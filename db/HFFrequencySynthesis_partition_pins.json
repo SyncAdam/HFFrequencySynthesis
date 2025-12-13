@@ -4,71 +4,27 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "output[0]",
+					"name" : "sdio",
 					"strict" : false
 				},
 				{
-					"name" : "output[1]",
+					"name" : "sclk",
 					"strict" : false
 				},
 				{
-					"name" : "output[2]",
+					"name" : "sdenb",
 					"strict" : false
 				},
 				{
-					"name" : "output[3]",
+					"name" : "configok",
 					"strict" : false
 				},
 				{
-					"name" : "output[4]",
+					"name" : "serialTimer",
 					"strict" : false
 				},
 				{
-					"name" : "output[5]",
-					"strict" : false
-				},
-				{
-					"name" : "output[6]",
-					"strict" : false
-				},
-				{
-					"name" : "output[7]",
-					"strict" : false
-				},
-				{
-					"name" : "output[8]",
-					"strict" : false
-				},
-				{
-					"name" : "output[9]",
-					"strict" : false
-				},
-				{
-					"name" : "output[10]",
-					"strict" : false
-				},
-				{
-					"name" : "output[11]",
-					"strict" : false
-				},
-				{
-					"name" : "output[12]",
-					"strict" : false
-				},
-				{
-					"name" : "output[13]",
-					"strict" : false
-				},
-				{
-					"name" : "output[14]",
-					"strict" : false
-				},
-				{
-					"name" : "output[15]",
-					"strict" : false
-				},
-				{
-					"name" : "clk",
+					"name" : "writeconfig",
 					"strict" : false
 				}
 			]

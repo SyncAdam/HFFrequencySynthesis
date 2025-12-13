@@ -1,5 +1,5 @@
 Analysis & Elaboration report for HFFrequencySynthesis
-Sat Dec 13 16:57:14 2025
+Sat Dec 13 22:31:25 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Sat Dec 13 16:57:13 2025       ;
+; Analysis & Elaboration Status ; Failed - Sat Dec 13 22:31:25 2025           ;
 ; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                 ; HFFrequencySynthesis                        ;
 ; Top-level Entity Name         ; MainFSM                                     ;
@@ -72,7 +72,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+----------------------+
 ; Option                                                                          ; Setting            ; Default Value        ;
 +---------------------------------------------------------------------------------+--------------------+----------------------+
-; Device                                                                          ; 5CGXFC7C7F23C8     ;                      ;
+; Device                                                                          ; 5CGXFC5C6F27C7     ;                      ;
 ; Top-level entity name                                                           ; MainFSM            ; HFFrequencySynthesis ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V            ;
 ; Use smart compilation                                                           ; Off                ; Off                  ;
@@ -160,21 +160,20 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Dec 13 16:57:00 2025
+    Info: Processing started: Sat Dec 13 22:31:13 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off HFFrequencySynthesis -c HFFrequencySynthesis --analysis_and_elaboration
-Info (20034): Auto device selection is not supported for Cyclone V device family. The default device, 5CGXFC7C7F23C8, is set.
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file baseline_c5gx.v
     Info (12023): Found entity 1: baseline_c5gx File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/baseline_c5gx.v Line: 38
 Info (12021): Found 2 design units, including 1 entities, in source file mainfsm.vhd
-    Info (12022): Found design unit 1: MainFSM-basic File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 17
+    Info (12022): Found design unit 1: MainFSM-basic File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 16
     Info (12023): Found entity 1: MainFSM File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file synthesiscircuitry.vhd
     Info (12022): Found design unit 1: SinLUT-basic File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/SynthesisCircuitry.vhd Line: 12
     Info (12023): Found entity 1: SinLUT File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/SynthesisCircuitry.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file configureadc.vhd
-    Info (12022): Found design unit 1: ConfigureADC-basic File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 18
+    Info (12022): Found design unit 1: ConfigureADC-basic File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 17
     Info (12023): Found entity 1: ConfigureADC File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file testbench.vhd
     Info (12022): Found design unit 1: TestBench-basic File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/TestBench.vhd Line: 7
@@ -182,37 +181,11 @@ Info (12021): Found 2 design units, including 1 entities, in source file testben
 Info (12021): Found 2 design units, including 1 entities, in source file configrom.vhd
     Info (12022): Found design unit 1: ConfigROM-basic File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigROM.vhd Line: 12
     Info (12023): Found entity 1: ConfigROM File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigROM.vhd Line: 5
-Info (12127): Elaborating entity "MainFSM" for the top level hierarchy
-Info (12129): Elaborating entity "SinLUT" using architecture "A:basic" for hierarchy "SinLUT:snythesizer" File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 25
-Info (12129): Elaborating entity "ConfigureADC" using architecture "A:basic" for hierarchy "ConfigureADC:configurator" File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 28
-Warning (10492): VHDL Process Statement warning at ConfigureADC.vhd(48): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 48
-Warning (10631): VHDL Process Statement warning at ConfigureADC.vhd(89): inferring latch(es) for signal or variable "SDENB", which holds its previous value in one or more paths through the process File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 89
-Warning (10631): VHDL Process Statement warning at ConfigureADC.vhd(89): inferring latch(es) for signal or variable "sendData", which holds its previous value in one or more paths through the process File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 89
-Warning (10492): VHDL Process Statement warning at ConfigureADC.vhd(118): signal "counter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 118
-Warning (10492): VHDL Process Statement warning at ConfigureADC.vhd(120): signal "config" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 120
-Warning (10631): VHDL Process Statement warning at ConfigureADC.vhd(114): inferring latch(es) for signal or variable "SDIO", which holds its previous value in one or more paths through the process File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 114
-Warning (10492): VHDL Process Statement warning at ConfigureADC.vhd(156): signal "clockDividerBuffer" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 156
-Warning (10492): VHDL Process Statement warning at ConfigureADC.vhd(157): signal "clockDividerBuffer" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 157
-Warning (10492): VHDL Process Statement warning at ConfigureADC.vhd(159): signal "internalClock" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 159
-Warning (10631): VHDL Process Statement warning at ConfigureADC.vhd(154): inferring latch(es) for signal or variable "internalClock", which holds its previous value in one or more paths through the process File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 154
-Warning (10492): VHDL Process Statement warning at ConfigureADC.vhd(167): signal "waitingBuffer" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 167
-Warning (10492): VHDL Process Statement warning at ConfigureADC.vhd(171): signal "waitingBuffer" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 171
-Warning (10631): VHDL Process Statement warning at ConfigureADC.vhd(164): inferring latch(es) for signal or variable "waitingBuffer", which holds its previous value in one or more paths through the process File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 164
-Warning (10631): VHDL Process Statement warning at ConfigureADC.vhd(164): inferring latch(es) for signal or variable "waitingDone", which holds its previous value in one or more paths through the process File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 164
-Info (10041): Inferred latch for "waitingDone" at ConfigureADC.vhd(164) File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 164
-Info (10041): Inferred latch for "waitingBuffer[0]" at ConfigureADC.vhd(164) File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 164
-Info (10041): Inferred latch for "waitingBuffer[1]" at ConfigureADC.vhd(164) File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 164
-Info (10041): Inferred latch for "waitingBuffer[2]" at ConfigureADC.vhd(164) File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 164
-Info (10041): Inferred latch for "waitingBuffer[3]" at ConfigureADC.vhd(164) File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 164
-Info (10041): Inferred latch for "internalClock" at ConfigureADC.vhd(154) File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 154
-Info (10041): Inferred latch for "SDIO" at ConfigureADC.vhd(114) File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 114
-Info (10041): Inferred latch for "sendData" at ConfigureADC.vhd(89) File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 89
-Info (10041): Inferred latch for "SDENB" at ConfigureADC.vhd(89) File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 89
-Info (12129): Elaborating entity "ConfigROM" using architecture "A:basic" for hierarchy "ConfigureADC:configurator|ConfigROM:ConfigMemory" File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 43
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 15 warnings
-    Info: Peak virtual memory: 4846 megabytes
-    Info: Processing ended: Sat Dec 13 16:57:14 2025
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:31
+Error (10410): VHDL Type Conversion error at ConfigureADC.vhd(159): Type Conversion near text or symbol "UNSIGNED" must have one argument File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 159
+Error: Quartus Prime Analysis & Elaboration was unsuccessful. 1 error, 1 warning
+    Error: Peak virtual memory: 4842 megabytes
+    Error: Processing ended: Sat Dec 13 22:31:25 2025
+    Error: Elapsed time: 00:00:12
+    Error: Total CPU time (on all processors): 00:00:26
 
 

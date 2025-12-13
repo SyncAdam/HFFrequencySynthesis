@@ -37,7 +37,7 @@
 
 
 set_global_assignment -name FAMILY "Cyclone V"
-set_global_assignment -name DEVICE AUTO
+set_global_assignment -name DEVICE 5CGXFC5C6F27C7
 set_global_assignment -name TOP_LEVEL_ENTITY MainFSM
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 12
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "TUE JUN  4 20:41:15 2013"
@@ -45,6 +45,7 @@ set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
 set_global_assignment -name STRATIXII_CONFIGURATION_DEVICE EPCQ256
+set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
 set_global_assignment -name VERILOG_FILE baseline_c5gx.v
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
@@ -58,4 +59,10 @@ set_global_assignment -name ENABLE_BOOT_SEL_PIN OFF
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_H12 -to serialTimer
+set_location_assignment PIN_D26 -to sdio
+set_location_assignment PIN_T21 -to sclk
+set_location_assignment PIN_K8 -to sdenb
+set_location_assignment PIN_P11 -to writeconfig
+set_location_assignment PIN_F7 -to configok
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
