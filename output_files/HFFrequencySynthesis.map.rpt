@@ -1,5 +1,5 @@
 Analysis & Elaboration report for HFFrequencySynthesis
-Sat Dec 13 11:23:01 2025
+Sat Dec 13 15:22:17 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Sat Dec 13 11:23:01 2025       ;
+; Analysis & Elaboration Status ; Successful - Sat Dec 13 15:22:17 2025       ;
 ; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                 ; HFFrequencySynthesis                        ;
 ; Top-level Entity Name         ; MainFSM                                     ;
@@ -72,7 +72,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+----------------------+
 ; Option                                                                          ; Setting            ; Default Value        ;
 +---------------------------------------------------------------------------------+--------------------+----------------------+
-; Device                                                                          ; 5CGXFC5C6F27C7     ;                      ;
+; Device                                                                          ; 5CGXFC7C7F23C8     ;                      ;
 ; Top-level entity name                                                           ; MainFSM            ; HFFrequencySynthesis ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V            ;
 ; Use smart compilation                                                           ; Off                ; Off                  ;
@@ -160,8 +160,9 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Dec 13 11:22:49 2025
+    Info: Processing started: Sat Dec 13 15:22:04 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off HFFrequencySynthesis -c HFFrequencySynthesis --analysis_and_elaboration
+Info (20034): Auto device selection is not supported for Cyclone V device family. The default device, 5CGXFC7C7F23C8, is set.
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file baseline_c5gx.v
@@ -186,16 +187,18 @@ Info (12129): Elaborating entity "SinLUT" using architecture "A:basic" for hiera
 Info (12129): Elaborating entity "ConfigureADC" using architecture "A:basic" for hierarchy "ConfigureADC:configurator" File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 28
 Warning (10492): VHDL Process Statement warning at ConfigureADC.vhd(38): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 38
 Warning (10631): VHDL Process Statement warning at ConfigureADC.vhd(69): inferring latch(es) for signal or variable "SDENB", which holds its previous value in one or more paths through the process File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 69
-Warning (10631): VHDL Process Statement warning at ConfigureADC.vhd(69): inferring latch(es) for signal or variable "generateClk", which holds its previous value in one or more paths through the process File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 69
 Warning (10631): VHDL Process Statement warning at ConfigureADC.vhd(69): inferring latch(es) for signal or variable "sendData", which holds its previous value in one or more paths through the process File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 69
+Warning (10492): VHDL Process Statement warning at ConfigureADC.vhd(89): signal "counter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 89
+Warning (10492): VHDL Process Statement warning at ConfigureADC.vhd(91): signal "config" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 91
+Warning (10631): VHDL Process Statement warning at ConfigureADC.vhd(85): inferring latch(es) for signal or variable "SDIO", which holds its previous value in one or more paths through the process File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 85
+Info (10041): Inferred latch for "SDIO" at ConfigureADC.vhd(85) File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 85
 Info (10041): Inferred latch for "sendData" at ConfigureADC.vhd(69) File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 69
-Info (10041): Inferred latch for "generateClk" at ConfigureADC.vhd(69) File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 69
 Info (10041): Inferred latch for "SDENB" at ConfigureADC.vhd(69) File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 69
 Info (12129): Elaborating entity "ConfigROM" using architecture "A:basic" for hierarchy "ConfigureADC:configurator|ConfigROM:ConfigMemory" File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 33
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4845 megabytes
-    Info: Processing ended: Sat Dec 13 11:23:01 2025
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:27
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 4844 megabytes
+    Info: Processing ended: Sat Dec 13 15:22:17 2025
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:31
 
 

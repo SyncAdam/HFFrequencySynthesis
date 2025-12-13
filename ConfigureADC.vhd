@@ -19,7 +19,7 @@ architecture basic of ConfigureADC is
 
 	type state_conf is (IDLE, SEND, DONE);
 
-	signal dataIndex: integer := 1;
+	signal dataIndex: integer := 0;
 	signal counter: std_logic_vector(6 downto 0) := B"0000000";
 	signal config: std_logic_vector(15 downto 0);
 	signal state: state_conf := IDLE;
@@ -74,31 +74,40 @@ begin
 								
 			when SEND =>	generateClk <= true;
 								sendData <= true;
+								
+			when DONE => 	generateClk <= false;
+								sendData <= false;
 			
 			when others => null;
 		end case;
 	end process;
 	
-	TransmitData: process(sendData, SCLK) is
+	TransmitData: process(dataIndex, sendData) is
 	begin
-		if(sendData = true) then	-- if we want to send
-			if(SCLK'event and SCLK = '0') then	-- on the falling edge of the output serial clk		
-				
+		if(sendData = true) then
+			if(dataIndex < 7) then		-- in adress range
+				SDIO <= counter(6 - dataIndex);
+			elsif(dataIndex < 22) then	-- in data range
+				SDIO <= config(15 + 7 - dataIndex);
+			end if;
+		end if;
+	end process;
+	
+	DataIndexIncrement: process(SDENB, SCLK) is
+	begin
+		if(SCLK'event and SCLK = '0') then
+			if(dataIndex < 22) then
 				dataIndex <= dataIndex + 1;
-				
-				if(dataIndex < 7) then		-- in adress range
-					SDIO <= counter(6 - dataIndex);
-				elsif(dataIndex < 22) then	-- in data range
-					SDIO <= config(15 + 7 - dataIndex);
+			else
+				dataIndex <= 0;
+				if(unsigned(counter) < 48) then 
+					counter <= std_logic_vector(unsigned(counter) + 1);
 				else
-					if(unsigned(counter) < 48) then
-						counter <= std_logic_vector(unsigned(counter) + 1);
-						dataIndex <= 0;
-					end if;
+					counter <= B"0000000";
+					configOK <= '1';
 				end if;
 			end if;
 		end if;
-			
 	end process;
 		
 	

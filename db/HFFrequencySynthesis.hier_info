@@ -97,9 +97,10 @@ writeConfig => nextState.OUTPUTSELECT
 writeConfig => Selector0.IN2
 writeConfig => Selector1.IN2
 writeConfig => state.IDLE.IN0
+configOK <> configOK~reg0
 SDENB <> SDENB
 SCLK <> SCLK
-SDIO <= SDIO~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SDIO <= SDIO$latch.DB_MAX_OUTPUT_PORT_TYPE
 CLKIN => SCLK.DATAB
 
 

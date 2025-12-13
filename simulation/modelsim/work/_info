@@ -22,9 +22,9 @@ V5@MVF=O@B1cjCQXOi2APM0
 !s100 UAbS6YSC=k>[9S?Rk[bJW2
 Z7 OV;C;10.5b;63
 32
-Z8 !s110 1765621865
+Z8 !s110 1765635556
 !i10b 1
-Z9 !s108 1765621865.000000
+Z9 !s108 1765635556.000000
 Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigROM.vhd|
 Z11 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigROM.vhd|
 !i113 1
@@ -50,7 +50,7 @@ R11
 R12
 R13
 Econfigureadc
-Z15 w1765621590
+Z15 w1765635718
 R1
 R2
 R3
@@ -63,11 +63,11 @@ VVDSWF_?<z0Pbe3Mibkkjk2
 !s100 KJ?iZ@JMfjcFj;PQd7amM0
 R7
 32
-R8
+Z18 !s110 1765635735
 !i10b 1
-R9
-Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd|
-Z19 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd|
+Z19 !s108 1765635734.000000
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd|
+Z21 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd|
 !i113 1
 R12
 R13
@@ -76,28 +76,28 @@ R14
 R1
 R2
 R3
-Z20 DEx4 work 12 configureadc 0 22 VDSWF_?<z0Pbe3Mibkkjk2
+Z22 DEx4 work 12 configureadc 0 22 VDSWF_?<z0Pbe3Mibkkjk2
 l31
 L18
-V^^g1nZHmf48ETDzz]@IKL2
-!s100 RG1KCQl48nSHjREW<aMRJ2
+V8e2D`aZm:5C^0HQIN@[S=0
+!s100 iKcPj3FSeX4WVcOWj14W51
 R7
 32
-R8
-!i10b 1
-R9
 R18
+!i10b 1
 R19
+R20
+R21
 !i113 1
 R12
 R13
 Emainfsm
-Z21 w1765621599
+Z23 w1765621599
 R2
 R3
 R4
-Z22 8Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd
-Z23 FZ:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd
+Z24 8Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd
+Z25 FZ:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd
 l0
 L4
 V4U5?aKV1Ahjk5NH3_XoPl3
@@ -107,18 +107,18 @@ R7
 R8
 !i10b 1
 R9
-Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd|
-Z25 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd|
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd|
+Z27 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd|
 !i113 1
 R12
 R13
 Abasic
-R20
+R22
 R1
-Z26 DEx4 work 6 sinlut 0 22 ][D1hP<^CfC]O3?L@XQWD1
+Z28 DEx4 work 6 sinlut 0 22 ][D1hP<^CfC]O3?L@XQWD1
 R2
 R3
-Z27 DEx4 work 7 mainfsm 0 22 4U5?aKV1Ahjk5NH3_XoPl3
+Z29 DEx4 work 7 mainfsm 0 22 4U5?aKV1Ahjk5NH3_XoPl3
 l21
 L17
 VKV?noY=^3B^KaiIF8mO_R2
@@ -128,28 +128,28 @@ R7
 R8
 !i10b 1
 R9
-R24
-R25
+R26
+R27
 !i113 1
 R12
 R13
 Esinlut
-Z28 w1765616226
+Z30 w1765616226
 R1
 R2
 R3
 R4
-Z29 8Z:/dev/hw/DDS/fpga_vhdl/ter/dds/SynthesisCircuitry.vhd
-Z30 FZ:/dev/hw/DDS/fpga_vhdl/ter/dds/SynthesisCircuitry.vhd
+Z31 8Z:/dev/hw/DDS/fpga_vhdl/ter/dds/SynthesisCircuitry.vhd
+Z32 FZ:/dev/hw/DDS/fpga_vhdl/ter/dds/SynthesisCircuitry.vhd
 l0
 L5
 V][D1hP<^CfC]O3?L@XQWD1
 !s100 EalKm[mD0z95i[NnbEhB<0
 R7
 32
-Z31 !s110 1765621866
+R8
 !i10b 1
-Z32 !s108 1765621866.000000
+R9
 Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/dds/SynthesisCircuitry.vhd|
 Z34 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/dds/SynthesisCircuitry.vhd|
 !i113 1
@@ -159,28 +159,28 @@ Abasic
 R1
 R2
 R3
-R26
+R28
 l33
 L12
-Z35 VjUW5_@P[6U4_V]`Vz9ILG0
-Z36 !s100 SgWBn<N;VTLL1BlKYR]0X0
+VjUW5_@P[6U4_V]`Vz9ILG0
+!s100 SgWBn<N;VTLL1BlKYR]0X0
 R7
 32
-R31
+R8
 !i10b 1
-R32
+R9
 R33
 R34
 !i113 1
 R12
 R13
 Etestbench
-Z37 w1765621859
+Z35 w1765621859
 R2
 R3
 R4
-Z38 8Z:\dev\hw\DDS\fpga_vhdl\ter\dds\TestBench.vhd
-Z39 FZ:\dev\hw\DDS\fpga_vhdl\ter\dds\TestBench.vhd
+Z36 8Z:/dev/hw/DDS/fpga_vhdl/ter/dds/TestBench.vhd
+Z37 FZ:/dev/hw/DDS/fpga_vhdl/ter/dds/TestBench.vhd
 l0
 L4
 VmTM2gj<z>980G2:^JcmQW3
@@ -190,13 +190,13 @@ R7
 R8
 !i10b 1
 R9
-Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:\dev\hw\DDS\fpga_vhdl\ter\dds\TestBench.vhd|
-Z41 !s107 Z:\dev\hw\DDS\fpga_vhdl\ter\dds\TestBench.vhd|
+Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/dds/TestBench.vhd|
+Z39 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/dds/TestBench.vhd|
 !i113 1
 R12
 R13
 Abasic
-R27
+R29
 R2
 R3
 DEx4 work 9 testbench 0 22 mTM2gj<z>980G2:^JcmQW3
@@ -209,8 +209,8 @@ R7
 R8
 !i10b 1
 R9
-R40
-R41
+R38
+R39
 !i113 1
 R12
 R13

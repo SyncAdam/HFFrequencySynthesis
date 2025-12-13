@@ -1,90 +1,5 @@
-# Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
-# do HFFrequencySynthesis_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
-# vmap work rtl_work 
-# Copying C:/intelFPGA/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:23:31 on Dec 13,2025
-# vcom -reportprogress 300 -93 -work work Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity MainFSM
-# -- Compiling architecture basic of MainFSM
-# ** Error: (vcom-11) Could not find work.sinlut.
-# ** Error (suppressible): Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd(25): (vcom-1195) Cannot find expanded name "work.SinLUT".
-# ** Error: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd(25): Unknown expanded name.
-# ** Error: (vcom-11) Could not find work.configureadc.
-# ** Error (suppressible): Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd(28): (vcom-1195) Cannot find expanded name "work.ConfigureADC".
-# ** Error: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd(28): Unknown expanded name.
-# ** Error: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd(32): VHDL Compiler exiting
-# End time: 11:23:31 on Dec 13,2025, Elapsed time: 0:00:00
-# Errors: 7, Warnings: 0
-# ** Error: C:/intelFPGA/18.1/modelsim_ase/win32aloem/vcom failed.
-# Error in macro ./HFFrequencySynthesis_run_msim_rtl_vhdl.do line 8
-# C:/intelFPGA/18.1/modelsim_ase/win32aloem/vcom failed.
-#     while executing
-# "vcom -93 -work work {Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd}"
-ls
-# HFFrequencySynthesis.sft                          HFFrequencySynthesis_run_msim_rtl_verilog.do.bak1  HFFrequencySynthesis_run_msim_rtl_verilog.do.bak6  modelsim.ini           
-# HFFrequencySynthesis.vho                          HFFrequencySynthesis_run_msim_rtl_verilog.do.bak2  HFFrequencySynthesis_run_msim_rtl_verilog.do.bak7  msim_transcript        
-# HFFrequencySynthesis_modelsim.xrf                 HFFrequencySynthesis_run_msim_rtl_verilog.do.bak3  HFFrequencySynthesis_run_msim_rtl_verilog.do.bak8  test_bench_script.tcl  
-# HFFrequencySynthesis_run_msim_rtl_verilog.do      HFFrequencySynthesis_run_msim_rtl_verilog.do.bak4  HFFrequencySynthesis_run_msim_rtl_verilog.do.bak9  vsim.wlf               
-# HFFrequencySynthesis_run_msim_rtl_verilog.do.bak  HFFrequencySynthesis_run_msim_rtl_verilog.do.bak5  HFFrequencySynthesis_run_msim_rtl_vhdl.do          waves.tcl              
-# 
-# rtl_work:
-# _info  _lib.qdb  _lib1_0.qdb  _lib1_0.qpg  _lib1_0.qtl  _vmake                
-# 
-# work:
-# _info                                                                                                                                                                
-source test_bench_script.tcl
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:24:02 on Dec 13,2025
-# vcom -reportprogress 300 ../../SynthesisCircuitry.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity SinLUT
-# -- Compiling architecture basic of SinLUT
-# End time: 11:24:02 on Dec 13,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:24:02 on Dec 13,2025
-# vcom -reportprogress 300 ../../ConfigROM.vhd ../../ConfigureADC.vhd ../../MainFSM.vhd ../../SynthesisCircuitry.vhd ../../TestBench.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity ConfigROM
-# -- Compiling architecture basic of ConfigROM
-# -- Compiling entity ConfigureADC
-# -- Compiling architecture basic of ConfigureADC
-# -- Loading entity ConfigROM
-# -- Compiling entity MainFSM
-# -- Compiling architecture basic of MainFSM
-# -- Loading entity SinLUT
-# -- Loading entity ConfigureADC
-# -- Compiling entity SinLUT
-# -- Compiling architecture basic of SinLUT
-# -- Compiling entity TestBench
-# -- Compiling architecture basic of TestBench
-# -- Loading entity MainFSM
-# ** Warning: ../../TestBench.vhd(24): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: ../../TestBench.vhd(26): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: ../../TestBench.vhd(33): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# End time: 11:24:02 on Dec 13,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 3
-# vsim work.testbench -Lf 220model -Lf altera_mf 
-# Start time: 11:24:02 on Dec 13,2025
+# vsim -gui -l msim_transcript work.testbench 
+# Start time: 15:18:39 on Dec 13,2025
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -94,11 +9,6 @@ source test_bench_script.tcl
 # Loading work.sinlut(basic)
 # Loading work.configureadc(basic)
 # Loading work.configrom(basic)
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/configOK has no driver.
-# This port will contribute value (0) to the signal network.
-restart
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/configOK has no driver.
-# This port will contribute value (0) to the signal network.
 add wave  \
 sim:/testbench/clock \
 sim:/testbench/outputValue \
@@ -108,51 +18,46 @@ sim:/testbench/SDENB \
 sim:/testbench/SCLK \
 sim:/testbench/SDIO
 run
-vsim -Lf 220model -Lf altera_mf work.testbench
-# End time: 11:25:10 on Dec 13,2025, Elapsed time: 0:01:08
-# Errors: 0, Warnings: 2
-# vsim -Lf 220model -Lf altera_mf work.testbench 
-# Start time: 11:25:10 on Dec 13,2025
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
+run
+run
+run
+run
+run
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful.
+# Compile of MainFSM.vhd was successful.
+# Compile of SynthesisCircuitry.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+restart
 # Loading work.testbench(basic)
-# Loading ieee.numeric_std(body)
 # Loading work.mainfsm(basic)
 # Loading work.sinlut(basic)
 # Loading work.configureadc(basic)
 # Loading work.configrom(basic)
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/configOK has no driver.
-# This port will contribute value (0) to the signal network.
+run
+run
+run
 add wave  \
-sim:/testbench/clock \
-sim:/testbench/outputValue \
-sim:/testbench/writeConfig \
-sim:/testbench/configOK \
-sim:/testbench/SDENB \
-sim:/testbench/SCLK \
-sim:/testbench/SDIO
+sim:/testbench/DUT/configurator/state
+add wave  \
+sim:/testbench/DUT/configurator/dataIndex
 restart
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/configOK has no driver.
-# This port will contribute value (0) to the signal network.
 run
 run
 run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
+add wave  \
+sim:/testbench/DUT/configurator/sendData
 restart
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/configOK has no driver.
-# This port will contribute value (0) to the signal network.
-quit -sim
-# End time: 11:27:05 on Dec 13,2025, Elapsed time: 0:01:55
-# Errors: 0, Warnings: 3
-# Loading project HFFreqSynthSimulation
+restart
+run
+run
+run
+# Compile of ConfigureADC.vhd was successful.
+restart
+# Loading work.configureadc(basic)
+run
+run
+run
+run
+run
