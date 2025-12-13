@@ -1,0 +1,49 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity SinLUT is
+	port(
+		     clk: in std_logic;
+			  output: out std_logic_vector(15 downto 0)
+		 );
+end SinLUT;
+
+architecture basic of SinLUT is
+
+type rawTableData is array (0 to 15) of unsigned(0 to 15);
+	
+	constant values: rawTableData := (to_unsigned(45307, 16),
+												 to_unsigned(55937, 16),
+												 to_unsigned(63040, 16),
+												 to_unsigned(65535, 16),
+												 to_unsigned(63040, 16),
+												 to_unsigned(55937, 16),
+												 to_unsigned(45307, 16),
+												 to_unsigned(32767, 16),
+												 to_unsigned(20227, 16),
+												 to_unsigned(9597, 16),
+												 to_unsigned(2494, 16),
+												 to_unsigned(0, 16),
+												 to_unsigned(2494, 16),
+												 to_unsigned(9597, 16),
+												 to_unsigned(20227, 16),
+												 to_unsigned(32767, 16)
+												 );														
+begin
+
+process(clk)
+
+	variable counter: integer := 0;
+	
+	begin
+	if(clk = '1') then
+		output <= std_logic_vector(values(counter));
+		counter := counter + 1;
+		if(counter > 15) then
+			counter := 0;
+	end if;
+	
+end process;
+
+end architecture basic;

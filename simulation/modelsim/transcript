@@ -1,0 +1,70 @@
+# Compile of TestBench.vhd failed with 4 errors.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful.
+# Compile of MainFSM.vhd failed with 4 errors.
+# Compile of SynthesisCircuitry.vhd was successful.
+# 5 compiles, 2 failed with 8 errors.
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of MainFSM.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful.
+# Compile of MainFSM.vhd was successful.
+# Compile of SynthesisCircuitry.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+vsim -Lf 220model -Lf altera_mf work.testbench
+# vsim -Lf 220model -Lf altera_mf work.testbench 
+# Start time: 11:28:29 on Dec 13,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.testbench(basic)
+# Loading ieee.numeric_std(body)
+# Loading work.mainfsm(basic)
+# Loading work.sinlut(basic)
+# Loading work.configureadc(basic)
+# Loading work.configrom(basic)
+# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/configOK has no driver.
+# This port will contribute value (U) to the signal network.
+add wave  \
+sim:/testbench/clock \
+sim:/testbench/outputValue \
+sim:/testbench/writeConfig \
+sim:/testbench/configOK \
+sim:/testbench/SDENB \
+sim:/testbench/SCLK \
+sim:/testbench/SDIO
+restart
+# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/configOK has no driver.
+# This port will contribute value (U) to the signal network.
+run
+# Compile of TestBench.vhd failed with 6 errors.
+# Compile of TestBench.vhd was successful with warnings.
+restart
+# Loading work.testbench(basic)
+# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/configOK has no driver.
+# This port will contribute value (U) to the signal network.
+run
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful.
+# Compile of MainFSM.vhd was successful.
+# Compile of SynthesisCircuitry.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+restart
+# Loading work.testbench(basic)
+# Loading work.mainfsm(basic)
+# Loading work.sinlut(basic)
+# Loading work.configureadc(basic)
+# Loading work.configrom(basic)
+# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/configOK has no driver.
+# This port will contribute value (U) to the signal network.
+run
+run
+run
+run
+run
+run
+run
+run
