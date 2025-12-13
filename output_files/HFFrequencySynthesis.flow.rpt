@@ -1,5 +1,5 @@
 Flow report for HFFrequencySynthesis
-Sat Dec 13 15:22:17 2025
+Sat Dec 13 16:57:14 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Successful - Sat Dec 13 15:22:17 2025       ;
+; Flow Status                 ; Successful - Sat Dec 13 16:57:13 2025       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; HFFrequencySynthesis                        ;
 ; Top-level Entity Name       ; MainFSM                                     ;
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +-------------------+----------------------+
 ; Option            ; Setting              ;
 +-------------------+----------------------+
-; Start date & time ; 12/13/2025 15:22:04  ;
+; Start date & time ; 12/13/2025 16:57:00  ;
 ; Main task         ; Compilation          ;
 ; Revision Name     ; HFFrequencySynthesis ;
 +-------------------+----------------------+
@@ -73,7 +73,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+----------------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value        ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+----------------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 255543650439341.176563572416672        ; --                   ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 255543650439341.176564142010832        ; --                   ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --                   ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>               ; --          ; --             ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --                   ; MainFSM     ; Top            ;
@@ -89,7 +89,7 @@ refer to the applicable agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:13     ; 1.0                     ; 4844 MB             ; 00:00:31                           ;
+; Analysis & Elaboration ; 00:00:13     ; 1.0                     ; 4846 MB             ; 00:00:31                           ;
 ; Total                  ; 00:00:13     ; --                      ; --                  ; 00:00:31                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 

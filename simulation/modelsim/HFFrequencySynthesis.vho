@@ -16,10 +16,10 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
 
--- DATE "11/18/2025 21:55:35"
+-- DATE "12/13/2025 16:33:01"
 
 -- 
--- Device: Altera 5CGXFC5C6F27C7 Package FBGA672
+-- Device: Altera 5CGXFC7C7F23C8 Package FBGA484
 -- 
 
 -- 
@@ -38,28 +38,40 @@ USE IEEE.STD_LOGIC_1164.ALL;
 ENTITY 	MainFSM IS
     PORT (
 	clk : IN std_logic;
-	outputValue : BUFFER std_logic_vector(15 DOWNTO 0)
+	output : BUFFER std_logic_vector(15 DOWNTO 0);
+	sclk : BUFFER std_logic;
+	sdenb : BUFFER std_logic;
+	sdio : BUFFER std_logic;
+	configok : BUFFER std_logic;
+	writeconfig : IN std_logic;
+	serialTimer : IN std_logic
 	);
 END MainFSM;
 
 -- Design Ports Information
--- outputValue[0]	=>  Location: PIN_J10,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- outputValue[1]	=>  Location: PIN_H7,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- outputValue[2]	=>  Location: PIN_K8,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- outputValue[3]	=>  Location: PIN_K10,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- outputValue[4]	=>  Location: PIN_J7,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- outputValue[5]	=>  Location: PIN_J8,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- outputValue[6]	=>  Location: PIN_G7,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- outputValue[7]	=>  Location: PIN_G6,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- outputValue[8]	=>  Location: PIN_F6,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- outputValue[9]	=>  Location: PIN_F7,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- outputValue[10]	=>  Location: PIN_H9,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- outputValue[11]	=>  Location: PIN_H8,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- outputValue[12]	=>  Location: PIN_B6,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- outputValue[13]	=>  Location: PIN_A5,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- outputValue[14]	=>  Location: PIN_E9,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- outputValue[15]	=>  Location: PIN_D8,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- clk	=>  Location: PIN_P11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- output[0]	=>  Location: PIN_N16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- output[1]	=>  Location: PIN_K21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- output[2]	=>  Location: PIN_K22,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- output[3]	=>  Location: PIN_P19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- output[4]	=>  Location: PIN_N20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- output[5]	=>  Location: PIN_N19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- output[6]	=>  Location: PIN_K17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- output[7]	=>  Location: PIN_L18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- output[8]	=>  Location: PIN_L22,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- output[9]	=>  Location: PIN_L17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- output[10]	=>  Location: PIN_M20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- output[11]	=>  Location: PIN_L19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- output[12]	=>  Location: PIN_N21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- output[13]	=>  Location: PIN_M21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- output[14]	=>  Location: PIN_M18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- output[15]	=>  Location: PIN_M22,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- sdio	=>  Location: PIN_T7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- writeconfig	=>  Location: PIN_G21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- serialTimer	=>  Location: PIN_V10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- sclk	=>  Location: PIN_M6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- sdenb	=>  Location: PIN_B6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- configok	=>  Location: PIN_E9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- clk	=>  Location: PIN_M16,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 ARCHITECTURE structure OF MainFSM IS
@@ -73,14 +85,24 @@ SIGNAL ww_devoe : std_logic;
 SIGNAL ww_devclrn : std_logic;
 SIGNAL ww_devpor : std_logic;
 SIGNAL ww_clk : std_logic;
-SIGNAL ww_outputValue : std_logic_vector(15 DOWNTO 0);
+SIGNAL ww_output : std_logic_vector(15 DOWNTO 0);
+SIGNAL ww_sclk : std_logic;
+SIGNAL ww_sdenb : std_logic;
+SIGNAL ww_sdio : std_logic;
+SIGNAL ww_configok : std_logic;
+SIGNAL ww_writeconfig : std_logic;
+SIGNAL ww_serialTimer : std_logic;
+SIGNAL \writeconfig~input_o\ : std_logic;
+SIGNAL \serialTimer~input_o\ : std_logic;
+SIGNAL \sclk~input_o\ : std_logic;
+SIGNAL \sdenb~input_o\ : std_logic;
+SIGNAL \configok~input_o\ : std_logic;
 SIGNAL \~QUARTUS_CREATED_GND~I_combout\ : std_logic;
 SIGNAL \clk~input_o\ : std_logic;
 SIGNAL \clk~inputCLKENA0_outclk\ : std_logic;
 SIGNAL \snythesizer|Add0~1_sumout\ : std_logic;
-SIGNAL \snythesizer|Add0~2\ : std_logic;
-SIGNAL \snythesizer|Add0~117_sumout\ : std_logic;
 SIGNAL \snythesizer|Add0~118\ : std_logic;
+SIGNAL \snythesizer|Add0~121_sumout\ : std_logic;
 SIGNAL \snythesizer|Add0~122\ : std_logic;
 SIGNAL \snythesizer|Add0~125_sumout\ : std_logic;
 SIGNAL \snythesizer|Add0~126\ : std_logic;
@@ -145,13 +167,15 @@ SIGNAL \snythesizer|LessThan0~4_combout\ : std_logic;
 SIGNAL \snythesizer|LessThan0~5_combout\ : std_logic;
 SIGNAL \snythesizer|LessThan0~2_combout\ : std_logic;
 SIGNAL \snythesizer|LessThan0~3_combout\ : std_logic;
-SIGNAL \snythesizer|Add0~121_sumout\ : std_logic;
+SIGNAL \snythesizer|Add0~2\ : std_logic;
+SIGNAL \snythesizer|Add0~117_sumout\ : std_logic;
 SIGNAL \snythesizer|counter[2]~DUPLICATE_q\ : std_logic;
-SIGNAL \snythesizer|counter[3]~DUPLICATE_q\ : std_logic;
+SIGNAL \snythesizer|counter[0]~DUPLICATE_q\ : std_logic;
 SIGNAL \snythesizer|Mux11~0_combout\ : std_logic;
 SIGNAL \snythesizer|Mux10~0_combout\ : std_logic;
 SIGNAL \snythesizer|Mux9~0_combout\ : std_logic;
 SIGNAL \snythesizer|Mux8~0_combout\ : std_logic;
+SIGNAL \snythesizer|output[4]~feeder_combout\ : std_logic;
 SIGNAL \snythesizer|Mux2~0_combout\ : std_logic;
 SIGNAL \snythesizer|Mux7~0_combout\ : std_logic;
 SIGNAL \snythesizer|Mux6~0_combout\ : std_logic;
@@ -162,13 +186,14 @@ SIGNAL \snythesizer|Mux3~0_combout\ : std_logic;
 SIGNAL \snythesizer|Mux0~0_combout\ : std_logic;
 SIGNAL \snythesizer|counter\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \snythesizer|output\ : std_logic_vector(15 DOWNTO 0);
-SIGNAL \snythesizer|ALT_INV_counter[3]~DUPLICATE_q\ : std_logic;
 SIGNAL \snythesizer|ALT_INV_counter[2]~DUPLICATE_q\ : std_logic;
+SIGNAL \snythesizer|ALT_INV_counter[0]~DUPLICATE_q\ : std_logic;
 SIGNAL \snythesizer|ALT_INV_LessThan0~5_combout\ : std_logic;
 SIGNAL \snythesizer|ALT_INV_LessThan0~4_combout\ : std_logic;
 SIGNAL \snythesizer|ALT_INV_LessThan0~2_combout\ : std_logic;
 SIGNAL \snythesizer|ALT_INV_LessThan0~1_combout\ : std_logic;
 SIGNAL \snythesizer|ALT_INV_LessThan0~0_combout\ : std_logic;
+SIGNAL \snythesizer|ALT_INV_Mux8~0_combout\ : std_logic;
 SIGNAL \snythesizer|ALT_INV_counter\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \snythesizer|ALT_INV_Add0~113_sumout\ : std_logic;
 SIGNAL \snythesizer|ALT_INV_Add0~109_sumout\ : std_logic;
@@ -202,17 +227,24 @@ SIGNAL \snythesizer|ALT_INV_Add0~5_sumout\ : std_logic;
 BEGIN
 
 ww_clk <= clk;
-outputValue <= ww_outputValue;
+output <= ww_output;
+sclk <= ww_sclk;
+sdenb <= ww_sdenb;
+sdio <= ww_sdio;
+configok <= ww_configok;
+ww_writeconfig <= writeconfig;
+ww_serialTimer <= serialTimer;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
-\snythesizer|ALT_INV_counter[3]~DUPLICATE_q\ <= NOT \snythesizer|counter[3]~DUPLICATE_q\;
 \snythesizer|ALT_INV_counter[2]~DUPLICATE_q\ <= NOT \snythesizer|counter[2]~DUPLICATE_q\;
+\snythesizer|ALT_INV_counter[0]~DUPLICATE_q\ <= NOT \snythesizer|counter[0]~DUPLICATE_q\;
 \snythesizer|ALT_INV_LessThan0~5_combout\ <= NOT \snythesizer|LessThan0~5_combout\;
 \snythesizer|ALT_INV_LessThan0~4_combout\ <= NOT \snythesizer|LessThan0~4_combout\;
 \snythesizer|ALT_INV_LessThan0~2_combout\ <= NOT \snythesizer|LessThan0~2_combout\;
 \snythesizer|ALT_INV_LessThan0~1_combout\ <= NOT \snythesizer|LessThan0~1_combout\;
 \snythesizer|ALT_INV_LessThan0~0_combout\ <= NOT \snythesizer|LessThan0~0_combout\;
+\snythesizer|ALT_INV_Mux8~0_combout\ <= NOT \snythesizer|Mux8~0_combout\;
 \snythesizer|ALT_INV_counter\(7) <= NOT \snythesizer|counter\(7);
 \snythesizer|ALT_INV_counter\(6) <= NOT \snythesizer|counter\(6);
 \snythesizer|ALT_INV_counter\(5) <= NOT \snythesizer|counter\(5);
@@ -274,8 +306,8 @@ ww_devpor <= devpor;
 \snythesizer|ALT_INV_counter\(1) <= NOT \snythesizer|counter\(1);
 \snythesizer|ALT_INV_counter\(0) <= NOT \snythesizer|counter\(0);
 
--- Location: IOOBUF_X12_Y61_N19
-\outputValue[0]~output\ : cyclonev_io_obuf
+-- Location: IOOBUF_X89_Y35_N45
+\output[0]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -285,10 +317,10 @@ GENERIC MAP (
 PORT MAP (
 	i => \snythesizer|output\(0),
 	devoe => ww_devoe,
-	o => ww_outputValue(0));
+	o => ww_output(0));
 
--- Location: IOOBUF_X12_Y61_N36
-\outputValue[1]~output\ : cyclonev_io_obuf
+-- Location: IOOBUF_X89_Y38_N39
+\output[1]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -298,10 +330,10 @@ GENERIC MAP (
 PORT MAP (
 	i => \snythesizer|output\(1),
 	devoe => ww_devoe,
-	o => ww_outputValue(1));
+	o => ww_output(1));
 
--- Location: IOOBUF_X14_Y61_N2
-\outputValue[2]~output\ : cyclonev_io_obuf
+-- Location: IOOBUF_X89_Y38_N56
+\output[2]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -311,10 +343,10 @@ GENERIC MAP (
 PORT MAP (
 	i => \snythesizer|output\(2),
 	devoe => ww_devoe,
-	o => ww_outputValue(2));
+	o => ww_output(2));
 
--- Location: IOOBUF_X12_Y61_N2
-\outputValue[3]~output\ : cyclonev_io_obuf
+-- Location: IOOBUF_X89_Y9_N39
+\output[3]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -324,10 +356,10 @@ GENERIC MAP (
 PORT MAP (
 	i => \snythesizer|output\(3),
 	devoe => ww_devoe,
-	o => ww_outputValue(3));
+	o => ww_output(3));
 
--- Location: IOOBUF_X12_Y61_N53
-\outputValue[4]~output\ : cyclonev_io_obuf
+-- Location: IOOBUF_X89_Y35_N79
+\output[4]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -337,10 +369,10 @@ GENERIC MAP (
 PORT MAP (
 	i => \snythesizer|output\(4),
 	devoe => ww_devoe,
-	o => ww_outputValue(4));
+	o => ww_output(4));
 
--- Location: IOOBUF_X14_Y61_N19
-\outputValue[5]~output\ : cyclonev_io_obuf
+-- Location: IOOBUF_X89_Y36_N5
+\output[5]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -350,10 +382,10 @@ GENERIC MAP (
 PORT MAP (
 	i => \snythesizer|output\(5),
 	devoe => ww_devoe,
-	o => ww_outputValue(5));
+	o => ww_output(5));
 
--- Location: IOOBUF_X14_Y61_N36
-\outputValue[6]~output\ : cyclonev_io_obuf
+-- Location: IOOBUF_X89_Y37_N5
+\output[6]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -363,10 +395,10 @@ GENERIC MAP (
 PORT MAP (
 	i => \snythesizer|output\(6),
 	devoe => ww_devoe,
-	o => ww_outputValue(6));
+	o => ww_output(6));
 
--- Location: IOOBUF_X15_Y61_N53
-\outputValue[7]~output\ : cyclonev_io_obuf
+-- Location: IOOBUF_X89_Y38_N22
+\output[7]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -376,10 +408,10 @@ GENERIC MAP (
 PORT MAP (
 	i => \snythesizer|output\(7),
 	devoe => ww_devoe,
-	o => ww_outputValue(7));
+	o => ww_output(7));
 
--- Location: IOOBUF_X15_Y61_N36
-\outputValue[8]~output\ : cyclonev_io_obuf
+-- Location: IOOBUF_X89_Y36_N56
+\output[8]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -389,10 +421,10 @@ GENERIC MAP (
 PORT MAP (
 	i => \snythesizer|output\(8),
 	devoe => ww_devoe,
-	o => ww_outputValue(8));
+	o => ww_output(8));
 
--- Location: IOOBUF_X14_Y61_N53
-\outputValue[9]~output\ : cyclonev_io_obuf
+-- Location: IOOBUF_X89_Y37_N22
+\output[9]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -402,10 +434,10 @@ GENERIC MAP (
 PORT MAP (
 	i => \snythesizer|output\(9),
 	devoe => ww_devoe,
-	o => ww_outputValue(9));
+	o => ww_output(9));
 
--- Location: IOOBUF_X19_Y61_N19
-\outputValue[10]~output\ : cyclonev_io_obuf
+-- Location: IOOBUF_X89_Y37_N39
+\output[10]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -415,10 +447,10 @@ GENERIC MAP (
 PORT MAP (
 	i => \snythesizer|output\(10),
 	devoe => ww_devoe,
-	o => ww_outputValue(10));
+	o => ww_output(10));
 
--- Location: IOOBUF_X19_Y61_N2
-\outputValue[11]~output\ : cyclonev_io_obuf
+-- Location: IOOBUF_X89_Y38_N5
+\output[11]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -428,10 +460,10 @@ GENERIC MAP (
 PORT MAP (
 	i => \snythesizer|output\(11),
 	devoe => ww_devoe,
-	o => ww_outputValue(11));
+	o => ww_output(11));
 
--- Location: IOOBUF_X21_Y61_N53
-\outputValue[12]~output\ : cyclonev_io_obuf
+-- Location: IOOBUF_X89_Y35_N96
+\output[12]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -441,10 +473,10 @@ GENERIC MAP (
 PORT MAP (
 	i => \snythesizer|output\(12),
 	devoe => ww_devoe,
-	o => ww_outputValue(12));
+	o => ww_output(12));
 
--- Location: IOOBUF_X21_Y61_N36
-\outputValue[13]~output\ : cyclonev_io_obuf
+-- Location: IOOBUF_X89_Y37_N56
+\output[13]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -454,10 +486,10 @@ GENERIC MAP (
 PORT MAP (
 	i => \snythesizer|output\(13),
 	devoe => ww_devoe,
-	o => ww_outputValue(13));
+	o => ww_output(13));
 
--- Location: IOOBUF_X10_Y61_N93
-\outputValue[14]~output\ : cyclonev_io_obuf
+-- Location: IOOBUF_X89_Y36_N22
+\output[14]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -467,10 +499,10 @@ GENERIC MAP (
 PORT MAP (
 	i => \snythesizer|output\(14),
 	devoe => ww_devoe,
-	o => ww_outputValue(14));
+	o => ww_output(14));
 
--- Location: IOOBUF_X10_Y61_N76
-\outputValue[15]~output\ : cyclonev_io_obuf
+-- Location: IOOBUF_X89_Y36_N39
+\output[15]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -480,9 +512,62 @@ GENERIC MAP (
 PORT MAP (
 	i => \snythesizer|output\(15),
 	devoe => ww_devoe,
-	o => ww_outputValue(15));
+	o => ww_output(15));
 
--- Location: IOIBUF_X21_Y0_N1
+-- Location: IOOBUF_X6_Y0_N19
+\sdio~output\ : cyclonev_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false",
+	shift_series_termination_control => "false")
+-- pragma translate_on
+PORT MAP (
+	i => GND,
+	devoe => ww_devoe,
+	o => ww_sdio);
+
+-- Location: IOOBUF_X8_Y0_N19
+\sclk~output\ : cyclonev_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "true",
+	shift_series_termination_control => "false")
+-- pragma translate_on
+PORT MAP (
+	i => GND,
+	devoe => ww_devoe,
+	o => ww_sclk);
+
+-- Location: IOOBUF_X32_Y81_N36
+\sdenb~output\ : cyclonev_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false",
+	shift_series_termination_control => "false")
+-- pragma translate_on
+PORT MAP (
+	i => VCC,
+	oe => VCC,
+	devoe => ww_devoe,
+	o => ww_sdenb);
+
+-- Location: IOOBUF_X28_Y81_N2
+\configok~output\ : cyclonev_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "true",
+	shift_series_termination_control => "false")
+-- pragma translate_on
+PORT MAP (
+	i => GND,
+	devoe => ww_devoe,
+	o => ww_configok);
+
+-- Location: IOIBUF_X89_Y35_N61
 \clk~input\ : cyclonev_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -493,7 +578,7 @@ PORT MAP (
 	i => ww_clk,
 	o => \clk~input_o\);
 
--- Location: CLKCTRL_G6
+-- Location: CLKCTRL_G10
 \clk~inputCLKENA0\ : cyclonev_clkena
 -- pragma translate_off
 GENERIC MAP (
@@ -507,23 +592,7 @@ PORT MAP (
 	inclk => \clk~input_o\,
 	outclk => \clk~inputCLKENA0_outclk\);
 
--- Location: FF_X15_Y59_N17
-\snythesizer|counter[29]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputCLKENA0_outclk\,
-	asdata => \snythesizer|Add0~9_sumout\,
-	sclr => \snythesizer|LessThan0~3_combout\,
-	sload => VCC,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \snythesizer|counter\(29));
-
--- Location: LABCELL_X15_Y60_N0
+-- Location: LABCELL_X85_Y24_N0
 \snythesizer|Add0~1\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \snythesizer|Add0~1_sumout\ = SUM(( \snythesizer|counter\(0) ) + ( VCC ) + ( !VCC ))
@@ -541,8 +610,8 @@ PORT MAP (
 	sumout => \snythesizer|Add0~1_sumout\,
 	cout => \snythesizer|Add0~2\);
 
--- Location: FF_X15_Y60_N2
-\snythesizer|counter[0]\ : dffeas
+-- Location: FF_X85_Y23_N16
+\snythesizer|counter[29]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -550,13 +619,14 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputCLKENA0_outclk\,
-	d => \snythesizer|Add0~1_sumout\,
+	asdata => \snythesizer|Add0~9_sumout\,
 	sclr => \snythesizer|LessThan0~3_combout\,
+	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \snythesizer|counter\(0));
+	q => \snythesizer|counter\(29));
 
--- Location: LABCELL_X15_Y60_N3
+-- Location: LABCELL_X85_Y24_N3
 \snythesizer|Add0~117\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \snythesizer|Add0~117_sumout\ = SUM(( \snythesizer|counter\(1) ) + ( GND ) + ( \snythesizer|Add0~2\ ))
@@ -574,22 +644,7 @@ PORT MAP (
 	sumout => \snythesizer|Add0~117_sumout\,
 	cout => \snythesizer|Add0~118\);
 
--- Location: FF_X15_Y60_N5
-\snythesizer|counter[1]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clk~inputCLKENA0_outclk\,
-	d => \snythesizer|Add0~117_sumout\,
-	sclr => \snythesizer|LessThan0~3_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \snythesizer|counter\(1));
-
--- Location: LABCELL_X15_Y60_N6
+-- Location: LABCELL_X85_Y24_N6
 \snythesizer|Add0~121\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \snythesizer|Add0~121_sumout\ = SUM(( \snythesizer|counter\(2) ) + ( GND ) + ( \snythesizer|Add0~118\ ))
@@ -607,7 +662,22 @@ PORT MAP (
 	sumout => \snythesizer|Add0~121_sumout\,
 	cout => \snythesizer|Add0~122\);
 
--- Location: LABCELL_X15_Y60_N9
+-- Location: FF_X85_Y24_N7
+\snythesizer|counter[2]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputCLKENA0_outclk\,
+	d => \snythesizer|Add0~121_sumout\,
+	sclr => \snythesizer|LessThan0~3_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \snythesizer|counter\(2));
+
+-- Location: LABCELL_X85_Y24_N9
 \snythesizer|Add0~125\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \snythesizer|Add0~125_sumout\ = SUM(( \snythesizer|counter\(3) ) + ( GND ) + ( \snythesizer|Add0~122\ ))
@@ -625,7 +695,7 @@ PORT MAP (
 	sumout => \snythesizer|Add0~125_sumout\,
 	cout => \snythesizer|Add0~126\);
 
--- Location: FF_X15_Y60_N11
+-- Location: FF_X85_Y24_N11
 \snythesizer|counter[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -640,7 +710,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|counter\(3));
 
--- Location: LABCELL_X15_Y60_N12
+-- Location: LABCELL_X85_Y24_N12
 \snythesizer|Add0~101\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \snythesizer|Add0~101_sumout\ = SUM(( \snythesizer|counter\(4) ) + ( GND ) + ( \snythesizer|Add0~126\ ))
@@ -658,7 +728,7 @@ PORT MAP (
 	sumout => \snythesizer|Add0~101_sumout\,
 	cout => \snythesizer|Add0~102\);
 
--- Location: FF_X15_Y60_N14
+-- Location: FF_X85_Y24_N14
 \snythesizer|counter[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -673,7 +743,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|counter\(4));
 
--- Location: LABCELL_X15_Y60_N15
+-- Location: LABCELL_X85_Y24_N15
 \snythesizer|Add0~105\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \snythesizer|Add0~105_sumout\ = SUM(( \snythesizer|counter\(5) ) + ( GND ) + ( \snythesizer|Add0~102\ ))
@@ -691,7 +761,7 @@ PORT MAP (
 	sumout => \snythesizer|Add0~105_sumout\,
 	cout => \snythesizer|Add0~106\);
 
--- Location: FF_X15_Y60_N17
+-- Location: FF_X85_Y24_N17
 \snythesizer|counter[5]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -706,7 +776,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|counter\(5));
 
--- Location: LABCELL_X15_Y60_N18
+-- Location: LABCELL_X85_Y24_N18
 \snythesizer|Add0~109\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \snythesizer|Add0~109_sumout\ = SUM(( \snythesizer|counter\(6) ) + ( GND ) + ( \snythesizer|Add0~106\ ))
@@ -724,7 +794,7 @@ PORT MAP (
 	sumout => \snythesizer|Add0~109_sumout\,
 	cout => \snythesizer|Add0~110\);
 
--- Location: FF_X15_Y60_N20
+-- Location: FF_X85_Y24_N20
 \snythesizer|counter[6]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -739,7 +809,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|counter\(6));
 
--- Location: LABCELL_X15_Y60_N21
+-- Location: LABCELL_X85_Y24_N21
 \snythesizer|Add0~113\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \snythesizer|Add0~113_sumout\ = SUM(( \snythesizer|counter\(7) ) + ( GND ) + ( \snythesizer|Add0~110\ ))
@@ -757,7 +827,7 @@ PORT MAP (
 	sumout => \snythesizer|Add0~113_sumout\,
 	cout => \snythesizer|Add0~114\);
 
--- Location: FF_X15_Y60_N23
+-- Location: FF_X85_Y24_N23
 \snythesizer|counter[7]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -772,7 +842,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|counter\(7));
 
--- Location: LABCELL_X15_Y60_N24
+-- Location: LABCELL_X85_Y24_N24
 \snythesizer|Add0~81\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \snythesizer|Add0~81_sumout\ = SUM(( \snythesizer|counter\(8) ) + ( GND ) + ( \snythesizer|Add0~114\ ))
@@ -790,7 +860,7 @@ PORT MAP (
 	sumout => \snythesizer|Add0~81_sumout\,
 	cout => \snythesizer|Add0~82\);
 
--- Location: FF_X15_Y60_N26
+-- Location: FF_X85_Y24_N26
 \snythesizer|counter[8]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -805,7 +875,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|counter\(8));
 
--- Location: LABCELL_X15_Y60_N27
+-- Location: LABCELL_X85_Y24_N27
 \snythesizer|Add0~85\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \snythesizer|Add0~85_sumout\ = SUM(( \snythesizer|counter\(9) ) + ( GND ) + ( \snythesizer|Add0~82\ ))
@@ -823,7 +893,7 @@ PORT MAP (
 	sumout => \snythesizer|Add0~85_sumout\,
 	cout => \snythesizer|Add0~86\);
 
--- Location: FF_X15_Y60_N29
+-- Location: FF_X85_Y24_N29
 \snythesizer|counter[9]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -838,7 +908,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|counter\(9));
 
--- Location: LABCELL_X15_Y60_N30
+-- Location: LABCELL_X85_Y24_N30
 \snythesizer|Add0~41\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \snythesizer|Add0~41_sumout\ = SUM(( \snythesizer|counter\(10) ) + ( GND ) + ( \snythesizer|Add0~86\ ))
@@ -847,16 +917,16 @@ PORT MAP (
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0000000000000000111111111111111100000000000000000011001100110011",
+	lut_mask => "0000000000000000111111111111111100000000000000000000111100001111",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	datab => \snythesizer|ALT_INV_counter\(10),
+	datac => \snythesizer|ALT_INV_counter\(10),
 	cin => \snythesizer|Add0~86\,
 	sumout => \snythesizer|Add0~41_sumout\,
 	cout => \snythesizer|Add0~42\);
 
--- Location: FF_X15_Y60_N32
+-- Location: FF_X85_Y24_N31
 \snythesizer|counter[10]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -871,7 +941,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|counter\(10));
 
--- Location: LABCELL_X15_Y60_N33
+-- Location: LABCELL_X85_Y24_N33
 \snythesizer|Add0~45\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \snythesizer|Add0~45_sumout\ = SUM(( \snythesizer|counter\(11) ) + ( GND ) + ( \snythesizer|Add0~42\ ))
@@ -889,7 +959,7 @@ PORT MAP (
 	sumout => \snythesizer|Add0~45_sumout\,
 	cout => \snythesizer|Add0~46\);
 
--- Location: FF_X15_Y60_N35
+-- Location: FF_X85_Y24_N35
 \snythesizer|counter[11]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -904,7 +974,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|counter\(11));
 
--- Location: LABCELL_X15_Y60_N36
+-- Location: LABCELL_X85_Y24_N36
 \snythesizer|Add0~49\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \snythesizer|Add0~49_sumout\ = SUM(( \snythesizer|counter\(12) ) + ( GND ) + ( \snythesizer|Add0~46\ ))
@@ -922,7 +992,7 @@ PORT MAP (
 	sumout => \snythesizer|Add0~49_sumout\,
 	cout => \snythesizer|Add0~50\);
 
--- Location: FF_X15_Y60_N38
+-- Location: FF_X85_Y24_N38
 \snythesizer|counter[12]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -937,7 +1007,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|counter\(12));
 
--- Location: LABCELL_X15_Y60_N39
+-- Location: LABCELL_X85_Y24_N39
 \snythesizer|Add0~53\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \snythesizer|Add0~53_sumout\ = SUM(( \snythesizer|counter\(13) ) + ( GND ) + ( \snythesizer|Add0~50\ ))
@@ -955,7 +1025,7 @@ PORT MAP (
 	sumout => \snythesizer|Add0~53_sumout\,
 	cout => \snythesizer|Add0~54\);
 
--- Location: FF_X15_Y60_N41
+-- Location: FF_X85_Y24_N41
 \snythesizer|counter[13]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -970,7 +1040,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|counter\(13));
 
--- Location: LABCELL_X15_Y60_N42
+-- Location: LABCELL_X85_Y24_N42
 \snythesizer|Add0~57\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \snythesizer|Add0~57_sumout\ = SUM(( \snythesizer|counter\(14) ) + ( GND ) + ( \snythesizer|Add0~54\ ))
@@ -979,16 +1049,16 @@ PORT MAP (
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0000000000000000111111111111111100000000000000000000000011111111",
+	lut_mask => "0000000000000000111111111111111100000000000000000011001100110011",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	datad => \snythesizer|ALT_INV_counter\(14),
+	datab => \snythesizer|ALT_INV_counter\(14),
 	cin => \snythesizer|Add0~54\,
 	sumout => \snythesizer|Add0~57_sumout\,
 	cout => \snythesizer|Add0~58\);
 
--- Location: FF_X15_Y60_N43
+-- Location: FF_X85_Y24_N44
 \snythesizer|counter[14]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1003,7 +1073,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|counter\(14));
 
--- Location: LABCELL_X15_Y60_N45
+-- Location: LABCELL_X85_Y24_N45
 \snythesizer|Add0~89\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \snythesizer|Add0~89_sumout\ = SUM(( \snythesizer|counter\(15) ) + ( GND ) + ( \snythesizer|Add0~58\ ))
@@ -1021,7 +1091,7 @@ PORT MAP (
 	sumout => \snythesizer|Add0~89_sumout\,
 	cout => \snythesizer|Add0~90\);
 
--- Location: FF_X15_Y60_N47
+-- Location: FF_X85_Y24_N47
 \snythesizer|counter[15]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1036,7 +1106,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|counter\(15));
 
--- Location: LABCELL_X15_Y60_N48
+-- Location: LABCELL_X85_Y24_N48
 \snythesizer|Add0~93\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \snythesizer|Add0~93_sumout\ = SUM(( \snythesizer|counter\(16) ) + ( GND ) + ( \snythesizer|Add0~90\ ))
@@ -1054,7 +1124,7 @@ PORT MAP (
 	sumout => \snythesizer|Add0~93_sumout\,
 	cout => \snythesizer|Add0~94\);
 
--- Location: FF_X15_Y60_N50
+-- Location: FF_X85_Y24_N50
 \snythesizer|counter[16]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1069,7 +1139,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|counter\(16));
 
--- Location: LABCELL_X15_Y60_N51
+-- Location: LABCELL_X85_Y24_N51
 \snythesizer|Add0~97\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \snythesizer|Add0~97_sumout\ = SUM(( \snythesizer|counter\(17) ) + ( GND ) + ( \snythesizer|Add0~94\ ))
@@ -1078,16 +1148,16 @@ PORT MAP (
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0000000000000000111111111111111100000000000000000101010101010101",
+	lut_mask => "0000000000000000111111111111111100000000000000000000000011111111",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \snythesizer|ALT_INV_counter\(17),
+	datad => \snythesizer|ALT_INV_counter\(17),
 	cin => \snythesizer|Add0~94\,
 	sumout => \snythesizer|Add0~97_sumout\,
 	cout => \snythesizer|Add0~98\);
 
--- Location: FF_X15_Y60_N53
+-- Location: FF_X85_Y24_N52
 \snythesizer|counter[17]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1102,7 +1172,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|counter\(17));
 
--- Location: LABCELL_X15_Y60_N54
+-- Location: LABCELL_X85_Y24_N54
 \snythesizer|Add0~61\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \snythesizer|Add0~61_sumout\ = SUM(( \snythesizer|counter\(18) ) + ( GND ) + ( \snythesizer|Add0~98\ ))
@@ -1120,7 +1190,7 @@ PORT MAP (
 	sumout => \snythesizer|Add0~61_sumout\,
 	cout => \snythesizer|Add0~62\);
 
--- Location: FF_X15_Y60_N56
+-- Location: FF_X85_Y24_N56
 \snythesizer|counter[18]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1135,7 +1205,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|counter\(18));
 
--- Location: LABCELL_X15_Y60_N57
+-- Location: LABCELL_X85_Y24_N57
 \snythesizer|Add0~21\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \snythesizer|Add0~21_sumout\ = SUM(( \snythesizer|counter\(19) ) + ( GND ) + ( \snythesizer|Add0~62\ ))
@@ -1153,7 +1223,7 @@ PORT MAP (
 	sumout => \snythesizer|Add0~21_sumout\,
 	cout => \snythesizer|Add0~22\);
 
--- Location: FF_X15_Y60_N59
+-- Location: FF_X85_Y24_N59
 \snythesizer|counter[19]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1168,7 +1238,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|counter\(19));
 
--- Location: LABCELL_X15_Y59_N0
+-- Location: LABCELL_X85_Y23_N0
 \snythesizer|Add0~65\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \snythesizer|Add0~65_sumout\ = SUM(( \snythesizer|counter\(20) ) + ( GND ) + ( \snythesizer|Add0~22\ ))
@@ -1186,7 +1256,7 @@ PORT MAP (
 	sumout => \snythesizer|Add0~65_sumout\,
 	cout => \snythesizer|Add0~66\);
 
--- Location: FF_X15_Y59_N55
+-- Location: FF_X85_Y23_N55
 \snythesizer|counter[20]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1202,7 +1272,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|counter\(20));
 
--- Location: LABCELL_X15_Y59_N3
+-- Location: LABCELL_X85_Y23_N3
 \snythesizer|Add0~25\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \snythesizer|Add0~25_sumout\ = SUM(( \snythesizer|counter\(21) ) + ( GND ) + ( \snythesizer|Add0~66\ ))
@@ -1220,7 +1290,7 @@ PORT MAP (
 	sumout => \snythesizer|Add0~25_sumout\,
 	cout => \snythesizer|Add0~26\);
 
--- Location: FF_X15_Y59_N38
+-- Location: FF_X85_Y23_N38
 \snythesizer|counter[21]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1236,7 +1306,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|counter\(21));
 
--- Location: LABCELL_X15_Y59_N6
+-- Location: LABCELL_X85_Y23_N6
 \snythesizer|Add0~29\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \snythesizer|Add0~29_sumout\ = SUM(( \snythesizer|counter\(22) ) + ( GND ) + ( \snythesizer|Add0~26\ ))
@@ -1254,7 +1324,7 @@ PORT MAP (
 	sumout => \snythesizer|Add0~29_sumout\,
 	cout => \snythesizer|Add0~30\);
 
--- Location: FF_X15_Y59_N50
+-- Location: FF_X85_Y23_N50
 \snythesizer|counter[22]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1270,7 +1340,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|counter\(22));
 
--- Location: LABCELL_X15_Y59_N9
+-- Location: LABCELL_X85_Y23_N9
 \snythesizer|Add0~33\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \snythesizer|Add0~33_sumout\ = SUM(( \snythesizer|counter\(23) ) + ( GND ) + ( \snythesizer|Add0~30\ ))
@@ -1288,7 +1358,7 @@ PORT MAP (
 	sumout => \snythesizer|Add0~33_sumout\,
 	cout => \snythesizer|Add0~34\);
 
--- Location: FF_X15_Y59_N47
+-- Location: FF_X85_Y23_N47
 \snythesizer|counter[23]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1304,7 +1374,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|counter\(23));
 
--- Location: LABCELL_X15_Y59_N12
+-- Location: LABCELL_X85_Y23_N12
 \snythesizer|Add0~37\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \snythesizer|Add0~37_sumout\ = SUM(( \snythesizer|counter\(24) ) + ( GND ) + ( \snythesizer|Add0~34\ ))
@@ -1313,16 +1383,16 @@ PORT MAP (
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0000000000000000111111111111111100000000000000000011001100110011",
+	lut_mask => "0000000000000000111111111111111100000000000000000000000011111111",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	datab => \snythesizer|ALT_INV_counter\(24),
+	datad => \snythesizer|ALT_INV_counter\(24),
 	cin => \snythesizer|Add0~34\,
 	sumout => \snythesizer|Add0~37_sumout\,
 	cout => \snythesizer|Add0~38\);
 
--- Location: FF_X15_Y59_N59
+-- Location: FF_X85_Y23_N59
 \snythesizer|counter[24]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1338,7 +1408,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|counter\(24));
 
--- Location: LABCELL_X15_Y59_N15
+-- Location: LABCELL_X85_Y23_N15
 \snythesizer|Add0~69\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \snythesizer|Add0~69_sumout\ = SUM(( \snythesizer|counter\(25) ) + ( GND ) + ( \snythesizer|Add0~38\ ))
@@ -1356,7 +1426,7 @@ PORT MAP (
 	sumout => \snythesizer|Add0~69_sumout\,
 	cout => \snythesizer|Add0~70\);
 
--- Location: FF_X15_Y59_N40
+-- Location: FF_X85_Y23_N40
 \snythesizer|counter[25]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1372,7 +1442,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|counter\(25));
 
--- Location: LABCELL_X15_Y59_N18
+-- Location: LABCELL_X85_Y23_N18
 \snythesizer|Add0~73\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \snythesizer|Add0~73_sumout\ = SUM(( \snythesizer|counter\(26) ) + ( GND ) + ( \snythesizer|Add0~70\ ))
@@ -1381,16 +1451,16 @@ PORT MAP (
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0000000000000000111111111111111100000000000000000000000011111111",
+	lut_mask => "0000000000000000111111111111111100000000000000000000111100001111",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	datad => \snythesizer|ALT_INV_counter\(26),
+	datac => \snythesizer|ALT_INV_counter\(26),
 	cin => \snythesizer|Add0~70\,
 	sumout => \snythesizer|Add0~73_sumout\,
 	cout => \snythesizer|Add0~74\);
 
--- Location: FF_X15_Y59_N52
+-- Location: FF_X85_Y23_N53
 \snythesizer|counter[26]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1406,7 +1476,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|counter\(26));
 
--- Location: LABCELL_X15_Y59_N21
+-- Location: LABCELL_X85_Y23_N21
 \snythesizer|Add0~77\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \snythesizer|Add0~77_sumout\ = SUM(( \snythesizer|counter\(27) ) + ( GND ) + ( \snythesizer|Add0~74\ ))
@@ -1415,16 +1485,16 @@ PORT MAP (
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0000000000000000111111111111111100000000000000000000111100001111",
+	lut_mask => "0000000000000000111111111111111100000000000000000000000011111111",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	datac => \snythesizer|ALT_INV_counter\(27),
+	datad => \snythesizer|ALT_INV_counter\(27),
 	cin => \snythesizer|Add0~74\,
 	sumout => \snythesizer|Add0~77_sumout\,
 	cout => \snythesizer|Add0~78\);
 
--- Location: FF_X15_Y59_N43
+-- Location: FF_X85_Y23_N43
 \snythesizer|counter[27]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1440,7 +1510,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|counter\(27));
 
--- Location: LABCELL_X15_Y59_N24
+-- Location: LABCELL_X85_Y23_N24
 \snythesizer|Add0~5\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \snythesizer|Add0~5_sumout\ = SUM(( \snythesizer|counter\(28) ) + ( GND ) + ( \snythesizer|Add0~78\ ))
@@ -1449,16 +1519,16 @@ PORT MAP (
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0000000000000000111111111111111100000000000000000011001100110011",
+	lut_mask => "0000000000000000111111111111111100000000000000000000111100001111",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	datab => \snythesizer|ALT_INV_counter\(28),
+	datac => \snythesizer|ALT_INV_counter\(28),
 	cin => \snythesizer|Add0~78\,
 	sumout => \snythesizer|Add0~5_sumout\,
 	cout => \snythesizer|Add0~6\);
 
--- Location: FF_X15_Y59_N23
+-- Location: FF_X85_Y23_N22
 \snythesizer|counter[28]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1474,7 +1544,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|counter\(28));
 
--- Location: LABCELL_X15_Y59_N27
+-- Location: LABCELL_X85_Y23_N27
 \snythesizer|Add0~9\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \snythesizer|Add0~9_sumout\ = SUM(( \snythesizer|counter\(29) ) + ( GND ) + ( \snythesizer|Add0~6\ ))
@@ -1483,16 +1553,16 @@ PORT MAP (
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0000000000000000111111111111111100000000000000000000000011111111",
+	lut_mask => "0000000000000000111111111111111100000000000000000000111100001111",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	datad => \snythesizer|ALT_INV_counter\(29),
+	datac => \snythesizer|ALT_INV_counter\(29),
 	cin => \snythesizer|Add0~6\,
 	sumout => \snythesizer|Add0~9_sumout\,
 	cout => \snythesizer|Add0~10\);
 
--- Location: FF_X15_Y59_N28
+-- Location: FF_X85_Y23_N28
 \snythesizer|counter[30]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1508,7 +1578,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|counter\(30));
 
--- Location: LABCELL_X15_Y59_N30
+-- Location: LABCELL_X85_Y23_N30
 \snythesizer|Add0~13\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \snythesizer|Add0~13_sumout\ = SUM(( \snythesizer|counter\(30) ) + ( GND ) + ( \snythesizer|Add0~10\ ))
@@ -1526,7 +1596,7 @@ PORT MAP (
 	sumout => \snythesizer|Add0~13_sumout\,
 	cout => \snythesizer|Add0~14\);
 
--- Location: FF_X15_Y59_N34
+-- Location: FF_X85_Y23_N34
 \snythesizer|counter[31]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1541,7 +1611,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|counter\(31));
 
--- Location: LABCELL_X15_Y59_N33
+-- Location: LABCELL_X85_Y23_N33
 \snythesizer|Add0~17\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \snythesizer|Add0~17_sumout\ = SUM(( \snythesizer|counter\(31) ) + ( GND ) + ( \snythesizer|Add0~14\ ))
@@ -1549,15 +1619,15 @@ PORT MAP (
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0000000000000000111111111111111100000000000000000000111100001111",
+	lut_mask => "0000000000000000111111111111111100000000000000000101010101010101",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	datac => \snythesizer|ALT_INV_counter\(31),
+	dataa => \snythesizer|ALT_INV_counter\(31),
 	cin => \snythesizer|Add0~14\,
 	sumout => \snythesizer|Add0~17_sumout\);
 
--- Location: MLABCELL_X14_Y60_N48
+-- Location: MLABCELL_X84_Y24_N0
 \snythesizer|LessThan0~0\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \snythesizer|LessThan0~0_combout\ = ( !\snythesizer|Add0~57_sumout\ & ( !\snythesizer|Add0~53_sumout\ & ( (!\snythesizer|Add0~41_sumout\ & (!\snythesizer|Add0~45_sumout\ & !\snythesizer|Add0~49_sumout\)) ) ) )
@@ -1576,7 +1646,7 @@ PORT MAP (
 	dataf => \snythesizer|ALT_INV_Add0~53_sumout\,
 	combout => \snythesizer|LessThan0~0_combout\);
 
--- Location: LABCELL_X15_Y59_N57
+-- Location: LABCELL_X85_Y23_N57
 \snythesizer|LessThan0~1\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \snythesizer|LessThan0~1_combout\ = ( !\snythesizer|Add0~37_sumout\ & ( \snythesizer|LessThan0~0_combout\ & ( (!\snythesizer|Add0~25_sumout\ & (!\snythesizer|Add0~29_sumout\ & (!\snythesizer|Add0~33_sumout\ & !\snythesizer|Add0~21_sumout\))) ) ) )
@@ -1596,10 +1666,10 @@ PORT MAP (
 	dataf => \snythesizer|ALT_INV_LessThan0~0_combout\,
 	combout => \snythesizer|LessThan0~1_combout\);
 
--- Location: MLABCELL_X14_Y60_N33
+-- Location: MLABCELL_X84_Y24_N30
 \snythesizer|LessThan0~4\ : cyclonev_lcell_comb
 -- Equation(s):
--- \snythesizer|LessThan0~4_combout\ = ( !\snythesizer|Add0~85_sumout\ & ( !\snythesizer|Add0~81_sumout\ & ( (!\snythesizer|Add0~105_sumout\ & (!\snythesizer|Add0~101_sumout\ & (!\snythesizer|Add0~109_sumout\ & !\snythesizer|Add0~113_sumout\))) ) ) )
+-- \snythesizer|LessThan0~4_combout\ = ( !\snythesizer|Add0~85_sumout\ & ( !\snythesizer|Add0~81_sumout\ & ( (!\snythesizer|Add0~105_sumout\ & (!\snythesizer|Add0~101_sumout\ & (!\snythesizer|Add0~113_sumout\ & !\snythesizer|Add0~109_sumout\))) ) ) )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1610,13 +1680,13 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \snythesizer|ALT_INV_Add0~105_sumout\,
 	datab => \snythesizer|ALT_INV_Add0~101_sumout\,
-	datac => \snythesizer|ALT_INV_Add0~109_sumout\,
-	datad => \snythesizer|ALT_INV_Add0~113_sumout\,
+	datac => \snythesizer|ALT_INV_Add0~113_sumout\,
+	datad => \snythesizer|ALT_INV_Add0~109_sumout\,
 	datae => \snythesizer|ALT_INV_Add0~85_sumout\,
 	dataf => \snythesizer|ALT_INV_Add0~81_sumout\,
 	combout => \snythesizer|LessThan0~4_combout\);
 
--- Location: LABCELL_X15_Y59_N42
+-- Location: LABCELL_X85_Y23_N42
 \snythesizer|LessThan0~5\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \snythesizer|LessThan0~5_combout\ = ( !\snythesizer|Add0~97_sumout\ & ( !\snythesizer|Add0~61_sumout\ & ( (!\snythesizer|Add0~93_sumout\ & !\snythesizer|Add0~89_sumout\) ) ) )
@@ -1634,7 +1704,7 @@ PORT MAP (
 	dataf => \snythesizer|ALT_INV_Add0~61_sumout\,
 	combout => \snythesizer|LessThan0~5_combout\);
 
--- Location: LABCELL_X15_Y59_N51
+-- Location: LABCELL_X85_Y23_N39
 \snythesizer|LessThan0~2\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \snythesizer|LessThan0~2_combout\ = ( !\snythesizer|Add0~77_sumout\ & ( \snythesizer|LessThan0~5_combout\ & ( (!\snythesizer|Add0~65_sumout\ & (\snythesizer|LessThan0~4_combout\ & (!\snythesizer|Add0~69_sumout\ & !\snythesizer|Add0~73_sumout\))) ) ) )
@@ -1654,10 +1724,10 @@ PORT MAP (
 	dataf => \snythesizer|ALT_INV_LessThan0~5_combout\,
 	combout => \snythesizer|LessThan0~2_combout\);
 
--- Location: LABCELL_X15_Y59_N39
+-- Location: LABCELL_X85_Y23_N51
 \snythesizer|LessThan0~3\ : cyclonev_lcell_comb
 -- Equation(s):
--- \snythesizer|LessThan0~3_combout\ = ( \snythesizer|LessThan0~1_combout\ & ( \snythesizer|LessThan0~2_combout\ & ( (!\snythesizer|Add0~17_sumout\ & (((\snythesizer|Add0~13_sumout\) # (\snythesizer|Add0~5_sumout\)) # (\snythesizer|Add0~9_sumout\))) ) ) ) # 
+-- \snythesizer|LessThan0~3_combout\ = ( \snythesizer|LessThan0~1_combout\ & ( \snythesizer|LessThan0~2_combout\ & ( (!\snythesizer|Add0~17_sumout\ & (((\snythesizer|Add0~5_sumout\) # (\snythesizer|Add0~13_sumout\)) # (\snythesizer|Add0~9_sumout\))) ) ) ) # 
 -- ( !\snythesizer|LessThan0~1_combout\ & ( \snythesizer|LessThan0~2_combout\ & ( !\snythesizer|Add0~17_sumout\ ) ) ) # ( \snythesizer|LessThan0~1_combout\ & ( !\snythesizer|LessThan0~2_combout\ & ( !\snythesizer|Add0~17_sumout\ ) ) ) # ( 
 -- !\snythesizer|LessThan0~1_combout\ & ( !\snythesizer|LessThan0~2_combout\ & ( !\snythesizer|Add0~17_sumout\ ) ) )
 
@@ -1669,15 +1739,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \snythesizer|ALT_INV_Add0~9_sumout\,
-	datab => \snythesizer|ALT_INV_Add0~5_sumout\,
-	datac => \snythesizer|ALT_INV_Add0~13_sumout\,
+	datab => \snythesizer|ALT_INV_Add0~13_sumout\,
+	datac => \snythesizer|ALT_INV_Add0~5_sumout\,
 	datad => \snythesizer|ALT_INV_Add0~17_sumout\,
 	datae => \snythesizer|ALT_INV_LessThan0~1_combout\,
 	dataf => \snythesizer|ALT_INV_LessThan0~2_combout\,
 	combout => \snythesizer|LessThan0~3_combout\);
 
--- Location: FF_X15_Y60_N7
-\snythesizer|counter[2]\ : dffeas
+-- Location: FF_X85_Y24_N2
+\snythesizer|counter[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -1685,13 +1755,28 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputCLKENA0_outclk\,
-	d => \snythesizer|Add0~121_sumout\,
+	d => \snythesizer|Add0~1_sumout\,
 	sclr => \snythesizer|LessThan0~3_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \snythesizer|counter\(2));
+	q => \snythesizer|counter\(0));
 
--- Location: FF_X15_Y60_N8
+-- Location: FF_X85_Y24_N5
+\snythesizer|counter[1]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk~inputCLKENA0_outclk\,
+	d => \snythesizer|Add0~117_sumout\,
+	sclr => \snythesizer|LessThan0~3_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \snythesizer|counter\(1));
+
+-- Location: FF_X85_Y24_N8
 \snythesizer|counter[2]~DUPLICATE\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1706,8 +1791,8 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|counter[2]~DUPLICATE_q\);
 
--- Location: FF_X15_Y60_N10
-\snythesizer|counter[3]~DUPLICATE\ : dffeas
+-- Location: FF_X85_Y24_N1
+\snythesizer|counter[0]~DUPLICATE\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -1715,33 +1800,32 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputCLKENA0_outclk\,
-	d => \snythesizer|Add0~125_sumout\,
+	d => \snythesizer|Add0~1_sumout\,
 	sclr => \snythesizer|LessThan0~3_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \snythesizer|counter[3]~DUPLICATE_q\);
+	q => \snythesizer|counter[0]~DUPLICATE_q\);
 
--- Location: MLABCELL_X14_Y60_N39
+-- Location: MLABCELL_X84_Y24_N9
 \snythesizer|Mux11~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \snythesizer|Mux11~0_combout\ = ( \snythesizer|counter\(1) & ( \snythesizer|counter[3]~DUPLICATE_q\ & ( \snythesizer|counter[2]~DUPLICATE_q\ ) ) ) # ( !\snythesizer|counter\(1) & ( \snythesizer|counter[3]~DUPLICATE_q\ & ( 
--- (!\snythesizer|counter[2]~DUPLICATE_q\) # (\snythesizer|counter\(0)) ) ) ) # ( \snythesizer|counter\(1) & ( !\snythesizer|counter[3]~DUPLICATE_q\ & ( (\snythesizer|counter\(0)) # (\snythesizer|counter[2]~DUPLICATE_q\) ) ) ) # ( !\snythesizer|counter\(1) & 
--- ( !\snythesizer|counter[3]~DUPLICATE_q\ & ( (!\snythesizer|counter[2]~DUPLICATE_q\) # (\snythesizer|counter\(0)) ) ) )
+-- \snythesizer|Mux11~0_combout\ = ( \snythesizer|counter\(3) & ( (!\snythesizer|counter\(1) & ((!\snythesizer|counter[2]~DUPLICATE_q\) # (\snythesizer|counter[0]~DUPLICATE_q\))) # (\snythesizer|counter\(1) & (\snythesizer|counter[2]~DUPLICATE_q\)) ) ) # ( 
+-- !\snythesizer|counter\(3) & ( (!\snythesizer|counter\(1) $ (\snythesizer|counter[2]~DUPLICATE_q\)) # (\snythesizer|counter[0]~DUPLICATE_q\) ) )
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "1010101011111111010101011111111110101010111111110101010101010101",
+	lut_mask => "1001111110011111100111111001111110011011100110111001101110011011",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \snythesizer|ALT_INV_counter[2]~DUPLICATE_q\,
-	datad => \snythesizer|ALT_INV_counter\(0),
-	datae => \snythesizer|ALT_INV_counter\(1),
-	dataf => \snythesizer|ALT_INV_counter[3]~DUPLICATE_q\,
+	dataa => \snythesizer|ALT_INV_counter\(1),
+	datab => \snythesizer|ALT_INV_counter[2]~DUPLICATE_q\,
+	datac => \snythesizer|ALT_INV_counter[0]~DUPLICATE_q\,
+	dataf => \snythesizer|ALT_INV_counter\(3),
 	combout => \snythesizer|Mux11~0_combout\);
 
--- Location: FF_X14_Y60_N40
+-- Location: FF_X84_Y24_N10
 \snythesizer|output[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1755,26 +1839,26 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|output\(0));
 
--- Location: MLABCELL_X14_Y60_N42
+-- Location: MLABCELL_X84_Y24_N12
 \snythesizer|Mux10~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \snythesizer|Mux10~0_combout\ = (!\snythesizer|counter\(1) & (!\snythesizer|counter\(0) & ((!\snythesizer|counter[2]~DUPLICATE_q\) # (\snythesizer|counter[3]~DUPLICATE_q\)))) # (\snythesizer|counter\(1) & ((!\snythesizer|counter[3]~DUPLICATE_q\ $ 
--- (!\snythesizer|counter\(0))) # (\snythesizer|counter[2]~DUPLICATE_q\)))
+-- \snythesizer|Mux10~0_combout\ = ( \snythesizer|counter[0]~DUPLICATE_q\ & ( (\snythesizer|counter\(1) & ((!\snythesizer|counter\(3)) # (\snythesizer|counter[2]~DUPLICATE_q\))) ) ) # ( !\snythesizer|counter[0]~DUPLICATE_q\ & ( (!\snythesizer|counter\(1) $ 
+-- (\snythesizer|counter[2]~DUPLICATE_q\)) # (\snythesizer|counter\(3)) ) )
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "1011010001110101101101000111010110110100011101011011010001110101",
+	lut_mask => "1001111110011111100111111001111101010001010100010101000101010001",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
 	dataa => \snythesizer|ALT_INV_counter\(1),
-	datab => \snythesizer|ALT_INV_counter[3]~DUPLICATE_q\,
-	datac => \snythesizer|ALT_INV_counter\(0),
-	datad => \snythesizer|ALT_INV_counter[2]~DUPLICATE_q\,
+	datab => \snythesizer|ALT_INV_counter[2]~DUPLICATE_q\,
+	datac => \snythesizer|ALT_INV_counter\(3),
+	dataf => \snythesizer|ALT_INV_counter[0]~DUPLICATE_q\,
 	combout => \snythesizer|Mux10~0_combout\);
 
--- Location: FF_X14_Y60_N44
+-- Location: FF_X84_Y24_N13
 \snythesizer|output[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1788,26 +1872,26 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|output\(1));
 
--- Location: MLABCELL_X14_Y60_N3
+-- Location: MLABCELL_X84_Y24_N15
 \snythesizer|Mux9~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \snythesizer|Mux9~0_combout\ = ( \snythesizer|counter\(0) & ( (!\snythesizer|counter[3]~DUPLICATE_q\ & ((\snythesizer|counter\(1)))) # (\snythesizer|counter[3]~DUPLICATE_q\ & ((!\snythesizer|counter\(1)) # (\snythesizer|counter[2]~DUPLICATE_q\))) ) ) # ( 
--- !\snythesizer|counter\(0) & ( (\snythesizer|counter[3]~DUPLICATE_q\ & (!\snythesizer|counter[2]~DUPLICATE_q\ $ (!\snythesizer|counter\(1)))) ) )
+-- \snythesizer|Mux9~0_combout\ = ( \snythesizer|counter\(3) & ( (!\snythesizer|counter\(1) & ((\snythesizer|counter[0]~DUPLICATE_q\) # (\snythesizer|counter[2]~DUPLICATE_q\))) # (\snythesizer|counter\(1) & (!\snythesizer|counter[2]~DUPLICATE_q\ $ 
+-- (\snythesizer|counter[0]~DUPLICATE_q\))) ) ) # ( !\snythesizer|counter\(3) & ( (\snythesizer|counter\(1) & \snythesizer|counter[0]~DUPLICATE_q\) ) )
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0001000100100010000100010010001000110011110111010011001111011101",
+	lut_mask => "0000010100000101000001010000010101101011011010110110101101101011",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \snythesizer|ALT_INV_counter[2]~DUPLICATE_q\,
-	datab => \snythesizer|ALT_INV_counter[3]~DUPLICATE_q\,
-	datad => \snythesizer|ALT_INV_counter\(1),
-	dataf => \snythesizer|ALT_INV_counter\(0),
+	dataa => \snythesizer|ALT_INV_counter\(1),
+	datab => \snythesizer|ALT_INV_counter[2]~DUPLICATE_q\,
+	datac => \snythesizer|ALT_INV_counter[0]~DUPLICATE_q\,
+	dataf => \snythesizer|ALT_INV_counter\(3),
 	combout => \snythesizer|Mux9~0_combout\);
 
--- Location: FF_X14_Y60_N4
+-- Location: FF_X84_Y24_N17
 \snythesizer|output[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1821,26 +1905,26 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|output\(2));
 
--- Location: MLABCELL_X14_Y60_N0
+-- Location: MLABCELL_X84_Y24_N6
 \snythesizer|Mux8~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \snythesizer|Mux8~0_combout\ = ( \snythesizer|counter\(0) & ( (!\snythesizer|counter[3]~DUPLICATE_q\ & (\snythesizer|counter\(1))) # (\snythesizer|counter[3]~DUPLICATE_q\ & ((!\snythesizer|counter\(1)) # (\snythesizer|counter[2]~DUPLICATE_q\))) ) ) # ( 
--- !\snythesizer|counter\(0) & ( !\snythesizer|counter[3]~DUPLICATE_q\ $ (!\snythesizer|counter\(1) $ (!\snythesizer|counter[2]~DUPLICATE_q\)) ) )
+-- \snythesizer|Mux8~0_combout\ = ( \snythesizer|counter[0]~DUPLICATE_q\ & ( (!\snythesizer|counter\(1) & ((\snythesizer|counter\(3)))) # (\snythesizer|counter\(1) & ((!\snythesizer|counter\(3)) # (\snythesizer|counter[2]~DUPLICATE_q\))) ) ) # ( 
+-- !\snythesizer|counter[0]~DUPLICATE_q\ & ( !\snythesizer|counter[2]~DUPLICATE_q\ $ (!\snythesizer|counter\(1) $ (!\snythesizer|counter\(3))) ) )
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "1100001100111100110000110011110000111100001111110011110000111111",
+	lut_mask => "1100001100111100110000110011110000001111111100110000111111110011",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	datab => \snythesizer|ALT_INV_counter[3]~DUPLICATE_q\,
+	datab => \snythesizer|ALT_INV_counter[2]~DUPLICATE_q\,
 	datac => \snythesizer|ALT_INV_counter\(1),
-	datad => \snythesizer|ALT_INV_counter[2]~DUPLICATE_q\,
-	dataf => \snythesizer|ALT_INV_counter\(0),
+	datad => \snythesizer|ALT_INV_counter\(3),
+	dataf => \snythesizer|ALT_INV_counter[0]~DUPLICATE_q\,
 	combout => \snythesizer|Mux8~0_combout\);
 
--- Location: FF_X13_Y60_N14
+-- Location: FF_X84_Y24_N34
 \snythesizer|output[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1855,7 +1939,22 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|output\(3));
 
--- Location: FF_X13_Y60_N8
+-- Location: MLABCELL_X84_Y24_N18
+\snythesizer|output[4]~feeder\ : cyclonev_lcell_comb
+-- Equation(s):
+-- \snythesizer|output[4]~feeder_combout\ = ( \snythesizer|Mux8~0_combout\ )
+
+-- pragma translate_off
+GENERIC MAP (
+	extended_lut => "off",
+	lut_mask => "0000000000000000000000000000000011111111111111111111111111111111",
+	shared_arith => "off")
+-- pragma translate_on
+PORT MAP (
+	dataf => \snythesizer|ALT_INV_Mux8~0_combout\,
+	combout => \snythesizer|output[4]~feeder_combout\);
+
+-- Location: FF_X84_Y24_N19
 \snythesizer|output[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1864,13 +1963,12 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~inputCLKENA0_outclk\,
-	asdata => \snythesizer|Mux8~0_combout\,
-	sload => VCC,
+	d => \snythesizer|output[4]~feeder_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \snythesizer|output\(4));
 
--- Location: FF_X14_Y60_N31
+-- Location: FF_X84_Y24_N44
 \snythesizer|output[5]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1885,26 +1983,26 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|output\(5));
 
--- Location: MLABCELL_X14_Y60_N24
+-- Location: MLABCELL_X84_Y24_N54
 \snythesizer|Mux2~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \snythesizer|Mux2~0_combout\ = ( \snythesizer|counter\(0) & ( (!\snythesizer|counter\(1) & (\snythesizer|counter[3]~DUPLICATE_q\)) # (\snythesizer|counter\(1) & ((!\snythesizer|counter[3]~DUPLICATE_q\) # (\snythesizer|counter[2]~DUPLICATE_q\))) ) ) # ( 
--- !\snythesizer|counter\(0) & ( !\snythesizer|counter[3]~DUPLICATE_q\ ) )
+-- \snythesizer|Mux2~0_combout\ = ( \snythesizer|counter[0]~DUPLICATE_q\ & ( (!\snythesizer|counter\(1) & ((\snythesizer|counter\(3)))) # (\snythesizer|counter\(1) & ((!\snythesizer|counter\(3)) # (\snythesizer|counter[2]~DUPLICATE_q\))) ) ) # ( 
+-- !\snythesizer|counter[0]~DUPLICATE_q\ & ( !\snythesizer|counter\(3) ) )
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "1100110011001100011001110110011111001100110011000110011101100111",
+	lut_mask => "1111111100000000111111110000000000001111111100110000111111110011",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \snythesizer|ALT_INV_counter\(1),
-	datab => \snythesizer|ALT_INV_counter[3]~DUPLICATE_q\,
-	datac => \snythesizer|ALT_INV_counter[2]~DUPLICATE_q\,
-	datae => \snythesizer|ALT_INV_counter\(0),
+	datab => \snythesizer|ALT_INV_counter[2]~DUPLICATE_q\,
+	datac => \snythesizer|ALT_INV_counter\(1),
+	datad => \snythesizer|ALT_INV_counter\(3),
+	dataf => \snythesizer|ALT_INV_counter[0]~DUPLICATE_q\,
 	combout => \snythesizer|Mux2~0_combout\);
 
--- Location: FF_X14_Y60_N28
+-- Location: FF_X84_Y24_N4
 \snythesizer|output[6]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1919,26 +2017,26 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|output\(6));
 
--- Location: MLABCELL_X14_Y60_N12
+-- Location: MLABCELL_X84_Y24_N57
 \snythesizer|Mux7~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \snythesizer|Mux7~0_combout\ = (!\snythesizer|counter\(0) & (!\snythesizer|counter[2]~DUPLICATE_q\ $ (!\snythesizer|counter[3]~DUPLICATE_q\ $ (!\snythesizer|counter\(1))))) # (\snythesizer|counter\(0) & ((!\snythesizer|counter[3]~DUPLICATE_q\) # 
--- ((\snythesizer|counter[2]~DUPLICATE_q\ & \snythesizer|counter\(1)))))
+-- \snythesizer|Mux7~0_combout\ = ( \snythesizer|counter\(3) & ( (!\snythesizer|counter\(1) & (\snythesizer|counter[2]~DUPLICATE_q\ & !\snythesizer|counter[0]~DUPLICATE_q\)) # (\snythesizer|counter\(1) & (!\snythesizer|counter[2]~DUPLICATE_q\ $ 
+-- (\snythesizer|counter[0]~DUPLICATE_q\))) ) ) # ( !\snythesizer|counter\(3) & ( (!\snythesizer|counter\(1) $ (\snythesizer|counter[2]~DUPLICATE_q\)) # (\snythesizer|counter[0]~DUPLICATE_q\) ) )
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "1001110001101101100111000110110110011100011011011001110001101101",
+	lut_mask => "1001111110011111100111111001111101100001011000010110000101100001",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \snythesizer|ALT_INV_counter[2]~DUPLICATE_q\,
-	datab => \snythesizer|ALT_INV_counter[3]~DUPLICATE_q\,
-	datac => \snythesizer|ALT_INV_counter\(0),
-	datad => \snythesizer|ALT_INV_counter\(1),
+	dataa => \snythesizer|ALT_INV_counter\(1),
+	datab => \snythesizer|ALT_INV_counter[2]~DUPLICATE_q\,
+	datac => \snythesizer|ALT_INV_counter[0]~DUPLICATE_q\,
+	dataf => \snythesizer|ALT_INV_counter\(3),
 	combout => \snythesizer|Mux7~0_combout\);
 
--- Location: FF_X14_Y60_N13
+-- Location: FF_X84_Y24_N59
 \snythesizer|output[7]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1952,26 +2050,26 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|output\(7));
 
--- Location: MLABCELL_X14_Y60_N15
+-- Location: MLABCELL_X84_Y24_N48
 \snythesizer|Mux6~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \snythesizer|Mux6~0_combout\ = ( \snythesizer|counter\(0) & ( (!\snythesizer|counter[3]~DUPLICATE_q\ & ((\snythesizer|counter\(1)))) # (\snythesizer|counter[3]~DUPLICATE_q\ & ((!\snythesizer|counter\(1)) # (\snythesizer|counter[2]~DUPLICATE_q\))) ) ) # ( 
--- !\snythesizer|counter\(0) & ( \snythesizer|counter[3]~DUPLICATE_q\ ) )
+-- \snythesizer|Mux6~0_combout\ = ( \snythesizer|counter[0]~DUPLICATE_q\ & ( (!\snythesizer|counter\(1) & ((\snythesizer|counter\(3)))) # (\snythesizer|counter\(1) & ((!\snythesizer|counter\(3)) # (\snythesizer|counter[2]~DUPLICATE_q\))) ) ) # ( 
+-- !\snythesizer|counter[0]~DUPLICATE_q\ & ( \snythesizer|counter\(3) ) )
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0011001100110011001100110011001100110011110111010011001111011101",
+	lut_mask => "0000111100001111000011110000111101011011010110110101101101011011",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \snythesizer|ALT_INV_counter[2]~DUPLICATE_q\,
-	datab => \snythesizer|ALT_INV_counter[3]~DUPLICATE_q\,
-	datad => \snythesizer|ALT_INV_counter\(1),
-	dataf => \snythesizer|ALT_INV_counter\(0),
+	dataa => \snythesizer|ALT_INV_counter\(1),
+	datab => \snythesizer|ALT_INV_counter[2]~DUPLICATE_q\,
+	datac => \snythesizer|ALT_INV_counter\(3),
+	dataf => \snythesizer|ALT_INV_counter[0]~DUPLICATE_q\,
 	combout => \snythesizer|Mux6~0_combout\);
 
--- Location: FF_X14_Y60_N16
+-- Location: FF_X84_Y24_N49
 \snythesizer|output[8]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1985,26 +2083,26 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|output\(8));
 
--- Location: MLABCELL_X14_Y60_N45
+-- Location: MLABCELL_X84_Y24_N45
 \snythesizer|Mux1~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \snythesizer|Mux1~0_combout\ = ( \snythesizer|counter\(0) & ( (!\snythesizer|counter[3]~DUPLICATE_q\) # ((\snythesizer|counter\(1) & \snythesizer|counter[2]~DUPLICATE_q\)) ) ) # ( !\snythesizer|counter\(0) & ( !\snythesizer|counter\(1) $ 
--- (!\snythesizer|counter[3]~DUPLICATE_q\ $ (\snythesizer|counter[2]~DUPLICATE_q\)) ) )
+-- \snythesizer|Mux1~0_combout\ = ( \snythesizer|counter\(1) & ( (!\snythesizer|counter[2]~DUPLICATE_q\ & ((!\snythesizer|counter\(3)))) # (\snythesizer|counter[2]~DUPLICATE_q\ & ((\snythesizer|counter\(3)) # (\snythesizer|counter[0]~DUPLICATE_q\))) ) ) # ( 
+-- !\snythesizer|counter\(1) & ( !\snythesizer|counter\(3) $ (((!\snythesizer|counter[2]~DUPLICATE_q\ & !\snythesizer|counter[0]~DUPLICATE_q\))) ) )
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0110011010011001011001101001100111001100110111011100110011011101",
+	lut_mask => "0011111111000000110011110011001100111111110000001100111100110011",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \snythesizer|ALT_INV_counter\(1),
-	datab => \snythesizer|ALT_INV_counter[3]~DUPLICATE_q\,
-	datad => \snythesizer|ALT_INV_counter[2]~DUPLICATE_q\,
-	dataf => \snythesizer|ALT_INV_counter\(0),
+	datab => \snythesizer|ALT_INV_counter[2]~DUPLICATE_q\,
+	datac => \snythesizer|ALT_INV_counter[0]~DUPLICATE_q\,
+	datad => \snythesizer|ALT_INV_counter\(3),
+	datae => \snythesizer|ALT_INV_counter\(1),
 	combout => \snythesizer|Mux1~0_combout\);
 
--- Location: FF_X14_Y60_N52
+-- Location: FF_X84_Y24_N41
 \snythesizer|output[9]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2019,26 +2117,26 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|output\(9));
 
--- Location: MLABCELL_X14_Y60_N6
+-- Location: MLABCELL_X84_Y24_N51
 \snythesizer|Mux5~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \snythesizer|Mux5~0_combout\ = (!\snythesizer|counter[2]~DUPLICATE_q\ & (!\snythesizer|counter[3]~DUPLICATE_q\ $ ((!\snythesizer|counter\(1))))) # (\snythesizer|counter[2]~DUPLICATE_q\ & ((!\snythesizer|counter[3]~DUPLICATE_q\ & (!\snythesizer|counter\(1) 
--- $ (\snythesizer|counter\(0)))) # (\snythesizer|counter[3]~DUPLICATE_q\ & ((\snythesizer|counter\(0)) # (\snythesizer|counter\(1))))))
+-- \snythesizer|Mux5~0_combout\ = ( \snythesizer|counter\(3) & ( (!\snythesizer|counter\(1) & ((!\snythesizer|counter[2]~DUPLICATE_q\) # (\snythesizer|counter[0]~DUPLICATE_q\))) # (\snythesizer|counter\(1) & (\snythesizer|counter[2]~DUPLICATE_q\)) ) ) # ( 
+-- !\snythesizer|counter\(3) & ( !\snythesizer|counter\(1) $ (((!\snythesizer|counter[2]~DUPLICATE_q\) # (\snythesizer|counter[0]~DUPLICATE_q\))) ) )
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0110100100111101011010010011110101101001001111010110100100111101",
+	lut_mask => "0110010101100101011001010110010110011011100110111001101110011011",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \snythesizer|ALT_INV_counter[2]~DUPLICATE_q\,
-	datab => \snythesizer|ALT_INV_counter[3]~DUPLICATE_q\,
-	datac => \snythesizer|ALT_INV_counter\(1),
-	datad => \snythesizer|ALT_INV_counter\(0),
+	dataa => \snythesizer|ALT_INV_counter\(1),
+	datab => \snythesizer|ALT_INV_counter[2]~DUPLICATE_q\,
+	datac => \snythesizer|ALT_INV_counter[0]~DUPLICATE_q\,
+	dataf => \snythesizer|ALT_INV_counter\(3),
 	combout => \snythesizer|Mux5~0_combout\);
 
--- Location: FF_X14_Y60_N7
+-- Location: FF_X84_Y24_N52
 \snythesizer|output[10]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2052,25 +2150,25 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|output\(10));
 
--- Location: MLABCELL_X14_Y60_N9
+-- Location: MLABCELL_X84_Y24_N24
 \snythesizer|Mux4~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \snythesizer|Mux4~0_combout\ = ( \snythesizer|counter\(0) & ( (!\snythesizer|counter[3]~DUPLICATE_q\) # ((\snythesizer|counter[2]~DUPLICATE_q\ & \snythesizer|counter\(1))) ) ) # ( !\snythesizer|counter\(0) & ( \snythesizer|counter[3]~DUPLICATE_q\ ) )
+-- \snythesizer|Mux4~0_combout\ = ( \snythesizer|counter[0]~DUPLICATE_q\ & ( (!\snythesizer|counter\(3)) # ((\snythesizer|counter\(1) & \snythesizer|counter[2]~DUPLICATE_q\)) ) ) # ( !\snythesizer|counter[0]~DUPLICATE_q\ & ( \snythesizer|counter\(3) ) )
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0011001100110011001100110011001111001100110111011100110011011101",
+	lut_mask => "0000111100001111000011110000111111110001111100011111000111110001",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \snythesizer|ALT_INV_counter[2]~DUPLICATE_q\,
-	datab => \snythesizer|ALT_INV_counter[3]~DUPLICATE_q\,
-	datad => \snythesizer|ALT_INV_counter\(1),
-	dataf => \snythesizer|ALT_INV_counter\(0),
+	dataa => \snythesizer|ALT_INV_counter\(1),
+	datab => \snythesizer|ALT_INV_counter[2]~DUPLICATE_q\,
+	datac => \snythesizer|ALT_INV_counter\(3),
+	dataf => \snythesizer|ALT_INV_counter[0]~DUPLICATE_q\,
 	combout => \snythesizer|Mux4~0_combout\);
 
--- Location: FF_X14_Y60_N10
+-- Location: FF_X84_Y24_N25
 \snythesizer|output[11]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2084,26 +2182,25 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|output\(11));
 
--- Location: MLABCELL_X14_Y60_N54
+-- Location: MLABCELL_X84_Y24_N27
 \snythesizer|Mux3~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \snythesizer|Mux3~0_combout\ = ( \snythesizer|counter\(0) & ( \snythesizer|counter[3]~DUPLICATE_q\ & ( (\snythesizer|counter\(1) & \snythesizer|counter[2]~DUPLICATE_q\) ) ) ) # ( \snythesizer|counter\(0) & ( !\snythesizer|counter[3]~DUPLICATE_q\ ) ) # ( 
--- !\snythesizer|counter\(0) & ( !\snythesizer|counter[3]~DUPLICATE_q\ ) )
+-- \snythesizer|Mux3~0_combout\ = ( \snythesizer|counter\(3) & ( (\snythesizer|counter\(1) & (\snythesizer|counter[2]~DUPLICATE_q\ & \snythesizer|counter[0]~DUPLICATE_q\)) ) ) # ( !\snythesizer|counter\(3) )
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "1111111111111111111111111111111100000000000000000000010100000101",
+	lut_mask => "1111111111111111111111111111111100000001000000010000000100000001",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
 	dataa => \snythesizer|ALT_INV_counter\(1),
-	datac => \snythesizer|ALT_INV_counter[2]~DUPLICATE_q\,
-	datae => \snythesizer|ALT_INV_counter\(0),
-	dataf => \snythesizer|ALT_INV_counter[3]~DUPLICATE_q\,
+	datab => \snythesizer|ALT_INV_counter[2]~DUPLICATE_q\,
+	datac => \snythesizer|ALT_INV_counter[0]~DUPLICATE_q\,
+	dataf => \snythesizer|ALT_INV_counter\(3),
 	combout => \snythesizer|Mux3~0_combout\);
 
--- Location: FF_X14_Y60_N55
+-- Location: FF_X84_Y24_N28
 \snythesizer|output[12]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2117,7 +2214,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|output\(12));
 
--- Location: FF_X14_Y60_N25
+-- Location: FF_X84_Y24_N55
 \snythesizer|output[13]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2131,7 +2228,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|output\(13));
 
--- Location: FF_X14_Y60_N47
+-- Location: FF_X84_Y24_N46
 \snythesizer|output[14]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2145,25 +2242,25 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|output\(14));
 
--- Location: MLABCELL_X14_Y60_N18
+-- Location: MLABCELL_X84_Y24_N36
 \snythesizer|Mux0~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \snythesizer|Mux0~0_combout\ = ( \snythesizer|counter\(0) & ( !\snythesizer|counter[3]~DUPLICATE_q\ & ( (!\snythesizer|counter\(1)) # (!\snythesizer|counter[2]~DUPLICATE_q\) ) ) ) # ( !\snythesizer|counter\(0) & ( !\snythesizer|counter[3]~DUPLICATE_q\ ) )
+-- \snythesizer|Mux0~0_combout\ = ( !\snythesizer|counter\(3) & ( \snythesizer|counter[0]~DUPLICATE_q\ & ( (!\snythesizer|counter\(1)) # (!\snythesizer|counter[2]~DUPLICATE_q\) ) ) ) # ( !\snythesizer|counter\(3) & ( !\snythesizer|counter[0]~DUPLICATE_q\ ) )
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "1111111111111111111110101111101000000000000000000000000000000000",
+	lut_mask => "1111111111111111000000000000000011101110111011100000000000000000",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
 	dataa => \snythesizer|ALT_INV_counter\(1),
-	datac => \snythesizer|ALT_INV_counter[2]~DUPLICATE_q\,
-	datae => \snythesizer|ALT_INV_counter\(0),
-	dataf => \snythesizer|ALT_INV_counter[3]~DUPLICATE_q\,
+	datab => \snythesizer|ALT_INV_counter[2]~DUPLICATE_q\,
+	datae => \snythesizer|ALT_INV_counter\(3),
+	dataf => \snythesizer|ALT_INV_counter[0]~DUPLICATE_q\,
 	combout => \snythesizer|Mux0~0_combout\);
 
--- Location: FF_X14_Y60_N19
+-- Location: FF_X84_Y24_N37
 \snythesizer|output[15]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2177,7 +2274,62 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \snythesizer|output\(15));
 
--- Location: LABCELL_X30_Y26_N3
+-- Location: IOIBUF_X88_Y81_N19
+\writeconfig~input\ : cyclonev_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_writeconfig,
+	o => \writeconfig~input_o\);
+
+-- Location: IOIBUF_X26_Y0_N41
+\serialTimer~input\ : cyclonev_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_serialTimer,
+	o => \serialTimer~input_o\);
+
+-- Location: IOIBUF_X8_Y0_N18
+\sclk~input\ : cyclonev_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_sclk,
+	o => \sclk~input_o\);
+
+-- Location: IOIBUF_X32_Y81_N35
+\sdenb~input\ : cyclonev_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_sdenb,
+	o => \sdenb~input_o\);
+
+-- Location: IOIBUF_X28_Y81_N1
+\configok~input\ : cyclonev_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_configok,
+	o => \configok~input_o\);
+
+-- Location: MLABCELL_X72_Y2_N3
 \~QUARTUS_CREATED_GND~I\ : cyclonev_lcell_comb
 -- Equation(s):
 

@@ -1,0 +1,12 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd}
+vcom -93 -work work {Z:/dev/hw/DDS/fpga_vhdl/ter/dds/SynthesisCircuitry.vhd}
+vcom -93 -work work {Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd}
+vcom -93 -work work {Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigROM.vhd}
+

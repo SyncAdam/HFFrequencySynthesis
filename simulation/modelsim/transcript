@@ -1,2 +1,1 @@
-# Compile of ConfigureADC.vhd was successful.
 vsim -gui -l msim_transcript work.testbench

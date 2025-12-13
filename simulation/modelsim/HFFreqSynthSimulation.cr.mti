@@ -9,6 +9,18 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading entity SinLUT
 -- Loading entity ConfigureADC
 
+} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/dds/TestBench.vhd {2 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/dds/TestBench.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity TestBench
+-- Compiling architecture basic of TestBench
+-- Loading entity MainFSM
+** Warning: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/TestBench.vhd(24): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/TestBench.vhd(30): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/TestBench.vhd(32): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+
 } {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigROM.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigROM.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -26,17 +38,5 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package NUMERIC_STD
 -- Compiling entity SinLUT
 -- Compiling architecture basic of SinLUT
-
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/dds/TestBench.vhd {2 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/dds/TestBench.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity TestBench
--- Compiling architecture basic of TestBench
--- Loading entity MainFSM
-** Warning: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/TestBench.vhd(24): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/TestBench.vhd(30): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/TestBench.vhd(32): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 
 } {} {}}

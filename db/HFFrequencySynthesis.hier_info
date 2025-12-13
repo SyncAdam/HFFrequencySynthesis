@@ -94,14 +94,15 @@ output[15] <= output[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 |MainFSM|ConfigureADC:configurator
 writeConfig => nextState.OUTPUTSELECT
 writeConfig => nextState.OUTPUTSELECT
-writeConfig => Selector0.IN2
+writeConfig => nextState.OUTPUTSELECT
 writeConfig => Selector1.IN2
-writeConfig => state.IDLE.IN0
+writeConfig => Selector3.IN3
+writeConfig => Selector0.IN1
 configOK <> configOK~reg0
 SDENB <> SDENB
 SCLK <> SCLK
 SDIO <= SDIO$latch.DB_MAX_OUTPUT_PORT_TYPE
-CLKIN => SCLK.DATAB
+CLKIN => ~NO_FANOUT~
 
 
 |MainFSM|ConfigureADC:configurator|ConfigROM:ConfigMemory

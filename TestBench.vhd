@@ -29,7 +29,7 @@ begin
 	
 		wait for 10ns;
 		writeConfig <= '1';
-		wait for 100us;
+		wait for 120us;
 		writeConfig <= '0';		
 		wait until configOK = '1';		
 		wait;
