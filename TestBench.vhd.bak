@@ -17,7 +17,7 @@ architecture basic of TestBench is
 begin
 
 	DUT: entity work.MainFSM(basic)
-				port map(clock, outputValue, SCLK, SDENB, SDIO, configOK, writeConfig, clock);
+				port map(outputValue, SCLK, SDENB, SDIO, configOK, writeConfig, clock);
 	
 	ClockProc: process begin
 		clock <= not clock;
@@ -28,9 +28,9 @@ begin
 	begin
 	
 		wait for 10ns;
-		writeConfig <= '1';
-		wait for 10ns;
-		writeConfig <= '0';		
+		writeConfig <= '0';
+		wait for 120ms;
+		writeConfig <= '1';		
 		wait until configOK = '1';		
 		wait;
 	end process;

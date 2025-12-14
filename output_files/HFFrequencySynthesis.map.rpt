@@ -1,5 +1,5 @@
-Analysis & Elaboration report for HFFrequencySynthesis
-Sat Dec 13 16:57:14 2025
+Analysis & Synthesis report for HFFrequencySynthesis
+Sun Dec 14 13:43:38 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -7,10 +7,20 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |MainFSM|ConfigureADC:configurator|state
+  9. State Machine - |MainFSM|ConfigureADC:configurator|nextState
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -33,46 +43,35 @@ refer to the applicable agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                              ;
-+-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Sat Dec 13 16:57:13 2025       ;
-; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
-; Revision Name                 ; HFFrequencySynthesis                        ;
-; Top-level Entity Name         ; MainFSM                                     ;
-; Family                        ; Cyclone V                                   ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
-; Total registers               ; N/A until Partition Merge                   ;
-; Total pins                    ; N/A until Partition Merge                   ;
-; Total virtual pins            ; N/A until Partition Merge                   ;
-; Total block memory bits       ; N/A until Partition Merge                   ;
-; Total PLLs                    ; N/A until Partition Merge                   ;
-; Total DLLs                    ; N/A until Partition Merge                   ;
-+-------------------------------+---------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sun Dec 14 13:43:38 2025       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; HFFrequencySynthesis                        ;
+; Top-level Entity Name           ; MainFSM                                     ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 51                                          ;
+; Total pins                      ; 35                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                             ;
+; Analysis & Synthesis Settings                                                                                               ;
 +---------------------------------------------------------------------------------+--------------------+----------------------+
 ; Option                                                                          ; Setting            ; Default Value        ;
 +---------------------------------------------------------------------------------+--------------------+----------------------+
-; Device                                                                          ; 5CGXFC7C7F23C8     ;                      ;
+; Device                                                                          ; 5CGXFC5C6F27C7     ;                      ;
 ; Top-level entity name                                                           ; MainFSM            ; HFFrequencySynthesis ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V            ;
 ; Use smart compilation                                                           ; Off                ; Off                  ;
@@ -154,27 +153,200 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+----------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                            ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                     ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------+---------+
+; MainFSM.vhd                      ; yes             ; User VHDL File  ; Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd      ;         ;
+; ConfigureADC.vhd                 ; yes             ; User VHDL File  ; Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd ;         ;
+; ConfigROM.vhd                    ; yes             ; User VHDL File  ; Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigROM.vhd    ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                           ;
++---------------------------------------------+-----------------------------------------+
+; Resource                                    ; Usage                                   ;
++---------------------------------------------+-----------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 43                                      ;
+;                                             ;                                         ;
+; Combinational ALUT usage for logic          ; 76                                      ;
+;     -- 7 input functions                    ; 2                                       ;
+;     -- 6 input functions                    ; 8                                       ;
+;     -- 5 input functions                    ; 6                                       ;
+;     -- 4 input functions                    ; 6                                       ;
+;     -- <=3 input functions                  ; 54                                      ;
+;                                             ;                                         ;
+; Dedicated logic registers                   ; 51                                      ;
+;                                             ;                                         ;
+; I/O pins                                    ; 35                                      ;
+;                                             ;                                         ;
+; Total DSP Blocks                            ; 0                                       ;
+;                                             ;                                         ;
+; Maximum fan-out node                        ; ConfigureADC:configurator|internalClock ;
+; Maximum fan-out                             ; 39                                      ;
+; Total fan-out                               ; 446                                     ;
+; Average fan-out                             ; 2.18                                    ;
++---------------------------------------------+-----------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                        ;
++--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+--------------+--------------+
+; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Entity Name  ; Library Name ;
++--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+--------------+--------------+
+; |MainFSM                       ; 76 (0)              ; 51 (0)                    ; 0                 ; 0          ; 35   ; 0            ; |MainFSM                           ; MainFSM      ; work         ;
+;    |ConfigureADC:configurator| ; 76 (76)             ; 51 (51)                   ; 0                 ; 0          ; 0    ; 0            ; |MainFSM|ConfigureADC:configurator ; ConfigureADC ; work         ;
++--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+--------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------+
+; State Machine - |MainFSM|ConfigureADC:configurator|state                           ;
++---------------+------------+---------------+-------------+------------+------------+
+; Name          ; state.DONE ; state.DISCARD ; state.INTER ; state.SEND ; state.IDLE ;
++---------------+------------+---------------+-------------+------------+------------+
+; state.IDLE    ; 0          ; 0             ; 0           ; 0          ; 0          ;
+; state.SEND    ; 0          ; 0             ; 0           ; 1          ; 1          ;
+; state.INTER   ; 0          ; 0             ; 1           ; 0          ; 1          ;
+; state.DISCARD ; 0          ; 1             ; 0           ; 0          ; 1          ;
+; state.DONE    ; 1          ; 0             ; 0           ; 0          ; 1          ;
++---------------+------------+---------------+-------------+------------+------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------+
+; State Machine - |MainFSM|ConfigureADC:configurator|nextState                                               ;
++-------------------+----------------+-------------------+-----------------+----------------+----------------+
+; Name              ; nextState.DONE ; nextState.DISCARD ; nextState.INTER ; nextState.SEND ; nextState.IDLE ;
++-------------------+----------------+-------------------+-----------------+----------------+----------------+
+; nextState.IDLE    ; 0              ; 0                 ; 0               ; 0              ; 0              ;
+; nextState.SEND    ; 0              ; 0                 ; 0               ; 1              ; 1              ;
+; nextState.INTER   ; 0              ; 0                 ; 1               ; 0              ; 1              ;
+; nextState.DISCARD ; 0              ; 1                 ; 0               ; 0              ; 1              ;
+; nextState.DONE    ; 1              ; 0                 ; 0               ; 0              ; 1              ;
++-------------------+----------------+-------------------+-----------------+----------------+----------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                             ;
++--------------------------------------------+---------------------------------------------------+
+; Register name                              ; Reason for Removal                                ;
++--------------------------------------------+---------------------------------------------------+
+; ConfigureADC:configurator|sendData         ; Merged with ConfigureADC:configurator|outputClock ;
+; ConfigureADC:configurator|waitingBuffer[3] ; Stuck at GND due to stuck port data_in            ;
+; Total Number of Removed Registers = 2      ;                                                   ;
++--------------------------------------------+---------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 51    ;
+; Number of registers using Synchronous Clear  ; 37    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 2     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 18    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |MainFSM|ConfigureADC:configurator|clockDividerBuffer[1] ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |MainFSM|ConfigureADC:configurator|dataIndex[2]          ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |MainFSM|ConfigureADC:configurator|waitingBuffer[3]      ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |MainFSM|ConfigureADC:configurator|counter[6]            ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |MainFSM|ConfigureADC:configurator|nextState             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 51                          ;
+;     CLR               ; 2                           ;
+;     ENA               ; 3                           ;
+;     ENA SCLR          ; 15                          ;
+;     SCLR              ; 22                          ;
+;     plain             ; 9                           ;
+; arriav_io_obuf        ; 8                           ;
+; arriav_lcell_comb     ; 83                          ;
+;     arith             ; 27                          ;
+;         1 data inputs ; 27                          ;
+;     extend            ; 2                           ;
+;         7 data inputs ; 2                           ;
+;     normal            ; 54                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 17                          ;
+;         3 data inputs ; 10                          ;
+;         4 data inputs ; 6                           ;
+;         5 data inputs ; 6                           ;
+;         6 data inputs ; 8                           ;
+; boundary_port         ; 35                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 1.62                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Dec 13 16:57:00 2025
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off HFFrequencySynthesis -c HFFrequencySynthesis --analysis_and_elaboration
-Info (20034): Auto device selection is not supported for Cyclone V device family. The default device, 5CGXFC7C7F23C8, is set.
+    Info: Processing started: Sun Dec 14 13:43:25 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off HFFrequencySynthesis -c HFFrequencySynthesis
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file baseline_c5gx.v
     Info (12023): Found entity 1: baseline_c5gx File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/baseline_c5gx.v Line: 38
 Info (12021): Found 2 design units, including 1 entities, in source file mainfsm.vhd
-    Info (12022): Found design unit 1: MainFSM-basic File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 17
+    Info (12022): Found design unit 1: MainFSM-basic File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 23
     Info (12023): Found entity 1: MainFSM File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file synthesiscircuitry.vhd
     Info (12022): Found design unit 1: SinLUT-basic File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/SynthesisCircuitry.vhd Line: 12
     Info (12023): Found entity 1: SinLUT File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/SynthesisCircuitry.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file configureadc.vhd
-    Info (12022): Found design unit 1: ConfigureADC-basic File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 18
+    Info (12022): Found design unit 1: ConfigureADC-basic File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 24
     Info (12023): Found entity 1: ConfigureADC File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file testbench.vhd
     Info (12022): Found design unit 1: TestBench-basic File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/TestBench.vhd Line: 7
@@ -183,36 +355,60 @@ Info (12021): Found 2 design units, including 1 entities, in source file configr
     Info (12022): Found design unit 1: ConfigROM-basic File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigROM.vhd Line: 12
     Info (12023): Found entity 1: ConfigROM File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigROM.vhd Line: 5
 Info (12127): Elaborating entity "MainFSM" for the top level hierarchy
-Info (12129): Elaborating entity "SinLUT" using architecture "A:basic" for hierarchy "SinLUT:snythesizer" File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 25
-Info (12129): Elaborating entity "ConfigureADC" using architecture "A:basic" for hierarchy "ConfigureADC:configurator" File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 28
-Warning (10492): VHDL Process Statement warning at ConfigureADC.vhd(48): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 48
-Warning (10631): VHDL Process Statement warning at ConfigureADC.vhd(89): inferring latch(es) for signal or variable "SDENB", which holds its previous value in one or more paths through the process File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 89
-Warning (10631): VHDL Process Statement warning at ConfigureADC.vhd(89): inferring latch(es) for signal or variable "sendData", which holds its previous value in one or more paths through the process File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 89
-Warning (10492): VHDL Process Statement warning at ConfigureADC.vhd(118): signal "counter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 118
-Warning (10492): VHDL Process Statement warning at ConfigureADC.vhd(120): signal "config" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 120
-Warning (10631): VHDL Process Statement warning at ConfigureADC.vhd(114): inferring latch(es) for signal or variable "SDIO", which holds its previous value in one or more paths through the process File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 114
-Warning (10492): VHDL Process Statement warning at ConfigureADC.vhd(156): signal "clockDividerBuffer" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 156
-Warning (10492): VHDL Process Statement warning at ConfigureADC.vhd(157): signal "clockDividerBuffer" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 157
-Warning (10492): VHDL Process Statement warning at ConfigureADC.vhd(159): signal "internalClock" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 159
-Warning (10631): VHDL Process Statement warning at ConfigureADC.vhd(154): inferring latch(es) for signal or variable "internalClock", which holds its previous value in one or more paths through the process File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 154
-Warning (10492): VHDL Process Statement warning at ConfigureADC.vhd(167): signal "waitingBuffer" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 167
-Warning (10492): VHDL Process Statement warning at ConfigureADC.vhd(171): signal "waitingBuffer" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 171
-Warning (10631): VHDL Process Statement warning at ConfigureADC.vhd(164): inferring latch(es) for signal or variable "waitingBuffer", which holds its previous value in one or more paths through the process File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 164
-Warning (10631): VHDL Process Statement warning at ConfigureADC.vhd(164): inferring latch(es) for signal or variable "waitingDone", which holds its previous value in one or more paths through the process File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 164
-Info (10041): Inferred latch for "waitingDone" at ConfigureADC.vhd(164) File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 164
-Info (10041): Inferred latch for "waitingBuffer[0]" at ConfigureADC.vhd(164) File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 164
-Info (10041): Inferred latch for "waitingBuffer[1]" at ConfigureADC.vhd(164) File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 164
-Info (10041): Inferred latch for "waitingBuffer[2]" at ConfigureADC.vhd(164) File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 164
-Info (10041): Inferred latch for "waitingBuffer[3]" at ConfigureADC.vhd(164) File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 164
-Info (10041): Inferred latch for "internalClock" at ConfigureADC.vhd(154) File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 154
-Info (10041): Inferred latch for "SDIO" at ConfigureADC.vhd(114) File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 114
-Info (10041): Inferred latch for "sendData" at ConfigureADC.vhd(89) File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 89
-Info (10041): Inferred latch for "SDENB" at ConfigureADC.vhd(89) File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 89
-Info (12129): Elaborating entity "ConfigROM" using architecture "A:basic" for hierarchy "ConfigureADC:configurator|ConfigROM:ConfigMemory" File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 43
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 15 warnings
-    Info: Peak virtual memory: 4846 megabytes
-    Info: Processing ended: Sat Dec 13 16:57:14 2025
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:31
+Warning (10541): VHDL Signal Declaration warning at MainFSM.vhd(6): used implicit default value for signal "output" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 6
+Info (12129): Elaborating entity "ConfigureADC" using architecture "A:basic" for hierarchy "ConfigureADC:configurator" File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 34
+Info (12129): Elaborating entity "ConfigROM" using architecture "A:basic" for hierarchy "ConfigureADC:configurator|ConfigROM:ConfigMemory" File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 52
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276004): RAM logic "ConfigureADC:configurator|ConfigROM:ConfigMemory|configValues" is uninferred due to inappropriate RAM size File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigROM.vhd Line: 16
+Warning (113028): 15 out of 64 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/db/HFFrequencySynthesis.ram0_ConfigROM_8d4fd7c8.hdl.mif Line: 1
+    Warning (113027): Addresses ranging from 49 to 63 are not initialized File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/db/HFFrequencySynthesis.ram0_ConfigROM_8d4fd7c8.hdl.mif Line: 1
+Warning (13034): The following nodes have both tri-state and non-tri-state drivers
+    Warning (13035): Inserted always-enabled tri-state buffer between "sclk" and its non-tri-state driver. File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 7
+    Warning (13035): Inserted always-enabled tri-state buffer between "sdenb" and its non-tri-state driver. File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 8
+    Warning (13035): Inserted always-enabled tri-state buffer between "configok" and its non-tri-state driver. File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 10
+    Warning (13035): Inserted always-enabled tri-state buffer between "discardBuffer" and its non-tri-state driver. File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 19
+Warning (13039): The following bidirectional pins have no drivers
+    Warning (13040): bidirectional pin "resetn" has no driver File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 18
+    Warning (13040): bidirectional pin "clockBuffOut[0]" has no driver File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 17
+    Warning (13040): bidirectional pin "clockBuffOut[1]" has no driver File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 17
+    Warning (13040): bidirectional pin "clockBuffOut[2]" has no driver File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 17
+Info (13060): One or more bidirectional pins are fed by always enabled tri-state buffers
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "configok" is moved to its source File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 10
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "discardBuffer" is moved to its source File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 19
+Warning (13009): TRI or OPNDRN buffers permanently enabled
+    Warning (13010): Node "sclk~synth" File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 7
+    Warning (13010): Node "sdenb~synth" File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 8
+    Warning (13010): Node "configok~synth" File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 10
+    Warning (13010): Node "discardBuffer~synth" File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 19
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "output[0]" is stuck at GND File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 6
+    Warning (13410): Pin "output[1]" is stuck at GND File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 6
+    Warning (13410): Pin "output[2]" is stuck at GND File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 6
+    Warning (13410): Pin "output[3]" is stuck at GND File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 6
+    Warning (13410): Pin "output[4]" is stuck at GND File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 6
+    Warning (13410): Pin "output[5]" is stuck at GND File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 6
+    Warning (13410): Pin "output[6]" is stuck at GND File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 6
+    Warning (13410): Pin "output[7]" is stuck at GND File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 6
+    Warning (13410): Pin "output[8]" is stuck at GND File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 6
+    Warning (13410): Pin "output[9]" is stuck at GND File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 6
+    Warning (13410): Pin "output[10]" is stuck at GND File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 6
+    Warning (13410): Pin "output[11]" is stuck at GND File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 6
+    Warning (13410): Pin "output[12]" is stuck at GND File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 6
+    Warning (13410): Pin "output[13]" is stuck at GND File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 6
+    Warning (13410): Pin "output[14]" is stuck at GND File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 6
+    Warning (13410): Pin "output[15]" is stuck at GND File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 6
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 111 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 25 output pins
+    Info (21060): Implemented 8 bidirectional pins
+    Info (21061): Implemented 76 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 36 warnings
+    Info: Peak virtual memory: 4851 megabytes
+    Info: Processing ended: Sun Dec 14 13:43:38 2025
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:26
 
 

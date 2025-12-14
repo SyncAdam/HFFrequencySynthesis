@@ -10,7 +10,12 @@ entity ConfigureADC is
 		signal SDENB: inout std_logic;
 		signal SCLK: inout std_logic;
 		signal SDIO: out std_logic;
-		signal CLKIN: in std_logic
+		signal CLKIN: in std_logic;
+		signal CLKRECEIVED: out std_logic;
+		signal writeConfigReceived: out std_logic;
+		signal stateRegOut: out std_logic_vector(2 downto 0);
+		signal nextStateRegOut: out std_logic_vector(2 downto 0);
+		signal resetn: inout std_logic
 	);
 end entity;
 
@@ -26,8 +31,8 @@ architecture basic of ConfigureADC is
 	signal counter: std_logic_vector(6 downto 0) := B"0000000";
 	signal config: std_logic_vector(15 downto 0);
 	signal waitingBuffer: unsigned(3 downto 0) := B"0000";
-	signal clockDividerBuffer: unsigned(2 downto 0) := B"000";
 	signal discardBuffer: unsigned(0 downto 0) := B"0";
+	signal clockDividerBuffer: std_logic_vector(3 downto 0) := std_logic_vector(to_unsigned(0, 4));
 	
 	signal state: state_conf := IDLE;
 	signal nextState: state_conf := IDLE;
@@ -47,16 +52,71 @@ begin
 	ConfigMemory: entity work.ConfigRom(basic)
 					port map(counter, config);
 					
-	StatePicker: process(configOK, writeConfig, needWait, waitingDone, discarded) is
+	DebugClock: process(internalClock, resetn)
+	begin
+		CLKRECEIVED <= internalClock;
+		if(resetn = '0') then
+			CLKRECEIVED <= '0';
+		end if;
+	end process;
+	
+	DebugWriteConf: process(CLKIN, writeConfig, resetn)
+	begin
+		writeConfigReceived <= writeConfig;
+		if(resetn = '0') then
+			writeConfigReceived <= '1';
+		end if;
+	end process;
+	
+	Debugger: process(state, CLKIN, resetn)
 	begin
 		case state is
-			when IDLE =>	if(writeConfig = '1') then
+			when IDLE =>	stateRegOut <= B"111";
+								
+			when SEND =>		stateRegOut <= B"101";
+								
+			when INTER =>		stateRegOut <= B"010";
+								
+			when DISCARD =>		stateRegOut <= B"110";
+								
+			when DONE =>			stateRegOut <= B"011";
+			when others => 	stateRegOut <= B"000";
+		end case;
+		if(resetn = '0') then
+			stateRegOut <=  B"000";
+		end if;
+	end process;
+	
+	DebuggerNext: process(nextState, CLKIN, resetn)
+	begin
+		case nextState is	
+			when IDLE =>	nextStateRegOut <= B"111";
+								
+			when SEND =>		nextStateRegOut <= B"101";
+								
+			when INTER =>		nextStateRegOut <= B"010";
+								
+			when DISCARD =>		nextStateRegOut <= B"110";
+								
+			when DONE =>			nextStateRegOut <= B"011";
+			when others => 	nextStateRegOut <= B"000";
+		end case;
+		if(resetn = '0') then
+			nextStateRegOut <=  B"000";
+		end if;
+	end process;
+					
+	StatePicker: process(configOK, writeConfig, needWait, waitingDone, discarded, CLKIN, resetn) is
+	begin
+		if falling_edge(CLKIN) then
+		case state is
+			when IDLE =>	if(writeConfig = '0') then
 									nextState <= DISCARD;
 								else
 									nextState <= IDLE;
 								end if;
 								
-			when SEND =>	if(writeConfig = '1') then
+			when SEND =>	if(writeConfig = '0') then
 									if(configOK = '1') then
 										nextState <= DONE;
 									else
@@ -73,7 +133,7 @@ begin
 			when INTER =>	if(waitingDone = false) then
 									nextState <= INTER;
 								else
-									nextState <= SEND;
+									nextState <= DISCARD;
 								end if;
 								
 			when DISCARD =>	if(discarded = true) then
@@ -82,27 +142,38 @@ begin
 									nextState <= DISCARD;
 								end if;
 								
-			when DONE =>	if(writeConfig = '0') then
+			when DONE =>	if(writeConfig = '1') then
 									nextState <= IDLE;
 								else
 									nextState <= DONE;
 								end if;
 			when others => null;
 		end case;
+		if(resetn = '0') then
+			nextState <=  IDLE;
+		end if;
+		end if;
 	end process;
 	
-	StateMediator: process(nextState) is
+	StateMediator: process(nextState, CLKIN, resetn) is
 	begin
+		if rising_edge(CLKIN) then
 		state <= nextState;
+		if(resetn = '0') then
+			state <= IDLE;
+		end if;
+		end if;
 	end process;
 						
-	Outputs: process(state) is
+	Outputs: process(state, CLKIN, resetn) is
 	begin
+		if rising_edge(CLKIN) then
 		case state is
 			when IDLE =>	SDENB <= '0';
 								waiting <= false;
 								outputClock <= false;
 								discarding <= false;
+								sendData <= false;
 								
 			when SEND =>	sendData <= true;
 								waiting <= false;
@@ -130,10 +201,19 @@ begin
 			
 			when others => null;
 		end case;
+		if(resetn = '0') then
+			sendData <= false;
+			waiting <= false;
+			SDENB <= '0';
+			outputClock <= false;
+			discarding <= false;
+		end if;
+		end if;
 	end process;
 	
-	TransmitData: process(dataIndex, sendData) is
+	TransmitData: process(dataIndex, sendData, CLKIN, resetn) is
 	begin
+		if rising_edge(CLKIN) then
 		if(sendData = true) then
 			if(dataIndex < 7) then		-- in adress range
 				SDIO <= counter(6 - dataIndex);
@@ -141,14 +221,20 @@ begin
 				SDIO <= config(15 + 7 - dataIndex);
 			end if;
 		end if;
+		if(resetn = '0') then
+			SDIO <= '0';
+		end if;
+		end if;
 	end process;
 	
-	DataIndexIncrement: process(SDENB, internalClock) is
+	DataIndexIncrement: process(SDENB, internalClock, CLKIN, resetn) is
 	begin
-		if(internalClock'event and internalClock = '0' and sendData = true) then
+		if falling_edge(internalClock) then
+		if(sendData = true) then
 			if(dataIndex < 22) then
 				dataIndex <= dataIndex + 1;
 				needWait <= false;
+					configOK <= '0';
 			else
 				dataIndex <= 0;
 				needWait <= true;
@@ -160,29 +246,52 @@ begin
 				end if;
 			end if;
 		end if;
+		if(discarding) then
+			needWait <= '0';
+		end if;
+		if(resetn = '0') then
+			dataIndex <= 0;
+			configOK <= '0';
+			needWait <= false;
+			counter <= B"0000000";
+		end if;
+		end if;
 	end process;
 		
 	
-	ClockGenerate: process(outputClock, internalClock) is
+	ClockGenerate: process(outputClock, internalClock, CLKIN, resetn) is
 	begin
+		if rising_edge(internalClock) then
 		if(outputClock) then
 			SCLK <= internalClock;
 		else
-			SCLK 	<= '0';
+			SCLK <= '0';
+		end if;
+		if(resetn = '0') then
+			SCLK <= '0';
+		end if;
 		end if;
 	end process;
 	
-	ClockDivide: process(CLKIN)
+	ClockDivide: process(CLKIN, resetn)
 	begin
-			clockDividerBuffer <= clockDividerBuffer + 1;
-			if(clockDividerBuffer = B"100") then
-				clockDividerBuffer <= to_unsigned(0, 3);
+		if rising_edge(CLKIN) then
+			clockDividerBuffer <= std_logic_vector(unsigned(clockDividerBuffer) + 1);
+			
+			if(clockDividerBuffer = B"1111") then
+				clockDividerBuffer <= B"0000";
 				internalClock <= not internalClock;
 			end if;
+			if(resetn = '0') then
+				clockDividerBuffer <= B"0000";
+				internalClock <= '0';
+			end if;
+		end if;
 	end process;
 	
-	Waiter: process(internalClock, waiting)
+	Waiter: process(internalClock, waiting, CLKIN, resetn)
 	begin
+		if rising_edge(CLKIN) then
 		if(waiting and internalClock = '1') then
 			if(waitingBuffer = 7) then
 				waitingBuffer <= to_unsigned(0, 4);
@@ -192,19 +301,30 @@ begin
 				waitingDone <= false;
 			end if;
 		end if;
+		if(resetn = '0') then
+			waitingBuffer <= B"0000";
+			waitingDone <= false;
+		end if;
+		end if;
 	end process;
 	
-	Discarder: process(internalClock, discarding)
+	Discarder: process(internalClock, discarding, CLKIN, resetn)
 	begin
+		if rising_edge(internalClock) then
 		if(discardBuffer = B"1") then
 			discarded <= true;
 		end if;
-		if(waiting and discardBuffer = B"1") then
+		if(waiting) then
 			discarded <= false;
-			discardBuffer = B"0";
+			discardBuffer <= B"0";
 		end if;
 		if(internalClock = '1' and discarding) then
 			discardBuffer <= discardBuffer + 1;
+		end if;
+		if(resetn = '0') then
+			discarded <= false;
+			discardBuffer <= B"0";
+		end if;
 		end if;
 	end process;
 				

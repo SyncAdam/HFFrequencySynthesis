@@ -13,7 +13,7 @@ architecture basic of ConfigROM is
 
 	type configDataTable is array (0 to 48) of unsigned(15 downto 0);
 	
-	constant configValues: configDataTable :=
+	signal configValues: configDataTable :=
 	(
 		B"0000000110011100",	-- Config 0		quadrature modulation correction, interpolation, fifo, alarm, sinc filter !! Change needed
 		B"0000000000001110",	-- Config 1		disable parity checks

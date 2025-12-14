@@ -1,85 +1,37 @@
 # vsim -gui -l msim_transcript work.testbench 
-# Start time: 16:46:15 on Dec 13,2025
+# Start time: 13:00:47 on Dec 14,2025
+# Loading std.standard
+# ** Error: (vsim-13) Recompile work.testbench(basic) because work.mainfsm has changed.
+# Error loading design
+# End time: 13:00:48 on Dec 14,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful.
+# Compile of MainFSM.vhd was successful.
+# Compile of SynthesisCircuitry.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+vsim -gui -l msim_transcript work.testbench
+# vsim -gui -l msim_transcript work.testbench 
+# Start time: 13:00:58 on Dec 14,2025
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading work.testbench(basic)
 # Loading ieee.numeric_std(body)
 # Loading work.mainfsm(basic)
-# Loading work.sinlut(basic)
 # Loading work.configureadc(basic)
 # Loading work.configrom(basic)
-add wave  \
-sim:/testbench/clock \
-sim:/testbench/outputValue \
-sim:/testbench/writeConfig \
-sim:/testbench/configOK \
-sim:/testbench/SDENB \
-sim:/testbench/SCLK \
-sim:/testbench/SDIO
-run
-run
+# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of ConfigROM.vhd was successful.
 # Compile of ConfigureADC.vhd was successful.
-restart
-# Loading work.configureadc(basic)
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-# Compile of ConfigureADC.vhd was successful with warnings.
-# Compile of ConfigureADC.vhd was successful with warnings.
-restart
-# Loading work.configureadc(basic)
-run
-# Compile of ConfigureADC.vhd was successful with warnings.
-restart
-# Loading work.configureadc(basic)
-run
-run
-run
-run
-# ** Fatal: (vsim-3420) Array lengths do not match. Left is 3 (2 downto 0). Right is 4 (3 downto 0).
-#    Time: 3030 ns  Iteration: 2  Process: /testbench/DUT/configurator/Waiter File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd
-# Fatal error in Process Waiter at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 168
-# 
-# HDL call sequence:
-# Stopped at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd 168 Process Waiter
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd 168 Process Waiter
-# 
-# Compile of ConfigureADC.vhd was successful with warnings.
-restart
-# Loading work.configureadc(basic)
-run
-# ** Fatal: (vsim-3420) Array lengths do not match. Left is 4 (3 downto 0). Right is 3 (2 downto 0).
-#    Time: 30 ns  Iteration: 1  Process: /testbench/DUT/configurator/ClockDivide File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd
-# Fatal error in Process ClockDivide at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 158
-# 
-# HDL call sequence:
-# Stopped at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd 158 Process ClockDivide
-# 
-# Compile of ConfigureADC.vhd was successful with warnings.
-restart
-# Loading work.configureadc(basic)
-run
-# ** Fatal: (vsim-3420) Array lengths do not match. Left is 4 (3 downto 0). Right is 3 (2 downto 0).
-#    Time: 30 ns  Iteration: 1  Process: /testbench/DUT/configurator/ClockDivide File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd
-# Fatal error in Process ClockDivide at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 158
-# 
-# HDL call sequence:
-# Stopped at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd 158 Process ClockDivide
-# 
-# Compile of ConfigureADC.vhd was successful with warnings.
+# Compile of MainFSM.vhd was successful.
+# Compile of SynthesisCircuitry.vhd was successful.
+# 5 compiles, 0 failed with no errors.
 # Compile of TestBench.vhd was successful with warnings.
 # Compile of ConfigROM.vhd was successful.
 # Compile of ConfigureADC.vhd was successful.
@@ -89,515 +41,145 @@ run
 restart
 # Loading work.testbench(basic)
 # Loading work.mainfsm(basic)
-# Loading work.sinlut(basic)
 # Loading work.configureadc(basic)
 # Loading work.configrom(basic)
-run
-run
-# Compile of ConfigureADC.vhd was successful.
-restart
-# Loading work.configureadc(basic)
-run
-run
-# Compile of TestBench.vhd was successful with warnings.
-restart
-# Loading work.testbench(basic)
-run
-run
-# Compile of TestBench.vhd was successful with warnings.
-restart
-# Loading work.testbench(basic)
-run -continue
-# Compile of ConfigureADC.vhd failed with 7 errors.
-restart
-# Compile of ConfigureADC.vhd failed with 6 errors.
-# Compile of ConfigureADC.vhd failed with 2 errors.
-# Compile of ConfigureADC.vhd failed with 4 errors.
-# Compile of ConfigureADC.vhd failed with 3 errors.
-# Compile of ConfigureADC.vhd failed with 4 errors.
-# Compile of ConfigureADC.vhd failed with 2 errors.
-# Compile of ConfigureADC.vhd was successful.
-restart
-# Loading work.configureadc(basic)
-run
-# Compile of ConfigureADC.vhd failed with 2 errors.
-# Compile of ConfigureADC.vhd failed with 3 errors.
-# Compile of ConfigureADC.vhd failed with 2 errors.
-# Compile of ConfigureADC.vhd failed with 3 errors.
-# Compile of ConfigureADC.vhd failed with 2 errors.
-# Compile of ConfigureADC.vhd was successful.
-# Compile of ConfigureADC.vhd was successful.
-restart
-# Loading work.configureadc(basic)
+# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
+add wave  \
+sim:/testbench/clock \
+sim:/testbench/outputValue \
+sim:/testbench/writeConfig \
+sim:/testbench/configOK \
+sim:/testbench/SDENB \
+sim:/testbench/SCLK \
+sim:/testbench/SDIO
 run
 add wave  \
 sim:/testbench/DUT/configurator/state
-restart
-run
 add wave  \
-sim:/testbench/DUT/configurator/discarded
+sim:/testbench/DUT/configurator/nextState
 add wave  \
-sim:/testbench/DUT/configurator/needDiscard
-restart
-run
-# Compile of ConfigureADC.vhd failed with 4 errors.
-# Compile of ConfigureADC.vhd failed with 3 errors.
-# Compile of ConfigureADC.vhd failed with 2 errors.
-# Compile of ConfigureADC.vhd failed with 2 errors.
-# Compile of ConfigureADC.vhd was successful.
-restart
-# Loading work.configureadc(basic)
-run
-# Compile of ConfigureADC.vhd was successful.
-restart
-# Loading work.configureadc(basic)
-run
-# Compile of ConfigureADC.vhd failed with 15 errors.
-# Compile of ConfigureADC.vhd failed with 13 errors.
-# Compile of ConfigureADC.vhd failed with 3 errors.
-# Compile of ConfigureADC.vhd was successful.
-restart
-# Loading work.configureadc(basic)
-# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/DUT/configurator/needDiscard'. 
-run
-add wave  \
+sim:/testbench/DUT/configurator/dataIndex \
+sim:/testbench/DUT/configurator/state \
+sim:/testbench/DUT/configurator/nextState \
+sim:/testbench/DUT/configurator/sendData \
+sim:/testbench/DUT/configurator/waiting \
+sim:/testbench/DUT/configurator/discarding \
+sim:/testbench/DUT/configurator/needWait \
+sim:/testbench/DUT/configurator/waitingDone \
 sim:/testbench/DUT/configurator/discarded
 restart
+# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
 run
 add wave  \
-sim:/testbench/DUT/configurator/waiting
+sim:/testbench/DUT/configurator/internalClock
 restart
+# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
 run
-restart
 run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
+run
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of ConfigROM.vhd was successful.
 # Compile of ConfigureADC.vhd was successful.
+# Compile of MainFSM.vhd was successful.
+# Compile of SynthesisCircuitry.vhd was successful.
+# 5 compiles, 0 failed with no errors.
 restart
+# Loading work.testbench(basic)
+# Loading work.mainfsm(basic)
 # Loading work.configureadc(basic)
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-restart
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-step -over
-step -over
-step -over
-step -over
-step -over
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-restart
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-restart
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-step -over
-step -over
-step -over
-step -over
-# Compile of ConfigureADC.vhd failed with 2 errors.
-restart
+# Loading work.configrom(basic)
+# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
+run
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of ConfigROM.vhd was successful.
 # Compile of ConfigureADC.vhd was successful.
-run
+# Compile of MainFSM.vhd was successful.
+# Compile of SynthesisCircuitry.vhd was successful.
+# 5 compiles, 0 failed with no errors.
 restart
+# Loading work.testbench(basic)
+# Loading work.mainfsm(basic)
 # Loading work.configureadc(basic)
+# Loading work.configrom(basic)
+# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
 run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 203
-step -over
-step -over
-step -over
-step -over
 run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-step -over
-step -over
-step -over
-run
-# Break in Process Discarder at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 199
-run
-add wave  \
-sim:/testbench/DUT/configurator/discarding
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful.
+# Compile of MainFSM.vhd was successful.
+# Compile of SynthesisCircuitry.vhd was successful.
+# 5 compiles, 0 failed with no errors.
 restart
+# Loading work.testbench(basic)
+# Loading work.mainfsm(basic)
+# Loading work.configureadc(basic)
+# Loading work.configrom(basic)
+# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
+run
+run
+run
+run
+run
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of TestBench.vhd was successful with warnings.
+restart
+# Loading work.testbench(basic)
+# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
+run
+# Compile of ConfigROM.vhd was successful.
+# Break key hit
+# Simulation stop requested.
+restart
+# Loading work.configrom(basic)
+# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
+run
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigROM.vhd was successful.
+restart
+# Loading work.configrom(basic)
+# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
 run
 # Compile of ConfigureADC.vhd was successful.
 restart
 # Loading work.configureadc(basic)
+# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
+run
+# Compile of ConfigureADC.vhd was successful.
+restart
+# Loading work.configureadc(basic)
+# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
 run

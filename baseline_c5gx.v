@@ -32,8 +32,8 @@
 //`define ENABLE_DDR2LP
 //`define ENABLE_HSMC_XCVR
 //`define ENABLE_SMA
-//`define ENABLE_REFCLK
-//`define ENABLE_GPIO
+`define ENABLE_REFCLK
+`define ENABLE_GPIO
 
 module baseline_c5gx(
 

@@ -1,0 +1,16 @@
+
+State Machine - |MainFSM|ConfigureADC:configurator|state
+Name state.DONE state.DISCARD state.INTER state.SEND state.IDLE 
+state.IDLE 0 0 0 0 0 
+state.SEND 0 0 0 1 1 
+state.INTER 0 0 1 0 1 
+state.DISCARD 0 1 0 0 1 
+state.DONE 1 0 0 0 1 
+
+State Machine - |MainFSM|ConfigureADC:configurator|nextState
+Name nextState.DONE nextState.DISCARD nextState.INTER nextState.SEND nextState.IDLE 
+nextState.IDLE 0 0 0 0 0 
+nextState.SEND 0 0 0 1 1 
+nextState.INTER 0 0 1 0 1 
+nextState.DISCARD 0 1 0 0 1 
+nextState.DONE 1 0 0 0 1 

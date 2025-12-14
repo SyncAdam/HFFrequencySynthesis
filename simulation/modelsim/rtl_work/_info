@@ -8,24 +8,208 @@ z2
 !i10f 100
 cModel Technology
 Z0 dZ:/dev/hw/DDS/fpga_vhdl/ter/dds/simulation/modelsim
-Emainfsm
-w1765621599
-DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Econfigrom
+Z1 w1765714983
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
-8Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd
-FZ:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd
+Z5 8Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigROM.vhd
+Z6 FZ:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigROM.vhd
+l0
+L5
+V5@MVF=O@B1cjCQXOi2APM0
+!s100 UAbS6YSC=k>[9S?Rk[bJW2
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1765715580
+!i10b 1
+Z9 !s108 1765715580.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigROM.vhd|
+Z11 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigROM.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Abasic
+R2
+R3
+R4
+Z14 DEx4 work 9 configrom 0 22 5@MVF=O@B1cjCQXOi2APM0
+l70
+L12
+V7VKkz2kAS;n]c9ZScSUfF0
+!s100 HhMMBJkFO=V>PRM[k2=Ib1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Econfigureadc
+Z15 w1765716147
+R2
+R3
+R4
+R0
+Z16 8Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd
+Z17 FZ:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd
+l0
+L6
+Vk6DJ19]8:6FGazGaUj?@_2
+!s100 PR<>enPH9i;Ub^XNjKR3C0
+R7
+32
+Z18 !s110 1765716470
+!i10b 1
+Z19 !s108 1765716470.000000
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd|
+Z21 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd|
+!i113 1
+R12
+R13
+Abasic
+R14
+R2
+R3
+R4
+Z22 DEx4 work 12 configureadc 0 22 k6DJ19]8:6FGazGaUj?@_2
+l50
+L24
+V79Z^4jlmKNedE=cXGWoXm0
+!s100 H^D[5AZC3eW81ZElZzN_c0
+R7
+32
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R12
+R13
+Emainfsm
+Z23 w1765711666
+R3
+R4
+R0
+Z24 8Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd
+Z25 FZ:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd
 l0
 L4
-Vf^5Vh35=Bh70ZS0hlBZa<1
-!s100 b3nj`D1nlMWmWdaai8<WN3
-OV;C;10.5b;63
-31
-!s110 1765640759
+V7AQ[lGzW7<aLVgnZ6Hn3d3
+!s100 ?oJGkXAOO^nC_`1bSdbPf2
+R7
+32
+Z26 !s110 1765714787
 !i10b 1
-!s108 1765640759.000000
-!s90 -reportprogress|300|-93|-work|work|Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd|
-!s107 Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd|
+Z27 !s108 1765714787.000000
+Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd|
+Z29 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd|
 !i113 1
-o-93 -work work
-tExplicit 1 CvgOpt 0
+R12
+R13
+Abasic
+R2
+R22
+R3
+R4
+Z30 DEx4 work 7 mainfsm 0 22 7AQ[lGzW7<aLVgnZ6Hn3d3
+l27
+L23
+VA9b@@MjmLzj4e:CVWcYhQ0
+!s100 KWV=_BN:0QnPA43i>o@Q32
+R7
+32
+R26
+!i10b 1
+R27
+R28
+R29
+!i113 1
+R12
+R13
+Esinlut
+Z31 w1765616226
+R2
+R3
+R4
+R0
+Z32 8Z:/dev/hw/DDS/fpga_vhdl/ter/dds/SynthesisCircuitry.vhd
+Z33 FZ:/dev/hw/DDS/fpga_vhdl/ter/dds/SynthesisCircuitry.vhd
+l0
+L5
+V][D1hP<^CfC]O3?L@XQWD1
+!s100 EalKm[mD0z95i[NnbEhB<0
+R7
+32
+Z34 !s110 1765714788
+!i10b 1
+Z35 !s108 1765714788.000000
+Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/dds/SynthesisCircuitry.vhd|
+Z37 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/dds/SynthesisCircuitry.vhd|
+!i113 1
+R12
+R13
+Abasic
+R2
+R3
+R4
+DEx4 work 6 sinlut 0 22 ][D1hP<^CfC]O3?L@XQWD1
+l33
+L12
+VjUW5_@P[6U4_V]`Vz9ILG0
+!s100 SgWBn<N;VTLL1BlKYR]0X0
+R7
+32
+R34
+!i10b 1
+R35
+R36
+R37
+!i113 1
+R12
+R13
+Etestbench
+Z38 w1765714782
+R3
+R4
+R0
+Z39 8Z:\dev\hw\DDS\fpga_vhdl\ter\dds\TestBench.vhd
+Z40 FZ:\dev\hw\DDS\fpga_vhdl\ter\dds\TestBench.vhd
+l0
+L4
+VmTM2gj<z>980G2:^JcmQW3
+!s100 li1_Y<I0T[=Dji=bf<_Hm2
+R7
+32
+Z41 !s110 1765715118
+!i10b 1
+Z42 !s108 1765715118.000000
+Z43 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:\dev\hw\DDS\fpga_vhdl\ter\dds\TestBench.vhd|
+Z44 !s107 Z:\dev\hw\DDS\fpga_vhdl\ter\dds\TestBench.vhd|
+!i113 1
+R12
+R13
+Abasic
+R30
+R3
+R4
+DEx4 work 9 testbench 0 22 mTM2gj<z>980G2:^JcmQW3
+l17
+L7
+ViLkMa?4EX:=<WGF:KBhzg0
+!s100 `bDJSod=Tk^32lNMR8b`Y3
+R7
+32
+R41
+!i10b 1
+R42
+R43
+R44
+!i113 1
+R12
+R13
