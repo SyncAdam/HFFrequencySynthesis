@@ -183,3 +183,5 @@ restart
 # ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
 # This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
 run
+# End time: 13:56:39 on Dec 14,2025, Elapsed time: 0:55:41
+# Errors: 0, Warnings: 24
