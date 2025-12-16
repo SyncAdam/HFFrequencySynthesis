@@ -3,99 +3,99 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'serialTimer'
-Slack : -3.686
-TNS   : -38.521
+Slack : -5.427
+TNS   : -230.195
 
 Type  : Slow 1100mV 85C Model Setup 'ConfigureADC:configurator|internalClock'
-Slack : -3.241
-TNS   : -86.703
-
-Type  : Slow 1100mV 85C Model Hold 'ConfigureADC:configurator|internalClock'
-Slack : 0.062
-TNS   : 0.000
+Slack : -3.969
+TNS   : -82.680
 
 Type  : Slow 1100mV 85C Model Hold 'serialTimer'
-Slack : 0.281
-TNS   : 0.000
+Slack : -0.133
+TNS   : -0.133
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ConfigureADC:configurator|internalClock'
-Slack : -0.538
-TNS   : -28.365
+Type  : Slow 1100mV 85C Model Hold 'ConfigureADC:configurator|internalClock'
+Slack : 0.463
+TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'serialTimer'
 Slack : -0.538
-TNS   : -13.232
+TNS   : -46.348
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ConfigureADC:configurator|internalClock'
+Slack : -0.538
+TNS   : -27.496
 
 Type  : Slow 1100mV 0C Model Setup 'serialTimer'
-Slack : -3.885
-TNS   : -37.388
+Slack : -5.546
+TNS   : -233.810
 
 Type  : Slow 1100mV 0C Model Setup 'ConfigureADC:configurator|internalClock'
-Slack : -3.396
-TNS   : -84.754
+Slack : -4.095
+TNS   : -84.193
 
 Type  : Slow 1100mV 0C Model Hold 'serialTimer'
-Slack : -0.059
-TNS   : -0.059
+Slack : -0.507
+TNS   : -1.051
 
 Type  : Slow 1100mV 0C Model Hold 'ConfigureADC:configurator|internalClock'
-Slack : 0.105
+Slack : 0.434
 TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ConfigureADC:configurator|internalClock'
-Slack : -0.538
-TNS   : -28.237
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'serialTimer'
 Slack : -0.538
-TNS   : -14.187
+TNS   : -50.401
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ConfigureADC:configurator|internalClock'
+Slack : -0.538
+TNS   : -27.234
 
 Type  : Fast 1100mV 85C Model Setup 'serialTimer'
-Slack : -2.884
-TNS   : -16.946
+Slack : -2.394
+TNS   : -85.502
 
 Type  : Fast 1100mV 85C Model Setup 'ConfigureADC:configurator|internalClock'
-Slack : -1.619
-TNS   : -34.060
-
-Type  : Fast 1100mV 85C Model Hold 'ConfigureADC:configurator|internalClock'
-Slack : -0.220
-TNS   : -0.372
+Slack : -1.776
+TNS   : -31.447
 
 Type  : Fast 1100mV 85C Model Hold 'serialTimer'
-Slack : 0.167
+Slack : 0.024
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'ConfigureADC:configurator|internalClock'
+Slack : 0.198
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'serialTimer'
-Slack : -0.382
-TNS   : -1.535
+Slack : -0.378
+TNS   : -4.235
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ConfigureADC:configurator|internalClock'
-Slack : -0.074
-TNS   : -0.258
+Slack : 0.056
+TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'serialTimer'
-Slack : -2.422
-TNS   : -13.219
+Slack : -2.104
+TNS   : -76.376
 
 Type  : Fast 1100mV 0C Model Setup 'ConfigureADC:configurator|internalClock'
-Slack : -1.426
-TNS   : -29.818
-
-Type  : Fast 1100mV 0C Model Hold 'ConfigureADC:configurator|internalClock'
-Slack : -0.147
-TNS   : -0.226
+Slack : -1.748
+TNS   : -28.406
 
 Type  : Fast 1100mV 0C Model Hold 'serialTimer'
-Slack : -0.081
-TNS   : -0.243
+Slack : -0.206
+TNS   : -0.691
+
+Type  : Fast 1100mV 0C Model Hold 'ConfigureADC:configurator|internalClock'
+Slack : 0.176
+TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'serialTimer'
-Slack : -0.392
-TNS   : -1.603
+Slack : -0.374
+TNS   : -4.486
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ConfigureADC:configurator|internalClock'
-Slack : -0.026
-TNS   : -0.049
+Slack : 0.078
+TNS   : 0.000
 
 ------------------------------------------------------------

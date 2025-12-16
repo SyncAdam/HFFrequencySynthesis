@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 entity SinLUT is
 	port(
 		     clk: in std_logic;
-			  output: out std_logic_vector(15 downto 0)
+			  output_p: out std_logic_vector(15 downto 0)
 		 );
 end SinLUT;
 
@@ -32,13 +32,14 @@ type rawTableData is array (0 to 15) of unsigned(0 to 15);
 												 );														
 begin
 
+
 process(clk)
 
 	variable counter: integer := 0;
 	
 	begin
 	if(clk = '1') then
-		output <= std_logic_vector(values(counter));
+		output_p <= std_logic_vector(values(counter));
 		counter := counter + 1;
 		if(counter > 15) then
 			counter := 0;

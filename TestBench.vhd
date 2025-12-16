@@ -7,7 +7,7 @@ end entity;
 architecture basic of TestBench is
 
 	signal clock: std_logic := '0';
-	signal outputValue: std_logic_vector(15 downto 0);
+	signal output_p: std_logic_vector(15 downto 0);
 	signal writeConfig: std_logic := '0';
 	signal configOK: std_logic;
 	signal SDENB: std_logic;
@@ -17,7 +17,7 @@ architecture basic of TestBench is
 begin
 
 	DUT: entity work.MainFSM(basic)
-				port map(outputValue, SCLK, SDENB, SDIO, configOK, writeConfig, clock);
+				port map(output_p, SCLK, SDENB, SDIO, configOK, writeConfig, clock);
 	
 	ClockProc: process begin
 		clock <= not clock;

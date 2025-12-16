@@ -32,7 +32,7 @@ architecture basic of ConfigureADC is
 	signal counter: std_logic_vector(6 downto 0) := B"0000000";
 	signal config: std_logic_vector(15 downto 0);
 	signal waitingBuffer: unsigned(3 downto 0) := B"0000";
-	signal clockDividerBuffer: std_logic_vector(11 downto 0) := std_logic_vector(to_unsigned(0, 12));
+	signal clockDividerBuffer: std_logic_vector(2 downto 0) := std_logic_vector(to_unsigned(0, 3));
 	
 	signal state: state_conf := IDLE;
 	signal nextState: state_conf := IDLE;
@@ -46,6 +46,7 @@ architecture basic of ConfigureADC is
 	signal waitingDone: std_logic := '0';
 	signal discarded: std_logic := '0';
 	signal outputClock: std_logic := '0';
+	signal WrReEn: std_logic:= '1';
 	
 begin
 		
@@ -211,10 +212,10 @@ begin
 		end if;
 	end process;
 	
-	TransmitData: process(dataIndex, sendData, internalClock, resetn) is
+	TransmitData: process(dataIndex, discarding, internalClock, resetn) is
 	begin
-		if rising_edge(internalClock) then
-		if(sendData = '1') then
+		if falling_edge(internalClock) then
+		if(sendData = '1') then				
 			if(unsigned(dataIndex) < 7) then		-- in adress range
 				SDIO <= counter(6 - to_integer(unsigned(dataIndex)));
 			elsif(unsigned(dataIndex) < 22) then	-- in data range
@@ -224,17 +225,23 @@ begin
 		if(resetn = '0') then
 			SDIO <= '0';
 		end if;
+		if (discarding = '1') then
+			SDIO <= WrReEn; 
+		end if;
 		end if;
 	end process;
 	
 	DataIndexIncrement: process(SDENB, internalClock,  resetn) is
 	begin
-		if falling_edge(internalClock) then
+		if rising_edge(internalClock) then
 		if(sendData = '1') then
+			
 			if(unsigned(dataIndex) < 22) then
 				dataIndex <= std_logic_vector(unsigned(dataIndex) + 1);
-				needWait <= '0';
-					configOK <= '0';
+				needWait <= '0';	
+				if(unsigned(dataIndex) = 21) then
+					needWait <= '1';
+				end if;
 			else
 				dataIndex <= x"00";
 				needWait <= '1';
@@ -248,6 +255,7 @@ begin
 		end if;
 		if(discarding = '1') then
 			needWait <= '0';
+			dataIndex <= x"00";
 		end if;
 		if(resetn = '0') then
 			dataIndex <= x"00";
@@ -276,12 +284,12 @@ begin
 		if rising_edge(CLKIN) then
 			clockDividerBuffer <= std_logic_vector(unsigned(clockDividerBuffer) + 1);
 			
-			if(clockDividerBuffer = x"FFF") then
-				clockDividerBuffer <= x"000";
+			if(clockDividerBuffer = B"100") then
+				clockDividerBuffer <= B"000";
 				internalClock <= not internalClock;
 			end if;
 			if(resetn = '0') then
-				clockDividerBuffer <= x"000";
+				clockDividerBuffer <= B"000";
 				internalClock <= '0';
 			end if;
 		end if;
@@ -306,7 +314,7 @@ begin
 		end if;
 	end process;
 	
-	Discarder: process(internalClock, discarding, resetn)
+	Discarder: process(internalClock, discarding, resetn, waiting)
 	begin
 		if rising_edge(internalClock) then
 			if(discarding = '1') then
@@ -315,6 +323,10 @@ begin
 			if(discardBuffer = '1') then
 				discardBuffer <= '0';
 				discarded <= '1';
+			end if;
+			if(waiting = '1') then
+				discarded <= '0';
+				discardBuffer <= '0';
 			end if;
 		end if;
 		if(resetn = '0') then
