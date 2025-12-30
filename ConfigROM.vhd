@@ -39,10 +39,10 @@ architecture basic of ConfigROM is
 		B"0000000000000000",	-- Config 21	Not configured
 		B"0000000000000000",	-- Config 22	Not configured
 		B"0000000000000000",	-- Config 23	Not configured
-		B"0000000000000000",	-- Config 24	Not configured
+		B"0000010000000000",	-- Config 24	Not configured
 		B"0000010001000000",	-- Config 25	Not configured
-		B"0000000000100000",	-- Config 26	Not configured
-		B"0000000000000000",	-- Config 27	Not configured
+		B"0000000000000000",	-- Config 26	Not configured
+		B"0000100000000000",	-- Config 27	Not configured
 		B"0000000000000000",	-- Config 28	Not configured
 		B"0000000000000000",	-- Config 29	Not configured
 		B"0001000100010001",	-- Config 30	Not configured

@@ -1,819 +1,65 @@
 # vsim -gui -l msim_transcript work.testbench 
-# Start time: 17:27:33 on Dec 16,2025
+# Start time: 18:09:50 on Dec 30,2025
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.testbench(basic)
 # Loading ieee.numeric_std(body)
+# Loading work.testbench(basic)
 # Loading work.mainfsm(basic)
+# Loading work.sinlut(basic)
 # Loading work.configureadc(basic)
 # Loading work.configrom(basic)
 # ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
 # This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-add wave  \
+add wave -position insertpoint  \
 sim:/testbench/clock \
-sim:/testbench/outputValue \
+sim:/testbench/output_p \
 sim:/testbench/writeConfig \
 sim:/testbench/configOK \
 sim:/testbench/SDENB \
 sim:/testbench/SCLK \
-sim:/testbench/SDIO
-run
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 0 failed with no errors.
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 0 failed with no errors.
-restart
-# Loading work.testbench(basic)
-# Loading work.mainfsm(basic)
-# Loading work.configureadc(basic)
-# Loading work.configrom(basic)
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-run
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 0 failed with no errors.
-restart
-# Loading work.testbench(basic)
-# Loading work.mainfsm(basic)
-# Loading work.configureadc(basic)
-# Loading work.configrom(basic)
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-run
-# Compile of ConfigureADC.vhd failed with 3 errors.
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 0 failed with no errors.
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 0 failed with no errors.
-restart
-# Loading work.testbench(basic)
-# Loading work.mainfsm(basic)
-# Loading work.configureadc(basic)
-# Loading work.configrom(basic)
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-run
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 1580 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 1580 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 1680 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 1980 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 1980 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 2080 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 6180 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 6180 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 6280 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 6580 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 6580 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 6680 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-add wave  \
-sim:/testbench/DUT/configurator/dataIndex
-restart
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-run
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 1580 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 1580 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 1680 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 1980 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 1980 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 2080 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 6180 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 6180 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 6280 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 6580 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 6580 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 6680 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-restart
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-run
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 1580 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 1580 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 1680 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 1980 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 1980 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 2080 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 6180 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 6180 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 6280 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 6580 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 6580 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 6680 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd failed with 3 errors.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 1 failed with 3 errors.
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful with warnings.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 0 failed with no errors.
-restart
-# Loading work.testbench(basic)
-# Loading work.mainfsm(basic)
-# Loading work.configureadc(basic)
-# Loading work.configrom(basic)
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-run
-# ** Fatal: (vsim-3420) Array lengths do not match. Left is 7 (6 downto 0). Right is 8 (6 downto -1).
-#    Time: 480 ns  Iteration: 3  Process: /testbench/DUT/configurator/TransmitData File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd
-# Fatal error in Process TransmitData at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 231
-# 
-# HDL call sequence:
-# Stopped at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd 231 Process TransmitData
-# 
-restart
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful with warnings.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 0 failed with no errors.
-restart
-# Loading work.testbench(basic)
-# Loading work.mainfsm(basic)
-# Loading work.configureadc(basic)
-# Loading work.configrom(basic)
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-run
-# ** Fatal: (vsim-3420) Array lengths do not match. Left is 7 (6 downto 0). Right is 8 (6 downto -1).
-#    Time: 480 ns  Iteration: 3  Process: /testbench/DUT/configurator/TransmitData File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd
-# Fatal error in Process TransmitData at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 231
-# 
-# HDL call sequence:
-# Stopped at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd 231 Process TransmitData
-# 
-# Compile of ConfigureADC.vhd was successful.
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 0 failed with no errors.
-restart
-# Loading work.testbench(basic)
-# Loading work.mainfsm(basic)
-# Loading work.configureadc(basic)
-# Loading work.configrom(basic)
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-run
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 1380 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 1380 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 1480 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 1580 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 1580 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 1680 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 1780 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 1780 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 1880 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 3980 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 3980 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 4080 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 5980 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 5980 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 6080 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 7980 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 7980 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 8080 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 9980 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 9980 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 0 failed with no errors.
-restart
-# Loading work.testbench(basic)
-# Loading work.mainfsm(basic)
-# Loading work.configureadc(basic)
-# Loading work.configrom(basic)
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-run
-add wave  \
-sim:/testbench/DUT/configurator/state
-restart
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-run
-# Compile of ConfigureADC.vhd failed with 2 errors.
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd failed with 2 errors.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 1 failed with 2 errors.
-# Compile of ConfigureADC.vhd failed with 2 errors.
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 0 failed with no errors.
-restart
-# Loading work.testbench(basic)
-# Loading work.mainfsm(basic)
-# Loading work.configureadc(basic)
-# Loading work.configrom(basic)
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-run
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 1480 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 1480 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 1480 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 1680 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 1680 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 1680 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 1880 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 1880 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 1880 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 4080 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 4080 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 4080 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 6080 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 6080 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 6080 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 8080 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 8080 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 8080 ns  Iteration: 2  Instance: /testbench/DUT/configurator
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 0 failed with no errors.
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 0 failed with no errors.
-restart
-# Loading work.testbench(basic)
-# Loading work.mainfsm(basic)
-# Loading work.configureadc(basic)
-# Loading work.configrom(basic)
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-# Compile of ConfigureADC.vhd was successful.
-restart
-# Loading work.configureadc(basic)
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-run
-# Compile of ConfigureADC.vhd was successful.
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 0 failed with no errors.
-restart
-# Loading work.testbench(basic)
-# Loading work.mainfsm(basic)
-# Loading work.configureadc(basic)
-# Loading work.configrom(basic)
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-run
+sim:/testbench/SDIO \
+sim:/testbench/DataCLK
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: adams  Hostname: LADAMTP  ProcessID: 17868
+#           Attempting to use alternate WLF file "./wlft94zmb4".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft94zmb4
 add wave -position insertpoint  \
-sim:/testbench/DUT/configurator/needWait
-restart
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-run
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 0 failed with no errors.
-restart
-# Loading work.testbench(basic)
-# Loading work.mainfsm(basic)
-# Loading work.configureadc(basic)
-# Loading work.configrom(basic)
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-run
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 0 failed with no errors.
-restart
-# Loading work.testbench(basic)
-# Loading work.mainfsm(basic)
-# Loading work.configureadc(basic)
-# Loading work.configrom(basic)
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-run
-run
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 0 failed with no errors.
-restart
-# Loading work.testbench(basic)
-# Loading work.mainfsm(basic)
-# Loading work.configureadc(basic)
-# Loading work.configrom(basic)
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-run
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 0 failed with no errors.
-restart
-# Loading work.testbench(basic)
-# Loading work.mainfsm(basic)
-# Loading work.configureadc(basic)
-# Loading work.configrom(basic)
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-run
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 0 failed with no errors.
-restart
-# Loading work.testbench(basic)
-# Loading work.mainfsm(basic)
-# Loading work.configureadc(basic)
-# Loading work.configrom(basic)
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-run
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 0 failed with no errors.
-restart
-# Loading work.testbench(basic)
-# Loading work.mainfsm(basic)
-# Loading work.configureadc(basic)
-# Loading work.configrom(basic)
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-run
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 0 failed with no errors.
-restart
-# Loading work.testbench(basic)
-# Loading work.mainfsm(basic)
-# Loading work.configureadc(basic)
-# Loading work.configrom(basic)
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-run
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 0 failed with no errors.
-restart
-# Loading work.testbench(basic)
-# Loading work.mainfsm(basic)
-# Loading work.configureadc(basic)
-# Loading work.configrom(basic)
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-run
-add wave -position insertpoint  \
-sim:/testbench/DUT/configurator/waiting
-restart
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-run
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd failed with 3 errors.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 1 failed with 3 errors.
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 0 failed with no errors.
-restart
-# Loading work.testbench(basic)
-# Loading work.mainfsm(basic)
-# Loading work.configureadc(basic)
-# Loading work.configrom(basic)
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-run
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 0 failed with no errors.
-restart
-# Loading work.testbench(basic)
-# Loading work.mainfsm(basic)
-# Loading work.configureadc(basic)
-# Loading work.configrom(basic)
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-run
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 0 failed with no errors.
-restart
-# Loading work.testbench(basic)
-# Loading work.mainfsm(basic)
-# Loading work.configureadc(basic)
-# Loading work.configrom(basic)
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-run
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 0 failed with no errors.
-restart
-# Loading work.testbench(basic)
-# Loading work.mainfsm(basic)
-# Loading work.configureadc(basic)
-# Loading work.configrom(basic)
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-add wave  \
 sim:/testbench/DUT/configurator/counter
-restart
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-run
-run
+add wave -position insertpoint  \
+sim:/testbench/DUT/configurator/dataIndex
+# Compile of TestBench.vhd failed with 1 errors.
 # Compile of ConfigROM.vhd was successful.
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful.
+# Compile of ConfigureADC.vhd was successful with warnings.
 # Compile of MainFSM.vhd was successful.
 # Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 0 failed with no errors.
-restart
-# Loading work.testbench(basic)
-# Loading work.mainfsm(basic)
-# Loading work.configureadc(basic)
-# Loading work.configrom(basic)
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-run
-run
-run
-run
-run
-run
-run
-# Compile of TestBench.vhd was successful with warnings.
+# 5 compiles, 1 failed with 1 error.
+# Compile of TestBench.vhd failed with 1 errors.
 # Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful.
+# Compile of ConfigureADC.vhd was successful with warnings.
 # Compile of MainFSM.vhd was successful.
 # Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 0 failed with no errors.
-restart
-# Loading work.testbench(basic)
-# Loading work.mainfsm(basic)
-# Loading work.configureadc(basic)
-# Loading work.configrom(basic)
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-run
-run
-run
-run
-run
-run
+# 5 compiles, 1 failed with 1 error.
 # Compile of TestBench.vhd was successful with warnings.
 # Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 0 failed with no errors.
-restart
-# Loading work.testbench(basic)
-# Loading work.mainfsm(basic)
-# Loading work.configureadc(basic)
-# Loading work.configrom(basic)
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-restart
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
-# ** Warning: (vsim-8683) Uninitialized out port /testbench/DUT/output(15 downto 0) has no driver.
-# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
-run
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful.
+# Compile of ConfigureADC.vhd was successful with warnings.
 # Compile of MainFSM.vhd was successful.
 # Compile of SynthesisCircuitry.vhd was successful.
 # 5 compiles, 0 failed with no errors.
 # Compile of TestBench.vhd was successful with warnings.
 # Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful.
+# Compile of ConfigureADC.vhd was successful with warnings.
 # Compile of MainFSM.vhd was successful.
 # Compile of SynthesisCircuitry.vhd was successful.
 # 5 compiles, 0 failed with no errors.
+run
+run
+run
+run
+run
+add wave -position insertpoint  \
+sim:/testbench/DUT/resetn
 restart
 # Loading work.testbench(basic)
 # Loading work.mainfsm(basic)
@@ -823,5 +69,60 @@ restart
 # ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
 # This port will contribute value (U) to the signal network.
 run
-# End time: 18:41:30 on Dec 16,2025, Elapsed time: 1:13:57
-# Errors: 4, Warnings: 145
+run
+add wave -position insertpoint  \
+sim:/testbench/clock \
+sim:/testbench/output_p \
+sim:/testbench/writeConfig \
+sim:/testbench/configOK \
+sim:/testbench/SDENB \
+sim:/testbench/SCLK \
+sim:/testbench/SDIO \
+sim:/testbench/DataCLK \
+sim:/testbench/ClkOUT \
+sim:/testbench/writeConfigReceived \
+sim:/testbench/stateRegOut \
+sim:/testbench/nextStateRegOut \
+sim:/testbench/resetn \
+sim:/testbench/discardBuffer
+run
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful with warnings.
+# Compile of MainFSM.vhd was successful.
+# Compile of SynthesisCircuitry.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful with warnings.
+# Compile of MainFSM.vhd was successful.
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful with warnings.
+# Compile of MainFSM.vhd was successful.
+# Compile of SynthesisCircuitry.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+# Compile of SynthesisCircuitry.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+add wave -position insertpoint  \
+sim:/testbench/clock \
+sim:/testbench/output_p \
+sim:/testbench/writeConfig \
+sim:/testbench/configOK \
+sim:/testbench/SDENB \
+sim:/testbench/SCLK \
+sim:/testbench/SDIO \
+sim:/testbench/DataCLK \
+sim:/testbench/resetn
+run
+# Break key hit
+# Break in Process DebugWriteConf at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 64
+restart
+# Loading work.testbench(basic)
+# Loading work.mainfsm(basic)
+# Loading work.sinlut(basic)
+# Loading work.configureadc(basic)
+# Loading work.configrom(basic)
+# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
+# This port will contribute value (U) to the signal network.
+run

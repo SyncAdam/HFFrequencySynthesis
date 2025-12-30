@@ -68,6 +68,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "parallelDataClk_p",
+					"strict" : false
+				},
+				{
 					"name" : "sdio",
 					"strict" : false
 				},
@@ -128,7 +132,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "serialTimer",
+					"name" : "inputClock",
 					"strict" : false
 				}
 			]

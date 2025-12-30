@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dZ:/dev/hw/DDS/fpga_vhdl/ter/dds/simulation/modelsim
 Econfigrom
-Z1 w1765893589
+Z1 w1766091150
 Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
@@ -22,9 +22,9 @@ V5@MVF=O@B1cjCQXOi2APM0
 !s100 UAbS6YSC=k>[9S?Rk[bJW2
 Z7 OV;C;10.5b;63
 32
-Z8 !s110 1765906843
+Z8 !s110 1767117973
 !i10b 1
-Z9 !s108 1765906843.000000
+Z9 !s108 1767117973.000000
 Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:\dev\hw\DDS\fpga_vhdl\ter\dds\ConfigROM.vhd|
 Z11 !s107 Z:\dev\hw\DDS\fpga_vhdl\ter\dds\ConfigROM.vhd|
 !i113 1
@@ -37,8 +37,8 @@ R4
 Z14 DEx4 work 9 configrom 0 22 5@MVF=O@B1cjCQXOi2APM0
 l70
 L12
-V=CdT0CRKT;=[b^9`DkGWE3
-!s100 bXaz4E3]DnRe=eELVYNaW1
+Vg9F3[9G:86TDf2l7d4j?U0
+!s100 ]ClW21bm]MPjcG8`O;Ajd2
 R7
 32
 R8
@@ -50,7 +50,7 @@ R11
 R12
 R13
 Econfigureadc
-Z15 w1765906268
+Z15 w1767117968
 R2
 R3
 R4
@@ -79,8 +79,8 @@ R4
 Z20 DEx4 work 12 configureadc 0 22 k6DJ19]8:6FGazGaUj?@_2
 l51
 L24
-Vmzo<L@dkzkZbSo2LC6_jR2
-!s100 8RUViU`=fDGRUd9Q@3VPa1
+VJ01d7TDBJHdhhgkW>WMm03
+!s100 W1[_2n]oAYCBMVhAb@5[c0
 R7
 32
 R8
@@ -92,66 +92,67 @@ R19
 R12
 R13
 Emainfsm
-Z21 w1765906450
+Z21 w1767108980
+R2
 R3
 R4
 R0
 Z22 8Z:\dev\hw\DDS\fpga_vhdl\ter\dds\MainFSM.vhd
 Z23 FZ:\dev\hw\DDS\fpga_vhdl\ter\dds\MainFSM.vhd
 l0
-L4
-V7AQ[lGzW7<aLVgnZ6Hn3d3
-!s100 ?oJGkXAOO^nC_`1bSdbPf2
+L5
+V1aJYIVJDkjRMRa?k5^OIE1
+!s100 T`L8N_9gRoEVFZCm6d];l0
 R7
 32
-R8
+Z24 !s110 1767117974
 !i10b 1
-R9
-Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:\dev\hw\DDS\fpga_vhdl\ter\dds\MainFSM.vhd|
-Z25 !s107 Z:\dev\hw\DDS\fpga_vhdl\ter\dds\MainFSM.vhd|
+Z25 !s108 1767117974.000000
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:\dev\hw\DDS\fpga_vhdl\ter\dds\MainFSM.vhd|
+Z27 !s107 Z:\dev\hw\DDS\fpga_vhdl\ter\dds\MainFSM.vhd|
 !i113 1
 R12
 R13
 Abasic
 R20
+Z28 DEx4 work 6 sinlut 0 22 S]UTnF:i4c2DgQl@`nAgj1
 R2
-Z26 DEx4 work 6 sinlut 0 22 ][D1hP<^CfC]O3?L@XQWD1
 R3
 R4
-Z27 DEx4 work 7 mainfsm 0 22 7AQ[lGzW7<aLVgnZ6Hn3d3
-l27
-L23
-Vb>4UOH`K_g:`oODGgEAX70
-!s100 6Ici`o@LkE8B>zN1Uo`<:2
+Z29 DEx4 work 7 mainfsm 0 22 1aJYIVJDkjRMRa?k5^OIE1
+l32
+L26
+VbFhz7U24bQCG[_;eX@IYV2
+!s100 ?<D5gG4bChYNlO2JWeR;U0
 R7
 32
-R8
-!i10b 1
-R9
 R24
+!i10b 1
 R25
+R26
+R27
 !i113 1
 R12
 R13
 Esinlut
-Z28 w1765616226
+Z30 w1765915469
 R2
 R3
 R4
 R0
-Z29 8Z:\dev\hw\DDS\fpga_vhdl\ter\dds\SynthesisCircuitry.vhd
-Z30 FZ:\dev\hw\DDS\fpga_vhdl\ter\dds\SynthesisCircuitry.vhd
+Z31 8Z:/dev/hw/DDS/fpga_vhdl/ter/dds/SynthesisCircuitry.vhd
+Z32 FZ:/dev/hw/DDS/fpga_vhdl/ter/dds/SynthesisCircuitry.vhd
 l0
 L5
-V][D1hP<^CfC]O3?L@XQWD1
-!s100 EalKm[mD0z95i[NnbEhB<0
+VS]UTnF:i4c2DgQl@`nAgj1
+!s100 ^HPZBR8c3[khhKH9>`nl91
 R7
 32
-R8
+R24
 !i10b 1
-R9
-Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:\dev\hw\DDS\fpga_vhdl\ter\dds\SynthesisCircuitry.vhd|
-Z32 !s107 Z:\dev\hw\DDS\fpga_vhdl\ter\dds\SynthesisCircuitry.vhd|
+R25
+Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/dds/SynthesisCircuitry.vhd|
+Z34 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/dds/SynthesisCircuitry.vhd|
 !i113 1
 R12
 R13
@@ -159,28 +160,28 @@ Abasic
 R2
 R3
 R4
-R26
+R28
 l33
 L12
-Z33 VjUW5_@P[6U4_V]`Vz9ILG0
-Z34 !s100 SgWBn<N;VTLL1BlKYR]0X0
+Z35 V^3eP>9BLPFNnMU=`JhSTi1
+Z36 !s100 7j:_N3knPg5Nmg]@H4HzL3
 R7
 32
-R8
+R24
 !i10b 1
-R9
-R31
-R32
+R25
+R33
+R34
 !i113 1
 R12
 R13
 Etestbench
-Z35 w1765714782
+Z37 w1767117739
 R3
 R4
 R0
-Z36 8Z:\dev\hw\DDS\fpga_vhdl\ter\dds\TestBench.vhd
-Z37 FZ:\dev\hw\DDS\fpga_vhdl\ter\dds\TestBench.vhd
+Z38 8Z:\dev\hw\DDS\fpga_vhdl\ter\dds\TestBench.vhd
+Z39 FZ:\dev\hw\DDS\fpga_vhdl\ter\dds\TestBench.vhd
 l0
 L4
 VmTM2gj<z>980G2:^JcmQW3
@@ -189,28 +190,29 @@ R7
 32
 R8
 !i10b 1
-R9
-Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:\dev\hw\DDS\fpga_vhdl\ter\dds\TestBench.vhd|
-Z39 !s107 Z:\dev\hw\DDS\fpga_vhdl\ter\dds\TestBench.vhd|
+Z40 !s108 1767117972.000000
+Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:\dev\hw\DDS\fpga_vhdl\ter\dds\TestBench.vhd|
+Z42 !s107 Z:\dev\hw\DDS\fpga_vhdl\ter\dds\TestBench.vhd|
 !i113 1
 R12
 R13
 Abasic
-R27
+R2
+R29
 R3
 R4
 DEx4 work 9 testbench 0 22 mTM2gj<z>980G2:^JcmQW3
-l17
+l25
 L7
-ViLkMa?4EX:=<WGF:KBhzg0
-!s100 `bDJSod=Tk^32lNMR8b`Y3
+VdV]M[@>lKe5Cc:j:mQGOh3
+!s100 nb2P3@nQb]K5OLL5zGc[i0
 R7
 32
 R8
 !i10b 1
-R9
-R38
-R39
+R40
+R41
+R42
 !i113 1
 R12
 R13

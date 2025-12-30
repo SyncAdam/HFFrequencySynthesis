@@ -1,5 +1,5 @@
 Analysis & Synthesis report for HFFrequencySynthesis
-Tue Dec 16 21:07:08 2025
+Tue Dec 30 18:05:06 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -46,14 +46,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Dec 16 21:07:08 2025       ;
+; Analysis & Synthesis Status     ; Successful - Tue Dec 30 18:05:06 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; HFFrequencySynthesis                        ;
 ; Top-level Entity Name           ; MainFSM                                     ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 90                                          ;
-; Total pins                      ; 35                                          ;
+; Total registers                 ; 113                                         ;
+; Total pins                      ; 33                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -182,31 +182,31 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                     ;
-+---------------------------------------------+-------------------+
-; Resource                                    ; Usage             ;
-+---------------------------------------------+-------------------+
-; Estimate of Logic utilization (ALMs needed) ; 80                ;
-;                                             ;                   ;
-; Combinational ALUT usage for logic          ; 137               ;
-;     -- 7 input functions                    ; 1                 ;
-;     -- 6 input functions                    ; 20                ;
-;     -- 5 input functions                    ; 10                ;
-;     -- 4 input functions                    ; 23                ;
-;     -- <=3 input functions                  ; 83                ;
-;                                             ;                   ;
-; Dedicated logic registers                   ; 90                ;
-;                                             ;                   ;
-; I/O pins                                    ; 35                ;
-;                                             ;                   ;
-; Total DSP Blocks                            ; 0                 ;
-;                                             ;                   ;
-; Maximum fan-out node                        ; serialTimer~input ;
-; Maximum fan-out                             ; 56                ;
-; Total fan-out                               ; 782               ;
-; Average fan-out                             ; 2.56              ;
-+---------------------------------------------+-------------------+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 90             ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 157            ;
+;     -- 7 input functions                    ; 1              ;
+;     -- 6 input functions                    ; 21             ;
+;     -- 5 input functions                    ; 11             ;
+;     -- 4 input functions                    ; 25             ;
+;     -- <=3 input functions                  ; 99             ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 113            ;
+;                                             ;                ;
+; I/O pins                                    ; 33             ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; innerDataClock ;
+; Maximum fan-out                             ; 50             ;
+; Total fan-out                               ; 879            ;
+; Average fan-out                             ; 2.58           ;
++---------------------------------------------+----------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -214,8 +214,8 @@ refer to the applicable agreement for further details.
 +--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+--------------+--------------+
 ; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Entity Name  ; Library Name ;
 +--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+--------------+--------------+
-; |MainFSM                       ; 137 (0)             ; 90 (0)                    ; 0                 ; 0          ; 35   ; 0            ; |MainFSM                           ; MainFSM      ; work         ;
-;    |ConfigureADC:configurator| ; 87 (87)             ; 42 (42)                   ; 0                 ; 0          ; 0    ; 0            ; |MainFSM|ConfigureADC:configurator ; ConfigureADC ; work         ;
+; |MainFSM                       ; 157 (12)            ; 113 (10)                  ; 0                 ; 0          ; 33   ; 0            ; |MainFSM                           ; MainFSM      ; work         ;
+;    |ConfigureADC:configurator| ; 95 (95)             ; 55 (55)                   ; 0                 ; 0          ; 0    ; 0            ; |MainFSM|ConfigureADC:configurator ; ConfigureADC ; work         ;
 ;    |SinLUT:snythesizer|        ; 50 (50)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |MainFSM|SinLUT:snythesizer        ; SinLUT       ; work         ;
 +--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -265,12 +265,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 90    ;
-; Number of registers using Synchronous Clear  ; 57    ;
+; Total registers                              ; 113   ;
+; Number of registers using Synchronous Clear  ; 73    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 2     ;
+; Number of registers using Asynchronous Clear ; 4     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 19    ;
+; Number of registers using Clock Enable       ; 18    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -280,10 +280,9 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |MainFSM|ConfigureADC:configurator|clockDividerBuffer[2] ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |MainFSM|ConfigureADC:configurator|waitingBuffer[0]      ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |MainFSM|ConfigureADC:configurator|counter[6]            ;
-; 5:1                ; 9 bits    ; 27 LEs        ; 9 LEs                ; 18 LEs                 ; Yes        ; |MainFSM|ConfigureADC:configurator|needWait              ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |MainFSM|ConfigureADC:configurator|clockDividerBuffer[5] ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |MainFSM|ConfigureADC:configurator|counter[2]            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |MainFSM|ConfigureADC:configurator|dataIndex[0]          ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |MainFSM|ConfigureADC:configurator|nextState             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
 
@@ -293,29 +292,31 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 90                          ;
-;     CLR               ; 2                           ;
-;     ENA               ; 3                           ;
-;     ENA SCLR          ; 16                          ;
-;     SCLR              ; 41                          ;
-;     plain             ; 28                          ;
-; arriav_io_obuf        ; 8                           ;
-; arriav_lcell_comb     ; 143                         ;
-;     arith             ; 47                          ;
-;         1 data inputs ; 47                          ;
+; arriav_ff             ; 113                         ;
+;     CLR               ; 3                           ;
+;     ENA               ; 2                           ;
+;     ENA CLR           ; 1                           ;
+;     ENA SCLR          ; 15                          ;
+;     SCLR              ; 58                          ;
+;     plain             ; 34                          ;
+; arriav_io_obuf        ; 5                           ;
+; arriav_lcell_comb     ; 163                         ;
+;     arith             ; 70                          ;
+;         1 data inputs ; 69                          ;
+;         2 data inputs ; 1                           ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 95                          ;
-;         1 data inputs ; 6                           ;
-;         2 data inputs ; 16                          ;
-;         3 data inputs ; 20                          ;
-;         4 data inputs ; 23                          ;
-;         5 data inputs ; 10                          ;
-;         6 data inputs ; 20                          ;
-; boundary_port         ; 35                          ;
+;     normal            ; 92                          ;
+;         1 data inputs ; 10                          ;
+;         2 data inputs ; 13                          ;
+;         3 data inputs ; 12                          ;
+;         4 data inputs ; 25                          ;
+;         5 data inputs ; 11                          ;
+;         6 data inputs ; 21                          ;
+; boundary_port         ; 33                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.80                        ;
-; Average LUT depth     ; 2.83                        ;
+; Average LUT depth     ; 2.65                        ;
 +-----------------------+-----------------------------+
 
 
@@ -334,15 +335,15 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Dec 16 21:06:55 2025
+    Info: Processing started: Tue Dec 30 18:04:53 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off HFFrequencySynthesis -c HFFrequencySynthesis
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file baseline_c5gx.v
     Info (12023): Found entity 1: baseline_c5gx File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/baseline_c5gx.v Line: 38
 Info (12021): Found 2 design units, including 1 entities, in source file mainfsm.vhd
-    Info (12022): Found design unit 1: MainFSM-basic File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 23
-    Info (12023): Found entity 1: MainFSM File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 4
+    Info (12022): Found design unit 1: MainFSM-basic File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 26
+    Info (12023): Found entity 1: MainFSM File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file synthesiscircuitry.vhd
     Info (12022): Found design unit 1: SinLUT-basic File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/SynthesisCircuitry.vhd Line: 12
     Info (12023): Found entity 1: SinLUT File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/SynthesisCircuitry.vhd Line: 5
@@ -356,44 +357,42 @@ Info (12021): Found 2 design units, including 1 entities, in source file configr
     Info (12022): Found design unit 1: ConfigROM-basic File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigROM.vhd Line: 12
     Info (12023): Found entity 1: ConfigROM File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigROM.vhd Line: 5
 Info (12127): Elaborating entity "MainFSM" for the top level hierarchy
-Info (12129): Elaborating entity "SinLUT" using architecture "A:basic" for hierarchy "SinLUT:snythesizer" File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 31
-Info (12129): Elaborating entity "ConfigureADC" using architecture "A:basic" for hierarchy "ConfigureADC:configurator" File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 34
+Info (12129): Elaborating entity "SinLUT" using architecture "A:basic" for hierarchy "SinLUT:snythesizer" File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 47
+Info (12129): Elaborating entity "ConfigureADC" using architecture "A:basic" for hierarchy "ConfigureADC:configurator" File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 50
 Warning (10540): VHDL Signal Declaration warning at ConfigureADC.vhd(49): used explicit default value for signal "WrReEn" because signal was never assigned a value File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 49
+Warning (10812): VHDL warning at ConfigureADC.vhd(295): sensitivity list already contains internalClock File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 295
 Info (12129): Elaborating entity "ConfigROM" using architecture "A:basic" for hierarchy "ConfigureADC:configurator|ConfigROM:ConfigMemory" File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 53
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276004): RAM logic "ConfigureADC:configurator|ConfigROM:ConfigMemory|configValues" is uninferred due to inappropriate RAM size File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigROM.vhd Line: 16
 Warning (113028): 15 out of 64 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/db/HFFrequencySynthesis.ram0_ConfigROM_8d4fd7c8.hdl.mif Line: 1
     Warning (113027): Addresses ranging from 49 to 63 are not initialized File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/db/HFFrequencySynthesis.ram0_ConfigROM_8d4fd7c8.hdl.mif Line: 1
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
-    Warning (13035): Inserted always-enabled tri-state buffer between "sclk" and its non-tri-state driver. File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 7
-    Warning (13035): Inserted always-enabled tri-state buffer between "sdenb" and its non-tri-state driver. File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 8
-    Warning (13035): Inserted always-enabled tri-state buffer between "configok" and its non-tri-state driver. File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 10
-    Warning (13035): Inserted always-enabled tri-state buffer between "discardBuffer" and its non-tri-state driver. File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 19
+    Warning (13035): Inserted always-enabled tri-state buffer between "sclk" and its non-tri-state driver. File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 10
+    Warning (13035): Inserted always-enabled tri-state buffer between "sdenb" and its non-tri-state driver. File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 11
+    Warning (13035): Inserted always-enabled tri-state buffer between "configok" and its non-tri-state driver. File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 14
+    Warning (13035): Inserted always-enabled tri-state buffer between "discardBuffer" and its non-tri-state driver. File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 22
 Warning (13039): The following bidirectional pins have no drivers
-    Warning (13040): bidirectional pin "resetn" has no driver File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 18
-    Warning (13040): bidirectional pin "clockBuffOut[0]" has no driver File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 17
-    Warning (13040): bidirectional pin "clockBuffOut[1]" has no driver File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 17
-    Warning (13040): bidirectional pin "clockBuffOut[2]" has no driver File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 17
+    Warning (13040): bidirectional pin "resetn" has no driver File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 21
 Info (13060): One or more bidirectional pins are fed by always enabled tri-state buffers
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "configok" is moved to its source File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 10
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "discardBuffer" is moved to its source File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 19
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "configok" is moved to its source File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 14
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "discardBuffer" is moved to its source File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 22
 Warning (13009): TRI or OPNDRN buffers permanently enabled
-    Warning (13010): Node "sclk~synth" File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 7
-    Warning (13010): Node "sdenb~synth" File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 8
-    Warning (13010): Node "configok~synth" File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 10
-    Warning (13010): Node "discardBuffer~synth" File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 19
+    Warning (13010): Node "sclk~synth" File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 10
+    Warning (13010): Node "sdenb~synth" File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 11
+    Warning (13010): Node "configok~synth" File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 14
+    Warning (13010): Node "discardBuffer~synth" File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 22
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 207 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 225 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 25 output pins
-    Info (21060): Implemented 8 bidirectional pins
-    Info (21061): Implemented 172 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 4858 megabytes
-    Info: Processing ended: Tue Dec 16 21:07:08 2025
+    Info (21059): Implemented 26 output pins
+    Info (21060): Implemented 5 bidirectional pins
+    Info (21061): Implemented 192 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 17 warnings
+    Info: Peak virtual memory: 4854 megabytes
+    Info: Processing ended: Tue Dec 30 18:05:06 2025
     Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Total CPU time (on all processors): 00:00:27
 
 
