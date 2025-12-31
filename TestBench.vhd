@@ -21,11 +21,13 @@ architecture basic of TestBench is
 	signal nextStateRegOut:  std_logic_vector(2 downto 0);
 	signal resetn: std_logic := '1';
 	signal discardBuffer:  std_logic;
+	signal WrReEn: std_logic := '0';
+	signal WrReState: std_logic := '0';
 	
 begin
 
 	DUT: entity work.MainFSM(basic)
-				port map(output_p, DataCLK, SCLK, SDENB, SDIO, configOK, writeConfig, clock, ClkOUT, writeConfigReceived, stateRegOut, nextStateRegOut, resetn, discardBuffer);
+				port map(output_p, DataCLK, SCLK, SDENB, SDIO, configOK, writeConfig, WrReEn, WrReState, clock, ClkOUT, writeConfigReceived, stateRegOut, nextStateRegOut, resetn, discardBuffer);
 	
 	ClockProc: process begin
 		clock <= not clock;
@@ -34,12 +36,21 @@ begin
 
 	process
 	begin
+		resetn <= '1';
+		WrReEn <= '0';
+		wait for 4400ms;
+		resetn <= '0';
+		WrReEn <= '1';
+		wait for 20ms;
+		resetn <= '1';
+	end process;
+
+
+	process
+	begin
 		wait for 10ns;
 		writeConfig <= '0';	
-		wait until configOK = '1';	
-		resetn <= '0';
-		wait for 500ns;
-		resetn <= '1';
+		wait until configOK = '1';
 		wait;
 	end process;
 	

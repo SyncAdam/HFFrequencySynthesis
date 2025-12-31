@@ -76,7 +76,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "ClkOUT",
+					"name" : "WrReState",
+					"strict" : false
+				},
+				{
+					"name" : "ClkOut",
 					"strict" : false
 				},
 				{
@@ -133,6 +137,10 @@
 				},
 				{
 					"name" : "inputClock",
+					"strict" : false
+				},
+				{
+					"name" : "WrReEnButton",
 					"strict" : false
 				}
 			]

@@ -15,8 +15,9 @@ entity ConfigureADC is
 		signal writeConfigReceived: out std_logic;
 		signal stateRegOut: out std_logic_vector(2 downto 0);
 		signal nextStateRegOut: out std_logic_vector(2 downto 0);
-		signal resetn: inout std_logic;
-		signal discardBuffer: inout std_logic
+		signal resetn: in std_logic;
+		signal discardBuffer: inout std_logic;
+		signal WrReEn: in std_logic
 	);
 end entity;
 
@@ -32,7 +33,7 @@ architecture basic of ConfigureADC is
 	signal counter: std_logic_vector(6 downto 0) := B"0000000";
 	signal config: std_logic_vector(15 downto 0);
 	signal waitingBuffer: unsigned(3 downto 0) := B"0000";
-	signal clockDividerBuffer: std_logic_vector(15 downto 0) := std_logic_vector(to_unsigned(0, 16));
+	signal clockDividerBuffer: std_logic_vector(7 downto 0) := std_logic_vector(to_unsigned(0, 8));
 	
 	signal state: state_conf := IDLE;
 	signal nextState: state_conf := IDLE;
@@ -46,7 +47,6 @@ architecture basic of ConfigureADC is
 	signal waitingDone: std_logic := '0';
 	signal discarded: std_logic := '0';
 	signal outputClock: std_logic := '0';
-	signal WrReEn: std_logic:= '0';
 	
 begin
 		
@@ -150,19 +150,19 @@ begin
 								end if;
 			when others => null;
 		end case;
+		end if;
 		if(resetn = '0') then
 			nextState <=  IDLE;
-		end if;
 		end if;
 	end process;
 	
 	StateMediator: process(nextState, CLKIN, resetn) is
 	begin
 		if rising_edge(CLKIN) then
-		state <= nextState;
+			state <= nextState;
+		end if;
 		if(resetn = '0') then
 			state <= IDLE;
-		end if;
 		end if;
 	end process;
 						
@@ -170,7 +170,7 @@ begin
 	begin
 		if rising_edge(CLKIN) then
 		case state is
-			when IDLE =>	SDENB <= '0';
+			when IDLE =>	SDENB <= '1';
 								waiting <= '0';
 								outputClock <= '0';
 								discarding <= '0';
@@ -178,37 +178,40 @@ begin
 								
 			when SEND =>	sendData <= '1';
 								waiting <= '0';
-								SDENB <= '1';
+								SDENB <= '0';
 								outputClock <= '1';
+								if(unsigned(dataIndex) = 23 and internalClock = '0') then
+									outputClock <= '0';
+								end if;
 								discarding <= '0';
 								
 			when DISCARD =>	outputClock <= '0';
 								sendData <= '0';
 								waiting <= '0';
-								SDENB <= '1';
+								SDENB <= '0';
 								discarding <= '1';
 								
 			when INTER =>	sendData <= '0';
 								waiting <= '1';
-								SDENB <= '0';
+								SDENB <= '1';
 								outputClock <= '0';
 								discarding <= '0';
 								
 			when DONE => 	sendData <= '0';
 								waiting <= '0';
-								SDENB <= '0';
+								SDENB <= '1';
 								outputClock <= '0';
 								discarding <= '0';
 			
 			when others => null;
 		end case;
+		end if;
 		if(resetn = '0') then
 			sendData <= '0';
 			waiting <= '0';
 			SDENB <= '0';
 			outputClock <= '0';
 			discarding <= '0';
-		end if;
 		end if;
 	end process;
 	
@@ -219,17 +222,21 @@ begin
 			if(unsigned(dataIndex) < 7) then		-- in adress range
 				SDIO <= counter(6 - to_integer(unsigned(dataIndex)));
 			elsif(unsigned(dataIndex) < 23) then	-- in data range
-				SDIO <= config(15 + 7 - to_integer(unsigned(dataIndex)));
+				if(WrReEn = '0') then
+					SDIO <= config(15 + 7 - to_integer(unsigned(dataIndex)));
+				else
+					SDIO <= 'Z';
+				end if;
 			end if;
 		else
-			SDIO <= '0';
-		end if;
-		if(resetn = '0') then
 			SDIO <= '0';
 		end if;
 		if (discarding = '1') then
 			SDIO <= WrReEn; 
 		end if;
+		end if;
+		if(resetn = '0') then
+			SDIO <= '0';
 		end if;
 	end process;
 	
@@ -256,19 +263,19 @@ begin
 			needWait <= '0';
 			dataIndex <= x"00";
 		end if;
+		end if;
 		if(resetn = '0') then
 			dataIndex <= x"00";
 			configOK <= '0';
 			needWait <= '0';
 			counter <= B"0000000";
 		end if;
-		end if;
 	end process;
 		
 	
 	ClockGenerate: process(outputClock, internalClock, resetn) is
 	begin
-			if(outputClock = '1') then
+			if(outputClock = '1' and needWait = '0') then
 				SCLK <= internalClock;
 			else
 				SCLK <= '0';
@@ -283,14 +290,14 @@ begin
 		if rising_edge(CLKIN) then
 			clockDividerBuffer <= std_logic_vector(unsigned(clockDividerBuffer) + 1);
 			
-			if(clockDividerBuffer = x"FFFF") then
-				clockDividerBuffer <= x"0000";
+			if(clockDividerBuffer = x"32") then
+				clockDividerBuffer <= x"00";
 				internalClock <= not internalClock;
 			end if;
-			if(resetn = '0') then
-				clockDividerBuffer <= x"0000";
-				internalClock <= '0';
-			end if;
+		end if;
+		if(resetn = '0') then
+			clockDividerBuffer <= x"00";
+			internalClock <= '0';
 		end if;
 	end process;
 	
@@ -329,10 +336,11 @@ begin
 				discarded <= '0';
 				discardBuffer <= '0';
 			end if;
-			if(resetn = '0') then
-				discarded <= '0';
-				discardBuffer <= '0';
-			end if;
+			
+		end if;
+		if(resetn = '0') then
+			discarded <= '0';
+			discardBuffer <= '0';
 		end if;
 		
 	end process;

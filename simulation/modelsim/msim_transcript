@@ -1,5 +1,5 @@
 # vsim -gui -l msim_transcript work.testbench 
-# Start time: 18:09:50 on Dec 30,2025
+# Start time: 13:32:05 on Dec 31,2025
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -9,66 +9,8 @@
 # Loading work.sinlut(basic)
 # Loading work.configureadc(basic)
 # Loading work.configrom(basic)
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
+# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/resetn has no driver.
 # This port will contribute value (U) to the signal network.
-add wave -position insertpoint  \
-sim:/testbench/clock \
-sim:/testbench/output_p \
-sim:/testbench/writeConfig \
-sim:/testbench/configOK \
-sim:/testbench/SDENB \
-sim:/testbench/SCLK \
-sim:/testbench/SDIO \
-sim:/testbench/DataCLK
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: adams  Hostname: LADAMTP  ProcessID: 17868
-#           Attempting to use alternate WLF file "./wlft94zmb4".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft94zmb4
-add wave -position insertpoint  \
-sim:/testbench/DUT/configurator/counter
-add wave -position insertpoint  \
-sim:/testbench/DUT/configurator/dataIndex
-# Compile of TestBench.vhd failed with 1 errors.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful with warnings.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 1 failed with 1 error.
-# Compile of TestBench.vhd failed with 1 errors.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful with warnings.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 1 failed with 1 error.
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful with warnings.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 0 failed with no errors.
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful with warnings.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 0 failed with no errors.
-run
-run
-run
-run
-run
-add wave -position insertpoint  \
-sim:/testbench/DUT/resetn
-restart
-# Loading work.testbench(basic)
-# Loading work.mainfsm(basic)
-# Loading work.sinlut(basic)
-# Loading work.configureadc(basic)
-# Loading work.configrom(basic)
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
-run
 run
 add wave -position insertpoint  \
 sim:/testbench/clock \
@@ -84,45 +26,143 @@ sim:/testbench/writeConfigReceived \
 sim:/testbench/stateRegOut \
 sim:/testbench/nextStateRegOut \
 sim:/testbench/resetn \
-sim:/testbench/discardBuffer
+sim:/testbench/discardBuffer \
+sim:/testbench/WrReEn \
+sim:/testbench/WrReState
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: adams  Hostname: LADAMTP  ProcessID: 17868
+#           Attempting to use alternate WLF file "./wlftsg5kn9".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftsg5kn9
+restart
+# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/resetn has no driver.
+# This port will contribute value (U) to the signal network.
 run
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful with warnings.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 0 failed with no errors.
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful with warnings.
-# Compile of MainFSM.vhd was successful.
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful with warnings.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 0 failed with no errors.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 0 failed with no errors.
 add wave -position insertpoint  \
-sim:/testbench/clock \
-sim:/testbench/output_p \
-sim:/testbench/writeConfig \
-sim:/testbench/configOK \
-sim:/testbench/SDENB \
-sim:/testbench/SCLK \
-sim:/testbench/SDIO \
-sim:/testbench/DataCLK \
-sim:/testbench/resetn
+sim:/testbench/DUT/configurator/state
+restart
+# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/resetn has no driver.
+# This port will contribute value (U) to the signal network.
 run
-# Break key hit
-# Break in Process DebugWriteConf at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 64
+add wave -position insertpoint  \
+sim:/testbench/DUT/configurator/needWait
+restart
+# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/resetn has no driver.
+# This port will contribute value (U) to the signal network.
+run
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful with warnings.
+# Compile of MainFSM.vhd was successful.
+# Compile of SynthesisCircuitry.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful with warnings.
+# Compile of MainFSM.vhd was successful.
+# Compile of SynthesisCircuitry.vhd was successful.
+# 5 compiles, 0 failed with no errors.
 restart
 # Loading work.testbench(basic)
 # Loading work.mainfsm(basic)
 # Loading work.sinlut(basic)
 # Loading work.configureadc(basic)
 # Loading work.configrom(basic)
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
+# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/resetn has no driver.
 # This port will contribute value (U) to the signal network.
 run
+add wave -position insertpoint  \
+sim:/testbench/DUT/configurator/outputClock
+restart
+# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/resetn has no driver.
+# This port will contribute value (U) to the signal network.
+run
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful with warnings.
+# Compile of MainFSM.vhd was successful.
+# Compile of SynthesisCircuitry.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful with warnings.
+# Compile of MainFSM.vhd was successful.
+# Compile of SynthesisCircuitry.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+restart
+# Loading work.testbench(basic)
+# Loading work.mainfsm(basic)
+# Loading work.sinlut(basic)
+# Loading work.configureadc(basic)
+# Loading work.configrom(basic)
+# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/resetn has no driver.
+# This port will contribute value (U) to the signal network.
+run
+add wave -position insertpoint  \
+sim:/testbench/DUT/configurator/dataIndex
+restart
+# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/resetn has no driver.
+# This port will contribute value (U) to the signal network.
+run
+add wave -position insertpoint  \
+sim:/testbench/DUT/configurator/CLKIN
+add wave -position insertpoint  \
+sim:/testbench/DUT/configurator/internalClock
+restart
+# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/resetn has no driver.
+# This port will contribute value (U) to the signal network.
+run
+restart
+# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/resetn has no driver.
+# This port will contribute value (U) to the signal network.
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful with warnings.
+# Compile of MainFSM.vhd was successful.
+# Compile of SynthesisCircuitry.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful with warnings.
+# Compile of MainFSM.vhd was successful.
+# Compile of SynthesisCircuitry.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+run
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful with warnings.
+# Compile of MainFSM.vhd was successful.
+# Compile of SynthesisCircuitry.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+restart
+# Loading work.testbench(basic)
+# Loading work.mainfsm(basic)
+# Loading work.sinlut(basic)
+# Loading work.configureadc(basic)
+# Loading work.configrom(basic)
+# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/resetn has no driver.
+# This port will contribute value (U) to the signal network.
+run
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful with warnings.
+# Compile of MainFSM.vhd was successful.
+# Compile of SynthesisCircuitry.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful with warnings.
+# Compile of MainFSM.vhd was successful.
+# Compile of SynthesisCircuitry.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+restart
+# Loading work.testbench(basic)
+# Loading work.mainfsm(basic)
+# Loading work.sinlut(basic)
+# Loading work.configureadc(basic)
+# Loading work.configrom(basic)
+# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/resetn has no driver.
+# This port will contribute value (U) to the signal network.
+run
+# End time: 13:56:02 on Dec 31,2025, Elapsed time: 0:23:57
+# Errors: 0, Warnings: 14

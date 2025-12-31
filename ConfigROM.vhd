@@ -15,12 +15,13 @@ architecture basic of ConfigROM is
 	
 	signal configValues: configDataTable :=
 	(
-		B"0000010010011100",	-- Config 0		quadrature modulation correction, interpolation, fifo, alarm, sinc filter !! Change needed
+		--B"0000010010011100",	-- Config 0		quadrature modulation correction, interpolation, fifo, alarm, sinc filter !! Change needed
+		B"0000000000000000",	-- Config 0		quadrature modulation correction, interpolation, fifo, alarm, sinc filter !! Change needed
 		B"0000010000001110",	-- Config 1		disable parity checks
 		B"0111000000000000",	-- Config 2		Not configured
 		B"1111000000000000",	-- Config 3		Not configured
 		B"0000000000000000",	-- Config 4		Not configured
-		B"0000000000000000",	-- Config 5		Not configured
+		B"0000000000000000",	-- Config 5		Clear all alarms
 		B"0000000000000000",	-- Config 6		Not configured
 		B"1111111111111111",	-- Config 7		Not configured
 		B"0000000000000000",	-- Config 8		Not configured
