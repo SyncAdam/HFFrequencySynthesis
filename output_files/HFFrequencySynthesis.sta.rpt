@@ -1,5 +1,5 @@
 Timing Analyzer report for HFFrequencySynthesis
-Wed Dec 31 13:57:14 2025
+Mon Feb 02 16:56:27 2026
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -99,14 +99,14 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.14        ;
+; Average used               ; 1.13        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   4.9%      ;
-;     Processor 3            ;   4.8%      ;
-;     Processor 4            ;   4.7%      ;
+;     Processor 2            ;   4.5%      ;
+;     Processor 3            ;   4.4%      ;
+;     Processor 4            ;   4.4%      ;
 +----------------------------+-------------+
 
 
@@ -127,10 +127,10 @@ refer to the applicable agreement for further details.
 +------------+-----------------+-----------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                              ; Note ;
 +------------+-----------------+-----------------------------------------+------+
-; 109.79 MHz ; 109.79 MHz      ; ConfigureADC:configurator|internalClock ;      ;
-; 156.13 MHz ; 156.13 MHz      ; innerDataClock                          ;      ;
-; 225.63 MHz ; 225.63 MHz      ; inputClock                              ;      ;
-; 628.54 MHz ; 628.54 MHz      ; WrReEnButton                            ;      ;
+; 113.07 MHz ; 113.07 MHz      ; ConfigureADC:configurator|internalClock ;      ;
+; 151.91 MHz ; 151.91 MHz      ; innerDataClock                          ;      ;
+; 235.46 MHz ; 235.46 MHz      ; inputClock                              ;      ;
+; 633.31 MHz ; 633.31 MHz      ; WrReEnButton                            ;      ;
 +------------+-----------------+-----------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -146,23 +146,23 @@ HTML report is unavailable in plain text report export.
 +-----------------------------------------+--------+---------------+
 ; Clock                                   ; Slack  ; End Point TNS ;
 +-----------------------------------------+--------+---------------+
-; ConfigureADC:configurator|internalClock ; -5.653 ; -110.866      ;
-; innerDataClock                          ; -5.405 ; -232.842      ;
-; inputClock                              ; -3.432 ; -57.987       ;
-; WrReEnButton                            ; -0.591 ; -1.011        ;
+; innerDataClock                          ; -5.583 ; -205.746      ;
+; ConfigureADC:configurator|internalClock ; -5.367 ; -102.925      ;
+; inputClock                              ; -3.247 ; -54.700       ;
+; WrReEnButton                            ; -0.579 ; -1.452        ;
 +-----------------------------------------+--------+---------------+
 
 
-+------------------------------------------------------------------+
-; Slow 1100mV 85C Model Hold Summary                               ;
-+-----------------------------------------+--------+---------------+
-; Clock                                   ; Slack  ; End Point TNS ;
-+-----------------------------------------+--------+---------------+
-; inputClock                              ; -0.129 ; -0.138        ;
-; WrReEnButton                            ; 0.330  ; 0.000         ;
-; innerDataClock                          ; 0.355  ; 0.000         ;
-; ConfigureADC:configurator|internalClock ; 0.397  ; 0.000         ;
-+-----------------------------------------+--------+---------------+
++-----------------------------------------------------------------+
+; Slow 1100mV 85C Model Hold Summary                              ;
++-----------------------------------------+-------+---------------+
+; Clock                                   ; Slack ; End Point TNS ;
++-----------------------------------------+-------+---------------+
+; inputClock                              ; 0.265 ; 0.000         ;
+; WrReEnButton                            ; 0.347 ; 0.000         ;
+; innerDataClock                          ; 0.361 ; 0.000         ;
+; ConfigureADC:configurator|internalClock ; 0.589 ; 0.000         ;
++-----------------------------------------+-------+---------------+
 
 
 ------------------------------------------
@@ -182,10 +182,10 @@ No paths to report.
 +-----------------------------------------+--------+---------------+
 ; Clock                                   ; Slack  ; End Point TNS ;
 +-----------------------------------------+--------+---------------+
-; innerDataClock                          ; -0.538 ; -41.004       ;
-; inputClock                              ; -0.538 ; -29.546       ;
-; ConfigureADC:configurator|internalClock ; -0.538 ; -19.715       ;
-; WrReEnButton                            ; -0.538 ; -1.570        ;
+; innerDataClock                          ; -0.538 ; -38.692       ;
+; inputClock                              ; -0.538 ; -28.875       ;
+; ConfigureADC:configurator|internalClock ; -0.538 ; -20.873       ;
+; WrReEnButton                            ; -0.538 ; -2.351        ;
 +-----------------------------------------+--------+---------------+
 
 
@@ -201,10 +201,10 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------+-----------------+-----------------------------------------+------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name                              ; Note                                                 ;
 +------------+-----------------+-----------------------------------------+------------------------------------------------------+
-; 108.06 MHz ; 108.06 MHz      ; ConfigureADC:configurator|internalClock ;                                                      ;
-; 152.84 MHz ; 152.84 MHz      ; innerDataClock                          ;                                                      ;
-; 216.36 MHz ; 216.36 MHz      ; inputClock                              ;                                                      ;
-; 629.72 MHz ; 606.8 MHz       ; WrReEnButton                            ; limit due to low minimum pulse width violation (tcl) ;
+; 119.85 MHz ; 119.85 MHz      ; ConfigureADC:configurator|internalClock ;                                                      ;
+; 149.08 MHz ; 149.08 MHz      ; innerDataClock                          ;                                                      ;
+; 227.22 MHz ; 227.22 MHz      ; inputClock                              ;                                                      ;
+; 677.51 MHz ; 605.33 MHz      ; WrReEnButton                            ; limit due to low minimum pulse width violation (tcl) ;
 +------------+-----------------+-----------------------------------------+------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -214,10 +214,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------------------+--------+---------------+
 ; Clock                                   ; Slack  ; End Point TNS ;
 +-----------------------------------------+--------+---------------+
-; ConfigureADC:configurator|internalClock ; -5.822 ; -114.159      ;
-; innerDataClock                          ; -5.543 ; -235.766      ;
-; inputClock                              ; -3.622 ; -55.945       ;
-; WrReEnButton                            ; -0.588 ; -1.008        ;
+; innerDataClock                          ; -5.708 ; -210.185      ;
+; ConfigureADC:configurator|internalClock ; -5.531 ; -106.089      ;
+; inputClock                              ; -3.401 ; -52.810       ;
+; WrReEnButton                            ; -0.476 ; -1.357        ;
 +-----------------------------------------+--------+---------------+
 
 
@@ -226,10 +226,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------------------+--------+---------------+
 ; Clock                                   ; Slack  ; End Point TNS ;
 +-----------------------------------------+--------+---------------+
-; inputClock                              ; -0.402 ; -1.064        ;
-; innerDataClock                          ; 0.357  ; 0.000         ;
-; ConfigureADC:configurator|internalClock ; 0.358  ; 0.000         ;
-; WrReEnButton                            ; 0.441  ; 0.000         ;
+; inputClock                              ; -0.060 ; -0.120        ;
+; innerDataClock                          ; 0.364  ; 0.000         ;
+; WrReEnButton                            ; 0.455  ; 0.000         ;
+; ConfigureADC:configurator|internalClock ; 0.570  ; 0.000         ;
 +-----------------------------------------+--------+---------------+
 
 
@@ -250,10 +250,10 @@ No paths to report.
 +-----------------------------------------+--------+---------------+
 ; Clock                                   ; Slack  ; End Point TNS ;
 +-----------------------------------------+--------+---------------+
-; innerDataClock                          ; -0.538 ; -40.757       ;
-; inputClock                              ; -0.538 ; -31.998       ;
-; ConfigureADC:configurator|internalClock ; -0.538 ; -19.642       ;
-; WrReEnButton                            ; -0.538 ; -1.724        ;
+; innerDataClock                          ; -0.538 ; -38.265       ;
+; inputClock                              ; -0.538 ; -31.108       ;
+; ConfigureADC:configurator|internalClock ; -0.538 ; -20.974       ;
+; WrReEnButton                            ; -0.538 ; -2.580        ;
 +-----------------------------------------+--------+---------------+
 
 
@@ -269,23 +269,23 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-----------------------------------------+--------+---------------+
 ; Clock                                   ; Slack  ; End Point TNS ;
 +-----------------------------------------+--------+---------------+
-; ConfigureADC:configurator|internalClock ; -2.557 ; -44.939       ;
-; inputClock                              ; -2.310 ; -22.925       ;
-; innerDataClock                          ; -2.147 ; -97.099       ;
-; WrReEnButton                            ; 0.326  ; 0.000         ;
+; inputClock                              ; -2.436 ; -21.318       ;
+; ConfigureADC:configurator|internalClock ; -2.378 ; -41.051       ;
+; innerDataClock                          ; -2.343 ; -83.880       ;
+; WrReEnButton                            ; 0.200  ; 0.000         ;
 +-----------------------------------------+--------+---------------+
 
 
-+------------------------------------------------------------------+
-; Fast 1100mV 85C Model Hold Summary                               ;
-+-----------------------------------------+--------+---------------+
-; Clock                                   ; Slack  ; End Point TNS ;
-+-----------------------------------------+--------+---------------+
-; inputClock                              ; -0.060 ; -0.115        ;
-; innerDataClock                          ; 0.109  ; 0.000         ;
-; ConfigureADC:configurator|internalClock ; 0.153  ; 0.000         ;
-; WrReEnButton                            ; 0.181  ; 0.000         ;
-+-----------------------------------------+--------+---------------+
++-----------------------------------------------------------------+
+; Fast 1100mV 85C Model Hold Summary                              ;
++-----------------------------------------+-------+---------------+
+; Clock                                   ; Slack ; End Point TNS ;
++-----------------------------------------+-------+---------------+
+; inputClock                              ; 0.055 ; 0.000         ;
+; innerDataClock                          ; 0.111 ; 0.000         ;
+; WrReEnButton                            ; 0.185 ; 0.000         ;
+; ConfigureADC:configurator|internalClock ; 0.227 ; 0.000         ;
++-----------------------------------------+-------+---------------+
 
 
 ------------------------------------------
@@ -305,10 +305,10 @@ No paths to report.
 +-----------------------------------------+--------+---------------+
 ; Clock                                   ; Slack  ; End Point TNS ;
 +-----------------------------------------+--------+---------------+
-; inputClock                              ; -0.398 ; -3.049        ;
-; WrReEnButton                            ; -0.048 ; -0.096        ;
-; innerDataClock                          ; 0.036  ; 0.000         ;
-; ConfigureADC:configurator|internalClock ; 0.065  ; 0.000         ;
+; inputClock                              ; -0.452 ; -3.054        ;
+; WrReEnButton                            ; -0.049 ; -0.145        ;
+; ConfigureADC:configurator|internalClock ; -0.009 ; -0.063        ;
+; innerDataClock                          ; 0.094  ; 0.000         ;
 +-----------------------------------------+--------+---------------+
 
 
@@ -324,10 +324,10 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-----------------------------------------+--------+---------------+
 ; Clock                                   ; Slack  ; End Point TNS ;
 +-----------------------------------------+--------+---------------+
-; ConfigureADC:configurator|internalClock ; -2.457 ; -43.175       ;
-; innerDataClock                          ; -1.973 ; -87.530       ;
-; inputClock                              ; -1.910 ; -17.870       ;
-; WrReEnButton                            ; 0.363  ; 0.000         ;
+; ConfigureADC:configurator|internalClock ; -2.320 ; -39.517       ;
+; innerDataClock                          ; -2.128 ; -75.488       ;
+; inputClock                              ; -1.911 ; -16.731       ;
+; WrReEnButton                            ; 0.282  ; 0.000         ;
 +-----------------------------------------+--------+---------------+
 
 
@@ -336,10 +336,10 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-----------------------------------------+--------+---------------+
 ; Clock                                   ; Slack  ; End Point TNS ;
 +-----------------------------------------+--------+---------------+
-; inputClock                              ; -0.260 ; -0.716        ;
-; innerDataClock                          ; 0.090  ; 0.000         ;
-; ConfigureADC:configurator|internalClock ; 0.123  ; 0.000         ;
-; WrReEnButton                            ; 0.190  ; 0.000         ;
+; inputClock                              ; -0.129 ; -0.289        ;
+; innerDataClock                          ; 0.093  ; 0.000         ;
+; WrReEnButton                            ; 0.195  ; 0.000         ;
+; ConfigureADC:configurator|internalClock ; 0.198  ; 0.000         ;
 +-----------------------------------------+--------+---------------+
 
 
@@ -360,10 +360,10 @@ No paths to report.
 +-----------------------------------------+--------+---------------+
 ; Clock                                   ; Slack  ; End Point TNS ;
 +-----------------------------------------+--------+---------------+
-; inputClock                              ; -0.368 ; -3.180        ;
-; WrReEnButton                            ; -0.067 ; -0.134        ;
-; innerDataClock                          ; 0.064  ; 0.000         ;
-; ConfigureADC:configurator|internalClock ; 0.082  ; 0.000         ;
+; inputClock                              ; -0.414 ; -3.219        ;
+; WrReEnButton                            ; -0.068 ; -0.202        ;
+; ConfigureADC:configurator|internalClock ; 0.024  ; 0.000         ;
+; innerDataClock                          ; 0.109  ; 0.000         ;
 +-----------------------------------------+--------+---------------+
 
 
@@ -379,16 +379,16 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------------------------------------+----------+--------+----------+---------+---------------------+
 ; Clock                                    ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------------------------------+----------+--------+----------+---------+---------------------+
-; Worst-case Slack                         ; -5.822   ; -0.402 ; N/A      ; N/A     ; -0.538              ;
-;  ConfigureADC:configurator|internalClock ; -5.822   ; 0.123  ; N/A      ; N/A     ; -0.538              ;
-;  WrReEnButton                            ; -0.591   ; 0.181  ; N/A      ; N/A     ; -0.538              ;
-;  innerDataClock                          ; -5.543   ; 0.090  ; N/A      ; N/A     ; -0.538              ;
-;  inputClock                              ; -3.622   ; -0.402 ; N/A      ; N/A     ; -0.538              ;
-; Design-wide TNS                          ; -406.878 ; -1.064 ; 0.0      ; 0.0     ; -94.121             ;
-;  ConfigureADC:configurator|internalClock ; -114.159 ; 0.000  ; N/A      ; N/A     ; -19.715             ;
-;  WrReEnButton                            ; -1.011   ; 0.000  ; N/A      ; N/A     ; -1.724              ;
-;  innerDataClock                          ; -235.766 ; 0.000  ; N/A      ; N/A     ; -41.004             ;
-;  inputClock                              ; -57.987  ; -1.064 ; N/A      ; N/A     ; -31.998             ;
+; Worst-case Slack                         ; -5.708   ; -0.129 ; N/A      ; N/A     ; -0.538              ;
+;  ConfigureADC:configurator|internalClock ; -5.531   ; 0.198  ; N/A      ; N/A     ; -0.538              ;
+;  WrReEnButton                            ; -0.579   ; 0.185  ; N/A      ; N/A     ; -0.538              ;
+;  innerDataClock                          ; -5.708   ; 0.093  ; N/A      ; N/A     ; -0.538              ;
+;  inputClock                              ; -3.401   ; -0.129 ; N/A      ; N/A     ; -0.538              ;
+; Design-wide TNS                          ; -370.441 ; -0.289 ; 0.0      ; 0.0     ; -92.927             ;
+;  ConfigureADC:configurator|internalClock ; -106.089 ; 0.000  ; N/A      ; N/A     ; -20.974             ;
+;  WrReEnButton                            ; -1.452   ; 0.000  ; N/A      ; N/A     ; -2.580              ;
+;  innerDataClock                          ; -210.185 ; 0.000  ; N/A      ; N/A     ; -38.692             ;
+;  inputClock                              ; -54.700  ; -0.289 ; N/A      ; N/A     ; -31.108             ;
 +------------------------------------------+----------+--------+----------+---------+---------------------+
 
 
@@ -698,14 +698,14 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-----------------------------------------+-----------------------------------------+----------+----------+----------+----------+
 ; From Clock                              ; To Clock                                ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------------------------+-----------------------------------------+----------+----------+----------+----------+
-; ConfigureADC:configurator|internalClock ; ConfigureADC:configurator|internalClock ; 238      ; 0        ; 120      ; 0        ;
+; ConfigureADC:configurator|internalClock ; ConfigureADC:configurator|internalClock ; 246      ; 0        ; 126      ; 0        ;
 ; inputClock                              ; ConfigureADC:configurator|internalClock ; 41       ; 0        ; 13       ; 0        ;
 ; WrReEnButton                            ; ConfigureADC:configurator|internalClock ; 0        ; 0        ; 0        ; 2        ;
-; innerDataClock                          ; innerDataClock                          ; 18730    ; 0        ; 0        ; 0        ;
+; innerDataClock                          ; innerDataClock                          ; 17690    ; 0        ; 0        ; 0        ;
 ; ConfigureADC:configurator|internalClock ; inputClock                              ; 10       ; 2        ; 9        ; 0        ;
 ; innerDataClock                          ; inputClock                              ; 2        ; 2        ; 0        ; 0        ;
-; inputClock                              ; inputClock                              ; 167      ; 8        ; 11       ; 0        ;
-; WrReEnButton                            ; WrReEnButton                            ; 0        ; 0        ; 0        ; 2        ;
+; inputClock                              ; inputClock                              ; 167      ; 7        ; 11       ; 0        ;
+; WrReEnButton                            ; WrReEnButton                            ; 0        ; 0        ; 0        ; 3        ;
 +-----------------------------------------+-----------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -715,14 +715,14 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-----------------------------------------+-----------------------------------------+----------+----------+----------+----------+
 ; From Clock                              ; To Clock                                ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------------------------+-----------------------------------------+----------+----------+----------+----------+
-; ConfigureADC:configurator|internalClock ; ConfigureADC:configurator|internalClock ; 238      ; 0        ; 120      ; 0        ;
+; ConfigureADC:configurator|internalClock ; ConfigureADC:configurator|internalClock ; 246      ; 0        ; 126      ; 0        ;
 ; inputClock                              ; ConfigureADC:configurator|internalClock ; 41       ; 0        ; 13       ; 0        ;
 ; WrReEnButton                            ; ConfigureADC:configurator|internalClock ; 0        ; 0        ; 0        ; 2        ;
-; innerDataClock                          ; innerDataClock                          ; 18730    ; 0        ; 0        ; 0        ;
+; innerDataClock                          ; innerDataClock                          ; 17690    ; 0        ; 0        ; 0        ;
 ; ConfigureADC:configurator|internalClock ; inputClock                              ; 10       ; 2        ; 9        ; 0        ;
 ; innerDataClock                          ; inputClock                              ; 2        ; 2        ; 0        ; 0        ;
-; inputClock                              ; inputClock                              ; 167      ; 8        ; 11       ; 0        ;
-; WrReEnButton                            ; WrReEnButton                            ; 0        ; 0        ; 0        ; 2        ;
+; inputClock                              ; inputClock                              ; 167      ; 7        ; 11       ; 0        ;
+; WrReEnButton                            ; WrReEnButton                            ; 0        ; 0        ; 0        ; 3        ;
 +-----------------------------------------+-----------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -747,7 +747,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 2     ; 2    ;
-; Unconstrained Input Port Paths  ; 68    ; 68   ;
+; Unconstrained Input Port Paths  ; 67    ; 67   ;
 ; Unconstrained Output Ports      ; 48    ; 48   ;
 ; Unconstrained Output Port Paths ; 64    ; 64   ;
 +---------------------------------+-------+------+
@@ -903,7 +903,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Dec 31 13:57:07 2025
+    Info: Processing started: Mon Feb 02 16:56:20 2026
 Info: Command: quartus_sta HFFrequencySynthesis -c HFFrequencySynthesis
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -923,29 +923,29 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.653
+Info (332146): Worst-case setup slack is -5.583
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.653            -110.866 ConfigureADC:configurator|internalClock 
-    Info (332119):    -5.405            -232.842 innerDataClock 
-    Info (332119):    -3.432             -57.987 inputClock 
-    Info (332119):    -0.591              -1.011 WrReEnButton 
-Info (332146): Worst-case hold slack is -0.129
+    Info (332119):    -5.583            -205.746 innerDataClock 
+    Info (332119):    -5.367            -102.925 ConfigureADC:configurator|internalClock 
+    Info (332119):    -3.247             -54.700 inputClock 
+    Info (332119):    -0.579              -1.452 WrReEnButton 
+Info (332146): Worst-case hold slack is 0.265
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.129              -0.138 inputClock 
-    Info (332119):     0.330               0.000 WrReEnButton 
-    Info (332119):     0.355               0.000 innerDataClock 
-    Info (332119):     0.397               0.000 ConfigureADC:configurator|internalClock 
+    Info (332119):     0.265               0.000 inputClock 
+    Info (332119):     0.347               0.000 WrReEnButton 
+    Info (332119):     0.361               0.000 innerDataClock 
+    Info (332119):     0.589               0.000 ConfigureADC:configurator|internalClock 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -0.538
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.538             -41.004 innerDataClock 
-    Info (332119):    -0.538             -29.546 inputClock 
-    Info (332119):    -0.538             -19.715 ConfigureADC:configurator|internalClock 
-    Info (332119):    -0.538              -1.570 WrReEnButton 
+    Info (332119):    -0.538             -38.692 innerDataClock 
+    Info (332119):    -0.538             -28.875 inputClock 
+    Info (332119):    -0.538             -20.873 ConfigureADC:configurator|internalClock 
+    Info (332119):    -0.538              -2.351 WrReEnButton 
 Info (332114): Report Metastability: Found 1 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Slow 1100mV 0C Model
@@ -954,29 +954,29 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.822
+Info (332146): Worst-case setup slack is -5.708
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.822            -114.159 ConfigureADC:configurator|internalClock 
-    Info (332119):    -5.543            -235.766 innerDataClock 
-    Info (332119):    -3.622             -55.945 inputClock 
-    Info (332119):    -0.588              -1.008 WrReEnButton 
-Info (332146): Worst-case hold slack is -0.402
+    Info (332119):    -5.708            -210.185 innerDataClock 
+    Info (332119):    -5.531            -106.089 ConfigureADC:configurator|internalClock 
+    Info (332119):    -3.401             -52.810 inputClock 
+    Info (332119):    -0.476              -1.357 WrReEnButton 
+Info (332146): Worst-case hold slack is -0.060
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.402              -1.064 inputClock 
-    Info (332119):     0.357               0.000 innerDataClock 
-    Info (332119):     0.358               0.000 ConfigureADC:configurator|internalClock 
-    Info (332119):     0.441               0.000 WrReEnButton 
+    Info (332119):    -0.060              -0.120 inputClock 
+    Info (332119):     0.364               0.000 innerDataClock 
+    Info (332119):     0.455               0.000 WrReEnButton 
+    Info (332119):     0.570               0.000 ConfigureADC:configurator|internalClock 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -0.538
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.538             -40.757 innerDataClock 
-    Info (332119):    -0.538             -31.998 inputClock 
-    Info (332119):    -0.538             -19.642 ConfigureADC:configurator|internalClock 
-    Info (332119):    -0.538              -1.724 WrReEnButton 
+    Info (332119):    -0.538             -38.265 innerDataClock 
+    Info (332119):    -0.538             -31.108 inputClock 
+    Info (332119):    -0.538             -20.974 ConfigureADC:configurator|internalClock 
+    Info (332119):    -0.538              -2.580 WrReEnButton 
 Info (332114): Report Metastability: Found 1 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1100mV 85C Model
@@ -985,65 +985,65 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.557
+Info (332146): Worst-case setup slack is -2.436
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.557             -44.939 ConfigureADC:configurator|internalClock 
-    Info (332119):    -2.310             -22.925 inputClock 
-    Info (332119):    -2.147             -97.099 innerDataClock 
-    Info (332119):     0.326               0.000 WrReEnButton 
-Info (332146): Worst-case hold slack is -0.060
+    Info (332119):    -2.436             -21.318 inputClock 
+    Info (332119):    -2.378             -41.051 ConfigureADC:configurator|internalClock 
+    Info (332119):    -2.343             -83.880 innerDataClock 
+    Info (332119):     0.200               0.000 WrReEnButton 
+Info (332146): Worst-case hold slack is 0.055
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.060              -0.115 inputClock 
-    Info (332119):     0.109               0.000 innerDataClock 
-    Info (332119):     0.153               0.000 ConfigureADC:configurator|internalClock 
-    Info (332119):     0.181               0.000 WrReEnButton 
+    Info (332119):     0.055               0.000 inputClock 
+    Info (332119):     0.111               0.000 innerDataClock 
+    Info (332119):     0.185               0.000 WrReEnButton 
+    Info (332119):     0.227               0.000 ConfigureADC:configurator|internalClock 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.398
+Info (332146): Worst-case minimum pulse width slack is -0.452
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.398              -3.049 inputClock 
-    Info (332119):    -0.048              -0.096 WrReEnButton 
-    Info (332119):     0.036               0.000 innerDataClock 
-    Info (332119):     0.065               0.000 ConfigureADC:configurator|internalClock 
+    Info (332119):    -0.452              -3.054 inputClock 
+    Info (332119):    -0.049              -0.145 WrReEnButton 
+    Info (332119):    -0.009              -0.063 ConfigureADC:configurator|internalClock 
+    Info (332119):     0.094               0.000 innerDataClock 
 Info (332114): Report Metastability: Found 1 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.457
+Info (332146): Worst-case setup slack is -2.320
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.457             -43.175 ConfigureADC:configurator|internalClock 
-    Info (332119):    -1.973             -87.530 innerDataClock 
-    Info (332119):    -1.910             -17.870 inputClock 
-    Info (332119):     0.363               0.000 WrReEnButton 
-Info (332146): Worst-case hold slack is -0.260
+    Info (332119):    -2.320             -39.517 ConfigureADC:configurator|internalClock 
+    Info (332119):    -2.128             -75.488 innerDataClock 
+    Info (332119):    -1.911             -16.731 inputClock 
+    Info (332119):     0.282               0.000 WrReEnButton 
+Info (332146): Worst-case hold slack is -0.129
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.260              -0.716 inputClock 
-    Info (332119):     0.090               0.000 innerDataClock 
-    Info (332119):     0.123               0.000 ConfigureADC:configurator|internalClock 
-    Info (332119):     0.190               0.000 WrReEnButton 
+    Info (332119):    -0.129              -0.289 inputClock 
+    Info (332119):     0.093               0.000 innerDataClock 
+    Info (332119):     0.195               0.000 WrReEnButton 
+    Info (332119):     0.198               0.000 ConfigureADC:configurator|internalClock 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.368
+Info (332146): Worst-case minimum pulse width slack is -0.414
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.368              -3.180 inputClock 
-    Info (332119):    -0.067              -0.134 WrReEnButton 
-    Info (332119):     0.064               0.000 innerDataClock 
-    Info (332119):     0.082               0.000 ConfigureADC:configurator|internalClock 
+    Info (332119):    -0.414              -3.219 inputClock 
+    Info (332119):    -0.068              -0.202 WrReEnButton 
+    Info (332119):     0.024               0.000 ConfigureADC:configurator|internalClock 
+    Info (332119):     0.109               0.000 innerDataClock 
 Info (332114): Report Metastability: Found 1 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5139 megabytes
-    Info: Processing ended: Wed Dec 31 13:57:14 2025
+    Info: Peak virtual memory: 5144 megabytes
+    Info: Processing ended: Mon Feb 02 16:56:27 2026
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:07
 

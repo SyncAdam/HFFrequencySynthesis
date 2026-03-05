@@ -251,7 +251,7 @@ begin
 			else
 				dataIndex <= x"00";
 				needWait <= '1';
-				if(unsigned(counter) < 48) then 
+				if(unsigned(counter) < 8) then 
 					counter <= std_logic_vector(unsigned(counter) + 1);
 				else
 					counter <= B"0000000";

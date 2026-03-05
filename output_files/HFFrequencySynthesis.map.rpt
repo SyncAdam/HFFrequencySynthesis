@@ -1,5 +1,5 @@
 Analysis & Synthesis report for HFFrequencySynthesis
-Wed Dec 31 13:56:25 2025
+Mon Feb 02 16:55:38 2026
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -47,7 +47,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Dec 31 13:56:25 2025       ;
+; Analysis & Synthesis Status     ; Successful - Mon Feb 02 16:55:38 2026       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; HFFrequencySynthesis                        ;
 ; Top-level Entity Name           ; MainFSM                                     ;
@@ -167,7 +167,8 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -190,12 +191,12 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+--------------+
 ; Estimate of Logic utilization (ALMs needed) ; 84           ;
 ;                                             ;              ;
-; Combinational ALUT usage for logic          ; 145          ;
+; Combinational ALUT usage for logic          ; 146          ;
 ;     -- 7 input functions                    ; 0            ;
 ;     -- 6 input functions                    ; 20           ;
-;     -- 5 input functions                    ; 14           ;
-;     -- 4 input functions                    ; 23           ;
-;     -- <=3 input functions                  ; 88           ;
+;     -- 5 input functions                    ; 15           ;
+;     -- 4 input functions                    ; 26           ;
+;     -- <=3 input functions                  ; 85           ;
 ;                                             ;              ;
 ; Dedicated logic registers                   ; 109          ;
 ;                                             ;              ;
@@ -205,8 +206,8 @@ refer to the applicable agreement for further details.
 ;                                             ;              ;
 ; Maximum fan-out node                        ; resetn~input ;
 ; Maximum fan-out                             ; 58           ;
-; Total fan-out                               ; 876          ;
-; Average fan-out                             ; 2.66         ;
+; Total fan-out                               ; 884          ;
+; Average fan-out                             ; 2.68         ;
 +---------------------------------------------+--------------+
 
 
@@ -215,8 +216,8 @@ refer to the applicable agreement for further details.
 +--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+--------------+--------------+
 ; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Entity Name  ; Library Name ;
 +--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+--------------+--------------+
-; |MainFSM                       ; 145 (14)            ; 109 (12)                  ; 0                 ; 0          ; 35   ; 0            ; |MainFSM                           ; MainFSM      ; work         ;
-;    |ConfigureADC:configurator| ; 81 (81)             ; 49 (49)                   ; 0                 ; 0          ; 0    ; 0            ; |MainFSM|ConfigureADC:configurator ; ConfigureADC ; work         ;
+; |MainFSM                       ; 146 (14)            ; 109 (12)                  ; 0                 ; 0          ; 35   ; 0            ; |MainFSM                           ; MainFSM      ; work         ;
+;    |ConfigureADC:configurator| ; 82 (82)             ; 49 (49)                   ; 0                 ; 0          ; 0    ; 0            ; |MainFSM|ConfigureADC:configurator ; ConfigureADC ; work         ;
 ;    |SinLUT:synthesizer|        ; 50 (50)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |MainFSM|SinLUT:synthesizer        ; SinLUT       ; work         ;
 +--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -290,7 +291,7 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |MainFSM|ConfigureADC:configurator|dataIndex[0] ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |MainFSM|ConfigureADC:configurator|dataIndex[2] ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |MainFSM|ConfigureADC:configurator|nextState    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
 
@@ -309,16 +310,16 @@ Encoding Type:  One-Hot
 ;     SCLR              ; 32                          ;
 ;     plain             ; 26                          ;
 ; arriav_io_obuf        ; 6                           ;
-; arriav_lcell_comb     ; 151                         ;
+; arriav_lcell_comb     ; 152                         ;
 ;     arith             ; 62                          ;
 ;         1 data inputs ; 61                          ;
 ;         2 data inputs ; 1                           ;
-;     normal            ; 89                          ;
+;     normal            ; 90                          ;
 ;         1 data inputs ; 12                          ;
 ;         2 data inputs ; 6                           ;
-;         3 data inputs ; 14                          ;
-;         4 data inputs ; 23                          ;
-;         5 data inputs ; 14                          ;
+;         3 data inputs ; 11                          ;
+;         4 data inputs ; 26                          ;
+;         5 data inputs ; 15                          ;
 ;         6 data inputs ; 20                          ;
 ; boundary_port         ; 35                          ;
 ;                       ;                             ;
@@ -342,7 +343,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Dec 31 13:56:12 2025
+    Info: Processing started: Mon Feb 02 16:55:24 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off HFFrequencySynthesis -c HFFrequencySynthesis
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -393,15 +394,15 @@ Critical Warning (18061): Ignored Power-Up Level option on the following registe
     Critical Warning (18010): Register ConfigureADC:configurator|SDIO~en will power up to High File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd Line: 12
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 223 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 224 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 27 output pins
     Info (21060): Implemented 5 bidirectional pins
-    Info (21061): Implemented 188 logic cells
+    Info (21061): Implemented 189 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 4856 megabytes
-    Info: Processing ended: Wed Dec 31 13:56:25 2025
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:27
+    Info: Peak virtual memory: 4855 megabytes
+    Info: Processing ended: Mon Feb 02 16:55:38 2026
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:28
 
 

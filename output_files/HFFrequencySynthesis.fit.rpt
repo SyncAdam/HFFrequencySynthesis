@@ -1,5 +1,5 @@
 Fitter report for HFFrequencySynthesis
-Wed Dec 31 13:56:58 2025
+Mon Feb 02 16:56:11 2026
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Wed Dec 31 13:56:58 2025       ;
+; Fitter Status                   ; Successful - Mon Feb 02 16:56:11 2026       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; HFFrequencySynthesis                        ;
 ; Top-level Entity Name           ; MainFSM                                     ;
@@ -72,7 +72,7 @@ refer to the applicable agreement for further details.
 ; Device                          ; 5CGXFC5C6F27C7                              ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; 84 / 29,080 ( < 1 % )                       ;
-; Total registers                 ; 116                                         ;
+; Total registers                 ; 114                                         ;
 ; Total pins                      ; 52 / 364 ( 14 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 4,567,040 ( 0 % )                       ;
@@ -157,7 +157,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.3%      ;
+;     Processor 2            ;   1.2%      ;
 ;     Processor 3            ;   1.1%      ;
 ;     Processor 4            ;   1.0%      ;
 +----------------------------+-------------+
@@ -173,10 +173,8 @@ refer to the applicable agreement for further details.
 ; ConfigureADC:configurator|sendData      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ConfigureADC:configurator|sendData~DUPLICATE      ;                  ;                       ;
 ; ConfigureADC:configurator|state.DISCARD ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ConfigureADC:configurator|state.DISCARD~DUPLICATE ;                  ;                       ;
 ; ConfigureADC:configurator|state.INTER   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ConfigureADC:configurator|state.INTER~DUPLICATE   ;                  ;                       ;
-; ConfigureADC:configurator|state.SEND    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ConfigureADC:configurator|state.SEND~DUPLICATE    ;                  ;                       ;
-; SinLUT:synthesizer|counter[0]           ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; SinLUT:synthesizer|counter[0]~DUPLICATE           ;                  ;                       ;
-; SinLUT:synthesizer|counter[2]           ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; SinLUT:synthesizer|counter[2]~DUPLICATE           ;                  ;                       ;
 ; SinLUT:synthesizer|counter[3]           ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; SinLUT:synthesizer|counter[3]~DUPLICATE           ;                  ;                       ;
+; WrReEn                                  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; WrReEn~DUPLICATE                                  ;                  ;                       ;
 +-----------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+---------------------------------------------------+------------------+-----------------------+
 
 
@@ -198,8 +196,8 @@ refer to the applicable agreement for further details.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 349 ) ; 0.00 % ( 0 / 349 )         ; 0.00 % ( 0 / 349 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 349 ) ; 0.00 % ( 0 / 349 )         ; 0.00 % ( 0 / 349 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 350 ) ; 0.00 % ( 0 / 350 )         ; 0.00 % ( 0 / 350 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 350 ) ; 0.00 % ( 0 / 350 )         ; 0.00 % ( 0 / 350 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -222,7 +220,7 @@ refer to the applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 349 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 350 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 0 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -240,12 +238,12 @@ The pin-out file can be found in Z:/dev/hw/DDS/fpga_vhdl/ter/dds/output_files/HF
 +-------------------------------------------------------------+--------------------+-------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 84 / 29,080        ; < 1 % ;
 ; ALMs needed [=A-B+C]                                        ; 84                 ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 98 / 29,080        ; < 1 % ;
-;         [a] ALMs used for LUT logic and registers           ; 37                 ;       ;
-;         [b] ALMs used for LUT logic                         ; 43                 ;       ;
-;         [c] ALMs used for registers                         ; 18                 ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 97 / 29,080        ; < 1 % ;
+;         [a] ALMs used for LUT logic and registers           ; 39                 ;       ;
+;         [b] ALMs used for LUT logic                         ; 42                 ;       ;
+;         [c] ALMs used for registers                         ; 16                 ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 14 / 29,080        ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 13 / 29,080        ; < 1 % ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 29,080         ; 0 %   ;
 ;         [a] Due to location constrained logic               ; 0                  ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                  ;       ;
@@ -254,25 +252,25 @@ The pin-out file can be found in Z:/dev/hw/DDS/fpga_vhdl/ter/dds/output_files/HF
 ;                                                             ;                    ;       ;
 ; Difficulty packing design                                   ; Low                ;       ;
 ;                                                             ;                    ;       ;
-; Total LABs:  partially or completely used                   ; 13 / 2,908         ; < 1 % ;
-;     -- Logic LABs                                           ; 13                 ;       ;
+; Total LABs:  partially or completely used                   ; 12 / 2,908         ; < 1 % ;
+;     -- Logic LABs                                           ; 12                 ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
-; Combinational ALUT usage for logic                          ; 146                ;       ;
+; Combinational ALUT usage for logic                          ; 147                ;       ;
 ;     -- 7 input functions                                    ; 0                  ;       ;
 ;     -- 6 input functions                                    ; 20                 ;       ;
-;     -- 5 input functions                                    ; 14                 ;       ;
-;     -- 4 input functions                                    ; 23                 ;       ;
-;     -- <=3 input functions                                  ; 89                 ;       ;
-; Combinational ALUT usage for route-throughs                 ; 14                 ;       ;
+;     -- 5 input functions                                    ; 15                 ;       ;
+;     -- 4 input functions                                    ; 26                 ;       ;
+;     -- <=3 input functions                                  ; 86                 ;       ;
+; Combinational ALUT usage for route-throughs                 ; 8                  ;       ;
 ;                                                             ;                    ;       ;
-; Dedicated logic registers                                   ; 116                ;       ;
+; Dedicated logic registers                                   ; 114                ;       ;
 ;     -- By type:                                             ;                    ;       ;
 ;         -- Primary logic registers                          ; 109 / 58,160       ; < 1 % ;
-;         -- Secondary logic registers                        ; 7 / 58,160         ; < 1 % ;
+;         -- Secondary logic registers                        ; 5 / 58,160         ; < 1 % ;
 ;     -- By function:                                         ;                    ;       ;
 ;         -- Design implementation registers                  ; 109                ;       ;
-;         -- Routing optimization registers                   ; 7                  ;       ;
+;         -- Routing optimization registers                   ; 5                  ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
 ; I/O pins                                                    ; 52 / 364           ; 14 %  ;
@@ -306,12 +304,12 @@ The pin-out file can be found in Z:/dev/hw/DDS/fpga_vhdl/ter/dds/output_files/HF
 ; Channel PLLs                                                ; 0 / 6              ; 0 %   ;
 ; Impedance control blocks                                    ; 0 / 3              ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
-; Average interconnect usage (total/H/V)                      ; 0.2% / 0.2% / 0.2% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 1.9% / 2.0% / 1.7% ;       ;
-; Maximum fan-out                                             ; 62                 ;       ;
-; Highest non-global fan-out                                  ; 62                 ;       ;
-; Total fan-out                                               ; 930                ;       ;
-; Average fan-out                                             ; 2.51               ;       ;
+; Average interconnect usage (total/H/V)                      ; 0.2% / 0.2% / 0.1% ;       ;
+; Peak interconnect usage (total/H/V)                         ; 1.5% / 1.7% / 0.9% ;       ;
+; Maximum fan-out                                             ; 61                 ;       ;
+; Highest non-global fan-out                                  ; 61                 ;       ;
+; Total fan-out                                               ; 925                ;       ;
+; Average fan-out                                             ; 2.55               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -322,12 +320,12 @@ The pin-out file can be found in Z:/dev/hw/DDS/fpga_vhdl/ter/dds/output_files/HF
 +-------------------------------------------------------------+-----------------------+--------------------------------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 84 / 29080 ( < 1 % )  ; 0 / 29080 ( 0 % )              ;
 ; ALMs needed [=A-B+C]                                        ; 84                    ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 98 / 29080 ( < 1 % )  ; 0 / 29080 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 37                    ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 43                    ; 0                              ;
-;         [c] ALMs used for registers                         ; 18                    ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 97 / 29080 ( < 1 % )  ; 0 / 29080 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 39                    ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 42                    ; 0                              ;
+;         [c] ALMs used for registers                         ; 16                    ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                     ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 14 / 29080 ( < 1 % )  ; 0 / 29080 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 13 / 29080 ( < 1 % )  ; 0 / 29080 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 29080 ( 0 % )     ; 0 / 29080 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                     ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                     ; 0                              ;
@@ -336,17 +334,17 @@ The pin-out file can be found in Z:/dev/hw/DDS/fpga_vhdl/ter/dds/output_files/HF
 ;                                                             ;                       ;                                ;
 ; Difficulty packing design                                   ; Low                   ; Low                            ;
 ;                                                             ;                       ;                                ;
-; Total LABs:  partially or completely used                   ; 13 / 2908 ( < 1 % )   ; 0 / 2908 ( 0 % )               ;
-;     -- Logic LABs                                           ; 13                    ; 0                              ;
+; Total LABs:  partially or completely used                   ; 12 / 2908 ( < 1 % )   ; 0 / 2908 ( 0 % )               ;
+;     -- Logic LABs                                           ; 12                    ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
-; Combinational ALUT usage for logic                          ; 146                   ; 0                              ;
+; Combinational ALUT usage for logic                          ; 147                   ; 0                              ;
 ;     -- 7 input functions                                    ; 0                     ; 0                              ;
 ;     -- 6 input functions                                    ; 20                    ; 0                              ;
-;     -- 5 input functions                                    ; 14                    ; 0                              ;
-;     -- 4 input functions                                    ; 23                    ; 0                              ;
-;     -- <=3 input functions                                  ; 89                    ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 14                    ; 0                              ;
+;     -- 5 input functions                                    ; 15                    ; 0                              ;
+;     -- 4 input functions                                    ; 26                    ; 0                              ;
+;     -- <=3 input functions                                  ; 86                    ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 8                     ; 0                              ;
 ; Memory ALUT usage                                           ; 0                     ; 0                              ;
 ;     -- 64-address deep                                      ; 0                     ; 0                              ;
 ;     -- 32-address deep                                      ; 0                     ; 0                              ;
@@ -354,10 +352,10 @@ The pin-out file can be found in Z:/dev/hw/DDS/fpga_vhdl/ter/dds/output_files/HF
 ; Dedicated logic registers                                   ; 0                     ; 0                              ;
 ;     -- By type:                                             ;                       ;                                ;
 ;         -- Primary logic registers                          ; 109 / 58160 ( < 1 % ) ; 0 / 58160 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 7 / 58160 ( < 1 % )   ; 0 / 58160 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 5 / 58160 ( < 1 % )   ; 0 / 58160 ( 0 % )              ;
 ;     -- By function:                                         ;                       ;                                ;
 ;         -- Design implementation registers                  ; 109                   ; 0                              ;
-;         -- Routing optimization registers                   ; 7                     ; 0                              ;
+;         -- Routing optimization registers                   ; 5                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ;                                                             ;                       ;                                ;
 ; Virtual pins                                                ; 0                     ; 0                              ;
@@ -374,8 +372,8 @@ The pin-out file can be found in Z:/dev/hw/DDS/fpga_vhdl/ter/dds/output_files/HF
 ;     -- Registered Output Connections                        ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Internal Connections                                        ;                       ;                                ;
-;     -- Total Connections                                    ; 930                   ; 0                              ;
-;     -- Registered Connections                               ; 426                   ; 0                              ;
+;     -- Total Connections                                    ; 925                   ; 0                              ;
+;     -- Registered Connections                               ; 431                   ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; External Connections                                        ;                       ;                                ;
 ;     -- Top                                                  ; 10                    ; 0                              ;
@@ -407,8 +405,8 @@ The pin-out file can be found in Z:/dev/hw/DDS/fpga_vhdl/ter/dds/output_files/HF
 +--------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; Name         ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +--------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; WrReEnButton ; P12   ; 3B       ; 21           ; 0            ; 17           ; 2                     ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; inputClock   ; H12   ; 7A       ; 38           ; 61           ; 0            ; 38                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; WrReEnButton ; P12   ; 3B       ; 21           ; 0            ; 17           ; 3                     ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; inputClock   ; H12   ; 7A       ; 38           ; 61           ; 0            ; 37                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; writeconfig  ; P11   ; 3B       ; 21           ; 0            ; 0            ; 6                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 +--------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
@@ -472,7 +470,7 @@ The pin-out file can be found in Z:/dev/hw/DDS/fpga_vhdl/ter/dds/output_files/HF
 +---------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+-------------------+-----------------------------------+---------------------------+----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 ; configok      ; L7    ; 8A       ; 10           ; 61           ; 40           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; 1         ; no              ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Off               ; Series 50 Ohm without Calibration ; --                        ; no                         ; 0                   ; Off                         ; User                 ; 0 pF                 ; -                   ;
 ; discardBuffer ; D8    ; 8A       ; 10           ; 61           ; 74           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; 1         ; no              ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Off               ; Series 50 Ohm without Calibration ; --                        ; no                         ; 0                   ; Off                         ; User                 ; 0 pF                 ; -                   ;
-; resetn        ; Y15   ; 4A       ; 46           ; 0            ; 0            ; 62                    ; 0                  ; no     ; no             ; no              ; no                     ; 1         ; no              ; yes        ; no       ; Off          ; 2.5 V        ; Default          ; Off               ; Series 50 Ohm without Calibration ; --                        ; no                         ; 0                   ; Off                         ; User                 ; 0 pF                 ; -                   ;
+; resetn        ; Y15   ; 4A       ; 46           ; 0            ; 0            ; 61                    ; 0                  ; no     ; no             ; no              ; no                     ; 1         ; no              ; yes        ; no       ; Off          ; 2.5 V        ; Default          ; Off               ; Series 50 Ohm without Calibration ; --                        ; no                         ; 0                   ; Off                         ; User                 ; 0 pF                 ; -                   ;
 ; sclk          ; T21   ; 5B       ; 68           ; 14           ; 43           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; 1         ; no              ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Off               ; Series 50 Ohm without Calibration ; --                        ; no                         ; 0                   ; Off                         ; User                 ; 0 pF                 ; -                   ;
 ; sdenb         ; K25   ; 6A       ; 68           ; 40           ; 43           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; 1         ; no              ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Off               ; Series 50 Ohm without Calibration ; --                        ; no                         ; 0                   ; Off                         ; User                 ; 0 pF                 ; -                   ;
 +---------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+-------------------+-----------------------------------+---------------------------+----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
@@ -1208,9 +1206,9 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +--------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+------------------------------------+--------------+--------------+
 ; Compilation Hierarchy Node     ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Entity Name  ; Library Name ;
 +--------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+------------------------------------+--------------+--------------+
-; |MainFSM                       ; 83.5 (7.5)           ; 97.5 (8.0)                       ; 14.0 (0.5)                                        ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 146 (15)            ; 116 (12)                  ; 0 (0)         ; 0                 ; 0     ; 0          ; 52   ; 0            ; |MainFSM                           ; MainFSM      ; work         ;
-;    |ConfigureADC:configurator| ; 49.0 (49.0)          ; 55.5 (55.5)                      ; 6.5 (6.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 81 (81)             ; 53 (53)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |MainFSM|ConfigureADC:configurator ; ConfigureADC ; work         ;
-;    |SinLUT:synthesizer|        ; 27.0 (27.0)          ; 34.0 (34.0)                      ; 7.0 (7.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 50 (50)             ; 51 (51)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |MainFSM|SinLUT:synthesizer        ; SinLUT       ; work         ;
+; |MainFSM                       ; 83.5 (7.5)           ; 96.5 (8.0)                       ; 13.0 (0.5)                                        ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 147 (15)            ; 114 (13)                  ; 0 (0)         ; 0                 ; 0     ; 0          ; 52   ; 0            ; |MainFSM                           ; MainFSM      ; work         ;
+;    |ConfigureADC:configurator| ; 49.0 (49.0)          ; 58.5 (58.5)                      ; 9.5 (9.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 82 (82)             ; 52 (52)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |MainFSM|ConfigureADC:configurator ; ConfigureADC ; work         ;
+;    |SinLUT:synthesizer|        ; 27.0 (27.0)          ; 30.0 (30.0)                      ; 3.0 (3.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 50 (50)             ; 49 (49)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |MainFSM|SinLUT:synthesizer        ; SinLUT       ; work         ;
 +--------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+------------------------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1250,7 +1248,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sclk                 ; Bidir    ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; sdenb                ; Bidir    ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; configok             ; Bidir    ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
-; resetn               ; Bidir    ; -- ; --   ; (0)  ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; resetn               ; Bidir    ; -- ; (0)  ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; discardBuffer        ; Bidir    ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; writeconfig          ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; inputClock           ; Input    ; -- ; (0)  ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
@@ -1284,68 +1282,67 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sdenb                                                    ;                   ;         ;
 ; configok                                                 ;                   ;         ;
 ; resetn                                                   ;                   ;         ;
-;      - ConfigureADC:configurator|clockDividerBuffer[7]   ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|clockDividerBuffer[6]   ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|clockDividerBuffer[5]   ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|clockDividerBuffer[4]   ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|clockDividerBuffer[3]   ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|clockDividerBuffer[2]   ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|clockDividerBuffer[1]   ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|clockDividerBuffer[0]   ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|dataIndex[0]            ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|dataIndex[2]            ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|dataIndex[3]            ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|dataIndex[4]            ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|dataIndex[5]            ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|dataIndex[6]            ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|dataIndex[7]            ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|dataIndex[1]            ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|counter[0]              ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|counter[1]              ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|counter[2]              ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|counter[3]              ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|counter[4]              ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|counter[5]              ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|counter[6]              ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|internalClock           ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|CLKRECEIVED~0           ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|writeConfigReceived~0   ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|state.INTER             ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|state.DISCARD           ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|stateRegOut[0]~3        ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|state.SEND              ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|stateRegOut[1]~4        ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|state.DONE              ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|stateRegOut[2]~5        ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|nextState.DISCARD       ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|nextState.INTER         ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|nextStateRegOut[0]~4    ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|nextState.SEND          ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|nextStateRegOut[1]~5    ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|nextState.DONE          ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|nextStateRegOut[2]~6    ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|SDIO~reg0               ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|SDIO~en                 ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|discarded               ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|waitingDone             ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|state.IDLE              ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|needWait                ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|configOK~reg0           ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|discarding              ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|sendData                ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|waiting                 ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|discardBuffer~reg0      ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|waitingBuffer[2]        ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|waitingBuffer[1]        ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|waitingBuffer[0]        ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|nextState.IDLE          ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|outputClock             ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|SCLK~0                  ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|SDENB~reg0              ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|state.INTER~DUPLICATE   ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|state.DISCARD~DUPLICATE ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|state.SEND~DUPLICATE    ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|sendData~DUPLICATE      ; 1                 ; 0       ;
+;      - ConfigureADC:configurator|clockDividerBuffer[7]   ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|clockDividerBuffer[6]   ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|clockDividerBuffer[5]   ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|clockDividerBuffer[4]   ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|clockDividerBuffer[3]   ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|clockDividerBuffer[2]   ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|clockDividerBuffer[1]   ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|clockDividerBuffer[0]   ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|dataIndex[2]            ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|dataIndex[0]            ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|dataIndex[1]            ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|dataIndex[4]            ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|dataIndex[3]            ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|dataIndex[5]            ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|dataIndex[6]            ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|dataIndex[7]            ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|counter[0]              ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|counter[1]              ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|counter[2]              ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|counter[3]              ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|counter[4]              ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|counter[5]              ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|counter[6]              ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|internalClock           ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|CLKRECEIVED~0           ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|writeConfigReceived~0   ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|state.INTER             ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|state.DISCARD           ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|stateRegOut[0]~3        ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|state.SEND              ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|stateRegOut[1]~4        ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|state.DONE              ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|stateRegOut[2]~5        ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|nextState.DISCARD       ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|nextState.INTER         ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|nextStateRegOut[0]~4    ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|nextState.SEND          ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|nextStateRegOut[1]~5    ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|nextState.DONE          ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|nextStateRegOut[2]~6    ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|SDIO~reg0               ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|SDIO~en                 ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|discarded               ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|waitingDone             ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|state.IDLE              ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|needWait                ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|configOK~reg0           ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|discarding              ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|sendData                ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|waiting                 ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|discardBuffer~reg0      ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|waitingBuffer[2]        ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|waitingBuffer[1]        ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|waitingBuffer[0]        ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|nextState.IDLE          ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|outputClock             ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|SCLK~0                  ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|SDENB~reg0              ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|state.INTER~DUPLICATE   ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|state.DISCARD~DUPLICATE ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|sendData~DUPLICATE      ; 0                 ; 0       ;
 ; discardBuffer                                            ;                   ;         ;
 ; writeconfig                                              ;                   ;         ;
 ;      - ConfigureADC:configurator|writeConfigReceived~0   ; 1                 ; 0       ;
@@ -1366,22 +1363,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------+----------------------+---------+---------------+--------+----------------------+------------------+---------------------------+
 ; Name                                     ; Location             ; Fan-Out ; Usage         ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------------------------------------------+----------------------+---------+---------------+--------+----------------------+------------------+---------------------------+
-; ConfigureADC:configurator|Equal1~1       ; MLABCELL_X37_Y54_N6  ; 8       ; Sync. clear   ; no     ; --                   ; --               ; --                        ;
-; ConfigureADC:configurator|LessThan2~0    ; LABCELL_X36_Y53_N21  ; 8       ; Sync. clear   ; no     ; --                   ; --               ; --                        ;
-; ConfigureADC:configurator|SDIO~5         ; LABCELL_X36_Y53_N0   ; 2       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; ConfigureADC:configurator|SDIO~en        ; FF_X35_Y53_N49       ; 1       ; Output enable ; no     ; --                   ; --               ; --                        ;
-; ConfigureADC:configurator|counter[6]~0   ; LABCELL_X36_Y53_N3   ; 7       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; ConfigureADC:configurator|dataIndex[0]~0 ; MLABCELL_X37_Y53_N15 ; 8       ; Sync. clear   ; no     ; --                   ; --               ; --                        ;
-; ConfigureADC:configurator|dataIndex[0]~1 ; MLABCELL_X37_Y53_N9  ; 8       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; ConfigureADC:configurator|internalClock  ; FF_X37_Y54_N5        ; 29      ; Clock         ; no     ; --                   ; --               ; --                        ;
-; ConfigureADC:configurator|waiting        ; FF_X37_Y53_N50       ; 6       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; Equal0~1                                 ; LABCELL_X43_Y57_N24  ; 2       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; SinLUT:synthesizer|LessThan0~3           ; LABCELL_X43_Y54_N36  ; 35      ; Sync. clear   ; no     ; --                   ; --               ; --                        ;
-; WrReEnButton                             ; PIN_P12              ; 2       ; Clock         ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-; innerDataClock                           ; FF_X43_Y57_N59       ; 53      ; Clock         ; no     ; --                   ; --               ; --                        ;
+; ConfigureADC:configurator|Equal1~1       ; MLABCELL_X32_Y55_N6  ; 8       ; Sync. clear   ; no     ; --                   ; --               ; --                        ;
+; ConfigureADC:configurator|LessThan2~0    ; MLABCELL_X32_Y53_N51 ; 8       ; Sync. clear   ; no     ; --                   ; --               ; --                        ;
+; ConfigureADC:configurator|SDIO~5         ; LABCELL_X31_Y53_N18  ; 2       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; ConfigureADC:configurator|SDIO~en        ; FF_X30_Y53_N55       ; 1       ; Output enable ; no     ; --                   ; --               ; --                        ;
+; ConfigureADC:configurator|counter[6]~0   ; LABCELL_X31_Y53_N42  ; 7       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; ConfigureADC:configurator|dataIndex[2]~0 ; LABCELL_X31_Y53_N15  ; 8       ; Sync. clear   ; no     ; --                   ; --               ; --                        ;
+; ConfigureADC:configurator|dataIndex[2]~1 ; LABCELL_X31_Y53_N3   ; 8       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; ConfigureADC:configurator|internalClock  ; FF_X32_Y55_N29       ; 29      ; Clock         ; no     ; --                   ; --               ; --                        ;
+; ConfigureADC:configurator|waiting        ; FF_X32_Y54_N47       ; 6       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; Equal0~1                                 ; LABCELL_X45_Y59_N54  ; 2       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; SinLUT:synthesizer|LessThan0~3           ; LABCELL_X46_Y58_N36  ; 33      ; Sync. clear   ; no     ; --                   ; --               ; --                        ;
+; WrReEnButton                             ; PIN_P12              ; 3       ; Clock         ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; innerDataClock                           ; FF_X45_Y59_N5        ; 51      ; Clock         ; no     ; --                   ; --               ; --                        ;
 ; inputClock                               ; PIN_H12              ; 3       ; Clock         ; no     ; --                   ; --               ; --                        ;
-; inputClock                               ; PIN_H12              ; 36      ; Clock         ; yes    ; Global Clock         ; GCLK12           ; --                        ;
-; resetn                                   ; PIN_Y15              ; 62      ; Async. clear  ; no     ; --                   ; --               ; --                        ;
+; inputClock                               ; PIN_H12              ; 35      ; Clock         ; yes    ; Global Clock         ; GCLK12           ; --                        ;
+; resetn                                   ; PIN_Y15              ; 61      ; Async. clear  ; no     ; --                   ; --               ; --                        ;
 +------------------------------------------+----------------------+---------+---------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1390,8 +1387,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------+----------+---------+----------------------+------------------+---------------------------+
 ; Name         ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +--------------+----------+---------+----------------------+------------------+---------------------------+
-; WrReEnButton ; PIN_P12  ; 2       ; Global Clock         ; GCLK6            ; --                        ;
-; inputClock   ; PIN_H12  ; 36      ; Global Clock         ; GCLK12           ; --                        ;
+; WrReEnButton ; PIN_P12  ; 3       ; Global Clock         ; GCLK6            ; --                        ;
+; inputClock   ; PIN_H12  ; 35      ; Global Clock         ; GCLK12           ; --                        ;
 +--------------+----------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1400,22 +1397,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------+-------------------------+
 ; Routing Resource Type        ; Usage                   ;
 +------------------------------+-------------------------+
-; Block interconnects          ; 255 / 217,884 ( < 1 % ) ;
-; C12 interconnects            ; 26 / 10,080 ( < 1 % )   ;
-; C2 interconnects             ; 86 / 87,208 ( < 1 % )   ;
-; C4 interconnects             ; 75 / 41,360 ( < 1 % )   ;
+; Block interconnects          ; 237 / 217,884 ( < 1 % ) ;
+; C12 interconnects            ; 21 / 10,080 ( < 1 % )   ;
+; C2 interconnects             ; 57 / 87,208 ( < 1 % )   ;
+; C4 interconnects             ; 63 / 41,360 ( < 1 % )   ;
 ; DQS bus muxes                ; 0 / 21 ( 0 % )          ;
 ; DQS-18 I/O buses             ; 0 / 21 ( 0 % )          ;
 ; DQS-9 I/O buses              ; 0 / 21 ( 0 % )          ;
-; Direct links                 ; 54 / 217,884 ( < 1 % )  ;
+; Direct links                 ; 58 / 217,884 ( < 1 % )  ;
 ; Global clocks                ; 2 / 16 ( 13 % )         ;
 ; Horizontal periphery clocks  ; 0 / 12 ( 0 % )          ;
-; Local interconnects          ; 87 / 58,160 ( < 1 % )   ;
+; Local interconnects          ; 96 / 58,160 ( < 1 % )   ;
 ; Quadrant clocks              ; 0 / 88 ( 0 % )          ;
-; R14 interconnects            ; 74 / 9,228 ( < 1 % )    ;
-; R14/C12 interconnect drivers ; 97 / 15,096 ( < 1 % )   ;
-; R3 interconnects             ; 141 / 94,896 ( < 1 % )  ;
-; R6 interconnects             ; 136 / 194,640 ( < 1 % ) ;
+; R14 interconnects            ; 93 / 9,228 ( 1 % )      ;
+; R14/C12 interconnect drivers ; 111 / 15,096 ( < 1 % )  ;
+; R3 interconnects             ; 132 / 94,896 ( < 1 % )  ;
+; R6 interconnects             ; 141 / 194,640 ( < 1 % ) ;
 ; Spine clocks                 ; 2 / 180 ( 1 % )         ;
 ; Wire stub REs                ; 0 / 11,606 ( 0 % )      ;
 +------------------------------+-------------------------+
@@ -1584,11 +1581,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------+----------------------------------------------------+-------------------+
 ; Source Clock(s)                         ; Destination Clock(s)                               ; Delay Added in ns ;
 +-----------------------------------------+----------------------------------------------------+-------------------+
-; ConfigureADC:configurator|internalClock ; inputClock                                         ; 36.3              ;
-; inputClock                              ; inputClock                                         ; 24.3              ;
-; ConfigureADC:configurator|internalClock ; ConfigureADC:configurator|internalClock            ; 16.5              ;
-; innerDataClock                          ; innerDataClock                                     ; 15.7              ;
-; ConfigureADC:configurator|internalClock ; inputClock,ConfigureADC:configurator|internalClock ; 2.5               ;
+; ConfigureADC:configurator|internalClock ; inputClock                                         ; 42.2              ;
+; inputClock                              ; inputClock                                         ; 27.0              ;
+; innerDataClock                          ; innerDataClock                                     ; 20.3              ;
+; ConfigureADC:configurator|internalClock ; ConfigureADC:configurator|internalClock            ; 10.2              ;
+; ConfigureADC:configurator|internalClock ; inputClock,ConfigureADC:configurator|internalClock ; 3.9               ;
 +-----------------------------------------+----------------------------------------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
@@ -1599,73 +1596,74 @@ This will disable optimization of problematic paths and expose them for further 
 +-------------------------------------------------+---------------------------------------------+-------------------+
 ; Source Register                                 ; Destination Register                        ; Delay Added in ns ;
 +-------------------------------------------------+---------------------------------------------+-------------------+
-; innerDataClock                                  ; innerDataClock                              ; 5.768             ;
-; ConfigureADC:configurator|internalClock         ; ConfigureADC:configurator|internalClock     ; 5.483             ;
-; ConfigureADC:configurator|dataIndex[3]          ; ConfigureADC:configurator|outputClock       ; 3.808             ;
-; ConfigureADC:configurator|dataIndex[4]          ; ConfigureADC:configurator|outputClock       ; 3.769             ;
-; ConfigureADC:configurator|dataIndex[2]          ; ConfigureADC:configurator|outputClock       ; 3.587             ;
-; ConfigureADC:configurator|dataIndex[0]          ; ConfigureADC:configurator|outputClock       ; 3.585             ;
-; ConfigureADC:configurator|dataIndex[1]          ; ConfigureADC:configurator|outputClock       ; 3.553             ;
-; ConfigureADC:configurator|dataIndex[7]          ; ConfigureADC:configurator|outputClock       ; 3.421             ;
-; ConfigureADC:configurator|dataIndex[5]          ; ConfigureADC:configurator|outputClock       ; 3.404             ;
-; ConfigureADC:configurator|dataIndex[6]          ; ConfigureADC:configurator|outputClock       ; 3.378             ;
-; ConfigureADC:configurator|discarded             ; ConfigureADC:configurator|nextState.DISCARD ; 3.277             ;
-; ConfigureADC:configurator|configOK~reg0         ; ConfigureADC:configurator|nextState.DONE    ; 2.840             ;
-; ConfigureADC:configurator|waitingDone           ; ConfigureADC:configurator|nextState.DISCARD ; 2.817             ;
-; ConfigureADC:configurator|needWait              ; ConfigureADC:configurator|nextState.INTER   ; 2.817             ;
-; ConfigureADC:configurator|clockDividerBuffer[7] ; ConfigureADC:configurator|internalClock     ; 1.427             ;
-; ConfigureADC:configurator|clockDividerBuffer[6] ; ConfigureADC:configurator|internalClock     ; 1.427             ;
-; ConfigureADC:configurator|clockDividerBuffer[5] ; ConfigureADC:configurator|internalClock     ; 1.427             ;
-; ConfigureADC:configurator|clockDividerBuffer[4] ; ConfigureADC:configurator|internalClock     ; 1.427             ;
-; ConfigureADC:configurator|clockDividerBuffer[1] ; ConfigureADC:configurator|internalClock     ; 1.427             ;
-; ConfigureADC:configurator|clockDividerBuffer[0] ; ConfigureADC:configurator|internalClock     ; 1.427             ;
-; ConfigureADC:configurator|clockDividerBuffer[3] ; ConfigureADC:configurator|internalClock     ; 1.427             ;
-; ConfigureADC:configurator|clockDividerBuffer[2] ; ConfigureADC:configurator|internalClock     ; 1.427             ;
-; ConfigureADC:configurator|state.SEND            ; ConfigureADC:configurator|outputClock       ; 1.405             ;
-; ConfigureADC:configurator|waitingBuffer[0]      ; ConfigureADC:configurator|waitingDone       ; 1.033             ;
-; ConfigureADC:configurator|waitingBuffer[2]      ; ConfigureADC:configurator|waitingDone       ; 0.968             ;
-; ConfigureADC:configurator|waitingBuffer[1]      ; ConfigureADC:configurator|waitingDone       ; 0.960             ;
-; clockDivideBuffer[4]                            ; innerDataClock                              ; 0.889             ;
-; clockDivideBuffer[7]                            ; innerDataClock                              ; 0.889             ;
-; clockDivideBuffer[5]                            ; innerDataClock                              ; 0.871             ;
-; SinLUT:synthesizer|counter[3]                   ; SinLUT:synthesizer|output_p[11]             ; 0.852             ;
-; SinLUT:synthesizer|counter[2]                   ; SinLUT:synthesizer|output_p[11]             ; 0.850             ;
-; SinLUT:synthesizer|counter[0]                   ; SinLUT:synthesizer|output_p[11]             ; 0.832             ;
-; SinLUT:synthesizer|counter[1]                   ; SinLUT:synthesizer|output_p[15]             ; 0.786             ;
-; clockDivideBuffer[0]                            ; innerDataClock                              ; 0.770             ;
-; clockDivideBuffer[1]                            ; innerDataClock                              ; 0.718             ;
-; clockDivideBuffer[2]                            ; innerDataClock                              ; 0.717             ;
-; WrReEn                                          ; WrReState~reg0                              ; 0.599             ;
-; clockDivideBuffer[6]                            ; innerDataClock                              ; 0.585             ;
-; ConfigureADC:configurator|counter[5]            ; ConfigureADC:configurator|SDIO~reg0         ; 0.507             ;
-; ConfigureADC:configurator|counter[3]            ; ConfigureADC:configurator|SDIO~reg0         ; 0.501             ;
-; ConfigureADC:configurator|counter[0]            ; ConfigureADC:configurator|SDIO~reg0         ; 0.499             ;
-; ConfigureADC:configurator|discardBuffer~reg0    ; ConfigureADC:configurator|discarded         ; 0.471             ;
-; ConfigureADC:configurator|counter[4]            ; ConfigureADC:configurator|configOK~reg0     ; 0.421             ;
-; ConfigureADC:configurator|counter[1]            ; ConfigureADC:configurator|SDIO~reg0         ; 0.408             ;
-; ConfigureADC:configurator|counter[2]            ; ConfigureADC:configurator|SDIO~reg0         ; 0.381             ;
-; clockDivideBuffer[3]                            ; innerDataClock                              ; 0.370             ;
-; ConfigureADC:configurator|counter[6]            ; ConfigureADC:configurator|configOK~reg0     ; 0.196             ;
-; SinLUT:synthesizer|counter[30]                  ; SinLUT:synthesizer|counter[31]              ; 0.187             ;
-; SinLUT:synthesizer|counter[18]                  ; SinLUT:synthesizer|counter[31]              ; 0.186             ;
-; SinLUT:synthesizer|counter[7]                   ; SinLUT:synthesizer|counter[31]              ; 0.186             ;
-; SinLUT:synthesizer|counter[15]                  ; SinLUT:synthesizer|counter[31]              ; 0.181             ;
-; SinLUT:synthesizer|counter[12]                  ; SinLUT:synthesizer|counter[31]              ; 0.179             ;
-; SinLUT:synthesizer|counter[8]                   ; SinLUT:synthesizer|counter[31]              ; 0.166             ;
-; SinLUT:synthesizer|counter[5]                   ; SinLUT:synthesizer|counter[31]              ; 0.166             ;
-; ConfigureADC:configurator|discarding            ; ConfigureADC:configurator|SDIO~reg0         ; 0.166             ;
-; ConfigureADC:configurator|sendData              ; ConfigureADC:configurator|SDIO~reg0         ; 0.166             ;
-; SinLUT:synthesizer|counter[13]                  ; SinLUT:synthesizer|counter[31]              ; 0.161             ;
-; SinLUT:synthesizer|counter[6]                   ; SinLUT:synthesizer|counter[31]              ; 0.161             ;
-; SinLUT:synthesizer|counter[16]                  ; SinLUT:synthesizer|counter[31]              ; 0.160             ;
-; SinLUT:synthesizer|counter[9]                   ; SinLUT:synthesizer|counter[31]              ; 0.159             ;
-; SinLUT:synthesizer|counter[29]                  ; SinLUT:synthesizer|counter[31]              ; 0.083             ;
-; SinLUT:synthesizer|counter[17]                  ; SinLUT:synthesizer|counter[31]              ; 0.082             ;
-; SinLUT:synthesizer|counter[14]                  ; SinLUT:synthesizer|counter[31]              ; 0.053             ;
-; SinLUT:synthesizer|counter[28]                  ; SinLUT:synthesizer|counter[31]              ; 0.032             ;
-; SinLUT:synthesizer|counter[10]                  ; SinLUT:synthesizer|counter[31]              ; 0.013             ;
+; ConfigureADC:configurator|internalClock         ; ConfigureADC:configurator|internalClock     ; 5.816             ;
+; innerDataClock                                  ; innerDataClock                              ; 5.704             ;
+; ConfigureADC:configurator|dataIndex[4]          ; ConfigureADC:configurator|outputClock       ; 4.110             ;
+; ConfigureADC:configurator|dataIndex[0]          ; ConfigureADC:configurator|outputClock       ; 3.914             ;
+; ConfigureADC:configurator|dataIndex[1]          ; ConfigureADC:configurator|outputClock       ; 3.898             ;
+; ConfigureADC:configurator|dataIndex[2]          ; ConfigureADC:configurator|outputClock       ; 3.892             ;
+; ConfigureADC:configurator|dataIndex[3]          ; ConfigureADC:configurator|outputClock       ; 3.851             ;
+; ConfigureADC:configurator|dataIndex[7]          ; ConfigureADC:configurator|outputClock       ; 3.846             ;
+; ConfigureADC:configurator|dataIndex[5]          ; ConfigureADC:configurator|outputClock       ; 3.818             ;
+; ConfigureADC:configurator|dataIndex[6]          ; ConfigureADC:configurator|outputClock       ; 3.805             ;
+; ConfigureADC:configurator|configOK~reg0         ; ConfigureADC:configurator|nextState.DONE    ; 3.021             ;
+; ConfigureADC:configurator|needWait              ; ConfigureADC:configurator|nextState.INTER   ; 3.000             ;
+; ConfigureADC:configurator|discarded             ; ConfigureADC:configurator|nextState.SEND    ; 2.802             ;
+; ConfigureADC:configurator|waitingDone           ; ConfigureADC:configurator|nextState.DISCARD ; 2.732             ;
+; ConfigureADC:configurator|clockDividerBuffer[7] ; ConfigureADC:configurator|internalClock     ; 1.625             ;
+; ConfigureADC:configurator|clockDividerBuffer[6] ; ConfigureADC:configurator|internalClock     ; 1.625             ;
+; ConfigureADC:configurator|clockDividerBuffer[5] ; ConfigureADC:configurator|internalClock     ; 1.625             ;
+; ConfigureADC:configurator|clockDividerBuffer[4] ; ConfigureADC:configurator|internalClock     ; 1.625             ;
+; ConfigureADC:configurator|clockDividerBuffer[1] ; ConfigureADC:configurator|internalClock     ; 1.625             ;
+; ConfigureADC:configurator|clockDividerBuffer[0] ; ConfigureADC:configurator|internalClock     ; 1.625             ;
+; ConfigureADC:configurator|clockDividerBuffer[3] ; ConfigureADC:configurator|internalClock     ; 1.625             ;
+; ConfigureADC:configurator|clockDividerBuffer[2] ; ConfigureADC:configurator|internalClock     ; 1.625             ;
+; ConfigureADC:configurator|waitingBuffer[1]      ; ConfigureADC:configurator|waitingDone       ; 1.117             ;
+; ConfigureADC:configurator|waitingBuffer[0]      ; ConfigureADC:configurator|waitingDone       ; 1.117             ;
+; ConfigureADC:configurator|waitingBuffer[2]      ; ConfigureADC:configurator|waitingDone       ; 1.066             ;
+; clockDivideBuffer[7]                            ; innerDataClock                              ; 0.861             ;
+; clockDivideBuffer[4]                            ; innerDataClock                              ; 0.859             ;
+; clockDivideBuffer[5]                            ; innerDataClock                              ; 0.842             ;
+; clockDivideBuffer[0]                            ; innerDataClock                              ; 0.751             ;
+; clockDivideBuffer[1]                            ; innerDataClock                              ; 0.728             ;
+; clockDivideBuffer[2]                            ; innerDataClock                              ; 0.701             ;
+; WrReEn                                          ; WrReState~reg0                              ; 0.592             ;
+; clockDivideBuffer[6]                            ; innerDataClock                              ; 0.558             ;
+; SinLUT:synthesizer|counter[0]                   ; SinLUT:synthesizer|output_p[2]              ; 0.527             ;
+; ConfigureADC:configurator|discardBuffer~reg0    ; ConfigureADC:configurator|discarded         ; 0.522             ;
+; SinLUT:synthesizer|counter[1]                   ; SinLUT:synthesizer|output_p[2]              ; 0.503             ;
+; SinLUT:synthesizer|counter[3]                   ; SinLUT:synthesizer|output_p[2]              ; 0.491             ;
+; ConfigureADC:configurator|state.DISCARD         ; ConfigureADC:configurator|SDENB~reg0        ; 0.434             ;
+; SinLUT:synthesizer|counter[2]                   ; SinLUT:synthesizer|output_p[2]              ; 0.426             ;
+; ConfigureADC:configurator|state.SEND            ; ConfigureADC:configurator|SDENB~reg0        ; 0.396             ;
+; clockDivideBuffer[3]                            ; innerDataClock                              ; 0.362             ;
+; ConfigureADC:configurator|counter[4]            ; ConfigureADC:configurator|SDIO~reg0         ; 0.326             ;
+; ConfigureADC:configurator|counter[3]            ; ConfigureADC:configurator|counter[6]        ; 0.271             ;
+; ConfigureADC:configurator|counter[1]            ; ConfigureADC:configurator|SDIO~reg0         ; 0.253             ;
+; ConfigureADC:configurator|counter[5]            ; ConfigureADC:configurator|counter[6]        ; 0.236             ;
+; ConfigureADC:configurator|counter[6]            ; ConfigureADC:configurator|counter[6]        ; 0.235             ;
+; ConfigureADC:configurator|counter[2]            ; ConfigureADC:configurator|SDIO~reg0         ; 0.220             ;
+; SinLUT:synthesizer|counter[30]                  ; SinLUT:synthesizer|counter[31]              ; 0.206             ;
+; SinLUT:synthesizer|counter[18]                  ; SinLUT:synthesizer|counter[31]              ; 0.201             ;
+; SinLUT:synthesizer|counter[7]                   ; SinLUT:synthesizer|counter[31]              ; 0.201             ;
+; SinLUT:synthesizer|counter[15]                  ; SinLUT:synthesizer|counter[31]              ; 0.196             ;
+; SinLUT:synthesizer|counter[12]                  ; SinLUT:synthesizer|counter[31]              ; 0.194             ;
+; SinLUT:synthesizer|counter[8]                   ; SinLUT:synthesizer|counter[31]              ; 0.181             ;
+; SinLUT:synthesizer|counter[5]                   ; SinLUT:synthesizer|counter[31]              ; 0.181             ;
+; ConfigureADC:configurator|counter[0]            ; ConfigureADC:configurator|SDIO~reg0         ; 0.179             ;
+; SinLUT:synthesizer|counter[13]                  ; SinLUT:synthesizer|counter[31]              ; 0.176             ;
+; SinLUT:synthesizer|counter[6]                   ; SinLUT:synthesizer|counter[31]              ; 0.176             ;
+; SinLUT:synthesizer|counter[16]                  ; SinLUT:synthesizer|counter[31]              ; 0.175             ;
+; SinLUT:synthesizer|counter[9]                   ; SinLUT:synthesizer|counter[31]              ; 0.174             ;
+; SinLUT:synthesizer|counter[29]                  ; SinLUT:synthesizer|counter[31]              ; 0.110             ;
+; ConfigureADC:configurator|discarding            ; ConfigureADC:configurator|SDIO~reg0         ; 0.102             ;
+; ConfigureADC:configurator|sendData              ; ConfigureADC:configurator|SDIO~reg0         ; 0.102             ;
+; SinLUT:synthesizer|counter[17]                  ; SinLUT:synthesizer|counter[31]              ; 0.097             ;
+; ConfigureADC:configurator|waiting               ; ConfigureADC:configurator|waitingBuffer[1]  ; 0.094             ;
+; SinLUT:synthesizer|counter[14]                  ; SinLUT:synthesizer|counter[31]              ; 0.067             ;
+; SinLUT:synthesizer|counter[10]                  ; SinLUT:synthesizer|counter[31]              ; 0.028             ;
 +-------------------------------------------------+---------------------------------------------+-------------------+
-Note: This table only shows the top 65 path(s) that have the largest delay added for hold.
+Note: This table only shows the top 66 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -1722,7 +1720,7 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "clockBuffOut[0]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "clockBuffOut[1]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "clockBuffOut[2]" is assigned to location or region, but does not exist in design
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:06
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:07
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
@@ -1733,7 +1731,7 @@ Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X34_Y49 to location X45_Y61
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:05
-Info (11888): Total time spent on timing analysis during the Fitter is 0.94 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.97 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1748,10 +1746,10 @@ Warning (169064): Following 5 pins have no output enable or a GND or VCC output 
     Info (169065): Pin discardBuffer has a permanently enabled output enable File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 24
 Info (144001): Generated suppressed messages file Z:/dev/hw/DDS/fpga_vhdl/ter/dds/output_files/HFFrequencySynthesis.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 6446 megabytes
-    Info: Processing ended: Wed Dec 31 13:56:59 2025
+    Info: Peak virtual memory: 6420 megabytes
+    Info: Processing ended: Mon Feb 02 16:56:12 2026
     Info: Elapsed time: 00:00:33
-    Info: Total CPU time (on all processors): 00:00:58
+    Info: Total CPU time (on all processors): 00:00:59
 
 
 +----------------------------+
