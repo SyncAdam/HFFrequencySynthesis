@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dZ:/dev/hw/DDS/fpga_vhdl/ter/dds/simulation/modelsim
 Econfigrom
-Z1 w1767129957
+Z1 w1770047498
 Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
@@ -22,9 +22,9 @@ V5@MVF=O@B1cjCQXOi2APM0
 !s100 UAbS6YSC=k>[9S?Rk[bJW2
 Z7 OV;C;10.5b;63
 32
-Z8 !s110 1769439145
+Z8 !s110 1772745433
 !i10b 1
-Z9 !s108 1769439145.000000
+Z9 !s108 1772745433.000000
 Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigROM.vhd|
 Z11 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigROM.vhd|
 !i113 1
@@ -35,10 +35,10 @@ R2
 R3
 R4
 Z14 DEx4 work 9 configrom 0 22 5@MVF=O@B1cjCQXOi2APM0
-l71
+l70
 L12
-V]LE`X3?Wk_mMDA6^:0n^Z1
-!s100 c7mFATJ7^e24G9d5HdPL?1
+VH0A:I[a_9@[e?k?cK3EC`3
+!s100 ZUo;;U5coz9_gYA05?zOe2
 R7
 32
 R8
@@ -50,7 +50,7 @@ R11
 R12
 R13
 Econfigureadc
-Z15 w1767185629
+Z15 w1772745220
 R2
 R3
 R4
@@ -59,8 +59,8 @@ Z16 8Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd
 Z17 FZ:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd
 l0
 L6
-VO<@@^jUSP>ed>3FcQgTGN3
-!s100 XT`XB`CWZ14e?Ri^MX=BP3
+VHEW44V?b@@;UV2f7@[3TV2
+!s100 Qz14]F4=KZIU6N5gFojhM3
 R7
 32
 R8
@@ -76,11 +76,11 @@ R14
 R2
 R3
 R4
-Z20 DEx4 work 12 configureadc 0 22 O<@@^jUSP>ed>3FcQgTGN3
-l51
+Z20 DEx4 work 12 configureadc 0 22 HEW44V?b@@;UV2f7@[3TV2
+l59
 L25
-V>and5K;m:N0cAXNjJDE@H0
-!s100 :002:M4kFN7V`iFjR<1mn3
+Ve_RY^PW;<9g[I9YD];5ZT3
+!s100 [XgD@0;aCb7QaCYK>Aho_3
 R7
 32
 R8
@@ -92,7 +92,7 @@ R19
 R12
 R13
 Emainfsm
-Z21 w1767123994
+Z21 w1772745322
 R2
 R3
 R4
@@ -101,8 +101,8 @@ Z22 8Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd
 Z23 FZ:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd
 l0
 L5
-Vl^0n4cWhh6Mmk8cEzgNd41
-!s100 ?;hFg0kLXR0B7c1;ncih40
+V2?;fC_zWUn>VDK3GDMNKW3
+!s100 5P_?od333Ii7GS>?Co<Fm0
 R7
 32
 R8
@@ -119,11 +119,11 @@ Z26 DEx4 work 6 sinlut 0 22 S]UTnF:i4c2DgQl@`nAgj1
 R2
 R3
 R4
-Z27 DEx4 work 7 mainfsm 0 22 l^0n4cWhh6Mmk8cEzgNd41
-l35
-L28
-VnKV5TJCFg3Sf0=kfj[oO;0
-!s100 mR:]fEj2cQE6djFZ0S?B]2
+Z27 DEx4 work 7 mainfsm 0 22 2?;fC_zWUn>VDK3GDMNKW3
+l37
+L27
+Vz=`mX2gofYLJQHLWVf;6<2
+!s100 ]DYCQ`O<VOdT__@92FM^X1
 R7
 32
 R8
@@ -176,7 +176,7 @@ R32
 R12
 R13
 Etestbench
-Z35 w1767124043
+Z35 w1772745117
 R3
 R4
 R0
@@ -204,8 +204,8 @@ R4
 DEx4 work 9 testbench 0 22 mTM2gj<z>980G2:^JcmQW3
 l27
 L7
-V67BFJ:eLlbgh=e8kVUd<^0
-!s100 6LP4T4LB6Wl:Z1TM5I?MZ1
+V]<i3^8cdE3iJWD`Y8Aa::0
+!s100 c^l=h;KReJXbn42zB=oO31
 R7
 32
 R8
