@@ -1,20 +1,5 @@
 # vsim -gui -l msim_transcript work.testbench 
-# Start time: 22:17:06 on Mar 05,2026
-# Loading std.standard
-# ** Error: (vsim-13) Recompile work.testbench(basic) because work.mainfsm has changed.
-# Error loading design
-# End time: 22:17:06 on Mar 05,2026, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# Compile of MainFSM.vhd was successful.
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful with warnings.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 0 failed with no errors.
-vsim -gui -l msim_transcript work.testbench
-# vsim -gui -l msim_transcript work.testbench 
-# Start time: 22:17:19 on Mar 05,2026
+# Start time: 11:47:03 on Mar 06,2026
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -24,36 +9,196 @@ vsim -gui -l msim_transcript work.testbench
 # Loading work.sinlut(basic)
 # Loading work.configureadc(basic)
 # Loading work.configrom(basic)
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
-add wave -position insertpoint  \
-sim:/testbench/SDENB \
-sim:/testbench/SCLK \
-sim:/testbench/SDIO
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: adams  Hostname: LADAMTP  ProcessID: 17868
-#           Attempting to use alternate WLF file "./wlfty48fhv".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlfty48fhv
 add wave -position insertpoint  \
 sim:/testbench/DUT/configurator/SDENB \
 sim:/testbench/DUT/configurator/SCLK \
 sim:/testbench/DUT/configurator/SDIO \
-sim:/testbench/DUT/configurator/resetn \
+sim:/testbench/DUT/configurator/resetn
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: adams  Hostname: LADAMTP  ProcessID: 17868
+#           Attempting to use alternate WLF file "./wlfteirkti".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfteirkti
+restart
+run
+add wave -position insertpoint  \
 sim:/testbench/DUT/configurator/dataIndex \
 sim:/testbench/DUT/configurator/counter \
-sim:/testbench/DUT/configurator/state \
-sim:/testbench/DUT/configurator/nextState \
-sim:/testbench/DUT/configurator/needWait \
-sim:/testbench/DUT/configurator/sdio_do \
-sim:/testbench/DUT/configurator/sdio_oe \
-sim:/testbench/DUT/configurator/sdio_di \
-sim:/testbench/DUT/configurator/sclk_reg \
-sim:/testbench/DUT/configurator/sclk_en
+sim:/testbench/DUT/configurator/state
 restart
-# ** Warning: (vsim-8683) Uninitialized inout port /testbench/DUT/configurator/resetn has no driver.
-# This port will contribute value (U) to the signal network.
 run
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful with warnings.
+# Compile of MainFSM.vhd was successful.
+# Compile of SynthesisCircuitry.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+restart
+# Loading work.testbench(basic)
+# Loading work.mainfsm(basic)
+# Loading work.sinlut(basic)
+# Loading work.configureadc(basic)
+# Loading work.configrom(basic)
 run
-# End time: 22:19:13 on Mar 05,2026, Elapsed time: 0:01:54
-# Errors: 0, Warnings: 4
+add wave -position insertpoint  \
+sim:/testbench/DUT/configurator/WrReEn
+restart
+run
+add wave -position insertpoint  \
+sim:/testbench/WrReEn
+restart
+run
+add wave -position insertpoint  \
+sim:/testbench/DUT/WrReEnButton
+add wave -position insertpoint  \
+sim:/testbench/DUT/configurator/wrre_latched
+restart
+run
+add wave -position insertpoint  \
+sim:/testbench/DUT/inputClock
+restart
+run
+restart
+run
+add wave -position insertpoint  \
+sim:/testbench/DUT/configurator/WrReEn
+add wave -position insertpoint  \
+sim:/testbench/DUT/WrReEn
+restart
+run
+add wave -position insertpoint  \
+sim:/testbench/DUT/btn_ff1 \
+sim:/testbench/DUT/btn_ff2 \
+sim:/testbench/DUT/btn_prev
+restart
+run
+add wave -position insertpoint  \
+sim:/testbench/DUT/inputClock
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful with warnings.
+# Compile of MainFSM.vhd was successful.
+# Compile of SynthesisCircuitry.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+restart
+# Loading work.testbench(basic)
+# Loading work.mainfsm(basic)
+# Loading work.sinlut(basic)
+# Loading work.configureadc(basic)
+# Loading work.configrom(basic)
+run
+# Break in Process line__50 at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd line 58
+run
+restart
+run
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful with warnings.
+# Compile of MainFSM.vhd was successful.
+# Compile of SynthesisCircuitry.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+restart
+# Loading work.testbench(basic)
+# Loading work.mainfsm(basic)
+# Loading work.sinlut(basic)
+# Loading work.configureadc(basic)
+# Loading work.configrom(basic)
+run
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful with warnings.
+# Compile of MainFSM.vhd was successful.
+# Compile of SynthesisCircuitry.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+restart
+# Loading work.testbench(basic)
+# Loading work.mainfsm(basic)
+# Loading work.sinlut(basic)
+# Loading work.configureadc(basic)
+# Loading work.configrom(basic)
+run
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful with warnings.
+# Compile of MainFSM.vhd was successful.
+# Compile of SynthesisCircuitry.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+restart
+# Loading work.testbench(basic)
+# Loading work.mainfsm(basic)
+# Loading work.sinlut(basic)
+# Loading work.configureadc(basic)
+# Loading work.configrom(basic)
+run
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful with warnings.
+# Compile of MainFSM.vhd was successful.
+# Compile of SynthesisCircuitry.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+restart
+# Loading work.testbench(basic)
+# Loading work.mainfsm(basic)
+# Loading work.sinlut(basic)
+# Loading work.configureadc(basic)
+# Loading work.configrom(basic)
+run
+restart
+run
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful with warnings.
+# Compile of MainFSM.vhd was successful.
+# Compile of SynthesisCircuitry.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+restart
+# Loading work.testbench(basic)
+# Loading work.mainfsm(basic)
+# Loading work.sinlut(basic)
+# Loading work.configureadc(basic)
+# Loading work.configrom(basic)
+run
+add wave -position insertpoint  \
+sim:/testbench/writeConfig
+restart
+run
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful with warnings.
+# Compile of MainFSM.vhd was successful.
+# Compile of SynthesisCircuitry.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+restart
+# Loading work.testbench(basic)
+# Loading work.mainfsm(basic)
+# Loading work.sinlut(basic)
+# Loading work.configureadc(basic)
+# Loading work.configrom(basic)
+run
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful with warnings.
+# Compile of MainFSM.vhd was successful.
+# Compile of SynthesisCircuitry.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+restart
+# Loading work.testbench(basic)
+# Loading work.mainfsm(basic)
+# Loading work.sinlut(basic)
+# Loading work.configureadc(basic)
+# Loading work.configrom(basic)
+run
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful with warnings.
+# Compile of MainFSM.vhd was successful.
+# Compile of SynthesisCircuitry.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+restart
+# Loading work.testbench(basic)
+# Loading work.mainfsm(basic)
+# Loading work.sinlut(basic)
+# Loading work.configureadc(basic)
+# Loading work.configrom(basic)
+run

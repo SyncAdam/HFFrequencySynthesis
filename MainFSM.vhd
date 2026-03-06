@@ -19,7 +19,7 @@ entity MainFSM is
 		writeConfigReceived: out std_logic;
 		stateRegOut: out std_logic_vector(2 downto 0);
 		nextStateRegOut: out std_logic_vector(2 downto 0);
-		resetn: inout std_logic := '1';
+		resetn: in std_logic;
 		discardBuffer: inout std_logic
 	);
 end entity;

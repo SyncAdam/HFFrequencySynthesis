@@ -15,7 +15,7 @@ entity ConfigureADC is
 		signal writeConfigReceived: out std_logic;
 		signal stateRegOut: out std_logic_vector(2 downto 0);
 		signal nextStateRegOut: out std_logic_vector(2 downto 0);
-		signal resetn: inout std_logic;
+		signal resetn: in std_logic;
 		signal discardBuffer: inout std_logic;
 		signal WrReEn: in std_logic
 	);
@@ -291,6 +291,7 @@ begin
 	begin
 	  if resetn = '0' then
 	    dataIndex <= x"00";
+	    configOK <= '0';
 	  elsif rising_edge(sclk_reg) then
 	    if sendData = '1' then
 	      if unsigned(dataIndex) < 23 then
@@ -299,7 +300,7 @@ begin
 	      else
 		dataIndex <= x"00";
 		needWait  <= '1';			
-		if(unsigned(counter) < 35) then 
+		if(unsigned(counter) < 3) then 
 			counter <= std_logic_vector(unsigned(counter) + 1);
 		else
 			counter <= B"0000000";

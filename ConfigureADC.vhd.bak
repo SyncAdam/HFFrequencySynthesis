@@ -291,6 +291,7 @@ begin
 	begin
 	  if resetn = '0' then
 	    dataIndex <= x"00";
+	    configOK <= '0';
 	  elsif rising_edge(sclk_reg) then
 	    if sendData = '1' then
 	      if unsigned(dataIndex) < 23 then
@@ -299,7 +300,7 @@ begin
 	      else
 		dataIndex <= x"00";
 		needWait  <= '1';			
-		if(unsigned(counter) < 35) then 
+		if(unsigned(counter) < 5) then 
 			counter <= std_logic_vector(unsigned(counter) + 1);
 		else
 			counter <= B"0000000";

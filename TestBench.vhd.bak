@@ -22,7 +22,6 @@ architecture basic of TestBench is
 	signal resetn: std_logic := '1';
 	signal discardBuffer:  std_logic;
 	signal WrReEn: std_logic := '0';
-	signal WrReState: std_logic := '0';
 	
 begin
 
@@ -38,12 +37,15 @@ begin
 	begin
 		resetn <= '1';
 		WrReEn <= '1';
-		wait for 100ms;
+		wait for 500us;
 		resetn <= '0';
-		WrReEn <= '0';
-		wait for 20ms;
-		WrReEn <= '1';
+		wait for 20ns;
 		resetn <= '1';
+		wait for 20ns;
+		WrReEn <= '0';
+		wait for 20ns;
+		WrReEn <= '1';
+		wait for 20ns;
 	end process;
 
 
@@ -52,6 +54,9 @@ begin
 		wait for 10ns;
 		writeConfig <= '0';	
 		wait until configOK = '1';
+		writeConfig <= '1';
+		wait for 100ns;
+		writeConfig <= '0';
 		wait;
 	end process;
 	
