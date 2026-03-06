@@ -1,5 +1,53 @@
+# do HFFrequencySynthesis_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying Z:/dev/hw/DDS/fpga_vhdl/ter/dds/simulation/modelsim/HFFreqSynthSimulation.mpf
+# 
+# vcom -93 -work work {Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:58:25 on Mar 06,2026
+# vcom -reportprogress 300 -93 -work work Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity MainFSM
+# -- Compiling architecture basic of MainFSM
+# ** Error: (vcom-11) Could not find work.sinlut.
+# ** Error (suppressible): Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd(68): (vcom-1195) Cannot find expanded name "work.SinLUT".
+# ** Error: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd(68): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.configureadc.
+# ** Error (suppressible): Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd(71): (vcom-1195) Cannot find expanded name "work.ConfigureADC".
+# ** Error: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd(71): Unknown expanded name.
+# ** Error: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd(74): VHDL Compiler exiting
+# End time: 15:58:25 on Mar 06,2026, Elapsed time: 0:00:00
+# Errors: 7, Warnings: 0
+# ** Error: C:/intelFPGA/18.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./HFFrequencySynthesis_run_msim_rtl_vhdl.do line 8
+# C:/intelFPGA/18.1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work {Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd}"
+# Load canceled
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful with warnings.
+# Compile of MainFSM.vhd failed with 4 errors.
+# Compile of SynthesisCircuitry.vhd was successful.
+# 5 compiles, 1 failed with 4 errors.
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful with warnings.
+# Compile of MainFSM.vhd was successful.
+# Compile of SynthesisCircuitry.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+vsim -gui -l msim_transcript work.testbench
 # vsim -gui -l msim_transcript work.testbench 
-# Start time: 11:47:03 on Mar 06,2026
+# Start time: 15:58:46 on Mar 06,2026
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -10,21 +58,23 @@
 # Loading work.configureadc(basic)
 # Loading work.configrom(basic)
 add wave -position insertpoint  \
-sim:/testbench/DUT/configurator/SDENB \
-sim:/testbench/DUT/configurator/SCLK \
-sim:/testbench/DUT/configurator/SDIO \
-sim:/testbench/DUT/configurator/resetn
+sim:/testbench/DUT/sclk \
+sim:/testbench/DUT/sdenb \
+sim:/testbench/DUT/sdio
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: adams  Hostname: LADAMTP  ProcessID: 17868
-#           Attempting to use alternate WLF file "./wlfteirkti".
+#           Attempting to use alternate WLF file "./wlftgns98f".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlfteirkti
-restart
+#           Using alternate file: ./wlftgns98f
 run
 add wave -position insertpoint  \
 sim:/testbench/DUT/configurator/dataIndex \
 sim:/testbench/DUT/configurator/counter \
-sim:/testbench/DUT/configurator/state
+sim:/testbench/DUT/configurator/state \
+sim:/testbench/DUT/configurator/nextState
+restart
+run
+add wave -position insertpoint sim:/testbench/DUT/configurator/TransmitData/*
 restart
 run
 # Compile of TestBench.vhd was successful with warnings.
@@ -40,40 +90,10 @@ restart
 # Loading work.configureadc(basic)
 # Loading work.configrom(basic)
 run
-add wave -position insertpoint  \
-sim:/testbench/DUT/configurator/WrReEn
-restart
-run
-add wave -position insertpoint  \
-sim:/testbench/WrReEn
-restart
-run
-add wave -position insertpoint  \
-sim:/testbench/DUT/WrReEnButton
 add wave -position insertpoint  \
 sim:/testbench/DUT/configurator/wrre_latched
 restart
 run
-add wave -position insertpoint  \
-sim:/testbench/DUT/inputClock
-restart
-run
-restart
-run
-add wave -position insertpoint  \
-sim:/testbench/DUT/configurator/WrReEn
-add wave -position insertpoint  \
-sim:/testbench/DUT/WrReEn
-restart
-run
-add wave -position insertpoint  \
-sim:/testbench/DUT/btn_ff1 \
-sim:/testbench/DUT/btn_ff2 \
-sim:/testbench/DUT/btn_prev
-restart
-run
-add wave -position insertpoint  \
-sim:/testbench/DUT/inputClock
 # Compile of TestBench.vhd was successful with warnings.
 # Compile of ConfigROM.vhd was successful.
 # Compile of ConfigureADC.vhd was successful with warnings.
@@ -87,10 +107,7 @@ restart
 # Loading work.configureadc(basic)
 # Loading work.configrom(basic)
 run
-# Break in Process line__50 at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd line 58
-run
-restart
-run
+# Compile of ConfigureADC.vhd was successful with warnings.
 # Compile of TestBench.vhd was successful with warnings.
 # Compile of ConfigROM.vhd was successful.
 # Compile of ConfigureADC.vhd was successful with warnings.
@@ -103,6 +120,14 @@ restart
 # Loading work.sinlut(basic)
 # Loading work.configureadc(basic)
 # Loading work.configrom(basic)
+run
+restart
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful with warnings.
+# Compile of MainFSM.vhd was successful.
+# Compile of SynthesisCircuitry.vhd was successful.
+# 5 compiles, 0 failed with no errors.
 run
 # Compile of TestBench.vhd was successful with warnings.
 # Compile of ConfigROM.vhd was successful.
@@ -143,8 +168,13 @@ restart
 # Loading work.configureadc(basic)
 # Loading work.configrom(basic)
 run
-restart
-run
+# ** Fatal: (vsim-3734) Index value -1 is out of range 15 downto 0.
+#    Time: 100960 ns  Iteration: 2  Process: /testbench/DUT/configurator/TransmitData File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd
+# Fatal error in Process TransmitData at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 262
+# 
+# HDL call sequence:
+# Stopped at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd 262 Process TransmitData
+# 
 # Compile of TestBench.vhd was successful with warnings.
 # Compile of ConfigROM.vhd was successful.
 # Compile of ConfigureADC.vhd was successful with warnings.
@@ -158,10 +188,13 @@ restart
 # Loading work.configureadc(basic)
 # Loading work.configrom(basic)
 run
-add wave -position insertpoint  \
-sim:/testbench/writeConfig
-restart
-run
+# ** Fatal: (vsim-3734) Index value 16 is out of range 15 downto 0.
+#    Time: 35680 ns  Iteration: 2  Process: /testbench/DUT/configurator/TransmitData File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd
+# Fatal error in Process TransmitData at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 262
+# 
+# HDL call sequence:
+# Stopped at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd 262 Process TransmitData
+# 
 # Compile of TestBench.vhd was successful with warnings.
 # Compile of ConfigROM.vhd was successful.
 # Compile of ConfigureADC.vhd was successful with warnings.
@@ -175,20 +208,13 @@ restart
 # Loading work.configureadc(basic)
 # Loading work.configrom(basic)
 run
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureADC.vhd was successful with warnings.
-# Compile of MainFSM.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# 5 compiles, 0 failed with no errors.
-restart
-# Loading work.testbench(basic)
-# Loading work.mainfsm(basic)
-# Loading work.sinlut(basic)
-# Loading work.configureadc(basic)
-# Loading work.configrom(basic)
-run
+# ** Fatal: (vsim-3734) Index value -1 is out of range 15 downto 0.
+#    Time: 100960 ns  Iteration: 2  Process: /testbench/DUT/configurator/TransmitData File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd
+# Fatal error in Process TransmitData at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd line 262
+# 
+# HDL call sequence:
+# Stopped at Z:/dev/hw/DDS/fpga_vhdl/ter/dds/ConfigureADC.vhd 262 Process TransmitData
+# 
 # Compile of TestBench.vhd was successful with warnings.
 # Compile of ConfigROM.vhd was successful.
 # Compile of ConfigureADC.vhd was successful with warnings.
@@ -202,3 +228,5 @@ restart
 # Loading work.configureadc(basic)
 # Loading work.configrom(basic)
 run
+# End time: 16:15:40 on Mar 06,2026, Elapsed time: 0:16:54
+# Errors: 6, Warnings: 2

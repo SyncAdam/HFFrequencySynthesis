@@ -22,7 +22,8 @@ architecture basic of ConfigROM is
 		B"0000000000000000",	-- Config 4		Not configured
 		B"0000000000000000",	-- Config 5		Clear all alarms
 		B"0000000000000000",	-- Config 6		Not configured
-		B"1101100011111111",	-- Config 7		Not configured
+		B"0000000000000000",
+		--B"1101100011111111",	-- Config 7		Not configured
 		B"0000000000000000",	-- Config 8		Not configured
 		B"1000000000000000",	-- Config 9		Not configured
 		B"0000000000000000",	-- Config 10	Not configured

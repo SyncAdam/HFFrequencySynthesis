@@ -19,7 +19,7 @@ entity MainFSM is
 		writeConfigReceived: out std_logic;
 		stateRegOut: out std_logic_vector(2 downto 0);
 		nextStateRegOut: out std_logic_vector(2 downto 0);
-		resetn: inout std_logic';
+		resetn: in std_logic;
 		discardBuffer: inout std_logic
 	);
 end entity;
@@ -68,6 +68,6 @@ begin
 						port map(innerDataClock, output_p);
 						
 	configurator: entity work.ConfigureADC(basic)
-						port map(writeconfig, configok, sdenb, sclk, sdio, inputClock, ClkOUT, writeConfigReceived, stateRegOut, nextStateRegOut, resetn, discardBuffer, WrReEn);
+						port map(writeconfig, configok, sdenb, sclk, sdio, inputClock, ClkOUT, writeConfigReceived, stateRegOut, nextStateRegOut, resetn, discardBuffer, WrReEn, WrReStatus);
 
 end architecture;

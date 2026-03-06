@@ -72,11 +72,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "sdio",
-					"strict" : false
-				},
-				{
-					"name" : "WrReState",
+					"name" : "WrReStatus",
 					"strict" : false
 				},
 				{
@@ -120,15 +116,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "sdio",
+					"strict" : false
+				},
+				{
 					"name" : "configok",
 					"strict" : false
 				},
 				{
-					"name" : "resetn",
+					"name" : "discardBuffer",
 					"strict" : false
 				},
 				{
-					"name" : "discardBuffer",
+					"name" : "resetn",
 					"strict" : false
 				},
 				{

@@ -17,7 +17,8 @@ entity ConfigureADC is
 		signal nextStateRegOut: out std_logic_vector(2 downto 0);
 		signal resetn: in std_logic;
 		signal discardBuffer: inout std_logic;
-		signal WrReEn: in std_logic
+		signal WrReEn: in std_logic;
+		signal WrReState: out std_logic
 	);
 end entity;
 
@@ -60,6 +61,7 @@ begin
 
 	SDIO    <= sdio_do when sdio_oe = '1' else 'Z';
 	sdio_di <= SDIO;
+	WrReState <= wrre_latched;
 
 	SCLK <= sclk_reg;
 		
@@ -232,14 +234,16 @@ begin
 		end if;
 	end process;
 	
-	TransmitData: process(sclk_reg, resetn)
+	TransmitData: process(internalClock, resetn, waiting, SDENB)
 	  variable idx : integer;
 	begin
 	  if resetn = '0' then
 	    sdio_do <= '0';
 	    sdio_oe <= '1';
-	  elsif falling_edge(sclk_reg) then
-	    if sendData = '1' then
+	  elsif waiting = '1' then
+		idx := 0;
+		sdio_do <= wrre_latched;
+	  elsif rising_edge(internalClock) then
 	      idx := to_integer(unsigned(dataIndex));
 	      
 	      sdio_oe <= '1';
@@ -262,45 +266,26 @@ begin
 		  sdio_do <= '0';
 		end if;
 	      end if;
-
-	    else
-	      sdio_oe <= '1';
-	      sdio_do <= '0';
-	    end if;
-	  end if;
+  	  end if;
 	end process;
 
-	DataIndexSupervisor: process(internalClock, resetn)
-	begin
-	  if resetn = '0' then
-	    needWait <= '0';
-	  elsif rising_edge(internalClock) then
-		if sendData = '1' then
-			if unsigned(dataIndex) < 23 then
-				needWait <= '0';
-			else
-				needWait <= '1';
-			end if;
-		elsif waiting = '1' then
-			needWait <= '0';
-		end if;
-	  end if;
-	end process;
-	
-	DataIndexIncrement: process(sclk_reg, resetn)
+	DataIndexIncrement: process(sclk_reg, resetn, waiting)
 	begin
 	  if resetn = '0' then
 	    dataIndex <= x"00";
+	    needWait <= '0';
 	    configOK <= '0';
+	  elsif waiting = '1' then
+	    needWait <= '0';
 	  elsif rising_edge(sclk_reg) then
 	    if sendData = '1' then
-	      if unsigned(dataIndex) < 23 then
+	      if unsigned(dataIndex) < 24 then
 		dataIndex <= std_logic_vector(unsigned(dataIndex) + 1);
-		needWait  <= '0';
+		needWait <= '0';
 	      else
-		dataIndex <= x"00";
-		needWait  <= '1';			
-		if(unsigned(counter) < 5) then 
+		dataIndex <= x"00";	
+		needWait <= '1';	
+		if(unsigned(counter) < 48) then 
 			counter <= std_logic_vector(unsigned(counter) + 1);
 		else
 			counter <= B"0000000";

@@ -22,11 +22,12 @@ architecture basic of TestBench is
 	signal resetn: std_logic := '1';
 	signal discardBuffer:  std_logic;
 	signal WrReEn: std_logic := '0';
+	signal WrReStatus: std_logic;
 	
 begin
 
 	DUT: entity work.MainFSM(basic)
-				port map(output_p, DataCLK, SCLK, SDENB, SDIO, configOK, writeConfig, WrReEn, clock, ClkOUT, writeConfigReceived, stateRegOut, nextStateRegOut, resetn, discardBuffer);
+				port map(output_p, DataCLK, SCLK, SDENB, SDIO, configOK, writeConfig, WrReEn, WrReStatus, clock, ClkOUT, writeConfigReceived, stateRegOut, nextStateRegOut, resetn, discardBuffer);
 	
 	ClockProc: process begin
 		clock <= not clock;

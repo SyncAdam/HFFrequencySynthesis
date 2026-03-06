@@ -1,5 +1,5 @@
 Fitter report for HFFrequencySynthesis
-Mon Feb 02 16:56:11 2026
+Fri Mar 06 16:17:16 2026
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Mon Feb 02 16:56:11 2026       ;
+; Fitter Status                   ; Successful - Fri Mar 06 16:17:16 2026       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; HFFrequencySynthesis                        ;
 ; Top-level Entity Name           ; MainFSM                                     ;
@@ -72,7 +72,7 @@ refer to the applicable agreement for further details.
 ; Device                          ; 5CGXFC5C6F27C7                              ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; 84 / 29,080 ( < 1 % )                       ;
-; Total registers                 ; 114                                         ;
+; Total registers                 ; 120                                         ;
 ; Total pins                      ; 52 / 364 ( 14 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 4,567,040 ( 0 % )                       ;
@@ -157,25 +157,26 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.2%      ;
-;     Processor 3            ;   1.1%      ;
-;     Processor 4            ;   1.0%      ;
+;     Processor 2            ;   1.0%      ;
+;     Processor 3            ;   0.8%      ;
+;     Processor 4            ;   0.7%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Netlist Optimizations                                                                                                                                                                                                                                      ;
-+-----------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+---------------------------------------------------+------------------+-----------------------+
-; Node                                    ; Action     ; Operation                                         ; Reason                     ; Node Port ; Node Port Name ; Destination Node                                  ; Destination Port ; Destination Port Name ;
-+-----------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+---------------------------------------------------+------------------+-----------------------+
-; WrReEnButton~inputCLKENA0               ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                   ;                  ;                       ;
-; inputClock~inputCLKENA0                 ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                   ;                  ;                       ;
-; ConfigureADC:configurator|sendData      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ConfigureADC:configurator|sendData~DUPLICATE      ;                  ;                       ;
-; ConfigureADC:configurator|state.DISCARD ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ConfigureADC:configurator|state.DISCARD~DUPLICATE ;                  ;                       ;
-; ConfigureADC:configurator|state.INTER   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ConfigureADC:configurator|state.INTER~DUPLICATE   ;                  ;                       ;
-; SinLUT:synthesizer|counter[3]           ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; SinLUT:synthesizer|counter[3]~DUPLICATE           ;                  ;                       ;
-; WrReEn                                  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; WrReEn~DUPLICATE                                  ;                  ;                       ;
-+-----------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+---------------------------------------------------+------------------+-----------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Netlist Optimizations                                                                                                                                                                                                                                                      ;
++-------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+-----------------------------------------------------------+------------------+-----------------------+
+; Node                                            ; Action     ; Operation                                         ; Reason                     ; Node Port ; Node Port Name ; Destination Node                                          ; Destination Port ; Destination Port Name ;
++-------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+-----------------------------------------------------------+------------------+-----------------------+
+; inputClock~inputCLKENA0                         ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                           ;                  ;                       ;
+; ConfigureADC:configurator|clockDividerBuffer[2] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ConfigureADC:configurator|clockDividerBuffer[2]~DUPLICATE ;                  ;                       ;
+; ConfigureADC:configurator|sendData              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ConfigureADC:configurator|sendData~DUPLICATE              ;                  ;                       ;
+; ConfigureADC:configurator|state.INTER           ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ConfigureADC:configurator|state.INTER~DUPLICATE           ;                  ;                       ;
+; ConfigureADC:configurator|wrre_latched          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ConfigureADC:configurator|wrre_latched~DUPLICATE          ;                  ;                       ;
+; SinLUT:synthesizer|counter[0]                   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; SinLUT:synthesizer|counter[0]~DUPLICATE                   ;                  ;                       ;
+; SinLUT:synthesizer|counter[1]                   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; SinLUT:synthesizer|counter[1]~DUPLICATE                   ;                  ;                       ;
+; SinLUT:synthesizer|counter[3]                   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; SinLUT:synthesizer|counter[3]~DUPLICATE                   ;                  ;                       ;
++-------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+-----------------------------------------------------------+------------------+-----------------------+
 
 
 +-------------------------------------------------------------------------------------------------+
@@ -183,6 +184,7 @@ refer to the applicable agreement for further details.
 +--------------+----------------+--------------+-----------------+---------------+----------------+
 ; Name         ; Ignored Entity ; Ignored From ; Ignored To      ; Ignored Value ; Ignored Source ;
 +--------------+----------------+--------------+-----------------+---------------+----------------+
+; Location     ;                ;              ; WrReState       ; PIN_A5        ; QSF Assignment ;
 ; Location     ;                ;              ; clockBuffOut[0] ; PIN_B6        ; QSF Assignment ;
 ; Location     ;                ;              ; clockBuffOut[1] ; PIN_H8        ; QSF Assignment ;
 ; Location     ;                ;              ; clockBuffOut[2] ; PIN_H9        ; QSF Assignment ;
@@ -196,8 +198,8 @@ refer to the applicable agreement for further details.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 350 ) ; 0.00 % ( 0 / 350 )         ; 0.00 % ( 0 / 350 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 350 ) ; 0.00 % ( 0 / 350 )         ; 0.00 % ( 0 / 350 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 355 ) ; 0.00 % ( 0 / 355 )         ; 0.00 % ( 0 / 355 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 355 ) ; 0.00 % ( 0 / 355 )         ; 0.00 % ( 0 / 355 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -220,7 +222,7 @@ refer to the applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 350 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 355 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 0 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -239,8 +241,8 @@ The pin-out file can be found in Z:/dev/hw/DDS/fpga_vhdl/ter/dds/output_files/HF
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 84 / 29,080        ; < 1 % ;
 ; ALMs needed [=A-B+C]                                        ; 84                 ;       ;
 ;     [A] ALMs used in final placement [=a+b+c+d]             ; 97 / 29,080        ; < 1 % ;
-;         [a] ALMs used for LUT logic and registers           ; 39                 ;       ;
-;         [b] ALMs used for LUT logic                         ; 42                 ;       ;
+;         [a] ALMs used for LUT logic and registers           ; 41                 ;       ;
+;         [b] ALMs used for LUT logic                         ; 40                 ;       ;
 ;         [c] ALMs used for registers                         ; 16                 ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
 ;     [B] Estimate of ALMs recoverable by dense packing       ; 13 / 29,080        ; < 1 % ;
@@ -252,25 +254,25 @@ The pin-out file can be found in Z:/dev/hw/DDS/fpga_vhdl/ter/dds/output_files/HF
 ;                                                             ;                    ;       ;
 ; Difficulty packing design                                   ; Low                ;       ;
 ;                                                             ;                    ;       ;
-; Total LABs:  partially or completely used                   ; 12 / 2,908         ; < 1 % ;
-;     -- Logic LABs                                           ; 12                 ;       ;
+; Total LABs:  partially or completely used                   ; 14 / 2,908         ; < 1 % ;
+;     -- Logic LABs                                           ; 14                 ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
-; Combinational ALUT usage for logic                          ; 147                ;       ;
-;     -- 7 input functions                                    ; 0                  ;       ;
-;     -- 6 input functions                                    ; 20                 ;       ;
-;     -- 5 input functions                                    ; 15                 ;       ;
+; Combinational ALUT usage for logic                          ; 149                ;       ;
+;     -- 7 input functions                                    ; 1                  ;       ;
+;     -- 6 input functions                                    ; 17                 ;       ;
+;     -- 5 input functions                                    ; 14                 ;       ;
 ;     -- 4 input functions                                    ; 26                 ;       ;
-;     -- <=3 input functions                                  ; 86                 ;       ;
-; Combinational ALUT usage for route-throughs                 ; 8                  ;       ;
+;     -- <=3 input functions                                  ; 91                 ;       ;
+; Combinational ALUT usage for route-throughs                 ; 12                 ;       ;
 ;                                                             ;                    ;       ;
-; Dedicated logic registers                                   ; 114                ;       ;
+; Dedicated logic registers                                   ; 120                ;       ;
 ;     -- By type:                                             ;                    ;       ;
-;         -- Primary logic registers                          ; 109 / 58,160       ; < 1 % ;
-;         -- Secondary logic registers                        ; 5 / 58,160         ; < 1 % ;
+;         -- Primary logic registers                          ; 113 / 58,160       ; < 1 % ;
+;         -- Secondary logic registers                        ; 7 / 58,160         ; < 1 % ;
 ;     -- By function:                                         ;                    ;       ;
-;         -- Design implementation registers                  ; 109                ;       ;
-;         -- Routing optimization registers                   ; 5                  ;       ;
+;         -- Design implementation registers                  ; 113                ;       ;
+;         -- Routing optimization registers                   ; 7                  ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
 ; I/O pins                                                    ; 52 / 364           ; 14 %  ;
@@ -285,8 +287,8 @@ The pin-out file can be found in Z:/dev/hw/DDS/fpga_vhdl/ter/dds/output_files/HF
 ; Total DSP Blocks                                            ; 0 / 150            ; 0 %   ;
 ;                                                             ;                    ;       ;
 ; Fractional PLLs                                             ; 0 / 6              ; 0 %   ;
-; Global signals                                              ; 2                  ;       ;
-;     -- Global clocks                                        ; 2 / 16             ; 13 %  ;
+; Global signals                                              ; 1                  ;       ;
+;     -- Global clocks                                        ; 1 / 16             ; 6 %   ;
 ;     -- Quadrant clocks                                      ; 0 / 88             ; 0 %   ;
 ;     -- Horizontal periphery clocks                          ; 0 / 12             ; 0 %   ;
 ; SERDES Transmitters                                         ; 0 / 88             ; 0 %   ;
@@ -304,12 +306,12 @@ The pin-out file can be found in Z:/dev/hw/DDS/fpga_vhdl/ter/dds/output_files/HF
 ; Channel PLLs                                                ; 0 / 6              ; 0 %   ;
 ; Impedance control blocks                                    ; 0 / 3              ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
-; Average interconnect usage (total/H/V)                      ; 0.2% / 0.2% / 0.1% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 1.5% / 1.7% / 0.9% ;       ;
+; Average interconnect usage (total/H/V)                      ; 0.2% / 0.2% / 0.2% ;       ;
+; Peak interconnect usage (total/H/V)                         ; 1.9% / 1.9% / 2.0% ;       ;
 ; Maximum fan-out                                             ; 61                 ;       ;
 ; Highest non-global fan-out                                  ; 61                 ;       ;
-; Total fan-out                                               ; 925                ;       ;
-; Average fan-out                                             ; 2.55               ;       ;
+; Total fan-out                                               ; 938                ;       ;
+; Average fan-out                                             ; 2.51               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -321,8 +323,8 @@ The pin-out file can be found in Z:/dev/hw/DDS/fpga_vhdl/ter/dds/output_files/HF
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 84 / 29080 ( < 1 % )  ; 0 / 29080 ( 0 % )              ;
 ; ALMs needed [=A-B+C]                                        ; 84                    ; 0                              ;
 ;     [A] ALMs used in final placement [=a+b+c+d]             ; 97 / 29080 ( < 1 % )  ; 0 / 29080 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 39                    ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 42                    ; 0                              ;
+;         [a] ALMs used for LUT logic and registers           ; 41                    ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 40                    ; 0                              ;
 ;         [c] ALMs used for registers                         ; 16                    ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                     ; 0                              ;
 ;     [B] Estimate of ALMs recoverable by dense packing       ; 13 / 29080 ( < 1 % )  ; 0 / 29080 ( 0 % )              ;
@@ -334,28 +336,28 @@ The pin-out file can be found in Z:/dev/hw/DDS/fpga_vhdl/ter/dds/output_files/HF
 ;                                                             ;                       ;                                ;
 ; Difficulty packing design                                   ; Low                   ; Low                            ;
 ;                                                             ;                       ;                                ;
-; Total LABs:  partially or completely used                   ; 12 / 2908 ( < 1 % )   ; 0 / 2908 ( 0 % )               ;
-;     -- Logic LABs                                           ; 12                    ; 0                              ;
+; Total LABs:  partially or completely used                   ; 14 / 2908 ( < 1 % )   ; 0 / 2908 ( 0 % )               ;
+;     -- Logic LABs                                           ; 14                    ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
-; Combinational ALUT usage for logic                          ; 147                   ; 0                              ;
-;     -- 7 input functions                                    ; 0                     ; 0                              ;
-;     -- 6 input functions                                    ; 20                    ; 0                              ;
-;     -- 5 input functions                                    ; 15                    ; 0                              ;
+; Combinational ALUT usage for logic                          ; 149                   ; 0                              ;
+;     -- 7 input functions                                    ; 1                     ; 0                              ;
+;     -- 6 input functions                                    ; 17                    ; 0                              ;
+;     -- 5 input functions                                    ; 14                    ; 0                              ;
 ;     -- 4 input functions                                    ; 26                    ; 0                              ;
-;     -- <=3 input functions                                  ; 86                    ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 8                     ; 0                              ;
+;     -- <=3 input functions                                  ; 91                    ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 12                    ; 0                              ;
 ; Memory ALUT usage                                           ; 0                     ; 0                              ;
 ;     -- 64-address deep                                      ; 0                     ; 0                              ;
 ;     -- 32-address deep                                      ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Dedicated logic registers                                   ; 0                     ; 0                              ;
 ;     -- By type:                                             ;                       ;                                ;
-;         -- Primary logic registers                          ; 109 / 58160 ( < 1 % ) ; 0 / 58160 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 5 / 58160 ( < 1 % )   ; 0 / 58160 ( 0 % )              ;
+;         -- Primary logic registers                          ; 113 / 58160 ( < 1 % ) ; 0 / 58160 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 7 / 58160 ( < 1 % )   ; 0 / 58160 ( 0 % )              ;
 ;     -- By function:                                         ;                       ;                                ;
-;         -- Design implementation registers                  ; 109                   ; 0                              ;
-;         -- Routing optimization registers                   ; 5                     ; 0                              ;
+;         -- Design implementation registers                  ; 113                   ; 0                              ;
+;         -- Routing optimization registers                   ; 7                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ;                                                             ;                       ;                                ;
 ; Virtual pins                                                ; 0                     ; 0                              ;
@@ -363,7 +365,7 @@ The pin-out file can be found in Z:/dev/hw/DDS/fpga_vhdl/ter/dds/output_files/HF
 ; I/O registers                                               ; 0                     ; 0                              ;
 ; Total block memory bits                                     ; 0                     ; 0                              ;
 ; Total block memory implementation bits                      ; 0                     ; 0                              ;
-; Clock enable block                                          ; 2 / 116 ( 1 % )       ; 0 / 116 ( 0 % )                ;
+; Clock enable block                                          ; 1 / 116 ( < 1 % )     ; 0 / 116 ( 0 % )                ;
 ;                                                             ;                       ;                                ;
 ; Connections                                                 ;                       ;                                ;
 ;     -- Input Connections                                    ; 5                     ; 0                              ;
@@ -372,16 +374,16 @@ The pin-out file can be found in Z:/dev/hw/DDS/fpga_vhdl/ter/dds/output_files/HF
 ;     -- Registered Output Connections                        ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Internal Connections                                        ;                       ;                                ;
-;     -- Total Connections                                    ; 925                   ; 0                              ;
-;     -- Registered Connections                               ; 431                   ; 0                              ;
+;     -- Total Connections                                    ; 938                   ; 0                              ;
+;     -- Registered Connections                               ; 432                   ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; External Connections                                        ;                       ;                                ;
 ;     -- Top                                                  ; 10                    ; 0                              ;
 ;     -- hard_block:auto_generated_inst                       ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Partition Interface                                         ;                       ;                                ;
-;     -- Input Ports                                          ; 3                     ; 0                              ;
-;     -- Output Ports                                         ; 27                    ; 0                              ;
+;     -- Input Ports                                          ; 4                     ; 0                              ;
+;     -- Output Ports                                         ; 26                    ; 0                              ;
 ;     -- Bidir Ports                                          ; 5                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Registered Ports                                            ;                       ;                                ;
@@ -405,8 +407,9 @@ The pin-out file can be found in Z:/dev/hw/DDS/fpga_vhdl/ter/dds/output_files/HF
 +--------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; Name         ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +--------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; WrReEnButton ; P12   ; 3B       ; 21           ; 0            ; 17           ; 3                     ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; inputClock   ; H12   ; 7A       ; 38           ; 61           ; 0            ; 37                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; WrReEnButton ; P12   ; 3B       ; 21           ; 0            ; 17           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; inputClock   ; H12   ; 7A       ; 38           ; 61           ; 0            ; 43                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; resetn       ; Y15   ; 4A       ; 46           ; 0            ; 0            ; 61                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; writeconfig  ; P11   ; 3B       ; 21           ; 0            ; 0            ; 6                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 +--------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
@@ -417,7 +420,7 @@ The pin-out file can be found in Z:/dev/hw/DDS/fpga_vhdl/ter/dds/output_files/HF
 ; Name                 ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Output Buffer Delay ; Output Buffer Delay Control ; Location assigned by ; Output Enable Source ; Output Enable Group ;
 +----------------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 ; ClkOut               ; J10   ; 8A       ; 12           ; 61           ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
-; WrReState            ; A5    ; 8A       ; 21           ; 61           ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
+; WrReStatus           ; D6    ; 8A       ; 18           ; 61           ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
 ; nextStateRegOut[0]   ; J8    ; 8A       ; 14           ; 61           ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; nextStateRegOut[1]   ; J7    ; 8A       ; 12           ; 61           ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; nextStateRegOut[2]   ; K10   ; 8A       ; 12           ; 61           ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
@@ -455,7 +458,6 @@ The pin-out file can be found in Z:/dev/hw/DDS/fpga_vhdl/ter/dds/output_files/HF
 ; output_p[9](n)       ; A9    ; 7A       ; 48           ; 61           ; 91           ; no              ; no                     ; no        ; no              ; no         ; no            ; no       ; Off          ; LVDS         ; Default          ; Off                               ; --                        ; 1                          ; 1                           ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; parallelDataClk_p    ; A19   ; 7A       ; 57           ; 61           ; 34           ; no              ; no                     ; no        ; no              ; no         ; no            ; no       ; Off          ; LVDS         ; Default          ; Off                               ; --                        ; 1                          ; 1                           ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; parallelDataClk_p(n) ; A18   ; 7A       ; 57           ; 61           ; 51           ; no              ; no                     ; no        ; no              ; no         ; no            ; no       ; Off          ; LVDS         ; Default          ; Off                               ; --                        ; 1                          ; 1                           ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
-; sdio                 ; D26   ; 6A       ; 68           ; 37           ; 37           ; no              ; no                     ; 1         ; no              ; no         ; yes           ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; stateRegOut[0]       ; F7    ; 8A       ; 14           ; 61           ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; stateRegOut[1]       ; F6    ; 8A       ; 15           ; 61           ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; stateRegOut[2]       ; G6    ; 8A       ; 15           ; 61           ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
@@ -463,17 +465,17 @@ The pin-out file can be found in Z:/dev/hw/DDS/fpga_vhdl/ter/dds/output_files/HF
 +----------------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Bidir Pins                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ;
-+---------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+-------------------+-----------------------------------+---------------------------+----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
-; Name          ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Output Register ; Output Enable Register ; Slew Rate ; PCI I/O Enabled ; Open Drain ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Input Termination ; Output Termination                ; Termination Control Block ; Output Buffer Pre-emphasis ; Output Buffer Delay ; Output Buffer Delay Control ; Location assigned by ; Output Enable Source ; Output Enable Group ;
-+---------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+-------------------+-----------------------------------+---------------------------+----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
-; configok      ; L7    ; 8A       ; 10           ; 61           ; 40           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; 1         ; no              ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Off               ; Series 50 Ohm without Calibration ; --                        ; no                         ; 0                   ; Off                         ; User                 ; 0 pF                 ; -                   ;
-; discardBuffer ; D8    ; 8A       ; 10           ; 61           ; 74           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; 1         ; no              ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Off               ; Series 50 Ohm without Calibration ; --                        ; no                         ; 0                   ; Off                         ; User                 ; 0 pF                 ; -                   ;
-; resetn        ; Y15   ; 4A       ; 46           ; 0            ; 0            ; 61                    ; 0                  ; no     ; no             ; no              ; no                     ; 1         ; no              ; yes        ; no       ; Off          ; 2.5 V        ; Default          ; Off               ; Series 50 Ohm without Calibration ; --                        ; no                         ; 0                   ; Off                         ; User                 ; 0 pF                 ; -                   ;
-; sclk          ; T21   ; 5B       ; 68           ; 14           ; 43           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; 1         ; no              ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Off               ; Series 50 Ohm without Calibration ; --                        ; no                         ; 0                   ; Off                         ; User                 ; 0 pF                 ; -                   ;
-; sdenb         ; K25   ; 6A       ; 68           ; 40           ; 43           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; 1         ; no              ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Off               ; Series 50 Ohm without Calibration ; --                        ; no                         ; 0                   ; Off                         ; User                 ; 0 pF                 ; -                   ;
-+---------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+-------------------+-----------------------------------+---------------------------+----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Bidir Pins                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+-------------------+-----------------------------------+---------------------------+----------------------------+---------------------+-----------------------------+----------------------+----------------------+-----------------------------------+
+; Name          ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Output Register ; Output Enable Register ; Slew Rate ; PCI I/O Enabled ; Open Drain ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Input Termination ; Output Termination                ; Termination Control Block ; Output Buffer Pre-emphasis ; Output Buffer Delay ; Output Buffer Delay Control ; Location assigned by ; Output Enable Source ; Output Enable Group               ;
++---------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+-------------------+-----------------------------------+---------------------------+----------------------------+---------------------+-----------------------------+----------------------+----------------------+-----------------------------------+
+; configok      ; L7    ; 8A       ; 10           ; 61           ; 40           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; 1         ; no              ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Off               ; Series 50 Ohm without Calibration ; --                        ; no                         ; 0                   ; Off                         ; User                 ; 0 pF                 ; -                                 ;
+; discardBuffer ; D8    ; 8A       ; 10           ; 61           ; 74           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; 1         ; no              ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Off               ; Series 50 Ohm without Calibration ; --                        ; no                         ; 0                   ; Off                         ; User                 ; 0 pF                 ; -                                 ;
+; sclk          ; T21   ; 5B       ; 68           ; 14           ; 43           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; 1         ; no              ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Off               ; Series 50 Ohm without Calibration ; --                        ; no                         ; 0                   ; Off                         ; User                 ; 0 pF                 ; -                                 ;
+; sdenb         ; K25   ; 6A       ; 68           ; 40           ; 43           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; 1         ; no              ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Off               ; Series 50 Ohm without Calibration ; --                        ; no                         ; 0                   ; Off                         ; User                 ; 0 pF                 ; -                                 ;
+; sdio          ; D26   ; 6A       ; 68           ; 37           ; 37           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; 1         ; no              ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Off               ; Series 50 Ohm without Calibration ; --                        ; no                         ; 0                   ; Off                         ; User                 ; 0 pF                 ; ConfigureADC:configurator|sdio_oe ;
++---------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+-------------------+-----------------------------------+---------------------------+----------------------------+---------------------+-----------------------------+----------------------+----------------------+-----------------------------------+
 
 
 +----------------------------------------------------------------------------+
@@ -502,7 +504,7 @@ The pin-out file can be found in Z:/dev/hw/DDS/fpga_vhdl/ter/dds/output_files/HF
 ; A2       ; 396        ; 9A       ; ^MSEL2                          ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; A3       ;            ;          ; DNU                             ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; A4       ;            ;          ; DNU                             ;        ;              ;                     ; --           ;                 ; --       ; --           ;
-; A5       ; 344        ; 8A       ; WrReState                       ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
+; A5       ; 344        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; A6       ; 392        ; 9A       ; ^CONF_DONE                      ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; A7       ; 348        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; A8       ; 308        ; 7A       ; output_p[9]                     ; output ; LVDS         ;                     ; Column I/O   ; Y               ; no       ; Off          ;
@@ -734,7 +736,7 @@ The pin-out file can be found in Z:/dev/hw/DDS/fpga_vhdl/ter/dds/output_files/HF
 ; D3       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; D4       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; D5       ; 395        ; 9A       ; ^nCE                            ;        ;              ;                     ; --           ;                 ; --       ; --           ;
-; D6       ; 352        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; D6       ; 352        ; 8A       ; WrReStatus                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; D7       ; 356        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; D8       ; 372        ; 8A       ; discardBuffer                   ; bidir  ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; D9       ;            ; 8A       ; VCCIO8A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -754,7 +756,7 @@ The pin-out file can be found in Z:/dev/hw/DDS/fpga_vhdl/ter/dds/output_files/HF
 ; D23      ; 262        ; 7A       ; ^GND                            ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; D24      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; D25      ; 251        ; 6A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; D26      ; 227        ; 6A       ; sdio                            ; output ; 2.5 V        ;                     ; Row I/O      ; Y               ; no       ; Off          ;
+; D26      ; 227        ; 6A       ; sdio                            ; bidir  ; 2.5 V        ;                     ; Row I/O      ; Y               ; no       ; Off          ;
 ; E1       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; E2       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; E3       ;            ;          ; NC                              ;        ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -1159,7 +1161,7 @@ The pin-out file can be found in Z:/dev/hw/DDS/fpga_vhdl/ter/dds/output_files/HF
 ; Y12      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; Y13      ; 95         ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; Y14      ; 89         ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; Y15      ; 116        ; 4A       ; resetn                          ; bidir  ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
+; Y15      ; 116        ; 4A       ; resetn                          ; input  ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; Y16      ; 114        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; Y17      ;            ; 4A       ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; Y18      ; 153        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -1180,8 +1182,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +---------------------+-------------------------------+
 ; Pin Name            ; Reason                        ;
 +---------------------+-------------------------------+
-; sdio                ; Incomplete set of assignments ;
-; WrReState           ; Incomplete set of assignments ;
+; WrReStatus          ; Incomplete set of assignments ;
 ; ClkOut              ; Incomplete set of assignments ;
 ; writeConfigReceived ; Incomplete set of assignments ;
 ; stateRegOut[0]      ; Incomplete set of assignments ;
@@ -1192,12 +1193,14 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; nextStateRegOut[2]  ; Incomplete set of assignments ;
 ; sclk                ; Incomplete set of assignments ;
 ; sdenb               ; Incomplete set of assignments ;
+; sdio                ; Incomplete set of assignments ;
 ; configok            ; Incomplete set of assignments ;
-; resetn              ; Incomplete set of assignments ;
 ; discardBuffer       ; Incomplete set of assignments ;
+; resetn              ; Incomplete set of assignments ;
 ; writeconfig         ; Incomplete set of assignments ;
 ; inputClock          ; Incomplete set of assignments ;
 ; WrReEnButton        ; Incomplete set of assignments ;
+; WrReStatus          ; Missing location assignment   ;
 +---------------------+-------------------------------+
 
 
@@ -1206,9 +1209,9 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +--------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+------------------------------------+--------------+--------------+
 ; Compilation Hierarchy Node     ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Entity Name  ; Library Name ;
 +--------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+------------------------------------+--------------+--------------+
-; |MainFSM                       ; 83.5 (7.5)           ; 96.5 (8.0)                       ; 13.0 (0.5)                                        ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 147 (15)            ; 114 (13)                  ; 0 (0)         ; 0                 ; 0     ; 0          ; 52   ; 0            ; |MainFSM                           ; MainFSM      ; work         ;
-;    |ConfigureADC:configurator| ; 49.0 (49.0)          ; 58.5 (58.5)                      ; 9.5 (9.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 82 (82)             ; 52 (52)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |MainFSM|ConfigureADC:configurator ; ConfigureADC ; work         ;
-;    |SinLUT:synthesizer|        ; 27.0 (27.0)          ; 30.0 (30.0)                      ; 3.0 (3.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 50 (50)             ; 49 (49)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |MainFSM|SinLUT:synthesizer        ; SinLUT       ; work         ;
+; |MainFSM                       ; 84.0 (7.8)           ; 96.0 (9.0)                       ; 12.0 (1.2)                                        ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 149 (15)            ; 120 (14)                  ; 0 (0)         ; 0                 ; 0     ; 0          ; 52   ; 0            ; |MainFSM                           ; MainFSM      ; work         ;
+;    |ConfigureADC:configurator| ; 48.7 (48.7)          ; 53.0 (53.0)                      ; 4.3 (4.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 84 (84)             ; 55 (55)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |MainFSM|ConfigureADC:configurator ; ConfigureADC ; work         ;
+;    |SinLUT:synthesizer|        ; 27.5 (27.5)          ; 34.0 (34.0)                      ; 6.5 (6.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 50 (50)             ; 51 (51)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |MainFSM|SinLUT:synthesizer        ; SinLUT       ; work         ;
 +--------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+------------------------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1235,8 +1238,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; output_p[14]         ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; output_p[15]         ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; parallelDataClk_p    ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
-; sdio                 ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
-; WrReState            ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; WrReStatus           ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; ClkOut               ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; writeConfigReceived  ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; stateRegOut[0]       ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
@@ -1247,12 +1249,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; nextStateRegOut[2]   ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; sclk                 ; Bidir    ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; sdenb                ; Bidir    ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; sdio                 ; Bidir    ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; configok             ; Bidir    ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
-; resetn               ; Bidir    ; -- ; (0)  ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; discardBuffer        ; Bidir    ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; resetn               ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; writeconfig          ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; inputClock           ; Input    ; -- ; (0)  ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; WrReEnButton         ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; WrReEnButton         ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; output_p[0](n)       ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (0)   ; --     ; --                     ; --                       ;
 ; output_p[1](n)       ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (0)   ; --     ; --                     ; --                       ;
 ; output_p[2](n)       ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (0)   ; --     ; --                     ; --                       ;
@@ -1273,123 +1276,124 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                                         ;
-+----------------------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                                      ; Pad To Core Index ; Setting ;
-+----------------------------------------------------------+-------------------+---------+
-; sclk                                                     ;                   ;         ;
-; sdenb                                                    ;                   ;         ;
-; configok                                                 ;                   ;         ;
-; resetn                                                   ;                   ;         ;
-;      - ConfigureADC:configurator|clockDividerBuffer[7]   ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|clockDividerBuffer[6]   ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|clockDividerBuffer[5]   ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|clockDividerBuffer[4]   ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|clockDividerBuffer[3]   ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|clockDividerBuffer[2]   ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|clockDividerBuffer[1]   ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|clockDividerBuffer[0]   ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|dataIndex[2]            ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|dataIndex[0]            ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|dataIndex[1]            ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|dataIndex[4]            ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|dataIndex[3]            ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|dataIndex[5]            ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|dataIndex[6]            ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|dataIndex[7]            ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|counter[0]              ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|counter[1]              ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|counter[2]              ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|counter[3]              ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|counter[4]              ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|counter[5]              ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|counter[6]              ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|internalClock           ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|CLKRECEIVED~0           ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|writeConfigReceived~0   ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|state.INTER             ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|state.DISCARD           ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|stateRegOut[0]~3        ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|state.SEND              ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|stateRegOut[1]~4        ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|state.DONE              ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|stateRegOut[2]~5        ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|nextState.DISCARD       ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|nextState.INTER         ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|nextStateRegOut[0]~4    ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|nextState.SEND          ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|nextStateRegOut[1]~5    ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|nextState.DONE          ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|nextStateRegOut[2]~6    ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|SDIO~reg0               ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|SDIO~en                 ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|discarded               ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|waitingDone             ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|state.IDLE              ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|needWait                ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|configOK~reg0           ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|discarding              ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|sendData                ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|waiting                 ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|discardBuffer~reg0      ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|waitingBuffer[2]        ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|waitingBuffer[1]        ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|waitingBuffer[0]        ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|nextState.IDLE          ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|outputClock             ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|SCLK~0                  ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|SDENB~reg0              ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|state.INTER~DUPLICATE   ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|state.DISCARD~DUPLICATE ; 0                 ; 0       ;
-;      - ConfigureADC:configurator|sendData~DUPLICATE      ; 0                 ; 0       ;
-; discardBuffer                                            ;                   ;         ;
-; writeconfig                                              ;                   ;         ;
-;      - ConfigureADC:configurator|writeConfigReceived~0   ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|Selector2~0             ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|Selector1~0             ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|Selector0~0             ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|Selector3~0             ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|nextState~9             ; 1                 ; 0       ;
-; inputClock                                               ;                   ;         ;
-;      - innerDataClock                                    ; 1                 ; 0       ;
-;      - ConfigureADC:configurator|internalClock           ; 1                 ; 0       ;
-; WrReEnButton                                             ;                   ;         ;
-+----------------------------------------------------------+-------------------+---------+
++------------------------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                                                 ;
++------------------------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                                              ; Pad To Core Index ; Setting ;
++------------------------------------------------------------------+-------------------+---------+
+; sclk                                                             ;                   ;         ;
+; sdenb                                                            ;                   ;         ;
+; sdio                                                             ;                   ;         ;
+; configok                                                         ;                   ;         ;
+; discardBuffer                                                    ;                   ;         ;
+; resetn                                                           ;                   ;         ;
+;      - ConfigureADC:configurator|wrre_latched                    ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|dataIndex[7]                    ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|dataIndex[6]                    ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|dataIndex[5]                    ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|dataIndex[4]                    ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|dataIndex[3]                    ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|dataIndex[0]                    ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|dataIndex[1]                    ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|dataIndex[2]                    ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|clockDividerBuffer[7]           ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|clockDividerBuffer[6]           ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|clockDividerBuffer[5]           ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|clockDividerBuffer[4]           ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|clockDividerBuffer[3]           ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|clockDividerBuffer[2]           ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|clockDividerBuffer[1]           ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|clockDividerBuffer[0]           ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|internalClock                   ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|CLKRECEIVED~0                   ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|writeConfigReceived~0           ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|state.DISCARD                   ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|state.INTER                     ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|stateRegOut[0]~3                ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|state.SEND                      ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|stateRegOut[1]~4                ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|state.DONE                      ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|stateRegOut[2]~5                ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|nextState.DISCARD               ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|nextState.INTER                 ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|nextStateRegOut[0]~3            ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|nextState.SEND                  ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|nextStateRegOut[1]~4            ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|nextState.DONE                  ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|nextStateRegOut[2]~5            ; 0                 ; 0       ;
+;      - WrReEn                                                    ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|discarded                       ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|waitingDone                     ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|state.IDLE                      ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|configOK~reg0                   ; 0                 ; 0       ;
+;      - btn_ff2                                                   ; 0                 ; 0       ;
+;      - btn_prev                                                  ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|waiting                         ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|discardBuffer~reg0              ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|waitingBuffer[2]                ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|waitingBuffer[1]                ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|waitingBuffer[0]                ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|nextState.IDLE                  ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|sendData                        ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|sclk_reg                        ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|needWait~1                      ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|SDENB~reg0                      ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|sdio_do~2                       ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|sdio_oe                         ; 0                 ; 0       ;
+;      - btn_ff1                                                   ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|discarding                      ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|counter[6]~1                    ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|sdio_do~1                       ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|clockDividerBuffer[2]~DUPLICATE ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|wrre_latched~DUPLICATE          ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|state.INTER~DUPLICATE           ; 0                 ; 0       ;
+;      - ConfigureADC:configurator|sendData~DUPLICATE              ; 0                 ; 0       ;
+; writeconfig                                                      ;                   ;         ;
+;      - ConfigureADC:configurator|writeConfigReceived~0           ; 1                 ; 0       ;
+;      - ConfigureADC:configurator|Selector2~0                     ; 1                 ; 0       ;
+;      - ConfigureADC:configurator|Selector1~0                     ; 1                 ; 0       ;
+;      - ConfigureADC:configurator|Selector0~0                     ; 1                 ; 0       ;
+;      - ConfigureADC:configurator|Selector3~0                     ; 1                 ; 0       ;
+;      - ConfigureADC:configurator|nextState~9                     ; 1                 ; 0       ;
+; inputClock                                                       ;                   ;         ;
+;      - innerDataClock                                            ; 1                 ; 0       ;
+;      - ConfigureADC:configurator|internalClock                   ; 1                 ; 0       ;
+; WrReEnButton                                                     ;                   ;         ;
+;      - btn_ff1~0                                                 ; 1                 ; 0       ;
++------------------------------------------------------------------+-------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                          ;
-+------------------------------------------+----------------------+---------+---------------+--------+----------------------+------------------+---------------------------+
-; Name                                     ; Location             ; Fan-Out ; Usage         ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+------------------------------------------+----------------------+---------+---------------+--------+----------------------+------------------+---------------------------+
-; ConfigureADC:configurator|Equal1~1       ; MLABCELL_X32_Y55_N6  ; 8       ; Sync. clear   ; no     ; --                   ; --               ; --                        ;
-; ConfigureADC:configurator|LessThan2~0    ; MLABCELL_X32_Y53_N51 ; 8       ; Sync. clear   ; no     ; --                   ; --               ; --                        ;
-; ConfigureADC:configurator|SDIO~5         ; LABCELL_X31_Y53_N18  ; 2       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; ConfigureADC:configurator|SDIO~en        ; FF_X30_Y53_N55       ; 1       ; Output enable ; no     ; --                   ; --               ; --                        ;
-; ConfigureADC:configurator|counter[6]~0   ; LABCELL_X31_Y53_N42  ; 7       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; ConfigureADC:configurator|dataIndex[2]~0 ; LABCELL_X31_Y53_N15  ; 8       ; Sync. clear   ; no     ; --                   ; --               ; --                        ;
-; ConfigureADC:configurator|dataIndex[2]~1 ; LABCELL_X31_Y53_N3   ; 8       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; ConfigureADC:configurator|internalClock  ; FF_X32_Y55_N29       ; 29      ; Clock         ; no     ; --                   ; --               ; --                        ;
-; ConfigureADC:configurator|waiting        ; FF_X32_Y54_N47       ; 6       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; Equal0~1                                 ; LABCELL_X45_Y59_N54  ; 2       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; SinLUT:synthesizer|LessThan0~3           ; LABCELL_X46_Y58_N36  ; 33      ; Sync. clear   ; no     ; --                   ; --               ; --                        ;
-; WrReEnButton                             ; PIN_P12              ; 3       ; Clock         ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-; innerDataClock                           ; FF_X45_Y59_N5        ; 51      ; Clock         ; no     ; --                   ; --               ; --                        ;
-; inputClock                               ; PIN_H12              ; 3       ; Clock         ; no     ; --                   ; --               ; --                        ;
-; inputClock                               ; PIN_H12              ; 35      ; Clock         ; yes    ; Global Clock         ; GCLK12           ; --                        ;
-; resetn                                   ; PIN_Y15              ; 61      ; Async. clear  ; no     ; --                   ; --               ; --                        ;
-+------------------------------------------+----------------------+---------+---------------+--------+----------------------+------------------+---------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                         ;
++------------------------------------------+---------------------+---------+---------------+--------+----------------------+------------------+---------------------------+
+; Name                                     ; Location            ; Fan-Out ; Usage         ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++------------------------------------------+---------------------+---------+---------------+--------+----------------------+------------------+---------------------------+
+; ConfigureADC:configurator|Equal2~1       ; LABCELL_X21_Y56_N24 ; 9       ; Sync. clear   ; no     ; --                   ; --               ; --                        ;
+; ConfigureADC:configurator|LessThan2~0    ; LABCELL_X18_Y55_N54 ; 10      ; Sync. clear   ; no     ; --                   ; --               ; --                        ;
+; ConfigureADC:configurator|LessThan3~0    ; LABCELL_X18_Y56_N54 ; 8       ; Sync. clear   ; no     ; --                   ; --               ; --                        ;
+; ConfigureADC:configurator|counter[6]~0   ; LABCELL_X18_Y55_N12 ; 7       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; ConfigureADC:configurator|dataIndex[7]~0 ; LABCELL_X18_Y56_N3  ; 8       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; ConfigureADC:configurator|internalClock  ; FF_X21_Y56_N59      ; 11      ; Clock         ; no     ; --                   ; --               ; --                        ;
+; ConfigureADC:configurator|needWait~1     ; LABCELL_X17_Y56_N39 ; 2       ; Async. clear  ; no     ; --                   ; --               ; --                        ;
+; ConfigureADC:configurator|sclk_reg       ; FF_X17_Y56_N20      ; 19      ; Clock         ; no     ; --                   ; --               ; --                        ;
+; ConfigureADC:configurator|sdio_oe        ; FF_X17_Y56_N14      ; 2       ; Output enable ; no     ; --                   ; --               ; --                        ;
+; ConfigureADC:configurator|waiting        ; FF_X18_Y56_N32      ; 13      ; Latch enable  ; no     ; --                   ; --               ; --                        ;
+; Equal0~1                                 ; LABCELL_X53_Y57_N51 ; 2       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; SinLUT:synthesizer|LessThan0~3           ; LABCELL_X53_Y55_N48 ; 35      ; Sync. clear   ; no     ; --                   ; --               ; --                        ;
+; innerDataClock                           ; FF_X53_Y57_N53      ; 53      ; Clock         ; no     ; --                   ; --               ; --                        ;
+; inputClock                               ; PIN_H12             ; 3       ; Clock         ; no     ; --                   ; --               ; --                        ;
+; inputClock                               ; PIN_H12             ; 41      ; Clock         ; yes    ; Global Clock         ; GCLK12           ; --                        ;
+; resetn                                   ; PIN_Y15             ; 61      ; Async. clear  ; no     ; --                   ; --               ; --                        ;
++------------------------------------------+---------------------+---------+---------------+--------+----------------------+------------------+---------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                             ;
-+--------------+----------+---------+----------------------+------------------+---------------------------+
-; Name         ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+--------------+----------+---------+----------------------+------------------+---------------------------+
-; WrReEnButton ; PIN_P12  ; 3       ; Global Clock         ; GCLK6            ; --                        ;
-; inputClock   ; PIN_H12  ; 35      ; Global Clock         ; GCLK12           ; --                        ;
-+--------------+----------+---------+----------------------+------------------+---------------------------+
++-------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                           ;
++------------+----------+---------+----------------------+------------------+---------------------------+
+; Name       ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++------------+----------+---------+----------------------+------------------+---------------------------+
+; inputClock ; PIN_H12  ; 41      ; Global Clock         ; GCLK12           ; --                        ;
++------------+----------+---------+----------------------+------------------+---------------------------+
 
 
 +--------------------------------------------------------+
@@ -1397,22 +1401,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------+-------------------------+
 ; Routing Resource Type        ; Usage                   ;
 +------------------------------+-------------------------+
-; Block interconnects          ; 237 / 217,884 ( < 1 % ) ;
-; C12 interconnects            ; 21 / 10,080 ( < 1 % )   ;
-; C2 interconnects             ; 57 / 87,208 ( < 1 % )   ;
-; C4 interconnects             ; 63 / 41,360 ( < 1 % )   ;
+; Block interconnects          ; 259 / 217,884 ( < 1 % ) ;
+; C12 interconnects            ; 25 / 10,080 ( < 1 % )   ;
+; C2 interconnects             ; 121 / 87,208 ( < 1 % )  ;
+; C4 interconnects             ; 84 / 41,360 ( < 1 % )   ;
 ; DQS bus muxes                ; 0 / 21 ( 0 % )          ;
 ; DQS-18 I/O buses             ; 0 / 21 ( 0 % )          ;
 ; DQS-9 I/O buses              ; 0 / 21 ( 0 % )          ;
-; Direct links                 ; 58 / 217,884 ( < 1 % )  ;
-; Global clocks                ; 2 / 16 ( 13 % )         ;
+; Direct links                 ; 44 / 217,884 ( < 1 % )  ;
+; Global clocks                ; 1 / 16 ( 6 % )          ;
 ; Horizontal periphery clocks  ; 0 / 12 ( 0 % )          ;
-; Local interconnects          ; 96 / 58,160 ( < 1 % )   ;
+; Local interconnects          ; 90 / 58,160 ( < 1 % )   ;
 ; Quadrant clocks              ; 0 / 88 ( 0 % )          ;
-; R14 interconnects            ; 93 / 9,228 ( 1 % )      ;
-; R14/C12 interconnect drivers ; 111 / 15,096 ( < 1 % )  ;
-; R3 interconnects             ; 132 / 94,896 ( < 1 % )  ;
-; R6 interconnects             ; 141 / 194,640 ( < 1 % ) ;
+; R14 interconnects            ; 58 / 9,228 ( < 1 % )    ;
+; R14/C12 interconnect drivers ; 78 / 15,096 ( < 1 % )   ;
+; R3 interconnects             ; 187 / 94,896 ( < 1 % )  ;
+; R6 interconnects             ; 137 / 194,640 ( < 1 % ) ;
 ; Spine clocks                 ; 2 / 180 ( 1 % )         ;
 ; Wire stub REs                ; 0 / 11,606 ( 0 % )      ;
 +------------------------------+-------------------------+
@@ -1424,10 +1428,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; I/O Rules Statistic              ; Total ;
 +----------------------------------+-------+
 ; Total I/O Rules                  ; 28    ;
-; Number of I/O Rules Passed       ; 11    ;
+; Number of I/O Rules Passed       ; 10    ;
 ; Number of I/O Rules Failed       ; 0     ;
 ; Number of I/O Rules Unchecked    ; 0     ;
-; Number of I/O Rules Inapplicable ; 17    ;
+; Number of I/O Rules Inapplicable ; 18    ;
 +----------------------------------+-------+
 
 
@@ -1456,7 +1460,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Inapplicable ; IO_000020 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested PCI Clamp Diode.                     ; Critical ; No Clamping Diode assignments found.                                     ; I/O                    ;                   ;
 ; Inapplicable ; IO_000021 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Weak Pull Up value.                  ; Critical ; No Weak Pull-Up Resistor assignments found.                              ; I/O                    ;                   ;
 ; Inapplicable ; IO_000022 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Bus Hold value.                      ; Critical ; No Enable Bus-Hold Circuitry assignments found.                          ; I/O                    ;                   ;
-; Pass         ; IO_000023 ; I/O Properties Checks for One I/O ; The I/O standard should support the Open Drain value.                              ; Critical ; 0 such failures found.                                                   ; I/O                    ;                   ;
+; Inapplicable ; IO_000023 ; I/O Properties Checks for One I/O ; The I/O standard should support the Open Drain value.                              ; Critical ; No open drain assignments found.                                         ; I/O                    ;                   ;
 ; Pass         ; IO_000024 ; I/O Properties Checks for One I/O ; The I/O direction should support the On Chip Termination value.                    ; Critical ; 0 such failures found.                                                   ; I/O                    ;                   ;
 ; Inapplicable ; IO_000026 ; I/O Properties Checks for One I/O ; On Chip Termination and Current Strength should not be used at the same time.      ; Critical ; No Current Strength assignments found.                                   ; I/O                    ;                   ;
 ; Inapplicable ; IO_000027 ; I/O Properties Checks for One I/O ; Weak Pull Up and Bus Hold should not be used at the same time.                     ; Critical ; No Enable Bus-Hold Circuitry or Weak Pull-Up Resistor assignments found. ; I/O                    ;                   ;
@@ -1469,68 +1473,68 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------+-----------+-----------------------------------+------------------------------------------------------------------------------------+----------+--------------------------------------------------------------------------+------------------------+-------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; I/O Rules Matrix                                                                                                                                                                                                                                                                                                                                                                                                                       ;
-+----------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
-; Pin/Rules            ; IO_000001 ; IO_000002    ; IO_000003 ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007 ; IO_000008    ; IO_000009 ; IO_000010 ; IO_000011    ; IO_000012    ; IO_000013    ; IO_000014    ; IO_000015    ; IO_000018    ; IO_000019    ; IO_000020    ; IO_000021    ; IO_000022    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000046    ; IO_000047    ; IO_000034    ;
-+----------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
-; Total Pass           ; 52        ; 0            ; 52        ; 0            ; 0            ; 52        ; 52        ; 0            ; 52        ; 52        ; 0            ; 15           ; 0            ; 0            ; 0            ; 0            ; 15           ; 0            ; 0            ; 0            ; 1            ; 15           ; 0            ; 0            ; 0            ; 0            ; 0            ; 49           ;
-; Total Unchecked      ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
-; Total Inapplicable   ; 0         ; 52           ; 0         ; 52           ; 52           ; 0         ; 0         ; 52           ; 0         ; 0         ; 52           ; 37           ; 52           ; 52           ; 52           ; 52           ; 37           ; 52           ; 52           ; 52           ; 51           ; 37           ; 52           ; 52           ; 52           ; 52           ; 52           ; 3            ;
-; Total Fail           ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
-; output_p[0]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; output_p[1]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; output_p[2]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; output_p[3]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; output_p[4]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; output_p[5]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; output_p[6]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; output_p[7]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; output_p[8]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; output_p[9]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; output_p[10]         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; output_p[11]         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; output_p[12]         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; output_p[13]         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; output_p[14]         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; output_p[15]         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; parallelDataClk_p    ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; sdio                 ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; WrReState            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; ClkOut               ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; writeConfigReceived  ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; stateRegOut[0]       ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; stateRegOut[1]       ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; stateRegOut[2]       ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; nextStateRegOut[0]   ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; nextStateRegOut[1]   ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; nextStateRegOut[2]   ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; sclk                 ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; sdenb                ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; configok             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; resetn               ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; discardBuffer        ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; writeconfig          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; inputClock           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; WrReEnButton         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; output_p[0](n)       ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; output_p[1](n)       ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; output_p[2](n)       ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; output_p[3](n)       ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; output_p[4](n)       ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; output_p[5](n)       ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; output_p[6](n)       ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; output_p[7](n)       ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; output_p[8](n)       ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; output_p[9](n)       ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; output_p[10](n)      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; output_p[11](n)      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; output_p[12](n)      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; output_p[13](n)      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; output_p[14](n)      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; output_p[15](n)      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-; parallelDataClk_p(n) ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
-+----------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; I/O Rules Matrix                                                                                                                                                                                                                                                                                                                                                                                                                                ;
++----------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+; Pin/Rules            ; IO_000001    ; IO_000002    ; IO_000003    ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007    ; IO_000008    ; IO_000009 ; IO_000010 ; IO_000011    ; IO_000012    ; IO_000013    ; IO_000014    ; IO_000015    ; IO_000018    ; IO_000019    ; IO_000020    ; IO_000021    ; IO_000022    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000046    ; IO_000047    ; IO_000034    ;
++----------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+; Total Pass           ; 51           ; 0            ; 51           ; 0            ; 0            ; 52        ; 51           ; 0            ; 52        ; 52        ; 0            ; 14           ; 0            ; 0            ; 0            ; 0            ; 14           ; 0            ; 0            ; 0            ; 0            ; 14           ; 0            ; 0            ; 0            ; 0            ; 0            ; 48           ;
+; Total Unchecked      ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
+; Total Inapplicable   ; 1            ; 52           ; 1            ; 52           ; 52           ; 0         ; 1            ; 52           ; 0         ; 0         ; 52           ; 38           ; 52           ; 52           ; 52           ; 52           ; 38           ; 52           ; 52           ; 52           ; 52           ; 38           ; 52           ; 52           ; 52           ; 52           ; 52           ; 4            ;
+; Total Fail           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
+; output_p[0]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; output_p[1]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; output_p[2]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; output_p[3]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; output_p[4]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; output_p[5]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; output_p[6]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; output_p[7]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; output_p[8]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; output_p[9]          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; output_p[10]         ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; output_p[11]         ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; output_p[12]         ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; output_p[13]         ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; output_p[14]         ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; output_p[15]         ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; parallelDataClk_p    ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; WrReStatus           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; ClkOut               ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; writeConfigReceived  ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; stateRegOut[0]       ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; stateRegOut[1]       ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; stateRegOut[2]       ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; nextStateRegOut[0]   ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; nextStateRegOut[1]   ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; nextStateRegOut[2]   ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; sclk                 ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; sdenb                ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; sdio                 ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; configok             ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; discardBuffer        ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; resetn               ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; writeconfig          ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; inputClock           ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; WrReEnButton         ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; output_p[0](n)       ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; output_p[1](n)       ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; output_p[2](n)       ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; output_p[3](n)       ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; output_p[4](n)       ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; output_p[5](n)       ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; output_p[6](n)       ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; output_p[7](n)       ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; output_p[8](n)       ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; output_p[9](n)       ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; output_p[10](n)      ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; output_p[11](n)      ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; output_p[12](n)      ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; output_p[13](n)      ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; output_p[14](n)      ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; output_p[15](n)      ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
+; parallelDataClk_p(n) ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ;
++----------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
 
 
 +------------------------------------------------------------------------------------------------+
@@ -1578,92 +1582,108 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 +------------------------------------------------------------------------------------------------------------------+
 ; Estimated Delay Added for Hold Timing Summary                                                                    ;
-+-----------------------------------------+----------------------------------------------------+-------------------+
-; Source Clock(s)                         ; Destination Clock(s)                               ; Delay Added in ns ;
-+-----------------------------------------+----------------------------------------------------+-------------------+
-; ConfigureADC:configurator|internalClock ; inputClock                                         ; 42.2              ;
-; inputClock                              ; inputClock                                         ; 27.0              ;
-; innerDataClock                          ; innerDataClock                                     ; 20.3              ;
-; ConfigureADC:configurator|internalClock ; ConfigureADC:configurator|internalClock            ; 10.2              ;
-; ConfigureADC:configurator|internalClock ; inputClock,ConfigureADC:configurator|internalClock ; 3.9               ;
-+-----------------------------------------+----------------------------------------------------+-------------------+
++----------------------------------------------------+-----------------------------------------+-------------------+
+; Source Clock(s)                                    ; Destination Clock(s)                    ; Delay Added in ns ;
++----------------------------------------------------+-----------------------------------------+-------------------+
+; inputClock                                         ; inputClock                              ; 24.4              ;
+; innerDataClock                                     ; innerDataClock                          ; 22.8              ;
+; ConfigureADC:configurator|sclk_reg                 ; inputClock                              ; 15.2              ;
+; ConfigureADC:configurator|internalClock            ; inputClock                              ; 13.1              ;
+; ConfigureADC:configurator|sclk_reg                 ; ConfigureADC:configurator|internalClock ; 12.3              ;
+; inputClock                                         ; ConfigureADC:configurator|internalClock ; 7.1               ;
+; inputClock,ConfigureADC:configurator|internalClock ; ConfigureADC:configurator|internalClock ; 5.6               ;
+; inputClock                                         ; ConfigureADC:configurator|sclk_reg      ; 2.8               ;
+; ConfigureADC:configurator|waiting                  ; ConfigureADC:configurator|internalClock ; 1.4               ;
+; inputClock,I/O                                     ; ConfigureADC:configurator|sclk_reg      ; 1.1               ;
++----------------------------------------------------+-----------------------------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                                                     ;
-+-------------------------------------------------+---------------------------------------------+-------------------+
-; Source Register                                 ; Destination Register                        ; Delay Added in ns ;
-+-------------------------------------------------+---------------------------------------------+-------------------+
-; ConfigureADC:configurator|internalClock         ; ConfigureADC:configurator|internalClock     ; 5.816             ;
-; innerDataClock                                  ; innerDataClock                              ; 5.704             ;
-; ConfigureADC:configurator|dataIndex[4]          ; ConfigureADC:configurator|outputClock       ; 4.110             ;
-; ConfigureADC:configurator|dataIndex[0]          ; ConfigureADC:configurator|outputClock       ; 3.914             ;
-; ConfigureADC:configurator|dataIndex[1]          ; ConfigureADC:configurator|outputClock       ; 3.898             ;
-; ConfigureADC:configurator|dataIndex[2]          ; ConfigureADC:configurator|outputClock       ; 3.892             ;
-; ConfigureADC:configurator|dataIndex[3]          ; ConfigureADC:configurator|outputClock       ; 3.851             ;
-; ConfigureADC:configurator|dataIndex[7]          ; ConfigureADC:configurator|outputClock       ; 3.846             ;
-; ConfigureADC:configurator|dataIndex[5]          ; ConfigureADC:configurator|outputClock       ; 3.818             ;
-; ConfigureADC:configurator|dataIndex[6]          ; ConfigureADC:configurator|outputClock       ; 3.805             ;
-; ConfigureADC:configurator|configOK~reg0         ; ConfigureADC:configurator|nextState.DONE    ; 3.021             ;
-; ConfigureADC:configurator|needWait              ; ConfigureADC:configurator|nextState.INTER   ; 3.000             ;
-; ConfigureADC:configurator|discarded             ; ConfigureADC:configurator|nextState.SEND    ; 2.802             ;
-; ConfigureADC:configurator|waitingDone           ; ConfigureADC:configurator|nextState.DISCARD ; 2.732             ;
-; ConfigureADC:configurator|clockDividerBuffer[7] ; ConfigureADC:configurator|internalClock     ; 1.625             ;
-; ConfigureADC:configurator|clockDividerBuffer[6] ; ConfigureADC:configurator|internalClock     ; 1.625             ;
-; ConfigureADC:configurator|clockDividerBuffer[5] ; ConfigureADC:configurator|internalClock     ; 1.625             ;
-; ConfigureADC:configurator|clockDividerBuffer[4] ; ConfigureADC:configurator|internalClock     ; 1.625             ;
-; ConfigureADC:configurator|clockDividerBuffer[1] ; ConfigureADC:configurator|internalClock     ; 1.625             ;
-; ConfigureADC:configurator|clockDividerBuffer[0] ; ConfigureADC:configurator|internalClock     ; 1.625             ;
-; ConfigureADC:configurator|clockDividerBuffer[3] ; ConfigureADC:configurator|internalClock     ; 1.625             ;
-; ConfigureADC:configurator|clockDividerBuffer[2] ; ConfigureADC:configurator|internalClock     ; 1.625             ;
-; ConfigureADC:configurator|waitingBuffer[1]      ; ConfigureADC:configurator|waitingDone       ; 1.117             ;
-; ConfigureADC:configurator|waitingBuffer[0]      ; ConfigureADC:configurator|waitingDone       ; 1.117             ;
-; ConfigureADC:configurator|waitingBuffer[2]      ; ConfigureADC:configurator|waitingDone       ; 1.066             ;
-; clockDivideBuffer[7]                            ; innerDataClock                              ; 0.861             ;
-; clockDivideBuffer[4]                            ; innerDataClock                              ; 0.859             ;
-; clockDivideBuffer[5]                            ; innerDataClock                              ; 0.842             ;
-; clockDivideBuffer[0]                            ; innerDataClock                              ; 0.751             ;
-; clockDivideBuffer[1]                            ; innerDataClock                              ; 0.728             ;
-; clockDivideBuffer[2]                            ; innerDataClock                              ; 0.701             ;
-; WrReEn                                          ; WrReState~reg0                              ; 0.592             ;
-; clockDivideBuffer[6]                            ; innerDataClock                              ; 0.558             ;
-; SinLUT:synthesizer|counter[0]                   ; SinLUT:synthesizer|output_p[2]              ; 0.527             ;
-; ConfigureADC:configurator|discardBuffer~reg0    ; ConfigureADC:configurator|discarded         ; 0.522             ;
-; SinLUT:synthesizer|counter[1]                   ; SinLUT:synthesizer|output_p[2]              ; 0.503             ;
-; SinLUT:synthesizer|counter[3]                   ; SinLUT:synthesizer|output_p[2]              ; 0.491             ;
-; ConfigureADC:configurator|state.DISCARD         ; ConfigureADC:configurator|SDENB~reg0        ; 0.434             ;
-; SinLUT:synthesizer|counter[2]                   ; SinLUT:synthesizer|output_p[2]              ; 0.426             ;
-; ConfigureADC:configurator|state.SEND            ; ConfigureADC:configurator|SDENB~reg0        ; 0.396             ;
-; clockDivideBuffer[3]                            ; innerDataClock                              ; 0.362             ;
-; ConfigureADC:configurator|counter[4]            ; ConfigureADC:configurator|SDIO~reg0         ; 0.326             ;
-; ConfigureADC:configurator|counter[3]            ; ConfigureADC:configurator|counter[6]        ; 0.271             ;
-; ConfigureADC:configurator|counter[1]            ; ConfigureADC:configurator|SDIO~reg0         ; 0.253             ;
-; ConfigureADC:configurator|counter[5]            ; ConfigureADC:configurator|counter[6]        ; 0.236             ;
-; ConfigureADC:configurator|counter[6]            ; ConfigureADC:configurator|counter[6]        ; 0.235             ;
-; ConfigureADC:configurator|counter[2]            ; ConfigureADC:configurator|SDIO~reg0         ; 0.220             ;
-; SinLUT:synthesizer|counter[30]                  ; SinLUT:synthesizer|counter[31]              ; 0.206             ;
-; SinLUT:synthesizer|counter[18]                  ; SinLUT:synthesizer|counter[31]              ; 0.201             ;
-; SinLUT:synthesizer|counter[7]                   ; SinLUT:synthesizer|counter[31]              ; 0.201             ;
-; SinLUT:synthesizer|counter[15]                  ; SinLUT:synthesizer|counter[31]              ; 0.196             ;
-; SinLUT:synthesizer|counter[12]                  ; SinLUT:synthesizer|counter[31]              ; 0.194             ;
-; SinLUT:synthesizer|counter[8]                   ; SinLUT:synthesizer|counter[31]              ; 0.181             ;
-; SinLUT:synthesizer|counter[5]                   ; SinLUT:synthesizer|counter[31]              ; 0.181             ;
-; ConfigureADC:configurator|counter[0]            ; ConfigureADC:configurator|SDIO~reg0         ; 0.179             ;
-; SinLUT:synthesizer|counter[13]                  ; SinLUT:synthesizer|counter[31]              ; 0.176             ;
-; SinLUT:synthesizer|counter[6]                   ; SinLUT:synthesizer|counter[31]              ; 0.176             ;
-; SinLUT:synthesizer|counter[16]                  ; SinLUT:synthesizer|counter[31]              ; 0.175             ;
-; SinLUT:synthesizer|counter[9]                   ; SinLUT:synthesizer|counter[31]              ; 0.174             ;
-; SinLUT:synthesizer|counter[29]                  ; SinLUT:synthesizer|counter[31]              ; 0.110             ;
-; ConfigureADC:configurator|discarding            ; ConfigureADC:configurator|SDIO~reg0         ; 0.102             ;
-; ConfigureADC:configurator|sendData              ; ConfigureADC:configurator|SDIO~reg0         ; 0.102             ;
-; SinLUT:synthesizer|counter[17]                  ; SinLUT:synthesizer|counter[31]              ; 0.097             ;
-; ConfigureADC:configurator|waiting               ; ConfigureADC:configurator|waitingBuffer[1]  ; 0.094             ;
-; SinLUT:synthesizer|counter[14]                  ; SinLUT:synthesizer|counter[31]              ; 0.067             ;
-; SinLUT:synthesizer|counter[10]                  ; SinLUT:synthesizer|counter[31]              ; 0.028             ;
-+-------------------------------------------------+---------------------------------------------+-------------------+
-Note: This table only shows the top 66 path(s) that have the largest delay added for hold.
++--------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                                      ;
++-------------------------------------------------+----------------------------------------------+-------------------+
+; Source Register                                 ; Destination Register                         ; Delay Added in ns ;
++-------------------------------------------------+----------------------------------------------+-------------------+
+; ConfigureADC:configurator|internalClock         ; ConfigureADC:configurator|internalClock      ; 6.231             ;
+; innerDataClock                                  ; innerDataClock                               ; 5.833             ;
+; ConfigureADC:configurator|discarded             ; ConfigureADC:configurator|nextState.DISCARD  ; 3.363             ;
+; ConfigureADC:configurator|waitingDone           ; ConfigureADC:configurator|nextState.DISCARD  ; 3.307             ;
+; ConfigureADC:configurator|needWait              ; ConfigureADC:configurator|nextState.SEND     ; 3.225             ;
+; ConfigureADC:configurator|configOK~reg0         ; ConfigureADC:configurator|nextState.SEND     ; 3.169             ;
+; ConfigureADC:configurator|waiting               ; ConfigureADC:configurator|waitingBuffer[1]   ; 1.990             ;
+; ConfigureADC:configurator|clockDividerBuffer[7] ; ConfigureADC:configurator|internalClock      ; 1.848             ;
+; ConfigureADC:configurator|clockDividerBuffer[6] ; ConfigureADC:configurator|internalClock      ; 1.848             ;
+; ConfigureADC:configurator|clockDividerBuffer[5] ; ConfigureADC:configurator|internalClock      ; 1.848             ;
+; ConfigureADC:configurator|clockDividerBuffer[4] ; ConfigureADC:configurator|internalClock      ; 1.848             ;
+; ConfigureADC:configurator|clockDividerBuffer[1] ; ConfigureADC:configurator|internalClock      ; 1.848             ;
+; ConfigureADC:configurator|clockDividerBuffer[0] ; ConfigureADC:configurator|internalClock      ; 1.848             ;
+; ConfigureADC:configurator|clockDividerBuffer[3] ; ConfigureADC:configurator|internalClock      ; 1.848             ;
+; ConfigureADC:configurator|clockDividerBuffer[2] ; ConfigureADC:configurator|internalClock      ; 1.848             ;
+; ConfigureADC:configurator|sclk_reg              ; ConfigureADC:configurator|sclk_reg           ; 1.738             ;
+; ConfigureADC:configurator|sdio_do~1             ; ConfigureADC:configurator|sdio_do~_emulated  ; 1.407             ;
+; SinLUT:synthesizer|counter[0]                   ; SinLUT:synthesizer|output_p[11]              ; 1.116             ;
+; SinLUT:synthesizer|counter[1]                   ; SinLUT:synthesizer|output_p[2]               ; 1.092             ;
+; SinLUT:synthesizer|counter[3]                   ; SinLUT:synthesizer|output_p[11]              ; 1.077             ;
+; ConfigureADC:configurator|dataIndex[7]          ; ConfigureADC:configurator|sdio_oe            ; 1.025             ;
+; clockDivideBuffer[4]                            ; innerDataClock                               ; 1.010             ;
+; ConfigureADC:configurator|dataIndex[6]          ; ConfigureADC:configurator|sdio_oe            ; 0.970             ;
+; ConfigureADC:configurator|dataIndex[5]          ; ConfigureADC:configurator|sdio_oe            ; 0.966             ;
+; ConfigureADC:configurator|dataIndex[4]          ; ConfigureADC:configurator|sdio_oe            ; 0.965             ;
+; clockDivideBuffer[6]                            ; innerDataClock                               ; 0.959             ;
+; clockDivideBuffer[5]                            ; innerDataClock                               ; 0.957             ;
+; clockDivideBuffer[7]                            ; innerDataClock                               ; 0.952             ;
+; ConfigureADC:configurator|dataIndex[2]          ; ConfigureADC:configurator|sdio_oe            ; 0.946             ;
+; ConfigureADC:configurator|waitingBuffer[1]      ; ConfigureADC:configurator|waitingBuffer[1]   ; 0.942             ;
+; ConfigureADC:configurator|waitingBuffer[0]      ; ConfigureADC:configurator|waitingBuffer[1]   ; 0.942             ;
+; ConfigureADC:configurator|dataIndex[0]          ; ConfigureADC:configurator|sdio_oe            ; 0.941             ;
+; ConfigureADC:configurator|dataIndex[1]          ; ConfigureADC:configurator|sdio_oe            ; 0.928             ;
+; ConfigureADC:configurator|counter[6]            ; ConfigureADC:configurator|configOK~reg0      ; 0.922             ;
+; ConfigureADC:configurator|counter[5]            ; ConfigureADC:configurator|configOK~reg0      ; 0.922             ;
+; ConfigureADC:configurator|dataIndex[3]          ; ConfigureADC:configurator|configOK~reg0      ; 0.922             ;
+; ConfigureADC:configurator|counter[4]            ; ConfigureADC:configurator|configOK~reg0      ; 0.922             ;
+; ConfigureADC:configurator|sendData              ; ConfigureADC:configurator|configOK~reg0      ; 0.922             ;
+; ConfigureADC:configurator|sdio_oe               ; ConfigureADC:configurator|sdio_oe            ; 0.907             ;
+; ConfigureADC:configurator|wrre_latched          ; ConfigureADC:configurator|sdio_oe            ; 0.907             ;
+; resetn                                          ; ConfigureADC:configurator|needWait           ; 0.864             ;
+; clockDivideBuffer[0]                            ; innerDataClock                               ; 0.854             ;
+; SinLUT:synthesizer|counter[2]                   ; SinLUT:synthesizer|output_p[2]               ; 0.850             ;
+; ConfigureADC:configurator|counter[2]            ; ConfigureADC:configurator|sdio_do~_emulated  ; 0.824             ;
+; clockDivideBuffer[3]                            ; innerDataClock                               ; 0.817             ;
+; ConfigureADC:configurator|discardBuffer~reg0    ; ConfigureADC:configurator|discarded          ; 0.808             ;
+; ConfigureADC:configurator|waitingBuffer[2]      ; ConfigureADC:configurator|waitingBuffer[2]   ; 0.791             ;
+; ConfigureADC:configurator|counter[0]            ; ConfigureADC:configurator|sdio_do~_emulated  ; 0.770             ;
+; ConfigureADC:configurator|counter[1]            ; ConfigureADC:configurator|sdio_do~_emulated  ; 0.770             ;
+; ConfigureADC:configurator|discarding            ; ConfigureADC:configurator|discardBuffer~reg0 ; 0.761             ;
+; ConfigureADC:configurator|sclk_en               ; ConfigureADC:configurator|sclk_reg           ; 0.709             ;
+; clockDivideBuffer[1]                            ; innerDataClock                               ; 0.600             ;
+; clockDivideBuffer[2]                            ; innerDataClock                               ; 0.551             ;
+; btn_prev                                        ; WrReEn                                       ; 0.464             ;
+; ConfigureADC:configurator|counter[3]            ; ConfigureADC:configurator|sdio_do~_emulated  ; 0.440             ;
+; btn_ff2                                         ; WrReEn                                       ; 0.431             ;
+; ConfigureADC:configurator|state.SEND            ; ConfigureADC:configurator|wrre_latched       ; 0.407             ;
+; SinLUT:synthesizer|counter[30]                  ; SinLUT:synthesizer|counter[31]               ; 0.206             ;
+; SinLUT:synthesizer|counter[18]                  ; SinLUT:synthesizer|counter[31]               ; 0.199             ;
+; SinLUT:synthesizer|counter[7]                   ; SinLUT:synthesizer|counter[31]               ; 0.198             ;
+; SinLUT:synthesizer|counter[15]                  ; SinLUT:synthesizer|counter[31]               ; 0.194             ;
+; SinLUT:synthesizer|counter[12]                  ; SinLUT:synthesizer|counter[31]               ; 0.192             ;
+; SinLUT:synthesizer|counter[8]                   ; SinLUT:synthesizer|counter[31]               ; 0.179             ;
+; SinLUT:synthesizer|counter[5]                   ; SinLUT:synthesizer|counter[31]               ; 0.179             ;
+; SinLUT:synthesizer|counter[13]                  ; SinLUT:synthesizer|counter[31]               ; 0.174             ;
+; SinLUT:synthesizer|counter[6]                   ; SinLUT:synthesizer|counter[31]               ; 0.174             ;
+; SinLUT:synthesizer|counter[16]                  ; SinLUT:synthesizer|counter[31]               ; 0.173             ;
+; SinLUT:synthesizer|counter[9]                   ; SinLUT:synthesizer|counter[31]               ; 0.172             ;
+; SinLUT:synthesizer|counter[29]                  ; SinLUT:synthesizer|counter[31]               ; 0.101             ;
+; SinLUT:synthesizer|counter[17]                  ; SinLUT:synthesizer|counter[31]               ; 0.095             ;
+; WrReEn                                          ; ConfigureADC:configurator|wrre_latched       ; 0.069             ;
+; SinLUT:synthesizer|counter[14]                  ; SinLUT:synthesizer|counter[31]               ; 0.065             ;
+; ConfigureADC:configurator|nextState.SEND        ; ConfigureADC:configurator|wrre_latched       ; 0.051             ;
+; SinLUT:synthesizer|counter[28]                  ; SinLUT:synthesizer|counter[31]               ; 0.049             ;
+; ConfigureADC:configurator|state.DONE            ; ConfigureADC:configurator|nextState.DONE     ; 0.035             ;
+; ConfigureADC:configurator|state.DISCARD         ; ConfigureADC:configurator|SDENB~reg0         ; 0.032             ;
+; SinLUT:synthesizer|counter[10]                  ; SinLUT:synthesizer|counter[31]               ; 0.026             ;
++-------------------------------------------------+----------------------------------------------+-------------------+
+Note: This table only shows the top 77 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -1677,6 +1697,7 @@ Info (21076): Low junction temperature operating condition is not set. Assuming 
 Info (171004): Fitter is performing a Standard Fit compilation using maximum Fitter effort to optimize design performance
 Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
+Critical Warning (169085): No exact pin location assignment(s) for 1 pins of 35 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
 Info (184025): 17 differential I/O pins do not have complementary pins. As a result, the Fitter automatically creates the complementary pins.
     Info (184026): differential I/O pin "output_p[0]" does not have a complementary pin. As a result, the Fitter automatically creates the complementary pin "output_p[0](n)". File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 7
     Info (184026): differential I/O pin "output_p[1]" does not have a complementary pin. As a result, the Fitter automatically creates the complementary pin "output_p[1](n)". File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 7
@@ -1696,60 +1717,73 @@ Info (184025): 17 differential I/O pins do not have complementary pins. As a res
     Info (184026): differential I/O pin "output_p[15]" does not have a complementary pin. As a result, the Fitter automatically creates the complementary pin "output_p[15](n)". File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 7
     Info (184026): differential I/O pin "parallelDataClk_p" does not have a complementary pin. As a result, the Fitter automatically creates the complementary pin "parallelDataClk_p(n)". File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 8
 Info (184020): Starting Fitter periphery placement operations
-Info (11191): Automatically promoted 2 clocks (2 global)
-    Info (11162): inputClock~inputCLKENA0 with 32 fanout uses global clock CLKCTRL_G12
-    Info (11162): WrReEnButton~inputCLKENA0 with 2 fanout uses global clock CLKCTRL_G6
+Info (11191): Automatically promoted 1 clock (1 global)
+    Info (11162): inputClock~inputCLKENA0 with 37 fanout uses global clock CLKCTRL_G12
 Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
 Info (176233): Starting register packing
+Warning (335093): The Timing Analyzer is analyzing 1 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'HFFrequencySynthesis.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info (332128): Timing requirements not specified -- optimizing circuit to achieve the following default global requirements
     Info (332127): Assuming a default timing requirement
-Info (332111): Found 4 clocks
+Info (332111): Found 5 clocks
     Info (332111):   Period   Clock Name
     Info (332111): ======== ============
     Info (332111):    1.000 ConfigureADC:configurator|internalClock
+    Info (332111):    1.000 ConfigureADC:configurator|sclk_reg
+    Info (332111):    1.000 ConfigureADC:configurator|waiting
     Info (332111):    1.000 innerDataClock
     Info (332111):    1.000   inputClock
-    Info (332111):    1.000 WrReEnButton
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
 Warning (15705): Ignored locations or region assignments to the following nodes
+    Warning (15706): Node "WrReState" is assigned to location or region, but does not exist in design
     Warning (15706): Node "clockBuffOut[0]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "clockBuffOut[1]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "clockBuffOut[2]" is assigned to location or region, but does not exist in design
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:07
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:08
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:02
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:03
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X34_Y49 to location X45_Y61
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:05
-Info (11888): Total time spent on timing analysis during the Fitter is 0.97 seconds.
+    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X11_Y49 to location X22_Y61
+Info (170134): Cannot fit design in device -- retrying with increased optimization that can result in longer processing time
+    Info (170138): Failed to route the following 1 signal(s)
+        Info (170139): Signal "ConfigureADC:configurator|Mux1~12"
+    Info (170140): Cannot fit design in device -- following 1 routing resource(s) needed by more than one signal during the last fitting attempt
+        Info (170141): Routing resource LAB Input (X19_Y56, I35)
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:06
+Info (170191): Fitter placement operations beginning
+Info (170137): Fitter placement was successful
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
+Info (170193): Fitter routing operations beginning
+Info (170195): Router estimated average interconnect usage is 0% of the available device resources
+    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X11_Y49 to location X22_Y61
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:07
+Info (11888): Total time spent on timing analysis during the Fitter is 1.41 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:05
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
-Warning (169064): Following 5 pins have no output enable or a GND or VCC output enable - later changes to this connectivity may change fitting results
+Warning (169064): Following 4 pins have no output enable or a GND or VCC output enable - later changes to this connectivity may change fitting results
     Info (169065): Pin sclk has a permanently enabled output enable File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 10
     Info (169065): Pin sdenb has a permanently enabled output enable File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 11
     Info (169065): Pin configok has a permanently enabled output enable File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 14
-    Info (169065): Pin resetn has a permanently disabled output enable File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 23
     Info (169065): Pin discardBuffer has a permanently enabled output enable File: Z:/dev/hw/DDS/fpga_vhdl/ter/dds/MainFSM.vhd Line: 24
 Info (144001): Generated suppressed messages file Z:/dev/hw/DDS/fpga_vhdl/ter/dds/output_files/HFFrequencySynthesis.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 6420 megabytes
-    Info: Processing ended: Mon Feb 02 16:56:12 2026
-    Info: Elapsed time: 00:00:33
-    Info: Total CPU time (on all processors): 00:00:59
+Info: Quartus Prime Fitter was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 6613 megabytes
+    Info: Processing ended: Fri Mar 06 16:17:16 2026
+    Info: Elapsed time: 00:01:03
+    Info: Total CPU time (on all processors): 00:01:55
 
 
 +----------------------------+

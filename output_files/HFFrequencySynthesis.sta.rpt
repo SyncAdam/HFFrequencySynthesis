@@ -1,5 +1,5 @@
 Timing Analyzer report for HFFrequencySynthesis
-Mon Feb 02 16:56:27 2026
+Fri Mar 06 16:17:37 2026
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -46,15 +46,17 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  38. Signal Integrity Metrics (Fast 1100mv 85c Model)
  39. Setup Transfers
  40. Hold Transfers
- 41. Report TCCS
- 42. Report RSKM
- 43. Unconstrained Paths Summary
- 44. Clock Status Summary
- 45. Unconstrained Input Ports
- 46. Unconstrained Output Ports
+ 41. Recovery Transfers
+ 42. Removal Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths Summary
+ 46. Clock Status Summary
  47. Unconstrained Input Ports
  48. Unconstrained Output Ports
- 49. Timing Analyzer Messages
+ 49. Unconstrained Input Ports
+ 50. Unconstrained Output Ports
+ 51. Timing Analyzer Messages
 
 
 
@@ -99,14 +101,14 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.13        ;
+; Average used               ; 1.16        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   4.5%      ;
-;     Processor 3            ;   4.4%      ;
-;     Processor 4            ;   4.4%      ;
+;     Processor 2            ;   5.5%      ;
+;     Processor 3            ;   5.4%      ;
+;     Processor 4            ;   5.3%      ;
 +----------------------------+-------------+
 
 
@@ -116,9 +118,10 @@ refer to the applicable agreement for further details.
 ; Clock Name                              ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                     ;
 +-----------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------------------------+
 ; ConfigureADC:configurator|internalClock ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { ConfigureADC:configurator|internalClock } ;
+; ConfigureADC:configurator|sclk_reg      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { ConfigureADC:configurator|sclk_reg }      ;
+; ConfigureADC:configurator|waiting       ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { ConfigureADC:configurator|waiting }       ;
 ; innerDataClock                          ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { innerDataClock }                          ;
 ; inputClock                              ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { inputClock }                              ;
-; WrReEnButton                            ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { WrReEnButton }                            ;
 +-----------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------------------------+
 
 
@@ -127,10 +130,10 @@ refer to the applicable agreement for further details.
 +------------+-----------------+-----------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                              ; Note ;
 +------------+-----------------+-----------------------------------------+------+
-; 113.07 MHz ; 113.07 MHz      ; ConfigureADC:configurator|internalClock ;      ;
-; 151.91 MHz ; 151.91 MHz      ; innerDataClock                          ;      ;
-; 235.46 MHz ; 235.46 MHz      ; inputClock                              ;      ;
-; 633.31 MHz ; 633.31 MHz      ; WrReEnButton                            ;      ;
+; 155.45 MHz ; 155.45 MHz      ; innerDataClock                          ;      ;
+; 204.67 MHz ; 204.67 MHz      ; ConfigureADC:configurator|sclk_reg      ;      ;
+; 207.47 MHz ; 207.47 MHz      ; inputClock                              ;      ;
+; 282.65 MHz ; 282.65 MHz      ; ConfigureADC:configurator|internalClock ;      ;
 +------------+-----------------+-----------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -146,10 +149,11 @@ HTML report is unavailable in plain text report export.
 +-----------------------------------------+--------+---------------+
 ; Clock                                   ; Slack  ; End Point TNS ;
 +-----------------------------------------+--------+---------------+
-; innerDataClock                          ; -5.583 ; -205.746      ;
-; ConfigureADC:configurator|internalClock ; -5.367 ; -102.925      ;
-; inputClock                              ; -3.247 ; -54.700       ;
-; WrReEnButton                            ; -0.579 ; -1.452        ;
+; ConfigureADC:configurator|waiting       ; -5.763 ; -5.763        ;
+; ConfigureADC:configurator|sclk_reg      ; -5.566 ; -86.377       ;
+; innerDataClock                          ; -5.433 ; -232.691      ;
+; ConfigureADC:configurator|internalClock ; -4.696 ; -29.081       ;
+; inputClock                              ; -3.942 ; -62.667       ;
 +-----------------------------------------+--------+---------------+
 
 
@@ -158,23 +162,32 @@ HTML report is unavailable in plain text report export.
 +-----------------------------------------+-------+---------------+
 ; Clock                                   ; Slack ; End Point TNS ;
 +-----------------------------------------+-------+---------------+
-; inputClock                              ; 0.265 ; 0.000         ;
-; WrReEnButton                            ; 0.347 ; 0.000         ;
+; inputClock                              ; 0.164 ; 0.000         ;
+; ConfigureADC:configurator|internalClock ; 0.226 ; 0.000         ;
 ; innerDataClock                          ; 0.361 ; 0.000         ;
-; ConfigureADC:configurator|internalClock ; 0.589 ; 0.000         ;
+; ConfigureADC:configurator|sclk_reg      ; 0.777 ; 0.000         ;
+; ConfigureADC:configurator|waiting       ; 3.587 ; 0.000         ;
 +-----------------------------------------+-------+---------------+
 
 
-------------------------------------------
-; Slow 1100mV 85C Model Recovery Summary ;
-------------------------------------------
-No paths to report.
++------------------------------------------------------------------+
+; Slow 1100mV 85C Model Recovery Summary                           ;
++-----------------------------------------+--------+---------------+
+; Clock                                   ; Slack  ; End Point TNS ;
++-----------------------------------------+--------+---------------+
+; ConfigureADC:configurator|sclk_reg      ; -1.868 ; -1.868        ;
+; ConfigureADC:configurator|internalClock ; -1.655 ; -1.655        ;
++-----------------------------------------+--------+---------------+
 
 
------------------------------------------
-; Slow 1100mV 85C Model Removal Summary ;
------------------------------------------
-No paths to report.
++-----------------------------------------------------------------+
+; Slow 1100mV 85C Model Removal Summary                           ;
++-----------------------------------------+-------+---------------+
+; Clock                                   ; Slack ; End Point TNS ;
++-----------------------------------------+-------+---------------+
+; ConfigureADC:configurator|internalClock ; 0.920 ; 0.000         ;
+; ConfigureADC:configurator|sclk_reg      ; 1.158 ; 0.000         ;
++-----------------------------------------+-------+---------------+
 
 
 +------------------------------------------------------------------+
@@ -182,10 +195,11 @@ No paths to report.
 +-----------------------------------------+--------+---------------+
 ; Clock                                   ; Slack  ; End Point TNS ;
 +-----------------------------------------+--------+---------------+
-; innerDataClock                          ; -0.538 ; -38.692       ;
-; inputClock                              ; -0.538 ; -28.875       ;
-; ConfigureADC:configurator|internalClock ; -0.538 ; -20.873       ;
-; WrReEnButton                            ; -0.538 ; -2.351        ;
+; innerDataClock                          ; -0.538 ; -40.631       ;
+; inputClock                              ; -0.538 ; -33.670       ;
+; ConfigureADC:configurator|sclk_reg      ; -0.538 ; -13.590       ;
+; ConfigureADC:configurator|internalClock ; -0.538 ; -7.245        ;
+; ConfigureADC:configurator|waiting       ; 0.362  ; 0.000         ;
 +-----------------------------------------+--------+---------------+
 
 
@@ -196,16 +210,16 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1100mV 0C Model Fmax Summary                                                                                             ;
-+------------+-----------------+-----------------------------------------+------------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name                              ; Note                                                 ;
-+------------+-----------------+-----------------------------------------+------------------------------------------------------+
-; 119.85 MHz ; 119.85 MHz      ; ConfigureADC:configurator|internalClock ;                                                      ;
-; 149.08 MHz ; 149.08 MHz      ; innerDataClock                          ;                                                      ;
-; 227.22 MHz ; 227.22 MHz      ; inputClock                              ;                                                      ;
-; 677.51 MHz ; 605.33 MHz      ; WrReEnButton                            ; limit due to low minimum pulse width violation (tcl) ;
-+------------+-----------------+-----------------------------------------+------------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Fmax Summary                                             ;
++------------+-----------------+-----------------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                              ; Note ;
++------------+-----------------+-----------------------------------------+------+
+; 153.0 MHz  ; 153.0 MHz       ; innerDataClock                          ;      ;
+; 197.86 MHz ; 197.86 MHz      ; inputClock                              ;      ;
+; 205.68 MHz ; 205.68 MHz      ; ConfigureADC:configurator|sclk_reg      ;      ;
+; 287.44 MHz ; 287.44 MHz      ; ConfigureADC:configurator|internalClock ;      ;
++------------+-----------------+-----------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -214,10 +228,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------------------+--------+---------------+
 ; Clock                                   ; Slack  ; End Point TNS ;
 +-----------------------------------------+--------+---------------+
-; innerDataClock                          ; -5.708 ; -210.185      ;
-; ConfigureADC:configurator|internalClock ; -5.531 ; -106.089      ;
-; inputClock                              ; -3.401 ; -52.810       ;
-; WrReEnButton                            ; -0.476 ; -1.357        ;
+; ConfigureADC:configurator|waiting       ; -5.854 ; -5.854        ;
+; ConfigureADC:configurator|sclk_reg      ; -5.778 ; -87.560       ;
+; innerDataClock                          ; -5.536 ; -236.397      ;
+; ConfigureADC:configurator|internalClock ; -4.887 ; -29.521       ;
+; inputClock                              ; -4.054 ; -60.996       ;
 +-----------------------------------------+--------+---------------+
 
 
@@ -226,23 +241,32 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------------------+--------+---------------+
 ; Clock                                   ; Slack  ; End Point TNS ;
 +-----------------------------------------+--------+---------------+
-; inputClock                              ; -0.060 ; -0.120        ;
+; inputClock                              ; -0.249 ; -0.296        ;
+; ConfigureADC:configurator|internalClock ; 0.352  ; 0.000         ;
 ; innerDataClock                          ; 0.364  ; 0.000         ;
-; WrReEnButton                            ; 0.455  ; 0.000         ;
-; ConfigureADC:configurator|internalClock ; 0.570  ; 0.000         ;
+; ConfigureADC:configurator|sclk_reg      ; 0.784  ; 0.000         ;
+; ConfigureADC:configurator|waiting       ; 3.706  ; 0.000         ;
 +-----------------------------------------+--------+---------------+
 
 
------------------------------------------
-; Slow 1100mV 0C Model Recovery Summary ;
------------------------------------------
-No paths to report.
++------------------------------------------------------------------+
+; Slow 1100mV 0C Model Recovery Summary                            ;
++-----------------------------------------+--------+---------------+
+; Clock                                   ; Slack  ; End Point TNS ;
++-----------------------------------------+--------+---------------+
+; ConfigureADC:configurator|sclk_reg      ; -1.932 ; -1.932        ;
+; ConfigureADC:configurator|internalClock ; -1.741 ; -1.741        ;
++-----------------------------------------+--------+---------------+
 
 
-----------------------------------------
-; Slow 1100mV 0C Model Removal Summary ;
-----------------------------------------
-No paths to report.
++-----------------------------------------------------------------+
+; Slow 1100mV 0C Model Removal Summary                            ;
++-----------------------------------------+-------+---------------+
+; Clock                                   ; Slack ; End Point TNS ;
++-----------------------------------------+-------+---------------+
+; ConfigureADC:configurator|internalClock ; 0.941 ; 0.000         ;
+; ConfigureADC:configurator|sclk_reg      ; 1.158 ; 0.000         ;
++-----------------------------------------+-------+---------------+
 
 
 +------------------------------------------------------------------+
@@ -250,10 +274,11 @@ No paths to report.
 +-----------------------------------------+--------+---------------+
 ; Clock                                   ; Slack  ; End Point TNS ;
 +-----------------------------------------+--------+---------------+
-; innerDataClock                          ; -0.538 ; -38.265       ;
-; inputClock                              ; -0.538 ; -31.108       ;
-; ConfigureADC:configurator|internalClock ; -0.538 ; -20.974       ;
-; WrReEnButton                            ; -0.538 ; -2.580        ;
+; innerDataClock                          ; -0.538 ; -40.248       ;
+; inputClock                              ; -0.538 ; -35.899       ;
+; ConfigureADC:configurator|sclk_reg      ; -0.538 ; -13.587       ;
+; ConfigureADC:configurator|internalClock ; -0.538 ; -7.119        ;
+; ConfigureADC:configurator|waiting       ; 0.375  ; 0.000         ;
 +-----------------------------------------+--------+---------------+
 
 
@@ -269,35 +294,45 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-----------------------------------------+--------+---------------+
 ; Clock                                   ; Slack  ; End Point TNS ;
 +-----------------------------------------+--------+---------------+
-; inputClock                              ; -2.436 ; -21.318       ;
-; ConfigureADC:configurator|internalClock ; -2.378 ; -41.051       ;
-; innerDataClock                          ; -2.343 ; -83.880       ;
-; WrReEnButton                            ; 0.200  ; 0.000         ;
+; inputClock                              ; -2.973 ; -23.446       ;
+; ConfigureADC:configurator|waiting       ; -2.565 ; -2.565        ;
+; ConfigureADC:configurator|sclk_reg      ; -2.492 ; -38.162       ;
+; innerDataClock                          ; -2.152 ; -93.731       ;
+; ConfigureADC:configurator|internalClock ; -2.059 ; -12.614       ;
++-----------------------------------------+--------+---------------+
+
+
++------------------------------------------------------------------+
+; Fast 1100mV 85C Model Hold Summary                               ;
++-----------------------------------------+--------+---------------+
+; Clock                                   ; Slack  ; End Point TNS ;
++-----------------------------------------+--------+---------------+
+; ConfigureADC:configurator|internalClock ; -0.032 ; -0.032        ;
+; inputClock                              ; 0.095  ; 0.000         ;
+; innerDataClock                          ; 0.111  ; 0.000         ;
+; ConfigureADC:configurator|sclk_reg      ; 0.342  ; 0.000         ;
+; ConfigureADC:configurator|waiting       ; 1.951  ; 0.000         ;
++-----------------------------------------+--------+---------------+
+
+
++------------------------------------------------------------------+
+; Fast 1100mV 85C Model Recovery Summary                           ;
++-----------------------------------------+--------+---------------+
+; Clock                                   ; Slack  ; End Point TNS ;
++-----------------------------------------+--------+---------------+
+; ConfigureADC:configurator|sclk_reg      ; -0.917 ; -0.917        ;
+; ConfigureADC:configurator|internalClock ; -0.778 ; -0.778        ;
 +-----------------------------------------+--------+---------------+
 
 
 +-----------------------------------------------------------------+
-; Fast 1100mV 85C Model Hold Summary                              ;
+; Fast 1100mV 85C Model Removal Summary                           ;
 +-----------------------------------------+-------+---------------+
 ; Clock                                   ; Slack ; End Point TNS ;
 +-----------------------------------------+-------+---------------+
-; inputClock                              ; 0.055 ; 0.000         ;
-; innerDataClock                          ; 0.111 ; 0.000         ;
-; WrReEnButton                            ; 0.185 ; 0.000         ;
-; ConfigureADC:configurator|internalClock ; 0.227 ; 0.000         ;
+; ConfigureADC:configurator|internalClock ; 0.262 ; 0.000         ;
+; ConfigureADC:configurator|sclk_reg      ; 0.418 ; 0.000         ;
 +-----------------------------------------+-------+---------------+
-
-
-------------------------------------------
-; Fast 1100mV 85C Model Recovery Summary ;
-------------------------------------------
-No paths to report.
-
-
------------------------------------------
-; Fast 1100mV 85C Model Removal Summary ;
------------------------------------------
-No paths to report.
 
 
 +------------------------------------------------------------------+
@@ -305,10 +340,11 @@ No paths to report.
 +-----------------------------------------+--------+---------------+
 ; Clock                                   ; Slack  ; End Point TNS ;
 +-----------------------------------------+--------+---------------+
-; inputClock                              ; -0.452 ; -3.054        ;
-; WrReEnButton                            ; -0.049 ; -0.145        ;
-; ConfigureADC:configurator|internalClock ; -0.009 ; -0.063        ;
-; innerDataClock                          ; 0.094  ; 0.000         ;
+; inputClock                              ; -0.401 ; -3.342        ;
+; ConfigureADC:configurator|sclk_reg      ; 0.037  ; 0.000         ;
+; innerDataClock                          ; 0.079  ; 0.000         ;
+; ConfigureADC:configurator|internalClock ; 0.123  ; 0.000         ;
+; ConfigureADC:configurator|waiting       ; 0.432  ; 0.000         ;
 +-----------------------------------------+--------+---------------+
 
 
@@ -324,10 +360,11 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-----------------------------------------+--------+---------------+
 ; Clock                                   ; Slack  ; End Point TNS ;
 +-----------------------------------------+--------+---------------+
-; ConfigureADC:configurator|internalClock ; -2.320 ; -39.517       ;
-; innerDataClock                          ; -2.128 ; -75.488       ;
-; inputClock                              ; -1.911 ; -16.731       ;
-; WrReEnButton                            ; 0.282  ; 0.000         ;
+; inputClock                              ; -2.489 ; -18.566       ;
+; ConfigureADC:configurator|waiting       ; -2.444 ; -2.444        ;
+; ConfigureADC:configurator|sclk_reg      ; -2.362 ; -35.729       ;
+; innerDataClock                          ; -1.977 ; -84.983       ;
+; ConfigureADC:configurator|internalClock ; -1.962 ; -11.482       ;
 +-----------------------------------------+--------+---------------+
 
 
@@ -336,23 +373,32 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-----------------------------------------+--------+---------------+
 ; Clock                                   ; Slack  ; End Point TNS ;
 +-----------------------------------------+--------+---------------+
-; inputClock                              ; -0.129 ; -0.289        ;
+; inputClock                              ; -0.098 ; -0.288        ;
+; ConfigureADC:configurator|internalClock ; -0.038 ; -0.038        ;
 ; innerDataClock                          ; 0.093  ; 0.000         ;
-; WrReEnButton                            ; 0.195  ; 0.000         ;
-; ConfigureADC:configurator|internalClock ; 0.198  ; 0.000         ;
+; ConfigureADC:configurator|sclk_reg      ; 0.314  ; 0.000         ;
+; ConfigureADC:configurator|waiting       ; 1.932  ; 0.000         ;
 +-----------------------------------------+--------+---------------+
 
 
------------------------------------------
-; Fast 1100mV 0C Model Recovery Summary ;
------------------------------------------
-No paths to report.
++------------------------------------------------------------------+
+; Fast 1100mV 0C Model Recovery Summary                            ;
++-----------------------------------------+--------+---------------+
+; Clock                                   ; Slack  ; End Point TNS ;
++-----------------------------------------+--------+---------------+
+; ConfigureADC:configurator|sclk_reg      ; -0.811 ; -0.811        ;
+; ConfigureADC:configurator|internalClock ; -0.688 ; -0.688        ;
++-----------------------------------------+--------+---------------+
 
 
-----------------------------------------
-; Fast 1100mV 0C Model Removal Summary ;
-----------------------------------------
-No paths to report.
++-----------------------------------------------------------------+
+; Fast 1100mV 0C Model Removal Summary                            ;
++-----------------------------------------+-------+---------------+
+; Clock                                   ; Slack ; End Point TNS ;
++-----------------------------------------+-------+---------------+
+; ConfigureADC:configurator|internalClock ; 0.237 ; 0.000         ;
+; ConfigureADC:configurator|sclk_reg      ; 0.374 ; 0.000         ;
++-----------------------------------------+-------+---------------+
 
 
 +------------------------------------------------------------------+
@@ -360,10 +406,11 @@ No paths to report.
 +-----------------------------------------+--------+---------------+
 ; Clock                                   ; Slack  ; End Point TNS ;
 +-----------------------------------------+--------+---------------+
-; inputClock                              ; -0.414 ; -3.219        ;
-; WrReEnButton                            ; -0.068 ; -0.202        ;
-; ConfigureADC:configurator|internalClock ; 0.024  ; 0.000         ;
-; innerDataClock                          ; 0.109  ; 0.000         ;
+; inputClock                              ; -0.388 ; -3.524        ;
+; ConfigureADC:configurator|sclk_reg      ; 0.059  ; 0.000         ;
+; innerDataClock                          ; 0.097  ; 0.000         ;
+; ConfigureADC:configurator|internalClock ; 0.135  ; 0.000         ;
+; ConfigureADC:configurator|waiting       ; 0.444  ; 0.000         ;
 +-----------------------------------------+--------+---------------+
 
 
@@ -379,16 +426,18 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------------------------------------+----------+--------+----------+---------+---------------------+
 ; Clock                                    ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------------------------------+----------+--------+----------+---------+---------------------+
-; Worst-case Slack                         ; -5.708   ; -0.129 ; N/A      ; N/A     ; -0.538              ;
-;  ConfigureADC:configurator|internalClock ; -5.531   ; 0.198  ; N/A      ; N/A     ; -0.538              ;
-;  WrReEnButton                            ; -0.579   ; 0.185  ; N/A      ; N/A     ; -0.538              ;
-;  innerDataClock                          ; -5.708   ; 0.093  ; N/A      ; N/A     ; -0.538              ;
-;  inputClock                              ; -3.401   ; -0.129 ; N/A      ; N/A     ; -0.538              ;
-; Design-wide TNS                          ; -370.441 ; -0.289 ; 0.0      ; 0.0     ; -92.927             ;
-;  ConfigureADC:configurator|internalClock ; -106.089 ; 0.000  ; N/A      ; N/A     ; -20.974             ;
-;  WrReEnButton                            ; -1.452   ; 0.000  ; N/A      ; N/A     ; -2.580              ;
-;  innerDataClock                          ; -210.185 ; 0.000  ; N/A      ; N/A     ; -38.692             ;
-;  inputClock                              ; -54.700  ; -0.289 ; N/A      ; N/A     ; -31.108             ;
+; Worst-case Slack                         ; -5.854   ; -0.249 ; -1.932   ; 0.237   ; -0.538              ;
+;  ConfigureADC:configurator|internalClock ; -4.887   ; -0.038 ; -1.741   ; 0.237   ; -0.538              ;
+;  ConfigureADC:configurator|sclk_reg      ; -5.778   ; 0.314  ; -1.932   ; 0.374   ; -0.538              ;
+;  ConfigureADC:configurator|waiting       ; -5.854   ; 1.932  ; N/A      ; N/A     ; 0.362               ;
+;  innerDataClock                          ; -5.536   ; 0.093  ; N/A      ; N/A     ; -0.538              ;
+;  inputClock                              ; -4.054   ; -0.249 ; N/A      ; N/A     ; -0.538              ;
+; Design-wide TNS                          ; -420.328 ; -0.326 ; -3.673   ; 0.0     ; -96.853             ;
+;  ConfigureADC:configurator|internalClock ; -29.521  ; -0.038 ; -1.741   ; 0.000   ; -7.245              ;
+;  ConfigureADC:configurator|sclk_reg      ; -87.560  ; 0.000  ; -1.932   ; 0.000   ; -13.590             ;
+;  ConfigureADC:configurator|waiting       ; -5.854   ; 0.000  ; N/A      ; N/A     ; 0.000               ;
+;  innerDataClock                          ; -236.397 ; 0.000  ; N/A      ; N/A     ; -40.631             ;
+;  inputClock                              ; -62.667  ; -0.296 ; N/A      ; N/A     ; -35.899             ;
 +------------------------------------------+----------+--------+----------+---------+---------------------+
 
 
@@ -414,8 +463,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; output_p[14]         ; LVDS         ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; open                ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; 100 Ohm            ; n/a           ; n/a             ; n/a         ;
 ; output_p[15]         ; LVDS         ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; open                ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; 100 Ohm            ; n/a           ; n/a             ; n/a         ;
 ; parallelDataClk_p    ; LVDS         ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; open                ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; 100 Ohm            ; n/a           ; n/a             ; n/a         ;
-; sdio                 ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; WrReState            ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; WrReStatus           ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ClkOut               ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; writeConfigReceived  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; stateRegOut[0]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
@@ -426,8 +474,8 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; nextStateRegOut[2]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; sclk                 ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; sdenb                ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; sdio                 ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; configok             ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; resetn               ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; discardBuffer        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; output_p[0](n)       ; LVDS         ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; open                ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; 100 Ohm            ; n/a           ; n/a             ; n/a         ;
 ; output_p[1](n)       ; LVDS         ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; open                ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; 100 Ohm            ; n/a           ; n/a             ; n/a         ;
@@ -456,9 +504,10 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +---------------+--------------+-----------------+-----------------+
 ; sclk          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; sdenb         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sdio          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; configok      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; resetn        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; discardBuffer ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; resetn        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; writeconfig   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; inputClock    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; WrReEnButton  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -487,8 +536,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; output_p[14]         ; LVDS         ; 0 s                 ; 0 s                 ; 0.351 V                      ; -0.351 V                     ; -                   ; -                   ; -                                    ; -                                    ; 1.3e-10 s                   ; 1.33e-10 s                  ; Yes                        ; Yes                        ; 0.351 V                     ; -0.351 V                    ; -                  ; -                  ; -                                   ; -                                   ; 1.3e-10 s                  ; 1.33e-10 s                 ; Yes                       ; Yes                       ;
 ; output_p[15]         ; LVDS         ; 0 s                 ; 0 s                 ; 0.351 V                      ; -0.351 V                     ; -                   ; -                   ; -                                    ; -                                    ; 1.3e-10 s                   ; 1.33e-10 s                  ; Yes                        ; Yes                        ; 0.351 V                     ; -0.351 V                    ; -                  ; -                  ; -                                   ; -                                   ; 1.3e-10 s                  ; 1.33e-10 s                 ; Yes                       ; Yes                       ;
 ; parallelDataClk_p    ; LVDS         ; 0 s                 ; 0 s                 ; 0.351 V                      ; -0.351 V                     ; -                   ; -                   ; -                                    ; -                                    ; 1.3e-10 s                   ; 1.33e-10 s                  ; Yes                        ; Yes                        ; 0.351 V                     ; -0.351 V                    ; -                  ; -                  ; -                                   ; -                                   ; 1.3e-10 s                  ; 1.33e-10 s                 ; Yes                       ; Yes                       ;
-; sdio                 ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0492 V           ; 0.181 V                              ; 0.116 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0492 V          ; 0.181 V                             ; 0.116 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
-; WrReState            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0492 V           ; 0.181 V                              ; 0.116 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0492 V          ; 0.181 V                             ; 0.116 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
+; WrReStatus           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0492 V           ; 0.181 V                              ; 0.116 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0492 V          ; 0.181 V                             ; 0.116 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
 ; ClkOut               ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.88e-07 V                   ; 2.35 V              ; -0.0185 V           ; 0.153 V                              ; 0.099 V                              ; 4.6e-10 s                   ; 4.48e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.88e-07 V                  ; 2.35 V             ; -0.0185 V          ; 0.153 V                             ; 0.099 V                             ; 4.6e-10 s                  ; 4.48e-10 s                 ; No                        ; Yes                       ;
 ; writeConfigReceived  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.88e-07 V                   ; 2.35 V              ; -0.0185 V           ; 0.153 V                              ; 0.099 V                              ; 4.6e-10 s                   ; 4.48e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.88e-07 V                  ; 2.35 V             ; -0.0185 V          ; 0.153 V                             ; 0.099 V                             ; 4.6e-10 s                  ; 4.48e-10 s                 ; No                        ; Yes                       ;
 ; stateRegOut[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0495 V           ; 0.18 V                               ; 0.115 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0495 V          ; 0.18 V                              ; 0.115 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
@@ -499,8 +547,8 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; nextStateRegOut[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.19e-07 V                   ; 2.4 V               ; -0.039 V            ; 0.21 V                               ; 0.145 V                              ; 4.67e-10 s                  ; 4.63e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.19e-07 V                  ; 2.4 V              ; -0.039 V           ; 0.21 V                              ; 0.145 V                             ; 4.67e-10 s                 ; 4.63e-10 s                 ; No                        ; Yes                       ;
 ; sclk                 ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.19e-07 V                   ; 2.4 V               ; -0.039 V            ; 0.21 V                               ; 0.145 V                              ; 4.67e-10 s                  ; 4.63e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.19e-07 V                  ; 2.4 V              ; -0.039 V           ; 0.21 V                              ; 0.145 V                             ; 4.67e-10 s                 ; 4.63e-10 s                 ; No                        ; Yes                       ;
 ; sdenb                ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.19e-07 V                   ; 2.4 V               ; -0.039 V            ; 0.21 V                               ; 0.145 V                              ; 4.67e-10 s                  ; 4.63e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.19e-07 V                  ; 2.4 V              ; -0.039 V           ; 0.21 V                              ; 0.145 V                             ; 4.67e-10 s                 ; 4.63e-10 s                 ; No                        ; Yes                       ;
+; sdio                 ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0492 V           ; 0.181 V                              ; 0.116 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0492 V          ; 0.181 V                             ; 0.116 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
 ; configok             ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.19e-07 V                   ; 2.4 V               ; -0.039 V            ; 0.21 V                               ; 0.145 V                              ; 4.67e-10 s                  ; 4.63e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.19e-07 V                  ; 2.4 V              ; -0.039 V           ; 0.21 V                              ; 0.145 V                             ; 4.67e-10 s                 ; 4.63e-10 s                 ; No                        ; Yes                       ;
-; resetn               ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.19e-07 V                   ; 2.4 V               ; -0.039 V            ; 0.21 V                               ; 0.145 V                              ; 4.67e-10 s                  ; 4.63e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.19e-07 V                  ; 2.4 V              ; -0.039 V           ; 0.21 V                              ; 0.145 V                             ; 4.67e-10 s                 ; 4.63e-10 s                 ; No                        ; Yes                       ;
 ; discardBuffer        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0492 V           ; 0.181 V                              ; 0.116 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0492 V          ; 0.181 V                             ; 0.116 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
 ; output_p[0](n)       ; LVDS         ; 0 s                 ; 0 s                 ; 0.351 V                      ; -0.351 V                     ; -                   ; -                   ; -                                    ; -                                    ; 1.3e-10 s                   ; 1.33e-10 s                  ; Yes                        ; Yes                        ; 0.351 V                     ; -0.351 V                    ; -                  ; -                  ; -                                   ; -                                   ; 1.3e-10 s                  ; 1.33e-10 s                 ; Yes                       ; Yes                       ;
 ; output_p[1](n)       ; LVDS         ; 0 s                 ; 0 s                 ; 0.351 V                      ; -0.351 V                     ; -                   ; -                   ; -                                    ; -                                    ; 1.3e-10 s                   ; 1.33e-10 s                  ; Yes                        ; Yes                        ; 0.351 V                     ; -0.351 V                    ; -                  ; -                  ; -                                   ; -                                   ; 1.3e-10 s                  ; 1.33e-10 s                 ; Yes                       ; Yes                       ;
@@ -544,8 +592,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; output_p[14]         ; LVDS         ; 0 s                 ; 0 s                 ; 0.319 V                      ; -0.319 V                     ; -                   ; -                   ; -                                    ; -                                    ; 1.37e-10 s                  ; 1.41e-10 s                  ; Yes                        ; Yes                        ; 0.319 V                     ; -0.319 V                    ; -                  ; -                  ; -                                   ; -                                   ; 1.37e-10 s                 ; 1.41e-10 s                 ; Yes                       ; Yes                       ;
 ; output_p[15]         ; LVDS         ; 0 s                 ; 0 s                 ; 0.319 V                      ; -0.319 V                     ; -                   ; -                   ; -                                    ; -                                    ; 1.37e-10 s                  ; 1.41e-10 s                  ; Yes                        ; Yes                        ; 0.319 V                     ; -0.319 V                    ; -                  ; -                  ; -                                   ; -                                   ; 1.37e-10 s                 ; 1.41e-10 s                 ; Yes                       ; Yes                       ;
 ; parallelDataClk_p    ; LVDS         ; 0 s                 ; 0 s                 ; 0.319 V                      ; -0.319 V                     ; -                   ; -                   ; -                                    ; -                                    ; 1.37e-10 s                  ; 1.41e-10 s                  ; Yes                        ; Yes                        ; 0.319 V                     ; -0.319 V                    ; -                  ; -                  ; -                                   ; -                                   ; 1.37e-10 s                 ; 1.41e-10 s                 ; Yes                       ; Yes                       ;
-; sdio                 ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.032 V            ; 0.204 V                              ; 0.181 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.032 V           ; 0.204 V                             ; 0.181 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
-; WrReState            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.032 V            ; 0.204 V                              ; 0.181 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.032 V           ; 0.204 V                             ; 0.181 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
+; WrReStatus           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.032 V            ; 0.204 V                              ; 0.181 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.032 V           ; 0.204 V                             ; 0.181 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
 ; ClkOut               ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.27e-05 V                   ; 2.34 V              ; -0.0089 V           ; 0.206 V                              ; 0.058 V                              ; 4.97e-10 s                  ; 5.13e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.27e-05 V                  ; 2.34 V             ; -0.0089 V          ; 0.206 V                             ; 0.058 V                             ; 4.97e-10 s                 ; 5.13e-10 s                 ; Yes                       ; Yes                       ;
 ; writeConfigReceived  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.27e-05 V                   ; 2.34 V              ; -0.0089 V           ; 0.206 V                              ; 0.058 V                              ; 4.97e-10 s                  ; 5.13e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.27e-05 V                  ; 2.34 V             ; -0.0089 V          ; 0.206 V                             ; 0.058 V                             ; 4.97e-10 s                 ; 5.13e-10 s                 ; Yes                       ; Yes                       ;
 ; stateRegOut[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.0315 V           ; 0.205 V                              ; 0.182 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.0315 V          ; 0.205 V                             ; 0.182 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
@@ -556,8 +603,8 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; nextStateRegOut[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.56e-05 V                   ; 2.38 V              ; -0.026 V            ; 0.249 V                              ; 0.089 V                              ; 4.95e-10 s                  ; 6.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.56e-05 V                  ; 2.38 V             ; -0.026 V           ; 0.249 V                             ; 0.089 V                             ; 4.95e-10 s                 ; 6.01e-10 s                 ; No                        ; Yes                       ;
 ; sclk                 ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.56e-05 V                   ; 2.38 V              ; -0.026 V            ; 0.249 V                              ; 0.089 V                              ; 4.95e-10 s                  ; 6.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.56e-05 V                  ; 2.38 V             ; -0.026 V           ; 0.249 V                             ; 0.089 V                             ; 4.95e-10 s                 ; 6.01e-10 s                 ; No                        ; Yes                       ;
 ; sdenb                ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.56e-05 V                   ; 2.38 V              ; -0.026 V            ; 0.249 V                              ; 0.089 V                              ; 4.95e-10 s                  ; 6.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.56e-05 V                  ; 2.38 V             ; -0.026 V           ; 0.249 V                             ; 0.089 V                             ; 4.95e-10 s                 ; 6.01e-10 s                 ; No                        ; Yes                       ;
+; sdio                 ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.032 V            ; 0.204 V                              ; 0.181 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.032 V           ; 0.204 V                             ; 0.181 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
 ; configok             ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.56e-05 V                   ; 2.38 V              ; -0.026 V            ; 0.249 V                              ; 0.089 V                              ; 4.95e-10 s                  ; 6.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.56e-05 V                  ; 2.38 V             ; -0.026 V           ; 0.249 V                             ; 0.089 V                             ; 4.95e-10 s                 ; 6.01e-10 s                 ; No                        ; Yes                       ;
-; resetn               ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.56e-05 V                   ; 2.38 V              ; -0.026 V            ; 0.249 V                              ; 0.089 V                              ; 4.95e-10 s                  ; 6.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.56e-05 V                  ; 2.38 V             ; -0.026 V           ; 0.249 V                             ; 0.089 V                             ; 4.95e-10 s                 ; 6.01e-10 s                 ; No                        ; Yes                       ;
 ; discardBuffer        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.032 V            ; 0.204 V                              ; 0.181 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.032 V           ; 0.204 V                             ; 0.181 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
 ; output_p[0](n)       ; LVDS         ; 0 s                 ; 0 s                 ; 0.319 V                      ; -0.319 V                     ; -                   ; -                   ; -                                    ; -                                    ; 1.37e-10 s                  ; 1.41e-10 s                  ; Yes                        ; Yes                        ; 0.319 V                     ; -0.319 V                    ; -                  ; -                  ; -                                   ; -                                   ; 1.37e-10 s                 ; 1.41e-10 s                 ; Yes                       ; Yes                       ;
 ; output_p[1](n)       ; LVDS         ; 0 s                 ; 0 s                 ; 0.319 V                      ; -0.319 V                     ; -                   ; -                   ; -                                    ; -                                    ; 1.37e-10 s                  ; 1.41e-10 s                  ; Yes                        ; Yes                        ; 0.319 V                     ; -0.319 V                    ; -                  ; -                  ; -                                   ; -                                   ; 1.37e-10 s                 ; 1.41e-10 s                 ; Yes                       ; Yes                       ;
@@ -601,8 +648,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; output_p[14]         ; LVDS         ; 0 s                 ; 0 s                 ; 0.534 V                      ; -0.534 V                     ; -                   ; -                   ; -                                    ; -                                    ; 1.33e-10 s                  ; 1.37e-10 s                  ; Yes                        ; Yes                        ; 0.534 V                     ; -0.534 V                    ; -                  ; -                  ; -                                   ; -                                   ; 1.33e-10 s                 ; 1.37e-10 s                 ; Yes                       ; Yes                       ;
 ; output_p[15]         ; LVDS         ; 0 s                 ; 0 s                 ; 0.534 V                      ; -0.534 V                     ; -                   ; -                   ; -                                    ; -                                    ; 1.33e-10 s                  ; 1.37e-10 s                  ; Yes                        ; Yes                        ; 0.534 V                     ; -0.534 V                    ; -                  ; -                  ; -                                   ; -                                   ; 1.33e-10 s                 ; 1.37e-10 s                 ; Yes                       ; Yes                       ;
 ; parallelDataClk_p    ; LVDS         ; 0 s                 ; 0 s                 ; 0.534 V                      ; -0.534 V                     ; -                   ; -                   ; -                                    ; -                                    ; 1.33e-10 s                  ; 1.37e-10 s                  ; Yes                        ; Yes                        ; 0.534 V                     ; -0.534 V                    ; -                  ; -                  ; -                                   ; -                                   ; 1.33e-10 s                 ; 1.37e-10 s                 ; Yes                       ; Yes                       ;
-; sdio                 ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
-; WrReState            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; WrReStatus           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
 ; ClkOut               ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
 ; writeConfigReceived  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
 ; stateRegOut[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
@@ -613,8 +659,8 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; nextStateRegOut[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
 ; sclk                 ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
 ; sdenb                ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
+; sdio                 ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
 ; configok             ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
-; resetn               ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
 ; discardBuffer        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
 ; output_p[0](n)       ; LVDS         ; 0 s                 ; 0 s                 ; 0.534 V                      ; -0.534 V                     ; -                   ; -                   ; -                                    ; -                                    ; 1.33e-10 s                  ; 1.37e-10 s                  ; Yes                        ; Yes                        ; 0.534 V                     ; -0.534 V                    ; -                  ; -                  ; -                                   ; -                                   ; 1.33e-10 s                 ; 1.37e-10 s                 ; Yes                       ; Yes                       ;
 ; output_p[1](n)       ; LVDS         ; 0 s                 ; 0 s                 ; 0.534 V                      ; -0.534 V                     ; -                   ; -                   ; -                                    ; -                                    ; 1.33e-10 s                  ; 1.37e-10 s                  ; Yes                        ; Yes                        ; 0.534 V                     ; -0.534 V                    ; -                  ; -                  ; -                                   ; -                                   ; 1.33e-10 s                 ; 1.37e-10 s                 ; Yes                       ; Yes                       ;
@@ -658,8 +704,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; output_p[14]         ; LVDS         ; 0 s                 ; 0 s                 ; 0.488 V                      ; -0.488 V                     ; -                   ; -                   ; -                                    ; -                                    ; 1.41e-10 s                  ; 1.44e-10 s                  ; Yes                        ; Yes                        ; 0.488 V                     ; -0.488 V                    ; -                  ; -                  ; -                                   ; -                                   ; 1.41e-10 s                 ; 1.44e-10 s                 ; Yes                       ; Yes                       ;
 ; output_p[15]         ; LVDS         ; 0 s                 ; 0 s                 ; 0.488 V                      ; -0.488 V                     ; -                   ; -                   ; -                                    ; -                                    ; 1.41e-10 s                  ; 1.44e-10 s                  ; Yes                        ; Yes                        ; 0.488 V                     ; -0.488 V                    ; -                  ; -                  ; -                                   ; -                                   ; 1.41e-10 s                 ; 1.44e-10 s                 ; Yes                       ; Yes                       ;
 ; parallelDataClk_p    ; LVDS         ; 0 s                 ; 0 s                 ; 0.488 V                      ; -0.488 V                     ; -                   ; -                   ; -                                    ; -                                    ; 1.41e-10 s                  ; 1.44e-10 s                  ; Yes                        ; Yes                        ; 0.488 V                     ; -0.488 V                    ; -                  ; -                  ; -                                   ; -                                   ; 1.41e-10 s                 ; 1.44e-10 s                 ; Yes                       ; Yes                       ;
-; sdio                 ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
-; WrReState            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
+; WrReStatus           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
 ; ClkOut               ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; writeConfigReceived  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; stateRegOut[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
@@ -670,8 +715,8 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; nextStateRegOut[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
 ; sclk                 ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
 ; sdenb                ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
+; sdio                 ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
 ; configok             ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
-; resetn               ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
 ; discardBuffer        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
 ; output_p[0](n)       ; LVDS         ; 0 s                 ; 0 s                 ; 0.488 V                      ; -0.488 V                     ; -                   ; -                   ; -                                    ; -                                    ; 1.41e-10 s                  ; 1.44e-10 s                  ; Yes                        ; Yes                        ; 0.488 V                     ; -0.488 V                    ; -                  ; -                  ; -                                   ; -                                   ; 1.41e-10 s                 ; 1.44e-10 s                 ; Yes                       ; Yes                       ;
 ; output_p[1](n)       ; LVDS         ; 0 s                 ; 0 s                 ; 0.488 V                      ; -0.488 V                     ; -                   ; -                   ; -                                    ; -                                    ; 1.41e-10 s                  ; 1.44e-10 s                  ; Yes                        ; Yes                        ; 0.488 V                     ; -0.488 V                    ; -                  ; -                  ; -                                   ; -                                   ; 1.41e-10 s                 ; 1.44e-10 s                 ; Yes                       ; Yes                       ;
@@ -698,14 +743,19 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-----------------------------------------+-----------------------------------------+----------+----------+----------+----------+
 ; From Clock                              ; To Clock                                ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------------------------+-----------------------------------------+----------+----------+----------+----------+
-; ConfigureADC:configurator|internalClock ; ConfigureADC:configurator|internalClock ; 246      ; 0        ; 126      ; 0        ;
-; inputClock                              ; ConfigureADC:configurator|internalClock ; 41       ; 0        ; 13       ; 0        ;
-; WrReEnButton                            ; ConfigureADC:configurator|internalClock ; 0        ; 0        ; 0        ; 2        ;
-; innerDataClock                          ; innerDataClock                          ; 17690    ; 0        ; 0        ; 0        ;
-; ConfigureADC:configurator|internalClock ; inputClock                              ; 10       ; 2        ; 9        ; 0        ;
+; ConfigureADC:configurator|internalClock ; ConfigureADC:configurator|internalClock ; 13       ; 0        ; 0        ; 0        ;
+; ConfigureADC:configurator|sclk_reg      ; ConfigureADC:configurator|internalClock ; 117      ; 1        ; 0        ; 0        ;
+; ConfigureADC:configurator|waiting       ; ConfigureADC:configurator|internalClock ; 7        ; 8        ; 0        ; 0        ;
+; inputClock                              ; ConfigureADC:configurator|internalClock ; 5        ; 0        ; 0        ; 0        ;
+; ConfigureADC:configurator|sclk_reg      ; ConfigureADC:configurator|sclk_reg      ; 175      ; 0        ; 0        ; 0        ;
+; ConfigureADC:configurator|waiting       ; ConfigureADC:configurator|sclk_reg      ; 16       ; 16       ; 0        ; 0        ;
+; inputClock                              ; ConfigureADC:configurator|sclk_reg      ; 17       ; 0        ; 0        ; 0        ;
+; inputClock                              ; ConfigureADC:configurator|waiting       ; 0        ; 0        ; 1        ; 0        ;
+; innerDataClock                          ; innerDataClock                          ; 18729    ; 0        ; 0        ; 0        ;
+; ConfigureADC:configurator|internalClock ; inputClock                              ; 1        ; 1        ; 4        ; 0        ;
+; ConfigureADC:configurator|sclk_reg      ; inputClock                              ; 0        ; 0        ; 5        ; 0        ;
 ; innerDataClock                          ; inputClock                              ; 2        ; 2        ; 0        ; 0        ;
-; inputClock                              ; inputClock                              ; 167      ; 7        ; 11       ; 0        ;
-; WrReEnButton                            ; WrReEnButton                            ; 0        ; 0        ; 0        ; 3        ;
+; inputClock                              ; inputClock                              ; 189      ; 8        ; 11       ; 0        ;
 +-----------------------------------------+-----------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -715,15 +765,42 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-----------------------------------------+-----------------------------------------+----------+----------+----------+----------+
 ; From Clock                              ; To Clock                                ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------------------------+-----------------------------------------+----------+----------+----------+----------+
-; ConfigureADC:configurator|internalClock ; ConfigureADC:configurator|internalClock ; 246      ; 0        ; 126      ; 0        ;
-; inputClock                              ; ConfigureADC:configurator|internalClock ; 41       ; 0        ; 13       ; 0        ;
-; WrReEnButton                            ; ConfigureADC:configurator|internalClock ; 0        ; 0        ; 0        ; 2        ;
-; innerDataClock                          ; innerDataClock                          ; 17690    ; 0        ; 0        ; 0        ;
-; ConfigureADC:configurator|internalClock ; inputClock                              ; 10       ; 2        ; 9        ; 0        ;
+; ConfigureADC:configurator|internalClock ; ConfigureADC:configurator|internalClock ; 13       ; 0        ; 0        ; 0        ;
+; ConfigureADC:configurator|sclk_reg      ; ConfigureADC:configurator|internalClock ; 117      ; 1        ; 0        ; 0        ;
+; ConfigureADC:configurator|waiting       ; ConfigureADC:configurator|internalClock ; 7        ; 8        ; 0        ; 0        ;
+; inputClock                              ; ConfigureADC:configurator|internalClock ; 5        ; 0        ; 0        ; 0        ;
+; ConfigureADC:configurator|sclk_reg      ; ConfigureADC:configurator|sclk_reg      ; 175      ; 0        ; 0        ; 0        ;
+; ConfigureADC:configurator|waiting       ; ConfigureADC:configurator|sclk_reg      ; 16       ; 16       ; 0        ; 0        ;
+; inputClock                              ; ConfigureADC:configurator|sclk_reg      ; 17       ; 0        ; 0        ; 0        ;
+; inputClock                              ; ConfigureADC:configurator|waiting       ; 0        ; 0        ; 1        ; 0        ;
+; innerDataClock                          ; innerDataClock                          ; 18729    ; 0        ; 0        ; 0        ;
+; ConfigureADC:configurator|internalClock ; inputClock                              ; 1        ; 1        ; 4        ; 0        ;
+; ConfigureADC:configurator|sclk_reg      ; inputClock                              ; 0        ; 0        ; 5        ; 0        ;
 ; innerDataClock                          ; inputClock                              ; 2        ; 2        ; 0        ; 0        ;
-; inputClock                              ; inputClock                              ; 167      ; 7        ; 11       ; 0        ;
-; WrReEnButton                            ; WrReEnButton                            ; 0        ; 0        ; 0        ; 3        ;
+; inputClock                              ; inputClock                              ; 189      ; 8        ; 11       ; 0        ;
 +-----------------------------------------+-----------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Recovery Transfers                                                                                                      ;
++-----------------------------------+-----------------------------------------+----------+----------+----------+----------+
+; From Clock                        ; To Clock                                ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------------------------+-----------------------------------------+----------+----------+----------+----------+
+; ConfigureADC:configurator|waiting ; ConfigureADC:configurator|internalClock ; 1        ; 1        ; 0        ; 0        ;
+; ConfigureADC:configurator|waiting ; ConfigureADC:configurator|sclk_reg      ; 1        ; 1        ; 0        ; 0        ;
++-----------------------------------+-----------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Removal Transfers                                                                                                       ;
++-----------------------------------+-----------------------------------------+----------+----------+----------+----------+
+; From Clock                        ; To Clock                                ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------------------------+-----------------------------------------+----------+----------+----------+----------+
+; ConfigureADC:configurator|waiting ; ConfigureADC:configurator|internalClock ; 1        ; 1        ; 0        ; 0        ;
+; ConfigureADC:configurator|waiting ; ConfigureADC:configurator|sclk_reg      ; 1        ; 1        ; 0        ; 0        ;
++-----------------------------------+-----------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
@@ -746,10 +823,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 2     ; 2    ;
-; Unconstrained Input Port Paths  ; 67    ; 67   ;
+; Unconstrained Input Ports       ; 3     ; 3    ;
+; Unconstrained Input Port Paths  ; 75    ; 75   ;
 ; Unconstrained Output Ports      ; 48    ; 48   ;
-; Unconstrained Output Port Paths ; 64    ; 64   ;
+; Unconstrained Output Port Paths ; 65    ; 65   ;
 +---------------------------------+-------+------+
 
 
@@ -759,20 +836,22 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Target                                  ; Clock                                   ; Type ; Status      ;
 +-----------------------------------------+-----------------------------------------+------+-------------+
 ; ConfigureADC:configurator|internalClock ; ConfigureADC:configurator|internalClock ; Base ; Constrained ;
-; WrReEnButton                            ; WrReEnButton                            ; Base ; Constrained ;
+; ConfigureADC:configurator|sclk_reg      ; ConfigureADC:configurator|sclk_reg      ; Base ; Constrained ;
+; ConfigureADC:configurator|waiting       ; ConfigureADC:configurator|waiting       ; Base ; Constrained ;
 ; innerDataClock                          ; innerDataClock                          ; Base ; Constrained ;
 ; inputClock                              ; inputClock                              ; Base ; Constrained ;
 +-----------------------------------------+-----------------------------------------+------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------+
-; Unconstrained Input Ports                                                                          ;
-+-------------+--------------------------------------------------------------------------------------+
-; Input Port  ; Comment                                                                              ;
-+-------------+--------------------------------------------------------------------------------------+
-; resetn      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; writeconfig ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+-------------+--------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                           ;
++--------------+--------------------------------------------------------------------------------------+
+; Input Port   ; Comment                                                                              ;
++--------------+--------------------------------------------------------------------------------------+
+; WrReEnButton ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; resetn       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; writeconfig  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++--------------+--------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------+
@@ -781,7 +860,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Output Port          ; Comment                                                                               ;
 +----------------------+---------------------------------------------------------------------------------------+
 ; ClkOut               ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; WrReState            ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; WrReStatus           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; configok             ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; discardBuffer        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; nextStateRegOut[0]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -831,14 +910,15 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +----------------------+---------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------+
-; Unconstrained Input Ports                                                                          ;
-+-------------+--------------------------------------------------------------------------------------+
-; Input Port  ; Comment                                                                              ;
-+-------------+--------------------------------------------------------------------------------------+
-; resetn      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; writeconfig ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+-------------+--------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                           ;
++--------------+--------------------------------------------------------------------------------------+
+; Input Port   ; Comment                                                                              ;
++--------------+--------------------------------------------------------------------------------------+
+; WrReEnButton ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; resetn       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; writeconfig  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++--------------+--------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------+
@@ -847,7 +927,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Output Port          ; Comment                                                                               ;
 +----------------------+---------------------------------------------------------------------------------------+
 ; ClkOut               ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; WrReState            ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; WrReStatus           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; configok             ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; discardBuffer        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; nextStateRegOut[0]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -903,50 +983,63 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Feb 02 16:56:20 2026
+    Info: Processing started: Fri Mar 06 16:17:29 2026
 Info: Command: quartus_sta HFFrequencySynthesis -c HFFrequencySynthesis
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (21076): High junction temperature operating condition is not set. Assuming a default value of '85'.
 Info (21076): Low junction temperature operating condition is not set. Assuming a default value of '0'.
+Warning (335093): The Timing Analyzer is analyzing 1 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'HFFrequencySynthesis.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name innerDataClock innerDataClock
     Info (332105): create_clock -period 1.000 -name inputClock inputClock
+    Info (332105): create_clock -period 1.000 -name ConfigureADC:configurator|sclk_reg ConfigureADC:configurator|sclk_reg
     Info (332105): create_clock -period 1.000 -name ConfigureADC:configurator|internalClock ConfigureADC:configurator|internalClock
-    Info (332105): create_clock -period 1.000 -name WrReEnButton WrReEnButton
+    Info (332105): create_clock -period 1.000 -name ConfigureADC:configurator|waiting ConfigureADC:configurator|waiting
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.583
+Info (332146): Worst-case setup slack is -5.763
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.583            -205.746 innerDataClock 
-    Info (332119):    -5.367            -102.925 ConfigureADC:configurator|internalClock 
-    Info (332119):    -3.247             -54.700 inputClock 
-    Info (332119):    -0.579              -1.452 WrReEnButton 
-Info (332146): Worst-case hold slack is 0.265
+    Info (332119):    -5.763              -5.763 ConfigureADC:configurator|waiting 
+    Info (332119):    -5.566             -86.377 ConfigureADC:configurator|sclk_reg 
+    Info (332119):    -5.433            -232.691 innerDataClock 
+    Info (332119):    -4.696             -29.081 ConfigureADC:configurator|internalClock 
+    Info (332119):    -3.942             -62.667 inputClock 
+Info (332146): Worst-case hold slack is 0.164
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.265               0.000 inputClock 
-    Info (332119):     0.347               0.000 WrReEnButton 
+    Info (332119):     0.164               0.000 inputClock 
+    Info (332119):     0.226               0.000 ConfigureADC:configurator|internalClock 
     Info (332119):     0.361               0.000 innerDataClock 
-    Info (332119):     0.589               0.000 ConfigureADC:configurator|internalClock 
-Info (332140): No Recovery paths to report
-Info (332140): No Removal paths to report
+    Info (332119):     0.777               0.000 ConfigureADC:configurator|sclk_reg 
+    Info (332119):     3.587               0.000 ConfigureADC:configurator|waiting 
+Info (332146): Worst-case recovery slack is -1.868
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.868              -1.868 ConfigureADC:configurator|sclk_reg 
+    Info (332119):    -1.655              -1.655 ConfigureADC:configurator|internalClock 
+Info (332146): Worst-case removal slack is 0.920
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.920               0.000 ConfigureADC:configurator|internalClock 
+    Info (332119):     1.158               0.000 ConfigureADC:configurator|sclk_reg 
 Info (332146): Worst-case minimum pulse width slack is -0.538
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.538             -38.692 innerDataClock 
-    Info (332119):    -0.538             -28.875 inputClock 
-    Info (332119):    -0.538             -20.873 ConfigureADC:configurator|internalClock 
-    Info (332119):    -0.538              -2.351 WrReEnButton 
-Info (332114): Report Metastability: Found 1 synchronizer chains.
+    Info (332119):    -0.538             -40.631 innerDataClock 
+    Info (332119):    -0.538             -33.670 inputClock 
+    Info (332119):    -0.538             -13.590 ConfigureADC:configurator|sclk_reg 
+    Info (332119):    -0.538              -7.245 ConfigureADC:configurator|internalClock 
+    Info (332119):     0.362               0.000 ConfigureADC:configurator|waiting 
+Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
@@ -954,30 +1047,41 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.708
+Info (332146): Worst-case setup slack is -5.854
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.708            -210.185 innerDataClock 
-    Info (332119):    -5.531            -106.089 ConfigureADC:configurator|internalClock 
-    Info (332119):    -3.401             -52.810 inputClock 
-    Info (332119):    -0.476              -1.357 WrReEnButton 
-Info (332146): Worst-case hold slack is -0.060
+    Info (332119):    -5.854              -5.854 ConfigureADC:configurator|waiting 
+    Info (332119):    -5.778             -87.560 ConfigureADC:configurator|sclk_reg 
+    Info (332119):    -5.536            -236.397 innerDataClock 
+    Info (332119):    -4.887             -29.521 ConfigureADC:configurator|internalClock 
+    Info (332119):    -4.054             -60.996 inputClock 
+Info (332146): Worst-case hold slack is -0.249
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.060              -0.120 inputClock 
+    Info (332119):    -0.249              -0.296 inputClock 
+    Info (332119):     0.352               0.000 ConfigureADC:configurator|internalClock 
     Info (332119):     0.364               0.000 innerDataClock 
-    Info (332119):     0.455               0.000 WrReEnButton 
-    Info (332119):     0.570               0.000 ConfigureADC:configurator|internalClock 
-Info (332140): No Recovery paths to report
-Info (332140): No Removal paths to report
+    Info (332119):     0.784               0.000 ConfigureADC:configurator|sclk_reg 
+    Info (332119):     3.706               0.000 ConfigureADC:configurator|waiting 
+Info (332146): Worst-case recovery slack is -1.932
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.932              -1.932 ConfigureADC:configurator|sclk_reg 
+    Info (332119):    -1.741              -1.741 ConfigureADC:configurator|internalClock 
+Info (332146): Worst-case removal slack is 0.941
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.941               0.000 ConfigureADC:configurator|internalClock 
+    Info (332119):     1.158               0.000 ConfigureADC:configurator|sclk_reg 
 Info (332146): Worst-case minimum pulse width slack is -0.538
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.538             -38.265 innerDataClock 
-    Info (332119):    -0.538             -31.108 inputClock 
-    Info (332119):    -0.538             -20.974 ConfigureADC:configurator|internalClock 
-    Info (332119):    -0.538              -2.580 WrReEnButton 
-Info (332114): Report Metastability: Found 1 synchronizer chains.
+    Info (332119):    -0.538             -40.248 innerDataClock 
+    Info (332119):    -0.538             -35.899 inputClock 
+    Info (332119):    -0.538             -13.587 ConfigureADC:configurator|sclk_reg 
+    Info (332119):    -0.538              -7.119 ConfigureADC:configurator|internalClock 
+    Info (332119):     0.375               0.000 ConfigureADC:configurator|waiting 
+Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
@@ -985,66 +1089,88 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.436
+Info (332146): Worst-case setup slack is -2.973
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.436             -21.318 inputClock 
-    Info (332119):    -2.378             -41.051 ConfigureADC:configurator|internalClock 
-    Info (332119):    -2.343             -83.880 innerDataClock 
-    Info (332119):     0.200               0.000 WrReEnButton 
-Info (332146): Worst-case hold slack is 0.055
+    Info (332119):    -2.973             -23.446 inputClock 
+    Info (332119):    -2.565              -2.565 ConfigureADC:configurator|waiting 
+    Info (332119):    -2.492             -38.162 ConfigureADC:configurator|sclk_reg 
+    Info (332119):    -2.152             -93.731 innerDataClock 
+    Info (332119):    -2.059             -12.614 ConfigureADC:configurator|internalClock 
+Info (332146): Worst-case hold slack is -0.032
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.055               0.000 inputClock 
+    Info (332119):    -0.032              -0.032 ConfigureADC:configurator|internalClock 
+    Info (332119):     0.095               0.000 inputClock 
     Info (332119):     0.111               0.000 innerDataClock 
-    Info (332119):     0.185               0.000 WrReEnButton 
-    Info (332119):     0.227               0.000 ConfigureADC:configurator|internalClock 
-Info (332140): No Recovery paths to report
-Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.452
+    Info (332119):     0.342               0.000 ConfigureADC:configurator|sclk_reg 
+    Info (332119):     1.951               0.000 ConfigureADC:configurator|waiting 
+Info (332146): Worst-case recovery slack is -0.917
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.452              -3.054 inputClock 
-    Info (332119):    -0.049              -0.145 WrReEnButton 
-    Info (332119):    -0.009              -0.063 ConfigureADC:configurator|internalClock 
-    Info (332119):     0.094               0.000 innerDataClock 
-Info (332114): Report Metastability: Found 1 synchronizer chains.
+    Info (332119):    -0.917              -0.917 ConfigureADC:configurator|sclk_reg 
+    Info (332119):    -0.778              -0.778 ConfigureADC:configurator|internalClock 
+Info (332146): Worst-case removal slack is 0.262
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.262               0.000 ConfigureADC:configurator|internalClock 
+    Info (332119):     0.418               0.000 ConfigureADC:configurator|sclk_reg 
+Info (332146): Worst-case minimum pulse width slack is -0.401
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.401              -3.342 inputClock 
+    Info (332119):     0.037               0.000 ConfigureADC:configurator|sclk_reg 
+    Info (332119):     0.079               0.000 innerDataClock 
+    Info (332119):     0.123               0.000 ConfigureADC:configurator|internalClock 
+    Info (332119):     0.432               0.000 ConfigureADC:configurator|waiting 
+Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.320
+Info (332146): Worst-case setup slack is -2.489
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.320             -39.517 ConfigureADC:configurator|internalClock 
-    Info (332119):    -2.128             -75.488 innerDataClock 
-    Info (332119):    -1.911             -16.731 inputClock 
-    Info (332119):     0.282               0.000 WrReEnButton 
-Info (332146): Worst-case hold slack is -0.129
+    Info (332119):    -2.489             -18.566 inputClock 
+    Info (332119):    -2.444              -2.444 ConfigureADC:configurator|waiting 
+    Info (332119):    -2.362             -35.729 ConfigureADC:configurator|sclk_reg 
+    Info (332119):    -1.977             -84.983 innerDataClock 
+    Info (332119):    -1.962             -11.482 ConfigureADC:configurator|internalClock 
+Info (332146): Worst-case hold slack is -0.098
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.129              -0.289 inputClock 
+    Info (332119):    -0.098              -0.288 inputClock 
+    Info (332119):    -0.038              -0.038 ConfigureADC:configurator|internalClock 
     Info (332119):     0.093               0.000 innerDataClock 
-    Info (332119):     0.195               0.000 WrReEnButton 
-    Info (332119):     0.198               0.000 ConfigureADC:configurator|internalClock 
-Info (332140): No Recovery paths to report
-Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.414
+    Info (332119):     0.314               0.000 ConfigureADC:configurator|sclk_reg 
+    Info (332119):     1.932               0.000 ConfigureADC:configurator|waiting 
+Info (332146): Worst-case recovery slack is -0.811
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.414              -3.219 inputClock 
-    Info (332119):    -0.068              -0.202 WrReEnButton 
-    Info (332119):     0.024               0.000 ConfigureADC:configurator|internalClock 
-    Info (332119):     0.109               0.000 innerDataClock 
-Info (332114): Report Metastability: Found 1 synchronizer chains.
+    Info (332119):    -0.811              -0.811 ConfigureADC:configurator|sclk_reg 
+    Info (332119):    -0.688              -0.688 ConfigureADC:configurator|internalClock 
+Info (332146): Worst-case removal slack is 0.237
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.237               0.000 ConfigureADC:configurator|internalClock 
+    Info (332119):     0.374               0.000 ConfigureADC:configurator|sclk_reg 
+Info (332146): Worst-case minimum pulse width slack is -0.388
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.388              -3.524 inputClock 
+    Info (332119):     0.059               0.000 ConfigureADC:configurator|sclk_reg 
+    Info (332119):     0.097               0.000 innerDataClock 
+    Info (332119):     0.135               0.000 ConfigureADC:configurator|internalClock 
+    Info (332119):     0.444               0.000 ConfigureADC:configurator|waiting 
+Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5144 megabytes
-    Info: Processing ended: Mon Feb 02 16:56:27 2026
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:07
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 5150 megabytes
+    Info: Processing ended: Fri Mar 06 16:17:37 2026
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:08
 
 

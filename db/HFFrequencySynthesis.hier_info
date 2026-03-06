@@ -18,13 +18,16 @@ output_p[15] << sinlut:synthesizer.output_p[15]
 parallelDataClk_p << parallelDataClk_p~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sclk <> configureadc:configurator.SCLK
 sdenb <> configureadc:configurator.SDENB
-sdio << configureadc:configurator.SDIO
+sdio <> configureadc:configurator.SDIO
 configok <> configureadc:configurator.configOK
 writeconfig => configureadc:configurator.writeConfig
-WrReEnButton => WrReState~reg0.CLK
-WrReEnButton => WrReEn.CLK
-WrReState << WrReState~reg0.DB_MAX_OUTPUT_PORT_TYPE
+WrReEnButton => btn_ff1.DATAIN
+WrReStatus << configureadc:configurator.WrReState
 inputClock => configureadc:configurator.CLKIN
+inputClock => WrReEn.CLK
+inputClock => btn_prev.CLK
+inputClock => btn_ff2.CLK
+inputClock => btn_ff1.CLK
 inputClock => parallelDataClk_p~reg0.CLK
 inputClock => innerDataClock.CLK
 inputClock => clockDivideBuffer[0].CLK
@@ -43,6 +46,11 @@ stateRegOut[2] << configureadc:configurator.stateRegOut[2]
 nextStateRegOut[0] << configureadc:configurator.nextStateRegOut[0]
 nextStateRegOut[1] << configureadc:configurator.nextStateRegOut[1]
 nextStateRegOut[2] << configureadc:configurator.nextStateRegOut[2]
+resetn => configureadc:configurator.resetn
+resetn => WrReEn.ACLR
+resetn => btn_prev.PRESET
+resetn => btn_ff2.PRESET
+resetn => btn_ff1.PRESET
 discardBuffer <> configureadc:configurator.discardBuffer
 
 
@@ -124,7 +132,7 @@ writeConfig => Selector3.IN1
 configOK <> configOK~reg0
 SDENB <> SDENB~reg0
 SCLK <> SCLK
-SDIO <= SDIO.DB_MAX_OUTPUT_PORT_TYPE
+SDIO <> SDIO
 CLKIN => internalClock.CLK
 CLKIN => clockDividerBuffer[0].CLK
 CLKIN => clockDividerBuffer[1].CLK
@@ -136,9 +144,10 @@ CLKIN => clockDividerBuffer[6].CLK
 CLKIN => clockDividerBuffer[7].CLK
 CLKIN => sendData.CLK
 CLKIN => discarding.CLK
-CLKIN => outputClock.CLK
+CLKIN => sclk_en.CLK
 CLKIN => waiting.CLK
 CLKIN => SDENB~reg0.CLK
+CLKIN => wrre_latched.CLK
 CLKIN => state~1.DATAIN
 CLKIN => nextState~1.DATAIN
 CLKRECEIVED <= CLKRECEIVED.DB_MAX_OUTPUT_PORT_TYPE
@@ -149,16 +158,9 @@ stateRegOut[2] <= stateRegOut.DB_MAX_OUTPUT_PORT_TYPE
 nextStateRegOut[0] <= nextStateRegOut.DB_MAX_OUTPUT_PORT_TYPE
 nextStateRegOut[1] <= nextStateRegOut.DB_MAX_OUTPUT_PORT_TYPE
 nextStateRegOut[2] <= nextStateRegOut.DB_MAX_OUTPUT_PORT_TYPE
-resetn => SCLK.OUTPUTSELECT
+resetn => sdio_do.IN1
 resetn => configOK~reg0.ACLR
-resetn => counter[0].ACLR
-resetn => counter[1].ACLR
-resetn => counter[2].ACLR
-resetn => counter[3].ACLR
-resetn => counter[4].ACLR
-resetn => counter[5].ACLR
-resetn => counter[6].ACLR
-resetn => needWait.ACLR
+resetn => needWait.IN1
 resetn => dataIndex[0].ACLR
 resetn => dataIndex[1].ACLR
 resetn => dataIndex[2].ACLR
@@ -169,7 +171,6 @@ resetn => dataIndex[6].ACLR
 resetn => dataIndex[7].ACLR
 resetn => sendData.ACLR
 resetn => discarding.ACLR
-resetn => outputClock.ACLR
 resetn => waiting.ACLR
 resetn => SDENB~reg0.ACLR
 resetn => CLKRECEIVED.OUTPUTSELECT
@@ -182,8 +183,10 @@ resetn => nextStateRegOut.OUTPUTSELECT
 resetn => nextStateRegOut.OUTPUTSELECT
 resetn => discarded.ACLR
 resetn => discardBuffer~reg0.ACLR
-resetn => SDIO~reg0.ACLR
-resetn => SDIO~en.PRESET
+resetn => wrre_latched.ACLR
+resetn => sdio_oe.PRESET
+resetn => sdio_do.ACLR
+resetn => sclk_reg.ACLR
 resetn => internalClock.ACLR
 resetn => clockDividerBuffer[0].ACLR
 resetn => clockDividerBuffer[1].ACLR
@@ -200,9 +203,16 @@ resetn => waitingBuffer[2].ACLR
 resetn => waitingBuffer[3].ACLR
 resetn => state~3.DATAIN
 resetn => nextState~3.DATAIN
+resetn => counter[6].ENA
+resetn => counter[5].ENA
+resetn => counter[4].ENA
+resetn => counter[3].ENA
+resetn => counter[2].ENA
+resetn => counter[1].ENA
+resetn => counter[0].ENA
 discardBuffer <> discardBuffer~reg0
-WrReEn => SDIO.DATAB
-WrReEn => SDIO.IN1
+WrReEn => wrre_latched.DATAIN
+WrReState <= wrre_latched.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MainFSM|ConfigureADC:configurator|ConfigROM:ConfigMemory
