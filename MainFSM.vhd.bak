@@ -14,6 +14,7 @@ entity MainFSM is
 		configok: inout std_logic;
 		writeconfig: in std_logic;
 		WrReEnButton: in std_logic;
+		WrReStatus: out std_logic;
 		inputClock: in std_logic;
 		ClkOut: out std_logic;
 		writeConfigReceived: out std_logic;
@@ -68,6 +69,6 @@ begin
 						port map(innerDataClock, output_p);
 						
 	configurator: entity work.ConfigureADC(basic)
-						port map(writeconfig, configok, sdenb, sclk, sdio, inputClock, ClkOUT, writeConfigReceived, stateRegOut, nextStateRegOut, resetn, discardBuffer, WrReEn, WrReStatus);
+						port map(writeconfig, configok, sdenb, sclk, sdio, inputClock, ClkOUT, writeConfigReceived, stateRegOut, nextStateRegOut, resetn, discardBuffer, WrReEn);
 
 end architecture;

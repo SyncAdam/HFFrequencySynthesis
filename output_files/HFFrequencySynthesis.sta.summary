@@ -2,308 +2,196 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'ConfigureADC:configurator|waiting'
-Slack : -5.763
-TNS   : -5.763
+Type  : Slow 1100mV 85C Model Setup 'Parallel_Data_CLK_IN'
+Slack : -5.037
+TNS   : -182.971
 
-Type  : Slow 1100mV 85C Model Setup 'ConfigureADC:configurator|sclk_reg'
-Slack : -5.566
-TNS   : -86.377
+Type  : Slow 1100mV 85C Model Setup 'MainFSM:inst|ConfigureADC:configurator|sclk_reg'
+Slack : -4.013
+TNS   : -94.049
 
-Type  : Slow 1100mV 85C Model Setup 'innerDataClock'
-Slack : -5.433
-TNS   : -232.691
+Type  : Slow 1100mV 85C Model Setup 'Clock'
+Slack : -3.927
+TNS   : -60.846
 
-Type  : Slow 1100mV 85C Model Setup 'ConfigureADC:configurator|internalClock'
-Slack : -4.696
-TNS   : -29.081
+Type  : Slow 1100mV 85C Model Setup 'MainFSM:inst|ConfigureADC:configurator|internalClock'
+Slack : -1.651
+TNS   : -4.671
 
-Type  : Slow 1100mV 85C Model Setup 'inputClock'
-Slack : -3.942
-TNS   : -62.667
-
-Type  : Slow 1100mV 85C Model Hold 'inputClock'
-Slack : 0.164
+Type  : Slow 1100mV 85C Model Hold 'Clock'
+Slack : 0.350
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Hold 'ConfigureADC:configurator|internalClock'
-Slack : 0.226
+Type  : Slow 1100mV 85C Model Hold 'MainFSM:inst|ConfigureADC:configurator|internalClock'
+Slack : 0.366
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Hold 'innerDataClock'
-Slack : 0.361
+Type  : Slow 1100mV 85C Model Hold 'MainFSM:inst|ConfigureADC:configurator|sclk_reg'
+Slack : 0.395
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Hold 'ConfigureADC:configurator|sclk_reg'
-Slack : 0.777
+Type  : Slow 1100mV 85C Model Hold 'Parallel_Data_CLK_IN'
+Slack : 0.436
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Hold 'ConfigureADC:configurator|waiting'
-Slack : 3.587
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Recovery 'ConfigureADC:configurator|sclk_reg'
-Slack : -1.868
-TNS   : -1.868
-
-Type  : Slow 1100mV 85C Model Recovery 'ConfigureADC:configurator|internalClock'
-Slack : -1.655
-TNS   : -1.655
-
-Type  : Slow 1100mV 85C Model Removal 'ConfigureADC:configurator|internalClock'
-Slack : 0.920
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Removal 'ConfigureADC:configurator|sclk_reg'
-Slack : 1.158
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'innerDataClock'
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'Parallel_Data_CLK_IN'
 Slack : -0.538
-TNS   : -40.631
+TNS   : -38.427
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'inputClock'
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'MainFSM:inst|ConfigureADC:configurator|sclk_reg'
 Slack : -0.538
-TNS   : -33.670
+TNS   : -25.759
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ConfigureADC:configurator|sclk_reg'
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'Clock'
 Slack : -0.538
-TNS   : -13.590
+TNS   : -23.283
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ConfigureADC:configurator|internalClock'
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'MainFSM:inst|ConfigureADC:configurator|internalClock'
 Slack : -0.538
-TNS   : -7.245
+TNS   : -2.412
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ConfigureADC:configurator|waiting'
-Slack : 0.362
+Type  : Slow 1100mV 0C Model Setup 'Parallel_Data_CLK_IN'
+Slack : -5.225
+TNS   : -190.196
+
+Type  : Slow 1100mV 0C Model Setup 'Clock'
+Slack : -4.237
+TNS   : -61.601
+
+Type  : Slow 1100mV 0C Model Setup 'MainFSM:inst|ConfigureADC:configurator|sclk_reg'
+Slack : -4.179
+TNS   : -94.286
+
+Type  : Slow 1100mV 0C Model Setup 'MainFSM:inst|ConfigureADC:configurator|internalClock'
+Slack : -1.678
+TNS   : -4.650
+
+Type  : Slow 1100mV 0C Model Hold 'Clock'
+Slack : 0.327
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Setup 'ConfigureADC:configurator|waiting'
-Slack : -5.854
-TNS   : -5.854
-
-Type  : Slow 1100mV 0C Model Setup 'ConfigureADC:configurator|sclk_reg'
-Slack : -5.778
-TNS   : -87.560
-
-Type  : Slow 1100mV 0C Model Setup 'innerDataClock'
-Slack : -5.536
-TNS   : -236.397
-
-Type  : Slow 1100mV 0C Model Setup 'ConfigureADC:configurator|internalClock'
-Slack : -4.887
-TNS   : -29.521
-
-Type  : Slow 1100mV 0C Model Setup 'inputClock'
-Slack : -4.054
-TNS   : -60.996
-
-Type  : Slow 1100mV 0C Model Hold 'inputClock'
-Slack : -0.249
-TNS   : -0.296
-
-Type  : Slow 1100mV 0C Model Hold 'ConfigureADC:configurator|internalClock'
-Slack : 0.352
+Type  : Slow 1100mV 0C Model Hold 'MainFSM:inst|ConfigureADC:configurator|internalClock'
+Slack : 0.350
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Hold 'innerDataClock'
-Slack : 0.364
+Type  : Slow 1100mV 0C Model Hold 'Parallel_Data_CLK_IN'
+Slack : 0.441
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Hold 'ConfigureADC:configurator|sclk_reg'
-Slack : 0.784
+Type  : Slow 1100mV 0C Model Hold 'MainFSM:inst|ConfigureADC:configurator|sclk_reg'
+Slack : 0.462
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Hold 'ConfigureADC:configurator|waiting'
-Slack : 3.706
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Recovery 'ConfigureADC:configurator|sclk_reg'
-Slack : -1.932
-TNS   : -1.932
-
-Type  : Slow 1100mV 0C Model Recovery 'ConfigureADC:configurator|internalClock'
-Slack : -1.741
-TNS   : -1.741
-
-Type  : Slow 1100mV 0C Model Removal 'ConfigureADC:configurator|internalClock'
-Slack : 0.941
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Removal 'ConfigureADC:configurator|sclk_reg'
-Slack : 1.158
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'innerDataClock'
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'Parallel_Data_CLK_IN'
 Slack : -0.538
-TNS   : -40.248
+TNS   : -42.831
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'inputClock'
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'MainFSM:inst|ConfigureADC:configurator|sclk_reg'
 Slack : -0.538
-TNS   : -35.899
+TNS   : -25.624
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ConfigureADC:configurator|sclk_reg'
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'Clock'
 Slack : -0.538
-TNS   : -13.587
+TNS   : -25.504
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ConfigureADC:configurator|internalClock'
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'MainFSM:inst|ConfigureADC:configurator|internalClock'
 Slack : -0.538
-TNS   : -7.119
+TNS   : -2.388
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ConfigureADC:configurator|waiting'
-Slack : 0.375
+Type  : Fast 1100mV 85C Model Setup 'Clock'
+Slack : -3.050
+TNS   : -17.304
+
+Type  : Fast 1100mV 85C Model Setup 'Parallel_Data_CLK_IN'
+Slack : -1.736
+TNS   : -59.100
+
+Type  : Fast 1100mV 85C Model Setup 'MainFSM:inst|ConfigureADC:configurator|sclk_reg'
+Slack : -1.532
+TNS   : -34.361
+
+Type  : Fast 1100mV 85C Model Setup 'MainFSM:inst|ConfigureADC:configurator|internalClock'
+Slack : -0.829
+TNS   : -1.840
+
+Type  : Fast 1100mV 85C Model Hold 'MainFSM:inst|ConfigureADC:configurator|internalClock'
+Slack : 0.034
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Setup 'inputClock'
-Slack : -2.973
-TNS   : -23.446
-
-Type  : Fast 1100mV 85C Model Setup 'ConfigureADC:configurator|waiting'
-Slack : -2.565
-TNS   : -2.565
-
-Type  : Fast 1100mV 85C Model Setup 'ConfigureADC:configurator|sclk_reg'
-Slack : -2.492
-TNS   : -38.162
-
-Type  : Fast 1100mV 85C Model Setup 'innerDataClock'
-Slack : -2.152
-TNS   : -93.731
-
-Type  : Fast 1100mV 85C Model Setup 'ConfigureADC:configurator|internalClock'
-Slack : -2.059
-TNS   : -12.614
-
-Type  : Fast 1100mV 85C Model Hold 'ConfigureADC:configurator|internalClock'
-Slack : -0.032
-TNS   : -0.032
-
-Type  : Fast 1100mV 85C Model Hold 'inputClock'
-Slack : 0.095
+Type  : Fast 1100mV 85C Model Hold 'Clock'
+Slack : 0.181
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'innerDataClock'
-Slack : 0.111
+Type  : Fast 1100mV 85C Model Hold 'Parallel_Data_CLK_IN'
+Slack : 0.198
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'ConfigureADC:configurator|sclk_reg'
-Slack : 0.342
+Type  : Fast 1100mV 85C Model Hold 'MainFSM:inst|ConfigureADC:configurator|sclk_reg'
+Slack : 0.222
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'ConfigureADC:configurator|waiting'
-Slack : 1.951
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'Clock'
+Slack : -0.420
+TNS   : -2.442
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'MainFSM:inst|ConfigureADC:configurator|sclk_reg'
+Slack : 0.053
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Recovery 'ConfigureADC:configurator|sclk_reg'
-Slack : -0.917
-TNS   : -0.917
-
-Type  : Fast 1100mV 85C Model Recovery 'ConfigureADC:configurator|internalClock'
-Slack : -0.778
-TNS   : -0.778
-
-Type  : Fast 1100mV 85C Model Removal 'ConfigureADC:configurator|internalClock'
-Slack : 0.262
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'Parallel_Data_CLK_IN'
+Slack : 0.070
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Removal 'ConfigureADC:configurator|sclk_reg'
-Slack : 0.418
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'MainFSM:inst|ConfigureADC:configurator|internalClock'
+Slack : 0.103
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'inputClock'
-Slack : -0.401
-TNS   : -3.342
+Type  : Fast 1100mV 0C Model Setup 'Clock'
+Slack : -2.555
+TNS   : -14.650
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ConfigureADC:configurator|sclk_reg'
-Slack : 0.037
+Type  : Fast 1100mV 0C Model Setup 'Parallel_Data_CLK_IN'
+Slack : -1.568
+TNS   : -53.118
+
+Type  : Fast 1100mV 0C Model Setup 'MainFSM:inst|ConfigureADC:configurator|sclk_reg'
+Slack : -1.503
+TNS   : -30.770
+
+Type  : Fast 1100mV 0C Model Setup 'MainFSM:inst|ConfigureADC:configurator|internalClock'
+Slack : -0.744
+TNS   : -1.582
+
+Type  : Fast 1100mV 0C Model Hold 'MainFSM:inst|ConfigureADC:configurator|internalClock'
+Slack : -0.017
+TNS   : -0.017
+
+Type  : Fast 1100mV 0C Model Hold 'Clock'
+Slack : 0.167
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'innerDataClock'
-Slack : 0.079
+Type  : Fast 1100mV 0C Model Hold 'Parallel_Data_CLK_IN'
+Slack : 0.186
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ConfigureADC:configurator|internalClock'
-Slack : 0.123
+Type  : Fast 1100mV 0C Model Hold 'MainFSM:inst|ConfigureADC:configurator|sclk_reg'
+Slack : 0.236
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ConfigureADC:configurator|waiting'
-Slack : 0.432
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'Clock'
+Slack : -0.415
+TNS   : -2.526
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'Parallel_Data_CLK_IN'
+Slack : 0.054
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Setup 'inputClock'
-Slack : -2.489
-TNS   : -18.566
-
-Type  : Fast 1100mV 0C Model Setup 'ConfigureADC:configurator|waiting'
-Slack : -2.444
-TNS   : -2.444
-
-Type  : Fast 1100mV 0C Model Setup 'ConfigureADC:configurator|sclk_reg'
-Slack : -2.362
-TNS   : -35.729
-
-Type  : Fast 1100mV 0C Model Setup 'innerDataClock'
-Slack : -1.977
-TNS   : -84.983
-
-Type  : Fast 1100mV 0C Model Setup 'ConfigureADC:configurator|internalClock'
-Slack : -1.962
-TNS   : -11.482
-
-Type  : Fast 1100mV 0C Model Hold 'inputClock'
-Slack : -0.098
-TNS   : -0.288
-
-Type  : Fast 1100mV 0C Model Hold 'ConfigureADC:configurator|internalClock'
-Slack : -0.038
-TNS   : -0.038
-
-Type  : Fast 1100mV 0C Model Hold 'innerDataClock'
-Slack : 0.093
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'MainFSM:inst|ConfigureADC:configurator|sclk_reg'
+Slack : 0.057
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Hold 'ConfigureADC:configurator|sclk_reg'
-Slack : 0.314
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'ConfigureADC:configurator|waiting'
-Slack : 1.932
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Recovery 'ConfigureADC:configurator|sclk_reg'
-Slack : -0.811
-TNS   : -0.811
-
-Type  : Fast 1100mV 0C Model Recovery 'ConfigureADC:configurator|internalClock'
-Slack : -0.688
-TNS   : -0.688
-
-Type  : Fast 1100mV 0C Model Removal 'ConfigureADC:configurator|internalClock'
-Slack : 0.237
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Removal 'ConfigureADC:configurator|sclk_reg'
-Slack : 0.374
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'inputClock'
-Slack : -0.388
-TNS   : -3.524
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ConfigureADC:configurator|sclk_reg'
-Slack : 0.059
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'innerDataClock'
-Slack : 0.097
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ConfigureADC:configurator|internalClock'
-Slack : 0.135
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ConfigureADC:configurator|waiting'
-Slack : 0.444
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'MainFSM:inst|ConfigureADC:configurator|internalClock'
+Slack : 0.120
 TNS   : 0.000
 
 ------------------------------------------------------------

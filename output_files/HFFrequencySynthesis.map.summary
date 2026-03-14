@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Fri Mar 06 16:16:12 2026
+Analysis & Synthesis Status : Successful - Sat Mar 14 12:42:00 2026
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : HFFrequencySynthesis
-Top-level Entity Name : MainFSM
+Top-level Entity Name : HFFrequencySynthesis
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 113
-Total pins : 35
+Total registers : 104
+Total pins : 33
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

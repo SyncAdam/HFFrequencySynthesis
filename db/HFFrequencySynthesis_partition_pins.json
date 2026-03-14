@@ -4,143 +4,135 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "output_p[0]",
+					"name" : "SCLK",
 					"strict" : false
 				},
 				{
-					"name" : "output_p[1]",
+					"name" : "SDENB",
 					"strict" : false
 				},
 				{
-					"name" : "output_p[2]",
+					"name" : "SDIO",
 					"strict" : false
 				},
 				{
-					"name" : "output_p[3]",
+					"name" : "Done",
 					"strict" : false
 				},
 				{
-					"name" : "output_p[4]",
+					"name" : "Wr_Re_Status",
 					"strict" : false
 				},
 				{
-					"name" : "output_p[5]",
+					"name" : "CLK_Buffered",
 					"strict" : false
 				},
 				{
-					"name" : "output_p[6]",
+					"name" : "SCLK_LED",
 					"strict" : false
 				},
 				{
-					"name" : "output_p[7]",
+					"name" : "SDENB_LED",
 					"strict" : false
 				},
 				{
-					"name" : "output_p[8]",
+					"name" : "SDIO_LED",
 					"strict" : false
 				},
 				{
-					"name" : "output_p[9]",
+					"name" : "Current_State[2]",
 					"strict" : false
 				},
 				{
-					"name" : "output_p[10]",
+					"name" : "Current_State[1]",
 					"strict" : false
 				},
 				{
-					"name" : "output_p[11]",
+					"name" : "Current_State[0]",
 					"strict" : false
 				},
 				{
-					"name" : "output_p[12]",
+					"name" : "Parallel_Data_Out[15]",
 					"strict" : false
 				},
 				{
-					"name" : "output_p[13]",
+					"name" : "Parallel_Data_Out[14]",
 					"strict" : false
 				},
 				{
-					"name" : "output_p[14]",
+					"name" : "Parallel_Data_Out[13]",
 					"strict" : false
 				},
 				{
-					"name" : "output_p[15]",
+					"name" : "Parallel_Data_Out[12]",
 					"strict" : false
 				},
 				{
-					"name" : "parallelDataClk_p",
+					"name" : "Parallel_Data_Out[11]",
 					"strict" : false
 				},
 				{
-					"name" : "WrReStatus",
+					"name" : "Parallel_Data_Out[10]",
 					"strict" : false
 				},
 				{
-					"name" : "ClkOut",
+					"name" : "Parallel_Data_Out[9]",
 					"strict" : false
 				},
 				{
-					"name" : "writeConfigReceived",
+					"name" : "Parallel_Data_Out[8]",
 					"strict" : false
 				},
 				{
-					"name" : "stateRegOut[0]",
+					"name" : "Parallel_Data_Out[7]",
 					"strict" : false
 				},
 				{
-					"name" : "stateRegOut[1]",
+					"name" : "Parallel_Data_Out[6]",
 					"strict" : false
 				},
 				{
-					"name" : "stateRegOut[2]",
+					"name" : "Parallel_Data_Out[5]",
 					"strict" : false
 				},
 				{
-					"name" : "nextStateRegOut[0]",
+					"name" : "Parallel_Data_Out[4]",
 					"strict" : false
 				},
 				{
-					"name" : "nextStateRegOut[1]",
+					"name" : "Parallel_Data_Out[3]",
 					"strict" : false
 				},
 				{
-					"name" : "nextStateRegOut[2]",
+					"name" : "Parallel_Data_Out[2]",
 					"strict" : false
 				},
 				{
-					"name" : "sclk",
+					"name" : "Parallel_Data_Out[1]",
 					"strict" : false
 				},
 				{
-					"name" : "sdenb",
+					"name" : "Parallel_Data_Out[0]",
 					"strict" : false
 				},
 				{
-					"name" : "sdio",
+					"name" : "Reset",
 					"strict" : false
 				},
 				{
-					"name" : "configok",
+					"name" : "Clock",
 					"strict" : false
 				},
 				{
-					"name" : "discardBuffer",
+					"name" : "Parallel_Data_CLK_IN",
 					"strict" : false
 				},
 				{
-					"name" : "resetn",
+					"name" : "Run",
 					"strict" : false
 				},
 				{
-					"name" : "writeconfig",
-					"strict" : false
-				},
-				{
-					"name" : "inputClock",
-					"strict" : false
-				},
-				{
-					"name" : "WrReEnButton",
+					"name" : "Wr_Re_Button",
 					"strict" : false
 				}
 			]

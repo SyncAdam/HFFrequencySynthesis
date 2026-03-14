@@ -12,13 +12,9 @@ entity ConfigureADC is
 		signal SDIO: inout std_logic;
 		signal CLKIN: in std_logic;
 		signal CLKRECEIVED: out std_logic;
-		signal writeConfigReceived: out std_logic;
 		signal stateRegOut: out std_logic_vector(2 downto 0);
-		signal nextStateRegOut: out std_logic_vector(2 downto 0);
 		signal resetn: in std_logic;
-		signal discardBuffer: inout std_logic;
-		signal WrReEn: in std_logic;
-		signal WrReState: out std_logic
+		signal WrReEn: in std_logic
 	);
 end entity;
 
@@ -33,37 +29,35 @@ architecture basic of ConfigureADC is
 	
 	signal counter: std_logic_vector(6 downto 0) := B"0000000";
 	signal config: std_logic_vector(15 downto 0);
-	signal waitingBuffer: unsigned(3 downto 0) := B"0000";
-	signal clockDividerBuffer: std_logic_vector(7 downto 0) := std_logic_vector(to_unsigned(0, 8));
+	signal clockDividerBuffer: std_logic_vector(15 downto 0) := std_logic_vector(to_unsigned(0, 16));
+	--signal clockDividerBuffer: std_logic_vector(7 downto 0) := std_logic_vector(to_unsigned(0, 8));
 	
 	signal state: state_conf := IDLE;
 	signal nextState: state_conf := IDLE;
 	
-	signal generateClk: std_logic := '0';
 	signal sendData: std_logic := '0';
 	signal resetSend: std_logic := '0';
-	signal waiting: std_logic := '0';
 	signal discarding: std_logic := '0';
-	signal needWait: std_logic := '0';
-	signal waitingDone: std_logic := '0';
 	signal discarded: std_logic := '0';
-	signal outputClock: std_logic := '0';
+	signal discardBuffer: std_logic := '0';
+
+	signal needWait: std_logic := '0';
+	signal waiting: std_logic := '0';
+	signal WaitingDone: std_logic := '0';
+	signal WaitingBuffer: unsigned(3 downto 0) := to_unsigned(0, 4);
 	
 	signal wrre_latched : std_logic := '0';
 
 	signal sdio_do : std_logic := '0';
-	signal sdio_oe : std_logic := '1';  -- 1 = drive, 0 = Hi-Z
-	signal sdio_di : std_logic;
+	signal sdio_oe : std_logic := '1';
 	signal sclk_reg : std_logic := '0';
-	signal sclk_en  : std_logic := '0';
+	signal sclk_oe  : std_logic := '0';
 	
 begin
 
 	SDIO    <= sdio_do when sdio_oe = '1' else 'Z';
-	sdio_di <= SDIO;
-	WrReState <= wrre_latched;
 
-	SCLK <= sclk_reg;
+	SCLK <= sclk_reg when sclk_oe = '1' else '0';
 		
 	ConfigMemory: entity work.ConfigRom(basic)
 					port map(counter, config);
@@ -73,14 +67,6 @@ begin
 		CLKRECEIVED <= internalClock;
 		if(resetn = '0') then
 			CLKRECEIVED <= '0';
-		end if;
-	end process;
-	
-	DebugWriteConf: process(CLKIN, writeConfig, resetn)
-	begin
-		writeConfigReceived <= writeConfig;
-		if(resetn = '0') then
-			writeConfigReceived <= '1';
 		end if;
 	end process;
 	
@@ -102,31 +88,12 @@ begin
 			stateRegOut <=  B"000";
 		end if;
 	end process;
-	
-	DebuggerNext: process(nextState, CLKIN, resetn)
-	begin
-		case nextState is	
-			when IDLE =>	nextStateRegOut <= B"111";
-								
-			when SEND =>		nextStateRegOut <= B"101";
-								
-			when INTER =>		nextStateRegOut <= B"010";
-								
-			when DISCARD =>		nextStateRegOut <= B"110";
-								
-			when DONE =>			nextStateRegOut <= B"011";
-			when others => 	nextStateRegOut <= B"000";
-		end case;
-		if(resetn = '0') then
-			nextStateRegOut <=  B"000";
-		end if;
-	end process;
 					
-	StatePicker: process(configOK, writeConfig, needWait, waitingDone, discarded, CLKIN, resetn) is
+	StatePicker: process(sclk_reg, resetn) is
 	begin
-		if falling_edge(CLKIN) then
+		if falling_edge(sclk_reg) then
 		case state is
-			when IDLE =>	if(writeConfig = '0') then
+			when IDLE =>	if(writeConfig = '0' and configOk /= '1') then
 									nextState <= DISCARD;
 								else
 									nextState <= IDLE;
@@ -146,19 +113,23 @@ begin
 									nextState <= IDLE;
 								end if;
 								
-			when INTER =>	if(waitingDone = '0') then
-									nextState <= INTER;
+			when INTER =>				if(configOk = '1') then
+									nextState <= DONE;
 								else
-									nextState <= DISCARD;
+									if(waitingDone = '0') then
+										nextState <= INTER;
+									else
+										nextState <= DISCARD;
+									end if;
 								end if;
 								
-			when DISCARD =>	if(discarded = '1') then
+			when DISCARD =>				if(discarded = '1') then
 									nextState <= SEND;
 								else
 									nextState <= DISCARD;
 								end if;
 								
-			when DONE =>	if(writeConfig = '1') then
+			when DONE =>				if(writeConfig = '1') then
 									nextState <= IDLE;
 								else
 									nextState <= DONE;
@@ -171,11 +142,11 @@ begin
 		end if;
 	end process;
 	
-	StateMediator: process(nextState, CLKIN, resetn) is
+	StateMediator: process(nextState, sclk_reg, resetn) is
 	begin
-		if rising_edge(CLKIN) then
+		if rising_edge(sclk_reg) then
 			state <= nextState;
-			if (state /= SEND) and (nextState = SEND) then
+			if (state /= SEND) then
 			   wrre_latched <= WrReEn;
 			end if;
 		end if;
@@ -185,130 +156,112 @@ begin
 		end if;
 	end process;
 						
-	Outputs: process(state, CLKIN, resetn) is
+	Outputs: process(state, resetn) is
 	begin
-		if rising_edge(CLKIN) then
 		case state is
 			when IDLE =>	SDENB <= '1';
-								waiting <= '0';
-								sclk_en <= '0';
 								discarding <= '0';
 								sendData <= '0';
-								
+								sclk_oe <= '0';
+								waiting <= '0';
+									
 			when SEND =>	sendData <= '1';
-								waiting <= '0';
 								SDENB <= '0';
-								sclk_en <= '1';
-								if(unsigned(dataIndex) = 23 and internalClock = '0') then
-									outputClock <= '0';
-								end if;
+								sclk_oe <= '1';
 								discarding <= '0';
-								
-			when DISCARD =>	sclk_en <= '0';
-								sendData <= '0';
 								waiting <= '0';
+									
+			when DISCARD =>				sendData <= '0';
 								SDENB <= '0';
 								discarding <= '1';
-								
+								sclk_oe <= '0';
+								waiting <= '0';
+									
 			when INTER =>	sendData <= '0';
-								waiting <= '1';
 								SDENB <= '1';
-								sclk_en <= '0';
 								discarding <= '0';
+								sclk_oe <= '0';
+								waiting <= '1';
 								
 			when DONE => 	sendData <= '0';
-								waiting <= '0';
 								SDENB <= '1';
-								sclk_en <= '0';
 								discarding <= '0';
-			
+								sclk_oe <= '0';
+								waiting <= '0';
+				
 			when others => null;
 		end case;
-		end if;
 		if(resetn = '0') then
 			sendData <= '0';
+			SDENB <= '1';
 			waiting <= '0';
-			SDENB <= '0';
-			outputClock <= '0';
 			discarding <= '0';
 		end if;
 	end process;
 	
-	TransmitData: process(internalClock, resetn, waiting, SDENB)
-	  variable idx : integer;
+	TransmitData: process(dataIndex, sendData, nextState)
+		variable currentIndex: integer;
 	begin
-	  if resetn = '0' then
-	    sdio_do <= '0';
-	    sdio_oe <= '1';
-	  elsif waiting = '1' then
-		idx := 0;
-		sdio_do <= wrre_latched;
-	  elsif rising_edge(internalClock) then
-	      idx := to_integer(unsigned(dataIndex));
-	      
-	      sdio_oe <= '1';
-
-	      if idx = 0 then
-		-- Bit 0
-		sdio_do <= wrre_latched;
-
-	      elsif idx >= 1 and idx <= 7 then
-		-- Bits 1..7
-		sdio_do <= counter(7 - idx);
-
-	      else
-		-- Bits 8..23
-		if idx = 24 then
-		  sdio_do <= '0';
-		  sdio_oe <= '0';
-		elsif wrre_latched = '0' then
-		  sdio_do <= config(23 - idx);
-		  sdio_oe <= '1';
+		currentIndex := to_integer(unsigned(dataIndex));
+		if(nextState = SEND) then
+			sdio_oe <= '1';
 		else
-		  sdio_oe <= '0';
-		  sdio_do <= '0';
+			sdio_do <= '0';
+			sdio_oe <= '0';
 		end if;
-	      end if;
-  	  end if;
+
+		if(dataIndex = x"00") then
+			sdio_do <= wrre_latched;
+		elsif(dataIndex <= x"07") then
+			sdio_do <= counter(7 - currentIndex);
+		else
+			if(wrre_latched = '0') then
+				sdio_do <= config(23 - currentIndex);
+				sdio_oe <= '1';
+			else
+				sdio_do <= '0';
+				sdio_oe <= '0';
+			end if;
+		end if;
 	end process;
 
-	DataIndexIncrement: process(sclk_reg, resetn, waiting)
+	DataIndexIncrement: process(sclk_reg, resetn)
+		variable current: unsigned(7 downto 0);
 	begin
-	  if resetn = '0' then
-	    dataIndex <= x"00";
-	    needWait <= '0';
-	    configOK <= '0';
-	  elsif waiting = '1' then
-	    needWait <= '0';
-	  elsif rising_edge(sclk_reg) then
-	    if sendData = '1' then
-	      if unsigned(dataIndex) < 24 then
-		dataIndex <= std_logic_vector(unsigned(dataIndex) + 1);
-		needWait <= '0';
-	      else
-		dataIndex <= x"00";	
-		needWait <= '1';	
-		if(unsigned(counter) < 48) then 
-			counter <= std_logic_vector(unsigned(counter) + 1);
-		else
-			counter <= B"0000000";
-			configOK <= '1';
-		end if;
-	      end if;
-	    end if;
-	  end if;
+		current := unsigned(dataIndex) + 1;
+	
+		if resetn = '0' then
+			dataIndex <= x"00";
+			configOK <= '0';
+			needWait <= '0';
+			counter <= B"0000000";	
+		elsif falling_edge(sclk_reg) then
+			if sendData = '1' then
+				if current < 24 then
+					dataIndex <= std_logic_vector(unsigned(dataIndex) + 1);
+					if(current = x"17") then
+						needWait <= '1';
+					end if;
+				else
+					dataIndex <= x"00";
+					needWait <= '0';
+					if(unsigned(counter) < 48) then 
+						counter <= std_logic_vector(unsigned(counter) + 1);
+					else
+						counter <= B"0000000";
+						configOK <= '1';
+					end if;
+				end if;
+			end if;
+	  	end if;
 	end process;
 		
 	SclkGen: process(internalClock, resetn)
 	begin
 	  if resetn = '0' then
-	    sclk_reg <= '0';
+			sclk_reg <= '0';
 	  elsif rising_edge(internalClock) then
-	    if sclk_en = '1' then
 	      sclk_reg <= not sclk_reg;
-	    else
-	      sclk_reg <= '0';
-	    end if;
 	  end if;
 	end process;
 	
@@ -317,21 +270,21 @@ begin
 		if rising_edge(CLKIN) then
 			clockDividerBuffer <= std_logic_vector(unsigned(clockDividerBuffer) + 1);
 			
-			if(clockDividerBuffer = x"32") then
-				clockDividerBuffer <= x"00";
+			if(clockDividerBuffer = x"FFFF") then --32
+				clockDividerBuffer <= x"0000";
 				internalClock <= not internalClock;
 			end if;
 		end if;
 		if(resetn = '0') then
-			clockDividerBuffer <= x"00";
+			clockDividerBuffer <= x"0000";
 			internalClock <= '0';
 		end if;
 	end process;
 	
-	Waiter: process(internalClock, waiting, internalClock, resetn)
+	Waiter: process(sclk_reg, resetn)
 	begin
-		if rising_edge(internalClock) then
-			if(waiting = '1' and internalClock = '1') then
+		if rising_edge(sclk_reg) then
+			if(waiting = '1') then
 				if(waitingBuffer = 7) then
 					waitingBuffer <= to_unsigned(0, 4);
 					waitingDone <= '1';

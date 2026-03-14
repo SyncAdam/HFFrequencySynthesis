@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CGXFC5C6F27C7
-set_global_assignment -name TOP_LEVEL_ENTITY MainFSM
+set_global_assignment -name TOP_LEVEL_ENTITY HFFrequencySynthesis
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 12
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "TUE JUN  4 20:41:15 2013"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
@@ -56,80 +56,27 @@ set_global_assignment -name VHDL_FILE TestBench.vhd
 set_global_assignment -name VHDL_FILE ConfigROM.vhd
 set_global_assignment -name ENABLE_CONFIGURATION_PINS OFF
 set_global_assignment -name ENABLE_BOOT_SEL_PIN OFF
+set_global_assignment -name BDF_FILE HFFrequencySynthesis.bdf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_location_assignment PIN_D26 -to sdio
-set_location_assignment PIN_T21 -to sclk
-set_location_assignment PIN_K25 -to sdenb
-set_location_assignment PIN_P11 -to writeconfig
-set_location_assignment PIN_L7 -to configok
-set_location_assignment PIN_F7 -to stateRegOut[0]
-set_location_assignment PIN_F6 -to stateRegOut[1]
-set_location_assignment PIN_G6 -to stateRegOut[2]
-set_location_assignment PIN_Y15 -to resetn
-set_location_assignment PIN_J10 -to ClkOUT
-set_location_assignment PIN_J8 -to nextStateRegOut[0]
-set_location_assignment PIN_J7 -to nextStateRegOut[1]
-set_location_assignment PIN_K10 -to nextStateRegOut[2]
-set_location_assignment PIN_H9 -to clockBuffOut[2]
-set_location_assignment PIN_H8 -to clockBuffOut[1]
-set_location_assignment PIN_B6 -to clockBuffOut[0]
-set_location_assignment PIN_K6 -to writeConfigReceived
-set_location_assignment PIN_D8 -to discardBuffer
-set_location_assignment PIN_E10 -to output_p[0]
-set_location_assignment PIN_C9 -to output_p[1]
-set_location_assignment PIN_D10 -to output_p[2]
-set_location_assignment PIN_A12 -to output_p[3]
-set_location_assignment PIN_B10 -to output_p[4]
-set_location_assignment PIN_C20 -to output_p[5]
-set_location_assignment PIN_B15 -to output_p[6]
-set_location_assignment PIN_B22 -to output_p[7]
-set_location_assignment PIN_C13 -to output_p[8]
-set_location_assignment PIN_A8 -to output_p[9]
-set_location_assignment PIN_B12 -to output_p[10]
-set_location_assignment PIN_C23 -to output_p[11]
-set_location_assignment PIN_A14 -to output_p[12]
-set_location_assignment PIN_A23 -to output_p[13]
-set_location_assignment PIN_C17 -to output_p[14]
-set_location_assignment PIN_C19 -to output_p[15]
-set_location_assignment PIN_E11 -to "output_p[0](n)"
-set_location_assignment PIN_B9 -to "output_p[1](n)"
-set_location_assignment PIN_C10 -to "output_p[2](n)"
-set_location_assignment PIN_B11 -to "output_p[3](n)"
-set_location_assignment PIN_A11 -to "output_p[4](n)"
-set_location_assignment PIN_B19 -to "output_p[5](n)"
-set_location_assignment PIN_C15 -to "output_p[6](n)"
-set_location_assignment PIN_A21 -to "output_p[7](n)"
-set_location_assignment PIN_C12 -to "output_p[8](n)"
-set_location_assignment PIN_A19 -to parallelDataClk_p
-set_instance_assignment -name IO_STANDARD LVDS -to parallelDataClk_p
-set_location_assignment PIN_A18 -to "parallelDataClk_p(n)"
-set_instance_assignment -name IO_STANDARD LVDS -to output_p[0]
-set_instance_assignment -name IO_STANDARD LVDS -to output_p[1]
-set_instance_assignment -name IO_STANDARD LVDS -to output_p[2]
-set_instance_assignment -name IO_STANDARD LVDS -to output_p[3]
-set_instance_assignment -name IO_STANDARD LVDS -to output_p[5]
-set_instance_assignment -name IO_STANDARD LVDS -to output_p[6]
-set_instance_assignment -name IO_STANDARD LVDS -to output_p
-set_instance_assignment -name IO_STANDARD LVDS -to output_p[15]
-set_location_assignment PIN_C18 -to "output_p[15](n)"
-set_instance_assignment -name IO_STANDARD LVDS -to output_p[14]
-set_location_assignment PIN_B17 -to "output_p[14](n)"
-set_instance_assignment -name IO_STANDARD LVDS -to output_p[13]
-set_location_assignment PIN_A22 -to "output_p[13](n)"
-set_instance_assignment -name IO_STANDARD LVDS -to output_p[12]
-set_location_assignment PIN_B14 -to "output_p[12](n)"
-set_instance_assignment -name IO_STANDARD LVDS -to output_p[11]
-set_location_assignment PIN_C22 -to "output_p[11](n)"
-set_instance_assignment -name IO_STANDARD LVDS -to output_p[10]
-set_location_assignment PIN_A13 -to "output_p[10](n)"
-set_instance_assignment -name IO_STANDARD LVDS -to output_p[9]
-set_location_assignment PIN_A9 -to "output_p[9](n)"
-set_instance_assignment -name IO_STANDARD LVDS -to output_p[8]
-set_instance_assignment -name IO_STANDARD LVDS -to output_p[7]
-set_instance_assignment -name IO_STANDARD LVDS -to output_p[4]
-set_location_assignment PIN_H12 -to inputClock
-set_location_assignment PIN_P12 -to WrReEnButton
-set_location_assignment PIN_A5 -to WrReState
+set_location_assignment PIN_J10 -to CLK_Buffered
+set_location_assignment PIN_H12 -to Clock
+set_location_assignment PIN_G6 -to Current_State[2]
+set_location_assignment PIN_F6 -to Current_State[1]
+set_location_assignment PIN_F7 -to Current_State[0]
+set_location_assignment PIN_L7 -to Done
+set_location_assignment PIN_G15 -to Parallel_Data_CLK_IN
+set_instance_assignment -name IO_STANDARD LVDS -to Parallel_Data_CLK_IN
+set_location_assignment PIN_G14 -to "Parallel_Data_CLK_IN(n)"
+set_location_assignment PIN_Y16 -to Reset
+set_location_assignment PIN_P11 -to Run
+set_location_assignment PIN_T21 -to SDIO
+set_location_assignment PIN_D26 -to SDENB
+set_location_assignment PIN_K25 -to SCLK
+set_location_assignment PIN_P12 -to Wr_Re_Button
+set_location_assignment PIN_D8 -to Wr_Re_Status
+set_location_assignment PIN_H9 -to SCLK_LED
+set_location_assignment PIN_H8 -to SDIO_LED
+set_location_assignment PIN_B6 -to SDENB_LED
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
