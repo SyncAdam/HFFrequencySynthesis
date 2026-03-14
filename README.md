@@ -4,31 +4,19 @@ This project aims to achieve a high frequency multi-tone signal generator using 
 
 ### Interface
 
-LEDR9 - Serial communication internal clock
-
-LEDR[2..0] - Serial communication state machine state encoded
-
-LEDG7 - Serial communication output clock
-
-LEDG6 - Serial communication output data
-
-LEDG5 - Serial communication enable line
-
-LEDG2 - Off -> Write to chip - ON -> Read from the chip
-
-LEDG0 - Configuration done indicator
-
-Button KEY3 - Reset
-
-Button KEY1 - Select write/read to/from the chip
-
-Button KEY0 - Run configuration
-
-GPIO 0 - Serial data
-
-GPIO 1 - Serial enable
-
-GPIO 2 - Serial clock
+ - LEDR9 - Serial communication internal clock
+ - LEDR[2..0] - Serial communication state machine state encoded
+ - LEDG7 - Serial communication output clock
+ - LEDG6 - Serial communication output data
+ - LEDG5 - Serial communication enable line
+ - LEDG2 - Off -> Write to chip - ON -> Read from the chip
+ - LEDG0 - Configuration done indicator
+ - Button KEY3 - Reset
+ - Button KEY1 - Select write/read to/from the chip
+ - Button KEY0 - Run configuration
+ - GPIO 0 - Serial data
+ - GPIO 1 - Serial enable
+ - GPIO 2 - Serial clock
 
 ### Steps to compile:
  1.  Clone git repository
