@@ -29,7 +29,7 @@ architecture basic of ConfigureADC is
 	
 	signal counter: std_logic_vector(6 downto 0) := B"0000000";
 	signal config: std_logic_vector(15 downto 0);
-	signal clockDividerBuffer: std_logic_vector(15 downto 0) := std_logic_vector(to_unsigned(0, 16));
+	signal clockDividerBuffer: std_logic_vector(3 downto 0) := std_logic_vector(to_unsigned(0, 4));
 	--signal clockDividerBuffer: std_logic_vector(7 downto 0) := std_logic_vector(to_unsigned(0, 8));
 	
 	signal state: state_conf := IDLE;
@@ -44,7 +44,7 @@ architecture basic of ConfigureADC is
 	signal needWait: std_logic := '0';
 	signal waiting: std_logic := '0';
 	signal WaitingDone: std_logic := '0';
-	signal WaitingBuffer: unsigned(3 downto 0) := to_unsigned(0, 4);
+	signal WaitingBuffer: unsigned(15 downto 0) := to_unsigned(0, 16);
 	
 	signal wrre_latched : std_logic := '0';
 
@@ -270,13 +270,13 @@ begin
 		if rising_edge(CLKIN) then
 			clockDividerBuffer <= std_logic_vector(unsigned(clockDividerBuffer) + 1);
 			
-			if(clockDividerBuffer = x"FFFF") then --32
-				clockDividerBuffer <= x"0000";
+			if(clockDividerBuffer = x"A") then --32
+				clockDividerBuffer <= x"0";
 				internalClock <= not internalClock;
 			end if;
 		end if;
 		if(resetn = '0') then
-			clockDividerBuffer <= x"0000";
+			clockDividerBuffer <= x"0";
 			internalClock <= '0';
 		end if;
 	end process;
@@ -285,8 +285,8 @@ begin
 	begin
 		if rising_edge(sclk_reg) then
 			if(waiting = '1') then
-				if(waitingBuffer = 7) then
-					waitingBuffer <= to_unsigned(0, 4);
+				if(waitingBuffer = 5000) then
+					waitingBuffer <= to_unsigned(0, 16);
 					waitingDone <= '1';
 				else
 					waitingBuffer <= waitingBuffer + 1;
@@ -297,7 +297,7 @@ begin
 			end if;
 		end if;
 		if(resetn = '0') then
-			waitingBuffer <= B"0000";
+			waitingBuffer <= x"0000";
 			waitingDone <= '0';
 		end if;
 	end process;

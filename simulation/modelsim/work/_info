@@ -1,0 +1,218 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/simulation/modelsim
+Econfigrom
+Z1 w1773492037
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/ConfigROM.vhd
+Z6 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/ConfigROM.vhd
+l0
+L5
+V5@MVF=O@B1cjCQXOi2APM0
+!s100 UAbS6YSC=k>[9S?Rk[bJW2
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1773492547
+!i10b 1
+Z9 !s108 1773492547.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/ConfigROM.vhd|
+Z11 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/ConfigROM.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Abasic
+R2
+R3
+R4
+Z14 DEx4 work 9 configrom 0 22 5@MVF=O@B1cjCQXOi2APM0
+l71
+L12
+VA^^07`j58S61zQKDkajme1
+!s100 C^4`WIXM3[54HO4jm:PDm2
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Econfigureadc
+R1
+R2
+R3
+R4
+R0
+Z15 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/ConfigureADC.vhd
+Z16 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/ConfigureADC.vhd
+l0
+L6
+VcY9AWebhgS?Q974TXZ`PE2
+!s100 h8Oe^cEQN5d=X4^]UfKfB0
+R7
+32
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/ConfigureADC.vhd|
+Z18 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/ConfigureADC.vhd|
+!i113 1
+R12
+R13
+Abasic
+R14
+R2
+R3
+R4
+Z19 DEx4 work 12 configureadc 0 22 cY9AWebhgS?Q974TXZ`PE2
+l56
+L22
+Vzjzi9h0J6bHTl6F;1?0252
+!s100 NjHn;N58B4Nfk?Dh`56P`2
+R7
+32
+R8
+!i10b 1
+R9
+R17
+R18
+!i113 1
+R12
+R13
+Emainfsm
+R1
+R2
+R3
+R4
+R0
+Z20 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/MainFSM.vhd
+Z21 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/MainFSM.vhd
+l0
+L5
+Vi:l@=SUmXRR@jHL=:n^S33
+!s100 EM<f06?fcP=ZKZULXFLYZ1
+R7
+32
+R8
+!i10b 1
+R9
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/MainFSM.vhd|
+Z23 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/MainFSM.vhd|
+!i113 1
+R12
+R13
+Abasic
+R19
+Z24 DEx4 work 6 sinlut 0 22 S]UTnF:i4c2DgQl@`nAgj1
+R2
+R3
+R4
+Z25 DEx4 work 7 mainfsm 0 22 i:l@=SUmXRR@jHL=:n^S33
+l34
+L25
+VS9ZF1gWb<YOkWYnk:3U692
+!s100 >O:iCbigT3;Ff73:OAJYd1
+R7
+32
+R8
+!i10b 1
+R9
+R22
+R23
+!i113 1
+R12
+R13
+Esinlut
+R1
+R2
+R3
+R4
+R0
+Z26 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SynthesisCircuitry.vhd
+Z27 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SynthesisCircuitry.vhd
+l0
+L5
+VS]UTnF:i4c2DgQl@`nAgj1
+!s100 ^HPZBR8c3[khhKH9>`nl91
+R7
+32
+R8
+!i10b 1
+R9
+Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SynthesisCircuitry.vhd|
+Z29 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SynthesisCircuitry.vhd|
+!i113 1
+R12
+R13
+Abasic
+R2
+R3
+R4
+R24
+l33
+L12
+V^3eP>9BLPFNnMU=`JhSTi1
+!s100 7j:_N3knPg5Nmg]@H4HzL3
+R7
+32
+R8
+!i10b 1
+R9
+R28
+R29
+!i113 1
+R12
+R13
+Etestbench
+R1
+R3
+R4
+R0
+Z30 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/TestBench.vhd
+Z31 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/TestBench.vhd
+l0
+L4
+VmTM2gj<z>980G2:^JcmQW3
+!s100 li1_Y<I0T[=Dji=bf<_Hm2
+R7
+32
+R8
+!i10b 1
+R9
+Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/TestBench.vhd|
+Z33 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/TestBench.vhd|
+!i113 1
+R12
+R13
+Abasic
+R2
+R25
+R3
+R4
+Z34 DEx4 work 9 testbench 0 22 mTM2gj<z>980G2:^JcmQW3
+l27
+L7
+Z35 VOiAMO^=??fGhA>Tj<3`>Y2
+Z36 !s100 69:PV7N09g_VTb[73RQdl0
+R7
+32
+R8
+!i10b 1
+R9
+R32
+R33
+!i113 1
+R12
+R13

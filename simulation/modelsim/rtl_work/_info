@@ -1,0 +1,32 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/simulation/modelsim
+Emainfsm
+w1773492037
+DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/MainFSM.vhd
+FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/MainFSM.vhd
+l0
+L5
+Vb>c<;FJLTfcVhlA@9B`aU2
+!s100 EM<f06?fcP=ZKZULXFLYZ1
+OV;C;10.5b;63
+31
+!s110 1773492522
+!i10b 1
+!s108 1773492522.000000
+!s90 -reportprogress|300|-93|-work|work|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/MainFSM.vhd|
+!s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/MainFSM.vhd|
+!i113 1
+o-93 -work work
+tExplicit 1 CvgOpt 0

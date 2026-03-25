@@ -5,7 +5,8 @@ use ieee.numeric_std.all;
 entity SinLUT is
 	port(
 		     clk: in std_logic;
-			  output_p: out std_logic_vector(15 downto 0)
+			  output_p: out std_logic_vector(15 downto 0);
+			  data_clk_out: out std_logic := '0'
 		 );
 end SinLUT;
 
@@ -38,7 +39,7 @@ process(clk)
 	variable counter: integer := 0;
 	
 	begin
-	if(clk = '1') then
+	if rising_edge(clk) then
 		output_p <= std_logic_vector(values(counter));
 		counter := counter + 1;
 		if(counter > 15) then
