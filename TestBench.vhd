@@ -14,6 +14,8 @@ architecture basic of TestBench is
 	signal SCLK: std_logic;
 	signal SDIO: std_logic;
 	signal DataCLK: std_logic;
+	
+	signal DataCLK_OUT: std_logic;
 
 	signal ClkOUT: std_logic;
 	signal writeConfigReceived: std_logic;
@@ -27,11 +29,11 @@ architecture basic of TestBench is
 begin
 
 	DUT: entity work.MainFSM(basic)
-				port map(output_p, DataCLK, SCLK, SDENB, SDIO, configOK, writeConfig, WrReEn, WrReStatus, clock, ClkOUT, stateRegOut, resetn);
+				port map(output_p, clock, DataCLK_OUT, SCLK, SDENB, SDIO, configOK, writeConfig, WrReEn, WrReStatus, clock, ClkOUT, stateRegOut, resetn);
 	
 	ClockProc: process begin
 		clock <= not clock;
-		wait for 10ps;
+		wait for 1.62ns;
 	end process;
 
 	process

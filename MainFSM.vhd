@@ -7,6 +7,8 @@ entity MainFSM is
 		output_p: out std_logic_vector(15 downto 0);
 		parallelDataClk_p: in std_logic;
 		
+		data_clk_out: out std_logic;
+		
 		sclk: inout std_logic;
 		sdenb: inout std_logic;
 		sdio: inout std_logic;
@@ -30,10 +32,19 @@ architecture basic of MainFSM is
 	
 	signal btn_ff1, btn_ff2 : std_logic := '1';
 	signal btn_prev         : std_logic := '1';
+
+	signal enableIFFTClk: std_logic := '1';
+
+	signal ifftCe_Out :std_logic := '1';
+	signal ifftData_OutReal: std_logic_vector(15 downto 0);
+	signal ifftData_OutImag: std_logic_vector(15 downto 0);
+
+	signal reset: std_logic;
 	
 begin
 
 	WrReStatus <= WrReEn;
+	reset <= not resetn;
 	
 	process(inputClock, resetn)
 	begin
@@ -53,9 +64,12 @@ begin
 	end process;
 	
 	synthesizer: entity work.SinLUT(basic)
-						port map(parallelDataClk_p, output_p);
+						port map(parallelDataClk_p, output_p, data_clk_out);
 						
 	configurator: entity work.ConfigureADC(basic)
 						port map(writeconfig, configok, sdenb, sclk, sdio, inputClock, ClkOUT, stateRegOut, resetn, WrReEn);
+
+	syynthesizer2IFFT: entity work.idek11(rtl)
+					port map(parallelDataClk_p, reset, enableIFFTClk, ifftCe_Out, ifftData_OutReal, ifftData_OutImag);
 
 end architecture;

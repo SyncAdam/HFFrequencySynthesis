@@ -33,6 +33,7 @@ type rawTableData is array (0 to 15) of unsigned(0 to 15);
 												 );														
 begin
 
+data_clk_out <= clk;
 
 process(clk)
 

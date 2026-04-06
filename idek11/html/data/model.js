@@ -1,0 +1,1 @@
+var modelInfo = {model:"idek11"};var modelHierarchy=[{model:"idek11",relativePath:"_internal.html",parent:"null"},];var AddCode = true;
