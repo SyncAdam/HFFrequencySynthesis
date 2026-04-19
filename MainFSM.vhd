@@ -43,6 +43,7 @@ architecture basic of MainFSM is
 	
 begin
 
+	data_clk_out <= parallelDataClk_p;
 	WrReStatus <= WrReEn;
 	reset <= not resetn;
 	
@@ -54,7 +55,7 @@ begin
 	    btn_prev <= '1';
 	    WrReEn   <= '0';
 	  elsif rising_edge(inputClock) then
-	    btn_ff1 <= WrReEnButton;
+--	    btn_ff1 <= WrReEnButton;
 	    btn_ff2 <= btn_ff1;
 	    if (btn_prev = '1') and (btn_ff2 = '0') then
 	      WrReEn <= not WrReEn;
@@ -64,12 +65,12 @@ begin
 	end process;
 	
 	synthesizer: entity work.SinLUT(basic)
-						port map(parallelDataClk_p, output_p, data_clk_out);
+						port map(parallelDataClk_p, ifftData_OutReal);
 						
 	configurator: entity work.ConfigureADC(basic)
 						port map(writeconfig, configok, sdenb, sclk, sdio, inputClock, ClkOUT, stateRegOut, resetn, WrReEn);
 
 	syynthesizer2IFFT: entity work.idek11(rtl)
-					port map(parallelDataClk_p, reset, enableIFFTClk, ifftCe_Out, ifftData_OutReal, ifftData_OutImag);
+					port map(parallelDataClk_p, reset, enableIFFTClk, ifftCe_Out, output_p, ifftData_OutImag);
 
 end architecture;

@@ -1,4 +1,5 @@
-library ieee;
+library ieee;   
+                                                                                                                                                                                                                                                               library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
@@ -15,15 +16,14 @@ architecture basic of ConfigROM is
 	
 	signal configValues: configDataTable :=
 	(
-		B"1111000110011111",	-- Config 0		quadrature modulation correction, interpolation, fifo, alarm, sinc filter !! Change needed
-		B"0000010000001110",	-- Config 1		disable parity checks
-		B"0111000001010010",	-- Config 2		Not configured
-		B"1010000000000000",	-- Config 3		Not configured
-		B"0000000000000000",	-- Config 4		Not configured
+		B"0000000010011100",	-- Config 0		quadrature modulation correction, interpolation, fifo, alarm, sinc filter !! Change needed
+		B"0001000100000110",	-- Config 1		disable parity checks
+		B"0000000000000000",	-- Config 2		Not configured
+		B"1110000000000001",	-- Config 3		Not configured
+		B"1111111111111111",	-- Config 4		Not configured
 		B"0000000000000000",	-- Config 5		Clear all alarms
-		B"0000000000000000",	-- Config 6		Not configured
-		B"0000000000000000",
-		--B"1101100011111111",	-- Config 7		Not configured
+		B"0011001000000000",	-- Config 6		Not configured
+		B"1111111111111111",	-- Config 7		Not configured
 		B"0000000000000000",	-- Config 8		Not configured
 		B"1000000000000000",	-- Config 9		Not configured
 		B"0000000000000000",	-- Config 10	Not configured
@@ -40,7 +40,7 @@ architecture basic of ConfigROM is
 		B"0000000000000000",	-- Config 21	Not configured
 		B"0000000000000000",	-- Config 22	Not configured
 		B"0000000000000000",	-- Config 23	Not configured
-		B"0000010000000000",	-- Config 24	Not configured
+		B"0010000000000111",	-- Config 24	Not configured
 		B"0000010001000000",	-- Config 25	Not configured
 		B"0000000000000000",	-- Config 26	Not configured
 		B"0000100000000000",	-- Config 27	Not configured

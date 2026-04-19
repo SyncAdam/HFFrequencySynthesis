@@ -33,12 +33,14 @@ begin
 	
 	ClockProc: process begin
 		clock <= not clock;
-		wait for 10ps;
+		wait for 1.62ns;
 	end process;
 
 	process
 	begin
 		resetn <= '1';
+		wait for 100ps;
+		resetn <= '0';
 		WrReEn <= '1';
 		wait for 10ms;
 		resetn <= '0';

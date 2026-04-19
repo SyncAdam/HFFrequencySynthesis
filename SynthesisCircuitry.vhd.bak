@@ -5,30 +5,114 @@ use ieee.numeric_std.all;
 entity SinLUT is
 	port(
 		     clk: in std_logic;
-			  output: out std_logic_vector(15 downto 0)
+			  output_p: out std_logic_vector(15 downto 0)
 		 );
 end SinLUT;
 
 architecture basic of SinLUT is
 
-type rawTableData is array (0 to 15) of unsigned(0 to 15);
+type rawTableData is array (0 to 99) of signed(0 to 15);
 	
-	constant values: rawTableData := (to_unsigned(45307, 16),
-												 to_unsigned(55937, 16),
-												 to_unsigned(63040, 16),
-												 to_unsigned(65535, 16),
-												 to_unsigned(63040, 16),
-												 to_unsigned(55937, 16),
-												 to_unsigned(45307, 16),
-												 to_unsigned(32767, 16),
-												 to_unsigned(20227, 16),
-												 to_unsigned(9597, 16),
-												 to_unsigned(2494, 16),
-												 to_unsigned(0, 16),
-												 to_unsigned(2494, 16),
-												 to_unsigned(9597, 16),
-												 to_unsigned(20227, 16),
-												 to_unsigned(32767, 16)
+	constant values: rawTableData := (to_signed(0, 16),
+to_signed(2041, 16),
+to_signed(4074, 16),
+to_signed(6090, 16),
+to_signed(8083, 16),
+to_signed(10044, 16),
+to_signed(11965, 16),
+to_signed(13838, 16),
+to_signed(15657, 16),
+to_signed(17415, 16),
+to_signed(19104, 16),
+to_signed(20717, 16),
+to_signed(22248, 16),
+to_signed(23692, 16),
+to_signed(25042, 16),
+to_signed(26294, 16),
+to_signed(27441, 16),
+to_signed(28480, 16),
+to_signed(29407, 16),
+to_signed(30218, 16),
+to_signed(30910, 16),
+to_signed(31479, 16),
+to_signed(31925, 16),
+to_signed(32244, 16),
+to_signed(32436, 16),
+to_signed(32500, 16),
+to_signed(32436, 16),
+to_signed(32244, 16),
+to_signed(31925, 16),
+to_signed(31479, 16),
+to_signed(30910, 16),
+to_signed(30218, 16),
+to_signed(29407, 16),
+to_signed(28480, 16),
+to_signed(27441, 16),
+to_signed(26294, 16),
+to_signed(25042, 16),
+to_signed(23692, 16),
+to_signed(22248, 16),
+to_signed(20717, 16),
+to_signed(19104, 16),
+to_signed(17415, 16),
+to_signed(15657, 16),
+to_signed(13838, 16),
+to_signed(11965, 16),
+to_signed(10044, 16),
+to_signed(8083, 16),
+to_signed(6090, 16),
+to_signed(4074, 16),
+to_signed(2041, 16),
+to_signed(1, 16),
+to_signed(-2040, 16),
+to_signed(-4073, 16),
+to_signed(-6089, 16),
+to_signed(-8082, 16),
+to_signed(-10043, 16),
+to_signed(-11964, 16),
+to_signed(-13837, 16),
+to_signed(-15656, 16),
+to_signed(-17414, 16),
+to_signed(-19103, 16),
+to_signed(-20716, 16),
+to_signed(-22247, 16),
+to_signed(-23691, 16),
+to_signed(-25041, 16),
+to_signed(-26293, 16),
+to_signed(-27440, 16),
+to_signed(-28479, 16),
+to_signed(-29406, 16),
+to_signed(-30217, 16),
+to_signed(-30909, 16),
+to_signed(-31478, 16),
+to_signed(-31924, 16),
+to_signed(-32243, 16),
+to_signed(-32435, 16),
+to_signed(-32500, 16),
+to_signed(-32435, 16),
+to_signed(-32243, 16),
+to_signed(-31924, 16),
+to_signed(-31478, 16),
+to_signed(-30909, 16),
+to_signed(-30217, 16),
+to_signed(-29406, 16),
+to_signed(-28479, 16),
+to_signed(-27440, 16),
+to_signed(-26293, 16),
+to_signed(-25041, 16),
+to_signed(-23691, 16),
+to_signed(-22247, 16),
+to_signed(-20716, 16),
+to_signed(-19103, 16),
+to_signed(-17414, 16),
+to_signed(-15656, 16),
+to_signed(-13837, 16),
+to_signed(-11964, 16),
+to_signed(-10043, 16),
+to_signed(-8082, 16),
+to_signed(-6089, 16),
+to_signed(-4073, 16),
+to_signed(-2040, 16),
 												 );														
 begin
 
@@ -37,11 +121,12 @@ process(clk)
 	variable counter: integer := 0;
 	
 	begin
-	if(clk = '1') then
-		output <= std_logic_vector(values(counter));
+	if rising_edge(clk) then
+		output_p <= std_logic_vector(values(counter));
 		counter := counter + 1;
-		if(counter > 15) then
+		if(counter > 99) then
 			counter := 0;
+		end if;
 	end if;
 	
 end process;

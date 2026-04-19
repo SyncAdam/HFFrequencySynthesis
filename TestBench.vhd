@@ -38,6 +38,8 @@ begin
 
 	process
 	begin
+		resetn <= '0';
+		wait for 100ps;
 		resetn <= '1';
 		WrReEn <= '1';
 		wait for 10ms;

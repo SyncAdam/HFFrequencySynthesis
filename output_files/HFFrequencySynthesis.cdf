@@ -4,10 +4,10 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EPCQ256) Path("Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/output_files/") File("output_file.pof") MfrSpec(OpMask(3) Child_OpMask(1 3));
+		Device PartName(5CGXFC5C6F27) Path("Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/output_files/") File("HFFrequencySynthesis.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
 AlteraBegin;
-	ChainType(asc);
+	ChainType(JTAG);
 AlteraEnd;
