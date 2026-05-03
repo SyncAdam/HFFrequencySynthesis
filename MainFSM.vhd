@@ -40,12 +40,13 @@ architecture basic of MainFSM is
 	signal ifftData_OutImag: std_logic_vector(15 downto 0);
 
 	signal reset: std_logic;
+	signal PLLLocked: std_logic;
 	
 begin
 
+
 	data_clk_out <= parallelDataClk_p;
 	WrReStatus <= WrReEn;
-	reset <= not resetn;
 	
 	process(inputClock, resetn)
 	begin
@@ -64,13 +65,13 @@ begin
 	  end if;
 	end process;
 	
-	synthesizer: entity work.SinLUT(basic)
-						port map(parallelDataClk_p, ifftData_OutReal);
+	--synthesizer: entity work.SinLUT(basic)
+						--port map(parallelDataClk_p, ifftData_OutReal);
 						
 	configurator: entity work.ConfigureADC(basic)
 						port map(writeconfig, configok, sdenb, sclk, sdio, inputClock, ClkOUT, stateRegOut, resetn, WrReEn);
 
-	syynthesizer2IFFT: entity work.idek11(rtl)
-					port map(parallelDataClk_p, reset, enableIFFTClk, ifftCe_Out, output_p, ifftData_OutImag);
+	synthesizer2IFFT: entity work.SignalGenerator(rtl)
+					port map(parallelDataClk_p, resetn, enableIFFTClk, ifftCe_Out, output_p, ifftData_OutImag);
 
 end architecture;

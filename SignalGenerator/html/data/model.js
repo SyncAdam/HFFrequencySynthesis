@@ -1,0 +1,1 @@
+var modelInfo = {model:"SignalGenerator"};var modelHierarchy=[{model:"SignalGenerator",relativePath:"_internal.html",parent:"null"},];var AddCode = true;var rptComponent = "HDL";
