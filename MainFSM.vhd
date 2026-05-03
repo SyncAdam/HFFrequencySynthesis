@@ -64,13 +64,13 @@ begin
 	  end if;
 	end process;
 	
-	synthesizer: entity work.SinLUT(basic)
-						port map(parallelDataClk_p, ifftData_OutReal);
+	--synthesizer: entity work.SinLUT(basic)
+						--port map(parallelDataClk_p, ifftData_OutReal);
 						
 	configurator: entity work.ConfigureADC(basic)
 						port map(writeconfig, configok, sdenb, sclk, sdio, inputClock, ClkOUT, stateRegOut, resetn, WrReEn);
 
-	syynthesizer2IFFT: entity work.idek11(rtl)
+	synthesizer2IFFT: entity work.SignalGenerator(rtl)
 					port map(parallelDataClk_p, reset, enableIFFTClk, ifftCe_Out, output_p, ifftData_OutImag);
 
 end architecture;
