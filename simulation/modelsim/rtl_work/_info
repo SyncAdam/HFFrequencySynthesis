@@ -8,61 +8,39 @@ z2
 !i10f 100
 cModel Technology
 Z0 dZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/simulation/modelsim
-vbaseline_c5gx
-!s110 1777752694
-!i10b 1
-!s100 :g`YC?k_1nF<@:ZMMXQHI3
-I<IhQE5EG;m:FHRj2Y_WaE2
-VDg1SIo80bB@j0V0VzS_@n1
-R0
-w1773492037
-8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/baseline_c5gx.v
-FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/baseline_c5gx.v
-L0 38
-OV;L;10.5b;63
-r1
-!s85 0
-31
-!s108 1777752694.000000
-!s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/baseline_c5gx.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/baseline_c5gx.v|
-!i113 1
-o-vlog01compat -work work
-!s92 -vlog01compat -work work +incdir+Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis
-tCvgOpt 0
-Ecomplex3multiply
-Z1 w1777752198
+Ecomplex4multiply
+Z1 w1775762946
 Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
-Z5 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/Complex3Multiply.vhd
-Z6 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/Complex3Multiply.vhd
+Z5 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/Complex4Multiply.vhd
+Z6 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/Complex4Multiply.vhd
 l0
 L23
-V^oaHC9@h98?VJmZANUbcH3
-!s100 ;PC9f=CiVi>zFhOjk8n3W3
+Vf0]N^X]<FnAhH2UX7j2IM3
+!s100 fh;iLR9`JeGX]P0Cf149e2
 Z7 OV;C;10.5b;63
-32
-Z8 !s110 1777752772
+31
+Z8 !s110 1776589534
 !i10b 1
-Z9 !s108 1777752772.000000
-Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/Complex3Multiply.vhd|
-Z11 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/Complex3Multiply.vhd|
+Z9 !s108 1776589534.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/Complex4Multiply.vhd|
+Z11 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/Complex4Multiply.vhd|
 !i113 1
-Z12 o-work work -2002 -explicit
+Z12 o-93 -work work
 Z13 tExplicit 1 CvgOpt 0
 Artl
 R2
 R3
 R4
-Z14 DEx4 work 16 complex3multiply 0 22 ^oaHC9@h98?VJmZANUbcH3
-l95
+DEx4 work 16 complex4multiply 0 22 f0]N^X]<FnAhH2UX7j2IM3
+l85
 L39
-Vh8JB5lKHi:14;289DbKZ<1
-!s100 26QbZeCz]Q92fXRWO03Q91
+VY@aW:IIP`c9j8Wn^bolRK1
+!s100 gi[I01MACk1Elm713<;N93
 R7
-32
+31
 R8
 !i10b 1
 R9
@@ -71,25 +49,25 @@ R11
 !i113 1
 R12
 R13
-Ecomplex3multiply_block
+Ecomplex4multiply_block
 R1
 R2
 R3
 R4
 R0
-Z15 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/Complex3Multiply_block.vhd
-Z16 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/Complex3Multiply_block.vhd
+Z14 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/Complex4Multiply_block.vhd
+Z15 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/Complex4Multiply_block.vhd
 l0
 L23
-VJD3mnTNjEknC1NA?@F5UY0
-!s100 ?;onA7hGnF]Zz`kM`0VPG2
+Vfk<6VLIZT6NcYhcIB^7Ec0
+!s100 <E137a`FL>cZ[PT=bImEe1
 R7
-32
-Z17 !s110 1777752773
+31
+R8
 !i10b 1
-Z18 !s108 1777752773.000000
-Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/Complex3Multiply_block.vhd|
-Z20 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/Complex3Multiply_block.vhd|
+R9
+Z16 !s90 -reportprogress|300|-93|-work|work|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/Complex4Multiply_block.vhd|
+Z17 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/Complex4Multiply_block.vhd|
 !i113 1
 R12
 R13
@@ -97,40 +75,81 @@ Artl
 R2
 R3
 R4
-Z21 DEx4 work 22 complex3multiply_block 0 22 JD3mnTNjEknC1NA?@F5UY0
-l95
+DEx4 work 22 complex4multiply_block 0 22 fk<6VLIZT6NcYhcIB^7Ec0
+l85
 L39
-V]?idJf?WcTMgTP`aZe>li1
-!s100 GHoB8M<i1gB`aC=92`0PR1
+V6<3=I0G1YP7K]nKdPa7H92
+!s100 4P=AlNP>MTdnZ`Iz=>OmZ2
 R7
-32
-R17
+31
+R8
 !i10b 1
-R18
-R19
+R9
+R16
+R17
+!i113 1
+R12
+R13
+Ecomplex4multiply_block1
+R1
+R2
+R3
+R4
+R0
+Z18 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/Complex4Multiply_block1.vhd
+Z19 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/Complex4Multiply_block1.vhd
+l0
+L23
+V7@ZHc=idjzZQo2OBBNXTW1
+!s100 =j<1hgkKl66][WXUScDKM1
+R7
+31
+R8
+!i10b 1
+R9
+Z20 !s90 -reportprogress|300|-93|-work|work|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/Complex4Multiply_block1.vhd|
+Z21 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/Complex4Multiply_block1.vhd|
+!i113 1
+R12
+R13
+Artl
+R2
+R3
+R4
+DEx4 work 23 complex4multiply_block1 0 22 7@ZHc=idjzZQo2OBBNXTW1
+l85
+L39
+V1=aIIZ<6E1=mkGGLkF_MF3
+!s100 PE`CXC9hB6h]Tk2:mA9UX3
+R7
+31
+R8
+!i10b 1
+R9
 R20
+R21
 !i113 1
 R12
 R13
-Ecomplex3multiply_block1
+Ecomplex4multiply_block2
 R1
 R2
 R3
 R4
 R0
-Z22 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/Complex3Multiply_block1.vhd
-Z23 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/Complex3Multiply_block1.vhd
+Z22 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/Complex4Multiply_block2.vhd
+Z23 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/Complex4Multiply_block2.vhd
 l0
 L23
-VI;cBWD46NX[V@9COj]a9K0
-!s100 lSKO:STjT0Qk;l:NM3H4;0
+VoQ8@Omk7DE?;@8c3F;f2K0
+!s100 e>LPOTo^Q8:oYjfL_f8jQ1
 R7
-32
-R17
+31
+R8
 !i10b 1
-R18
-Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/Complex3Multiply_block1.vhd|
-Z25 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/Complex3Multiply_block1.vhd|
+R9
+Z24 !s90 -reportprogress|300|-93|-work|work|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/Complex4Multiply_block2.vhd|
+Z25 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/Complex4Multiply_block2.vhd|
 !i113 1
 R12
 R13
@@ -138,457 +157,62 @@ Artl
 R2
 R3
 R4
-Z26 DEx4 work 23 complex3multiply_block1 0 22 I;cBWD46NX[V@9COj]a9K0
-l95
+DEx4 work 23 complex4multiply_block2 0 22 oQ8@Omk7DE?;@8c3F;f2K0
+l85
 L39
-V5lHc9SnSWH_]0zgY3TkF71
-!s100 L9SN^WG]aHmi=P<VKTjX91
+VUl:GI3igb5CKR]MTHi5F^2
+!s100 Q6jfTocZaAU6ak]^8j78K2
 R7
-32
-R17
+31
+R8
 !i10b 1
-R18
+R9
 R24
 R25
 !i113 1
 R12
 R13
-Ecomplex3multiply_block2
-R1
+Pidek11_pkg
 R2
 R3
 R4
+Z26 w1775762947
 R0
-Z27 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/Complex3Multiply_block2.vhd
-Z28 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/Complex3Multiply_block2.vhd
+8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/idek11_pkg.vhd
+FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/idek11_pkg.vhd
 l0
-L23
-V:I[MJ`1Me0biW<i@REb]o0
-!s100 =X^RXLm@dWLnk20TZ48l^2
+L15
+VG1aD2Z=AlUzhgY70B8L7n3
+!s100 m?foZPSRZ9K9A_P6gJ;PU3
 R7
-32
-R17
-!i10b 1
-R18
-Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/Complex3Multiply_block2.vhd|
-Z30 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/Complex3Multiply_block2.vhd|
-!i113 1
-R12
-R13
-Artl
-R2
-R3
-R4
-Z31 DEx4 work 23 complex3multiply_block2 0 22 :I[MJ`1Me0biW<i@REb]o0
-l95
-L39
-V82IZOdA6I<HjNia7X?eTK2
-!s100 ;WlXa5RA3TKn3kAF^iVFG0
-R7
-32
-R17
-!i10b 1
-R18
-R29
-R30
-!i113 1
-R12
-R13
-Ecomplex4multiply
-Z32 w1777721999
-R2
-R3
-R4
-R0
-Z33 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/Complex4Multiply.vhd
-Z34 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/Complex4Multiply.vhd
-l0
-L23
-VPgMO3KNm^Q?a5o4;bl=0G3
-!s100 EI25TkeD9E8Z035m]_c;K1
-R7
-32
-R17
-!i10b 1
-R18
-Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/Complex4Multiply.vhd|
-Z36 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/Complex4Multiply.vhd|
-!i113 1
-R12
-R13
-Artl
-R2
-R3
-R4
-DEx4 work 16 complex4multiply 0 22 PgMO3KNm^Q?a5o4;bl=0G3
-l85
-L39
-VB=fgDk`60@hnRBJGe6MnH0
-!s100 O<8mA1M]43TcA;cQC]^=T1
-R7
-32
-R17
-!i10b 1
-R18
-R35
-R36
-!i113 1
-R12
-R13
-Ecomplex4multiply_block
-R32
-R2
-R3
-R4
-R0
-Z37 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/Complex4Multiply_block.vhd
-Z38 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/Complex4Multiply_block.vhd
-l0
-L23
-VN>aOL9BS7RL776=`^[>B81
-!s100 A1WJmn=98;Q8jBJQ4N<N`1
-R7
-32
-R17
-!i10b 1
-R18
-Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/Complex4Multiply_block.vhd|
-Z40 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/Complex4Multiply_block.vhd|
-!i113 1
-R12
-R13
-Artl
-R2
-R3
-R4
-DEx4 work 22 complex4multiply_block 0 22 N>aOL9BS7RL776=`^[>B81
-l85
-L39
-V?>2D]ZnBDi3MEjJn4O]jT3
-!s100 W:hMIn17Y:kE3^832[iaT0
-R7
-32
-R17
-!i10b 1
-R18
-R39
-R40
-!i113 1
-R12
-R13
-Ecomplex4multiply_block1
-R32
-R2
-R3
-R4
-R0
-Z41 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/Complex4Multiply_block1.vhd
-Z42 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/Complex4Multiply_block1.vhd
-l0
-L23
-VJKOGA;nOAzk@hEO8fI@Q:1
-!s100 kGQWRIjH1BI6>^h@[BzdD3
-R7
-32
-Z43 !s110 1777752774
-!i10b 1
-Z44 !s108 1777752774.000000
-Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/Complex4Multiply_block1.vhd|
-Z46 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/Complex4Multiply_block1.vhd|
-!i113 1
-R12
-R13
-Artl
-R2
-R3
-R4
-DEx4 work 23 complex4multiply_block1 0 22 JKOGA;nOAzk@hEO8fI@Q:1
-l85
-L39
-Vn]nSE3^[JL2i<Db@[UXUJ2
-!s100 0cTlNDhEP>UT[76oZi5[m3
-R7
-32
-R43
-!i10b 1
-R44
-R45
-R46
-!i113 1
-R12
-R13
-Ecomplex4multiply_block2
-R32
-R2
-R3
-R4
-R0
-Z47 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/Complex4Multiply_block2.vhd
-Z48 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/Complex4Multiply_block2.vhd
-l0
-L23
-V?T=1<bH5JZkNPVa71RScf3
-!s100 03cE944MLInD^_h`kodKA1
-R7
-32
-R43
-!i10b 1
-R44
-Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/Complex4Multiply_block2.vhd|
-Z50 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/Complex4Multiply_block2.vhd|
-!i113 1
-R12
-R13
-Artl
-R2
-R3
-R4
-DEx4 work 23 complex4multiply_block2 0 22 ?T=1<bH5JZkNPVa71RScf3
-l85
-L39
-V]?70zKofZCjMiSK5_eNZG0
-!s100 44YJ4PVWdm]Panfi8hHai0
-R7
-32
-R43
-!i10b 1
-R44
-R49
-R50
-!i113 1
-R12
-R13
-Econfigrom
-Z51 w1775655509
-R2
-R3
-R4
-R0
-Z52 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/ConfigROM.vhd
-Z53 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/ConfigROM.vhd
-l0
-L6
-V?g`H2GM@;WPNZ9YLV;3_H0
-!s100 CB;Z@dmMNa31?hankRIR31
-R7
-32
-R8
-!i10b 1
-Z54 !s108 1777752771.000000
-Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/ConfigROM.vhd|
-Z56 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/ConfigROM.vhd|
-!i113 1
-R12
-R13
-Abasic
-R2
-R3
-R4
-Z57 DEx4 work 9 configrom 0 22 ?g`H2GM@;WPNZ9YLV;3_H0
-l71
-L13
-V9L0@?gaB^6JgDRC3J6aX`3
-!s100 Fc@j:<P_7cJGSz7Eh2Rz[1
-R7
-32
-R8
-!i10b 1
-R54
-R55
-R56
-!i113 1
-R12
-R13
-Econfigureadc
-Z58 w1774356393
-R2
-R3
-R4
-R0
-Z59 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/ConfigureADC.vhd
-Z60 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/ConfigureADC.vhd
-l0
-L6
-VcY9AWebhgS?Q974TXZ`PE2
-!s100 h8Oe^cEQN5d=X4^]UfKfB0
-R7
-32
+31
 R8
 !i10b 1
 R9
-Z61 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/ConfigureADC.vhd|
-Z62 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/ConfigureADC.vhd|
-!i113 1
-R12
-R13
-Abasic
-R57
-R2
-R3
-R4
-Z63 DEx4 work 12 configureadc 0 22 cY9AWebhgS?Q974TXZ`PE2
-l56
-L22
-VZ_mDWZZ3UjTcDUkNoh8Mh0
-!s100 Hza^a2O3c3FZHYoXT=hXK0
-R7
-32
-R8
-!i10b 1
-R9
-R61
-R62
-!i113 1
-R12
-R13
-Eifft
-R1
-Z64 DPx4 work 19 signalgenerator_pkg 0 22 WnC@agDT4UkA=lRYW5j;]3
-R2
-R3
-R4
-R0
-Z65 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/IFFT.vhd
-Z66 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/IFFT.vhd
-l0
-L26
-Ve537L5`7OPS:NO]na`W^m3
-!s100 IR7doWioWS:hK:z>1:h^M1
-R7
-32
-R43
-!i10b 1
-R44
-Z67 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/IFFT.vhd|
-Z68 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/IFFT.vhd|
-!i113 1
-R12
-R13
-Artl
-Z69 DEx4 work 20 radix2fft_bitnatural 0 22 2jHJJoj47eWD_kl3haVC?2
-Z70 DEx4 work 17 radix22fft_sdf1_9 0 22 Vzb?L[^HcR7J<IQMJQ13R1
-Z71 DEx4 work 24 radix22fft_ctrl1_1_block 0 22 OZ5VV<:H`F4V62dTMUeSM0
-Z72 DEx4 work 11 twdlrom_9_1 0 22 mh3bPH7h<gVb^Fc>`ARnX0
-Z73 DEx4 work 17 radix22fft_sdf2_8 0 22 E`aP3[o`2`gjnbR8@BHl^0
-Z74 DEx4 work 18 radix22fft_ctrl1_8 0 22 ;iM=j0k46HK2K2kznl3?`1
-Z75 DEx4 work 17 radix22fft_sdf1_7 0 22 KzZ_3DZ6A<B[Gk_:```Hc1
-Z76 DEx4 work 18 radix22fft_ctrl1_7 0 22 d<EeefiEnQ^84_]G>]>Ec2
-Z77 DEx4 work 11 twdlrom_7_1 0 22 5FCNM`<:CHdYfTJ2kK9U02
-Z78 DEx4 work 17 radix22fft_sdf2_6 0 22 1K?5Z<^EZ_R?=AYB?h@483
-Z79 DEx4 work 18 radix22fft_ctrl1_6 0 22 8C`kdAIjS9Mle:M=>RO3b0
-Z80 DEx4 work 17 radix22fft_sdf1_5 0 22 P^8QLXI4Y1blBoS6GIPg@0
-Z81 DEx4 work 18 radix22fft_ctrl1_5 0 22 ESLmCY@U2aY`AgBzW9H9m1
-Z82 DEx4 work 11 twdlrom_5_1 0 22 kc_K53^D?E8Z65c6_2EHE2
-Z83 DEx4 work 17 radix22fft_sdf2_4 0 22 _N@?`cR;cEj95GIOT;nVM0
-Z84 DEx4 work 18 radix22fft_ctrl1_4 0 22 e=z>D10kCVn4oVJobWbok3
-Z85 DEx4 work 17 radix22fft_sdf1_3 0 22 JW?ZYDaCKOfDdzN`RO8gR2
-Z86 DEx4 work 18 radix22fft_ctrl1_3 0 22 cUXdSWQ^4gbz^GZoRWE5c1
-Z87 DEx4 work 11 twdlrom_3_1 0 22 Ma026WGl4en]U9zcYjDQK0
-Z88 DEx4 work 17 radix22fft_sdf2_2 0 22 2L4bULg[JcHcg2`7L;BOI0
-Z89 DEx4 work 18 radix22fft_ctrl1_2 0 22 S3j3;QI8GU4VaEj^lk`@Y2
-Z90 DEx4 work 17 radix22fft_sdf1_1 0 22 VAHXG2Lh?c@VTG6]h:Q;51
-Z91 DEx4 work 18 radix22fft_ctrl1_1 0 22 zom:`ChdSf4]I[0BLNUE>3
-R64
-R2
-R3
-R4
-Z92 DEx4 work 4 ifft 0 22 e537L5`7OPS:NO]na`W^m3
-l561
-L39
-VVS_<C;K>gMo8K7cbEk6JB0
-!s100 ;NFd_F>M5FKdnDi<@POQH0
-R7
-32
-R43
-!i10b 1
-R44
-R67
-R68
+!s90 -reportprogress|300|-93|-work|work|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/idek11_pkg.vhd|
+!s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/idek11_pkg.vhd|
 !i113 1
 R12
 R13
 Emainfsm
-Z93 w1777752599
+w1776504364
 R2
 R3
 R4
 R0
-Z94 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/MainFSM.vhd
-Z95 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/MainFSM.vhd
+8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/MainFSM.vhd
+FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/MainFSM.vhd
 l0
 L5
-VC0=DY4Oo:VFkd;c:L`Ob;3
+VB;gFoFJBF6JbXg5[]]@M_3
 !s100 j[Oo]Faza:@mX5U4?KGno1
 R7
-32
+31
 R8
 !i10b 1
 R9
-Z96 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/MainFSM.vhd|
-Z97 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/MainFSM.vhd|
-!i113 1
-R12
-R13
-Abasic
-R64
-Z98 DEx4 work 15 signalgenerator 0 22 ]b@S80_QMMjX5AXCm=Dco1
-R63
-R2
-R3
-R4
-Z99 DEx4 work 7 mainfsm 0 22 C0=DY4Oo:VFkd;c:L`Ob;3
-l45
-L27
-VV]@An==j8@Lg7aTDHAVZ63
-!s100 HdZX]:CbR`fT_kb3bRh?22
-R7
-32
-R8
-!i10b 1
-R9
-R96
-R97
-!i113 1
-R12
-R13
-Epll
-Z100 w1777749685
-R2
-R3
-R4
-R0
-Z101 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/PLL.vhd
-Z102 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/PLL.vhd
-l0
-L11
-V4X1F`H2Falk:M7VR__ToZ3
-!s100 C;D3NkfME<[TG30_5c6jk3
-R7
-32
-Z103 !s110 1777752783
-!i10b 1
-Z104 !s108 1777752783.000000
-Z105 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/PLL.vhd|
-Z106 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/PLL.vhd|
-!i113 1
-R12
-R13
-Artl
-R2
-R3
-R4
-Z107 DEx4 work 3 pll 0 22 4X1F`H2Falk:M7VR__ToZ3
-l30
-L20
-Z108 VFK`Y@R]^;l5I0k<bD3`2b0
-Z109 !s100 LT5@zm@<N8mdC3YL60UiQ3
-R7
-32
-R103
-!i10b 1
-R104
-R105
-R106
+!s90 -reportprogress|300|-93|-work|work|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/MainFSM.vhd|
+!s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/MainFSM.vhd|
 !i113 1
 R12
 R13
@@ -598,19 +222,19 @@ R2
 R3
 R4
 R0
-Z110 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_CTRL1_1.vhd
-Z111 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_CTRL1_1.vhd
+Z27 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX22FFT_CTRL1_1.vhd
+Z28 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX22FFT_CTRL1_1.vhd
 l0
 L23
-Vzom:`ChdSf4]I[0BLNUE>3
+Vh2R6:F9a^Wo33P_EE1QfI3
 !s100 `[A]Rl1RjfHh^zV5g13HE2
 R7
-32
-R43
+31
+R8
 !i10b 1
-R44
-Z112 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_CTRL1_1.vhd|
-Z113 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_CTRL1_1.vhd|
+R9
+Z29 !s90 -reportprogress|300|-93|-work|work|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX22FFT_CTRL1_1.vhd|
+Z30 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX22FFT_CTRL1_1.vhd|
 !i113 1
 R12
 R13
@@ -618,40 +242,40 @@ Artl
 R2
 R3
 R4
-R91
+DEx4 work 18 radix22fft_ctrl1_1 0 22 h2R6:F9a^Wo33P_EE1QfI3
 l56
 L36
-VjR4eX7PjLoWF=6n<<4enW1
-!s100 N@H960SF5:S4JSU^S?]5C1
+VdaR08H3[GI6z>VjY1ATd71
+!s100 9aK<GLN@dBU3YlAQ24J7C0
 R7
-32
-R43
+31
+R8
 !i10b 1
-R44
-R112
-R113
+R9
+R29
+R30
 !i113 1
 R12
 R13
 Eradix22fft_ctrl1_1_block
-R1
+R26
 R2
 R3
 R4
 R0
-Z114 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_CTRL1_1_block.vhd
-Z115 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_CTRL1_1_block.vhd
+Z31 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX22FFT_CTRL1_1_block.vhd
+Z32 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX22FFT_CTRL1_1_block.vhd
 l0
 L23
-VOZ5VV<:H`F4V62dTMUeSM0
+VFVDc^=Do_23<HzXM]bzB@0
 !s100 3iKY4Gh:2`Ld?bgb1bAg]2
 R7
-32
-Z116 !s110 1777752775
+31
+R8
 !i10b 1
-Z117 !s108 1777752775.000000
-Z118 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_CTRL1_1_block.vhd|
-Z119 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_CTRL1_1_block.vhd|
+R9
+Z33 !s90 -reportprogress|300|-93|-work|work|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX22FFT_CTRL1_1_block.vhd|
+Z34 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX22FFT_CTRL1_1_block.vhd|
 !i113 1
 R12
 R13
@@ -659,18 +283,18 @@ Artl
 R2
 R3
 R4
-R71
+DEx4 work 24 radix22fft_ctrl1_1_block 0 22 FVDc^=Do_23<HzXM]bzB@0
 l49
 L36
-VP;D:I`;][]gCe]od^G>UI1
-!s100 <8WfB]2Vk3GJoHndB6FbD2
+V6DY34FofL3o3EADP`^=Ag3
+!s100 b_?LX;5N8J?aL]D=R9D8Q3
 R7
-32
-R116
+31
+R8
 !i10b 1
-R117
-R118
-R119
+R9
+R33
+R34
 !i113 1
 R12
 R13
@@ -680,19 +304,19 @@ R2
 R3
 R4
 R0
-Z120 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_CTRL1_2.vhd
-Z121 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_CTRL1_2.vhd
+Z35 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX22FFT_CTRL1_2.vhd
+Z36 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX22FFT_CTRL1_2.vhd
 l0
 L23
-VS3j3;QI8GU4VaEj^lk`@Y2
+V7N4dXWVk>0oWVe`MC@mQU0
 !s100 h[>D@AeRfH8OE5CeKG@dA3
 R7
-32
-R116
+31
+R8
 !i10b 1
-R117
-Z122 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_CTRL1_2.vhd|
-Z123 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_CTRL1_2.vhd|
+R9
+Z37 !s90 -reportprogress|300|-93|-work|work|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX22FFT_CTRL1_2.vhd|
+Z38 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX22FFT_CTRL1_2.vhd|
 !i113 1
 R12
 R13
@@ -700,18 +324,18 @@ Artl
 R2
 R3
 R4
-R89
+DEx4 work 18 radix22fft_ctrl1_2 0 22 7N4dXWVk>0oWVe`MC@mQU0
 l56
 L37
-Vo5TOI?PJTmUXLRT=b6L_X3
-!s100 LVI>eG0KHIVY3[G`_khO;3
+V2kXBn1LW?6EP3e[MXBOah3
+!s100 9oRIX>S23d2A7PPz?YM083
 R7
-32
-R116
+31
+R8
 !i10b 1
-R117
-R122
-R123
+R9
+R37
+R38
 !i113 1
 R12
 R13
@@ -721,19 +345,19 @@ R2
 R3
 R4
 R0
-Z124 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_CTRL1_3.vhd
-Z125 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_CTRL1_3.vhd
+Z39 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX22FFT_CTRL1_3.vhd
+Z40 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX22FFT_CTRL1_3.vhd
 l0
 L23
-VcUXdSWQ^4gbz^GZoRWE5c1
+V;g3BM0OI85k534WXSjT_;0
 !s100 FiFPoPPm[mUkiNTI1oVnz3
 R7
-32
-R116
+31
+R8
 !i10b 1
-R117
-Z126 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_CTRL1_3.vhd|
-Z127 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_CTRL1_3.vhd|
+R9
+Z41 !s90 -reportprogress|300|-93|-work|work|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX22FFT_CTRL1_3.vhd|
+Z42 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX22FFT_CTRL1_3.vhd|
 !i113 1
 R12
 R13
@@ -741,18 +365,18 @@ Artl
 R2
 R3
 R4
-R86
+DEx4 work 18 radix22fft_ctrl1_3 0 22 ;g3BM0OI85k534WXSjT_;0
 l56
 L36
-Vl1Hc>5I>aiGLzYhVkZm2X3
-!s100 XAl]kEY5eNgLmg`7oJGg91
+VOG2zA<^W:^75MngTHoCMB1
+!s100 [1l?`NVmbSLf7HcKQOCDa2
 R7
-32
-R116
+31
+R8
 !i10b 1
-R117
-R126
-R127
+R9
+R41
+R42
 !i113 1
 R12
 R13
@@ -762,19 +386,19 @@ R2
 R3
 R4
 R0
-Z128 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_CTRL1_4.vhd
-Z129 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_CTRL1_4.vhd
+Z43 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX22FFT_CTRL1_4.vhd
+Z44 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX22FFT_CTRL1_4.vhd
 l0
 L23
-Ve=z>D10kCVn4oVJobWbok3
+VjF5BzOZ^aHZ5G=>izOBC30
 !s100 dTAaPUJjKbk0>XCW4bzhz1
 R7
-32
-R116
+31
+R8
 !i10b 1
-R117
-Z130 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_CTRL1_4.vhd|
-Z131 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_CTRL1_4.vhd|
+Z45 !s108 1776589533.000000
+Z46 !s90 -reportprogress|300|-93|-work|work|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX22FFT_CTRL1_4.vhd|
+Z47 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX22FFT_CTRL1_4.vhd|
 !i113 1
 R12
 R13
@@ -782,18 +406,18 @@ Artl
 R2
 R3
 R4
-R84
+DEx4 work 18 radix22fft_ctrl1_4 0 22 jF5BzOZ^aHZ5G=>izOBC30
 l56
 L37
-VJ2c2bZ=dBj>OKKWLc09In3
-!s100 D231DVfN:9O3cGiPg<jPB3
+V91lLm[<bfTHVJEJz>35LD3
+!s100 8W_S]UE3jT]F9F<fN>V]11
 R7
-32
-R116
+31
+R8
 !i10b 1
-R117
-R130
-R131
+R45
+R46
+R47
 !i113 1
 R12
 R13
@@ -803,19 +427,19 @@ R2
 R3
 R4
 R0
-Z132 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_CTRL1_5.vhd
-Z133 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_CTRL1_5.vhd
+Z48 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX22FFT_CTRL1_5.vhd
+Z49 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX22FFT_CTRL1_5.vhd
 l0
 L23
-VESLmCY@U2aY`AgBzW9H9m1
+V9_Zz:^VeUggQo`k6B]2Ec0
 !s100 :dDHZ9FAOb=C3e_AgRQb53
 R7
-32
-R116
+31
+Z50 !s110 1776589533
 !i10b 1
-R117
-Z134 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_CTRL1_5.vhd|
-Z135 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_CTRL1_5.vhd|
+R45
+Z51 !s90 -reportprogress|300|-93|-work|work|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX22FFT_CTRL1_5.vhd|
+Z52 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX22FFT_CTRL1_5.vhd|
 !i113 1
 R12
 R13
@@ -823,18 +447,18 @@ Artl
 R2
 R3
 R4
-R81
+DEx4 work 18 radix22fft_ctrl1_5 0 22 9_Zz:^VeUggQo`k6B]2Ec0
 l56
 L36
-V9>`=jHR;S3WL0:SIkLgdU2
-!s100 FUdX0BV_7<6RTZW>ARIJT1
+VmSg<<?GkSR725oZ6g9o]k2
+!s100 lFQeW8VTERA50SMMgLM^g0
 R7
-32
-R116
+31
+R50
 !i10b 1
-R117
-R134
-R135
+R45
+R51
+R52
 !i113 1
 R12
 R13
@@ -844,19 +468,19 @@ R2
 R3
 R4
 R0
-Z136 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_CTRL1_6.vhd
-Z137 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_CTRL1_6.vhd
+Z53 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX22FFT_CTRL1_6.vhd
+Z54 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX22FFT_CTRL1_6.vhd
 l0
 L23
-V8C`kdAIjS9Mle:M=>RO3b0
+VM=jXk;DXJ<V6<kfeAP[342
 !s100 ^3TOX9FZT3kDallIgWz3E2
 R7
-32
-Z138 !s110 1777752776
+31
+R50
 !i10b 1
-Z139 !s108 1777752776.000000
-Z140 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_CTRL1_6.vhd|
-Z141 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_CTRL1_6.vhd|
+R45
+Z55 !s90 -reportprogress|300|-93|-work|work|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX22FFT_CTRL1_6.vhd|
+Z56 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX22FFT_CTRL1_6.vhd|
 !i113 1
 R12
 R13
@@ -864,18 +488,18 @@ Artl
 R2
 R3
 R4
-R79
+DEx4 work 18 radix22fft_ctrl1_6 0 22 M=jXk;DXJ<V6<kfeAP[342
 l56
 L37
-V_AX:AJbnAGVfCM_OoQR[T3
-!s100 NQZaPXIRK3BWDS5M<4H<D0
+VabPhATRa?3^F2Yc]YL;^92
+!s100 Oc=omT7X@;Ke]m@`;X>B=2
 R7
-32
-R138
+31
+R50
 !i10b 1
-R139
-R140
-R141
+R45
+R55
+R56
 !i113 1
 R12
 R13
@@ -885,19 +509,19 @@ R2
 R3
 R4
 R0
-Z142 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_CTRL1_7.vhd
-Z143 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_CTRL1_7.vhd
+Z57 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX22FFT_CTRL1_7.vhd
+Z58 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX22FFT_CTRL1_7.vhd
 l0
 L23
-Vd<EeefiEnQ^84_]G>]>Ec2
+VmXO7ebCD9N:Z1;OS@zz8m3
 !s100 O8]ABA68:^CZM`;IQkK1o1
 R7
-32
-R138
+31
+R50
 !i10b 1
-R139
-Z144 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_CTRL1_7.vhd|
-Z145 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_CTRL1_7.vhd|
+R45
+Z59 !s90 -reportprogress|300|-93|-work|work|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX22FFT_CTRL1_7.vhd|
+Z60 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX22FFT_CTRL1_7.vhd|
 !i113 1
 R12
 R13
@@ -905,18 +529,18 @@ Artl
 R2
 R3
 R4
-R76
+DEx4 work 18 radix22fft_ctrl1_7 0 22 mXO7ebCD9N:Z1;OS@zz8m3
 l56
 L36
-V7fOe62KZP[QdlQ@Z?083M1
-!s100 lF4J3l6Mm_3n66406R]Cm1
+VlDzC57F>K;4Jb14@5?Lz]0
+!s100 9JY:QN02HB7lKR4O30YiT0
 R7
-32
-R138
+31
+R50
 !i10b 1
-R139
-R144
-R145
+R45
+R59
+R60
 !i113 1
 R12
 R13
@@ -926,19 +550,19 @@ R2
 R3
 R4
 R0
-Z146 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_CTRL1_8.vhd
-Z147 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_CTRL1_8.vhd
+Z61 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX22FFT_CTRL1_8.vhd
+Z62 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX22FFT_CTRL1_8.vhd
 l0
 L23
-V;iM=j0k46HK2K2kznl3?`1
+VnI`:?d`oL@5k>SPT2RXJ80
 !s100 W]4LZSWk3E222WT^f;gfh0
 R7
-32
-R138
+31
+R50
 !i10b 1
-R139
-Z148 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_CTRL1_8.vhd|
-Z149 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_CTRL1_8.vhd|
+R45
+Z63 !s90 -reportprogress|300|-93|-work|work|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX22FFT_CTRL1_8.vhd|
+Z64 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX22FFT_CTRL1_8.vhd|
 !i113 1
 R12
 R13
@@ -946,467 +570,60 @@ Artl
 R2
 R3
 R4
-R74
+DEx4 work 18 radix22fft_ctrl1_8 0 22 nI`:?d`oL@5k>SPT2RXJ80
 l55
 L37
-VlJIm;gAH<_PBYfSnE6^0[3
-!s100 eb@4?mA<0EM8=z1[j=dOH0
+V?XEJEKZGJFAbD8h6:=WL?3
+!s100 9z1J1To;NMzE[0[YB9CWQ0
 R7
-32
-R138
+31
+R50
 !i10b 1
-R139
-R148
-R149
-!i113 1
-R12
-R13
-Eradix22fft_sdf1_1
-R1
+R45
+R63
 R64
-R2
-R3
-R4
-R0
-Z150 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_SDF1_1.vhd
-Z151 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_SDF1_1.vhd
-l0
-L24
-VVAHXG2Lh?c@VTG6]h:Q;51
-!s100 k3@`:W0G>h;=mG0Qj07FG0
-R7
-32
-R138
-!i10b 1
-R139
-Z152 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_SDF1_1.vhd|
-Z153 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_SDF1_1.vhd|
-!i113 1
-R12
-R13
-Artl
-Z154 DEx4 work 14 sdfcommutator1 0 22 <F^DBS7jH?10CJC>OhZgO2
-Z155 DEx4 work 25 simpledualportram_generic 0 22 gW87:aiNCl=k_JbZ^MQHU2
-R64
-R2
-R3
-R4
-R90
-l148
-L42
-VBH4iVUJ6>EgK4ohO[R6eC1
-!s100 :<>LXzHjEAl?MJk=VJNeM1
-R7
-32
-R138
-!i10b 1
-R139
-R152
-R153
-!i113 1
-R12
-R13
-Eradix22fft_sdf1_3
-R1
-R64
-R2
-R3
-R4
-R0
-Z156 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_SDF1_3.vhd
-Z157 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_SDF1_3.vhd
-l0
-L24
-VJW?ZYDaCKOfDdzN`RO8gR2
-!s100 f1ZlOj?Jz0]no;KE1W`D=2
-R7
-32
-R138
-!i10b 1
-R139
-Z158 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_SDF1_3.vhd|
-Z159 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_SDF1_3.vhd|
-!i113 1
-R12
-R13
-Artl
-Z160 DEx4 work 14 sdfcommutator3 0 22 mizLZ1UEOHK1=AbU_21C[2
-R155
-R14
-R64
-R2
-R3
-R4
-R85
-l170
-L44
-VCaFkTFb6cX7bK9D`]SGH^0
-!s100 VO`VPeP30CB@Qg4UIjgj03
-R7
-32
-R138
-!i10b 1
-R139
-R158
-R159
-!i113 1
-R12
-R13
-Eradix22fft_sdf1_5
-R1
-R64
-R2
-R3
-R4
-R0
-Z161 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_SDF1_5.vhd
-Z162 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_SDF1_5.vhd
-l0
-L24
-VP^8QLXI4Y1blBoS6GIPg@0
-!s100 =>^2CjmNVX?43?6?kfKYN3
-R7
-32
-Z163 !s110 1777752777
-!i10b 1
-Z164 !s108 1777752777.000000
-Z165 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_SDF1_5.vhd|
-Z166 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_SDF1_5.vhd|
-!i113 1
-R12
-R13
-Artl
-Z167 DEx4 work 14 sdfcommutator5 0 22 WdzTaRMD6YaG]FVL_bjoX3
-R155
-R21
-R64
-R2
-R3
-R4
-R80
-l170
-L44
-VUAJk7]0]Sal8V4o8d1`:A0
-!s100 I9d;PzNKXSJgd[e6iWmiT3
-R7
-32
-R163
-!i10b 1
-R164
-R165
-R166
-!i113 1
-R12
-R13
-Eradix22fft_sdf1_7
-R1
-R64
-R2
-R3
-R4
-R0
-Z168 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_SDF1_7.vhd
-Z169 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_SDF1_7.vhd
-l0
-L24
-VKzZ_3DZ6A<B[Gk_:```Hc1
-!s100 oZQVbL0U8Q=z69MiSkD][0
-R7
-32
-R163
-!i10b 1
-R164
-Z170 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_SDF1_7.vhd|
-Z171 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_SDF1_7.vhd|
-!i113 1
-R12
-R13
-Artl
-Z172 DEx4 work 14 sdfcommutator7 0 22 6L<AeJ?U_OJ4N>jjG06cP3
-R155
-R26
-R64
-R2
-R3
-R4
-R75
-l170
-L44
-V?7[gz[kB0j1V`0B^0_be10
-!s100 4zJoEAR61jf06@beMlme_2
-R7
-32
-R163
-!i10b 1
-R164
-R170
-R171
-!i113 1
-R12
-R13
-Eradix22fft_sdf1_9
-R1
-R64
-R2
-R3
-R4
-R0
-Z173 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_SDF1_9.vhd
-Z174 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_SDF1_9.vhd
-l0
-L24
-VVzb?L[^HcR7J<IQMJQ13R1
-!s100 YmjWh;i;DcgUbf0DF1Ch:3
-R7
-32
-R163
-!i10b 1
-R164
-Z175 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_SDF1_9.vhd|
-Z176 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_SDF1_9.vhd|
-!i113 1
-R12
-R13
-Artl
-Z177 DEx4 work 14 sdfcommutator9 0 22 WPcWTo02bJ_fW82VM_i<B0
-R31
-R64
-R2
-R3
-R4
-R70
-l162
-L44
-V]48P^JoJLbLZUDg<j4dmU0
-!s100 odgDCWYKh`ZbK>@z?HFO<1
-R7
-32
-R163
-!i10b 1
-R164
-R175
-R176
-!i113 1
-R12
-R13
-Eradix22fft_sdf2_2
-R1
-R64
-R2
-R3
-R4
-R0
-Z178 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_SDF2_2.vhd
-Z179 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_SDF2_2.vhd
-l0
-L24
-V2L4bULg[JcHcg2`7L;BOI0
-!s100 <NUU``JW>F7ZhgJco?H[C3
-R7
-32
-R163
-!i10b 1
-R164
-Z180 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_SDF2_2.vhd|
-Z181 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_SDF2_2.vhd|
-!i113 1
-R12
-R13
-Artl
-Z182 DEx4 work 14 sdfcommutator2 0 22 P1ecQmDGCPIME1H^@lF0M0
-R155
-R64
-R2
-R3
-R4
-R88
-l163
-L43
-Vz2PkXMBT3`RAGlbXl]cf[2
-!s100 =?[edcY6^iOJW5SeWQZhY0
-R7
-32
-R163
-!i10b 1
-R164
-R180
-R181
-!i113 1
-R12
-R13
-Eradix22fft_sdf2_4
-R1
-R64
-R2
-R3
-R4
-R0
-Z183 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_SDF2_4.vhd
-Z184 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_SDF2_4.vhd
-l0
-L24
-V_N@?`cR;cEj95GIOT;nVM0
-!s100 L[M1EA4H@dSjY8DKMOzzX0
-R7
-32
-R163
-!i10b 1
-R164
-Z185 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_SDF2_4.vhd|
-Z186 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_SDF2_4.vhd|
-!i113 1
-R12
-R13
-Artl
-Z187 DEx4 work 14 sdfcommutator4 0 22 3iWCdj2:_lKFM^m8DMh[c0
-R155
-R64
-R2
-R3
-R4
-R83
-l163
-L43
-VE1@IFl=h_70WB1T22ODjb2
-!s100 <;eadGc?9E]gaV3AfdO]J1
-R7
-32
-R163
-!i10b 1
-R164
-R185
-R186
-!i113 1
-R12
-R13
-Eradix22fft_sdf2_6
-R1
-R64
-R2
-R3
-R4
-R0
-Z188 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_SDF2_6.vhd
-Z189 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_SDF2_6.vhd
-l0
-L24
-V1K?5Z<^EZ_R?=AYB?h@483
-!s100 0ZRkm<0hS;0f`3J7A2SbY2
-R7
-32
-Z190 !s110 1777752778
-!i10b 1
-Z191 !s108 1777752778.000000
-Z192 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_SDF2_6.vhd|
-Z193 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_SDF2_6.vhd|
-!i113 1
-R12
-R13
-Artl
-Z194 DEx4 work 14 sdfcommutator6 0 22 _M?CObg[e^e[Pe]bBVCE62
-R155
-R64
-R2
-R3
-R4
-R78
-l163
-L43
-VhOOP[>G`VL:<GzH>m6bkB0
-!s100 ZV=mjUYD?Ujl5MQVF`W>50
-R7
-32
-R190
-!i10b 1
-R191
-R192
-R193
-!i113 1
-R12
-R13
-Eradix22fft_sdf2_8
-R1
-R64
-R2
-R3
-R4
-R0
-Z195 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_SDF2_8.vhd
-Z196 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_SDF2_8.vhd
-l0
-L24
-VE`aP3[o`2`gjnbR8@BHl^0
-!s100 =d:<JX<LFEeGZ?V`ji6Df3
-R7
-32
-R190
-!i10b 1
-R191
-Z197 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_SDF2_8.vhd|
-Z198 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX22FFT_SDF2_8.vhd|
-!i113 1
-R12
-R13
-Artl
-Z199 DEx4 work 14 sdfcommutator8 0 22 AQCU[U00f@EFWooW:J37K2
-R64
-R2
-R3
-R4
-R73
-l164
-L43
-V[`Eenm;V]NICOk;CRjGG23
-!s100 >AJhMH[heagMWLF4j<LQ92
-R7
-32
-R190
-!i10b 1
-R191
-R197
-R198
 !i113 1
 R12
 R13
 Eradix2fft_bitnatural
-R1
+R26
 R2
 R3
 R4
 R0
-Z200 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX2FFT_bitNatural.vhd
-Z201 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX2FFT_bitNatural.vhd
+Z65 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX2FFT_bitNatural.vhd
+Z66 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX2FFT_bitNatural.vhd
 l0
 L23
-V2jHJJoj47eWD_kl3haVC?2
-!s100 jm@5RDZV1zB5ciV8<_VXg1
+V1L0@XCj<;>3h3NSR_2c_L2
+!s100 MKB_W1G[faY:BbFIN]K392
 R7
-32
-R43
+31
+R8
 !i10b 1
-R44
-Z202 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX2FFT_bitNatural.vhd|
-Z203 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/RADIX2FFT_bitNatural.vhd|
+R9
+Z67 !s90 -reportprogress|300|-93|-work|work|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX2FFT_bitNatural.vhd|
+Z68 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/RADIX2FFT_bitNatural.vhd|
 !i113 1
 R12
 R13
 Artl
-R155
+Z69 DEx4 work 25 simpledualportram_generic 0 22 JF@O:?`GAc1jo2=H>a@_K1
 R2
 R3
 R4
-R69
+DEx4 work 20 radix2fft_bitnatural 0 22 1L0@XCj<;>3h3NSR_2c_L2
 l106
 L36
-V_l1T4Yf3PbmB5F<z72]oB0
-!s100 9HgkeSbEhmgCj9J:Ch]hP2
+V6S5FXIE0eMU5a_m?zom9l3
+!s100 HII7NXn2JnI_f35b0InBE2
 R7
-32
-R43
+31
+R8
 !i10b 1
-R44
-R202
-R203
+R9
+R67
+R68
 !i113 1
 R12
 R13
@@ -1416,39 +633,39 @@ R2
 R3
 R4
 R0
-Z204 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SDFCommutator1.vhd
-Z205 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SDFCommutator1.vhd
+Z70 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SDFCommutator1.vhd
+Z71 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SDFCommutator1.vhd
 l0
 L23
-V<F^DBS7jH?10CJC>OhZgO2
-!s100 T8gT?5hZ3AUM^?NZMHdM41
+Vh7]G6QCPPSY8P;8Eg8eD12
+!s100 m[zmn:KIleAEXa@fdK;ZC1
 R7
-32
-R190
+31
+R50
 !i10b 1
-R191
-Z206 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SDFCommutator1.vhd|
-Z207 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SDFCommutator1.vhd|
+R45
+Z72 !s90 -reportprogress|300|-93|-work|work|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SDFCommutator1.vhd|
+Z73 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SDFCommutator1.vhd|
 !i113 1
 R12
 R13
 Artl
-R155
+R69
 R2
 R3
 R4
-R154
-l143
-L50
-VD9NhO>=iG3ZFU_g;9UkO:1
-!s100 jVh167dQdCF:L>3DJl9h42
+DEx4 work 14 sdfcommutator1 0 22 h7]G6QCPPSY8P;8Eg8eD12
+l142
+L49
+V=NAffAg0PFfH>g<L9HlQ_0
+!s100 N@ZdgNl@cGhM7_H3F=Age2
 R7
-32
-R190
+31
+R50
 !i10b 1
-R191
-R206
-R207
+R45
+R72
+R73
 !i113 1
 R12
 R13
@@ -1458,39 +675,39 @@ R2
 R3
 R4
 R0
-Z208 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SDFCommutator2.vhd
-Z209 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SDFCommutator2.vhd
+Z74 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SDFCommutator2.vhd
+Z75 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SDFCommutator2.vhd
 l0
 L23
-VP1ecQmDGCPIME1H^@lF0M0
-!s100 ^ET]A@J><eFjG^jdjDgJC0
+VP4F5<ofCh3?_6d6YbAT>M2
+!s100 L=<PCcTFb@:0mFKP<G4GV2
 R7
-32
-R190
+31
+R50
 !i10b 1
-R191
-Z210 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SDFCommutator2.vhd|
-Z211 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SDFCommutator2.vhd|
+R45
+Z76 !s90 -reportprogress|300|-93|-work|work|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SDFCommutator2.vhd|
+Z77 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SDFCommutator2.vhd|
 !i113 1
 R12
 R13
 Artl
-R155
+R69
 R2
 R3
 R4
-R182
+DEx4 work 14 sdfcommutator2 0 22 P4F5<ofCh3?_6d6YbAT>M2
 l143
 L50
-VFdVN>Y`C5f=R3S1bXZ<>91
-!s100 ^8_7Fo2^IcFLcN:]0lMHV3
+VREE3G3AA6P?Ol6NH<1k680
+!s100 V6S`ER;8boTCFLd^zJ9@f0
 R7
-32
-R190
+31
+R50
 !i10b 1
-R191
-R210
-R211
+R45
+R76
+R77
 !i113 1
 R12
 R13
@@ -1500,39 +717,39 @@ R2
 R3
 R4
 R0
-Z212 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SDFCommutator3.vhd
-Z213 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SDFCommutator3.vhd
+Z78 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SDFCommutator3.vhd
+Z79 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SDFCommutator3.vhd
 l0
 L23
-VmizLZ1UEOHK1=AbU_21C[2
-!s100 KjT^z]514XS`6nIjV_4]I0
+V=64Y3DSziXKBmH@jUPi1?1
+!s100 ch39AOieJR=jTWh6UF?W13
 R7
-32
-R190
+31
+R50
 !i10b 1
-R191
-Z214 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SDFCommutator3.vhd|
-Z215 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SDFCommutator3.vhd|
+R45
+Z80 !s90 -reportprogress|300|-93|-work|work|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SDFCommutator3.vhd|
+Z81 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SDFCommutator3.vhd|
 !i113 1
 R12
 R13
 Artl
-R155
+R69
 R2
 R3
 R4
-R160
+DEx4 work 14 sdfcommutator3 0 22 =64Y3DSziXKBmH@jUPi1?1
 l143
 L50
-VeOT?jhf54c6j0I?G0Ce9O1
-!s100 GXkHQ:feiJI[L_;eD>L]d0
+VKi0k58iS7YRSngzdcaWf<2
+!s100 6B^IbY6GSCTcF2A8d`mSZ1
 R7
-32
-Z216 !s110 1777752779
+31
+R50
 !i10b 1
-R191
-R214
-R215
+R45
+R80
+R81
 !i113 1
 R12
 R13
@@ -1542,39 +759,39 @@ R2
 R3
 R4
 R0
-Z217 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SDFCommutator4.vhd
-Z218 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SDFCommutator4.vhd
+Z82 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SDFCommutator4.vhd
+Z83 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SDFCommutator4.vhd
 l0
 L23
-V3iWCdj2:_lKFM^m8DMh[c0
-!s100 @0Yhd1eYZKgN_PR2jNP@93
+VfNNI8:PjL;I8U1>I2nEo53
+!s100 MgLg2l^mLoTM;[UbF^cBV3
 R7
-32
-R216
+31
+R50
 !i10b 1
-Z219 !s108 1777752779.000000
-Z220 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SDFCommutator4.vhd|
-Z221 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SDFCommutator4.vhd|
+R45
+Z84 !s90 -reportprogress|300|-93|-work|work|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SDFCommutator4.vhd|
+Z85 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SDFCommutator4.vhd|
 !i113 1
 R12
 R13
 Artl
-R155
+R69
 R2
 R3
 R4
-R187
+DEx4 work 14 sdfcommutator4 0 22 fNNI8:PjL;I8U1>I2nEo53
 l143
 L50
-V`>bXC=TX4cc0NERYzdM071
-!s100 hQ<f23QEG?Zac8JnJYL4<2
+VSC;kmhTZl[?h[^`2<Z:K[3
+!s100 fUY3cU^Zmlb5ee@VV:kd>0
 R7
-32
-R216
+31
+R50
 !i10b 1
-R219
-R220
-R221
+R45
+R84
+R85
 !i113 1
 R12
 R13
@@ -1584,39 +801,39 @@ R2
 R3
 R4
 R0
-Z222 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SDFCommutator5.vhd
-Z223 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SDFCommutator5.vhd
+Z86 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SDFCommutator5.vhd
+Z87 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SDFCommutator5.vhd
 l0
 L23
-VWdzTaRMD6YaG]FVL_bjoX3
-!s100 TZ@_cVNYMb2dIaH6d1hS53
+VWU>GdmEU_0MBQ;kR`O]ZK0
+!s100 CMh]=e1ZX<bV0ZdK@?HX80
 R7
-32
-R216
+31
+R50
 !i10b 1
-R219
-Z224 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SDFCommutator5.vhd|
-Z225 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SDFCommutator5.vhd|
+R45
+Z88 !s90 -reportprogress|300|-93|-work|work|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SDFCommutator5.vhd|
+Z89 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SDFCommutator5.vhd|
 !i113 1
 R12
 R13
 Artl
-R155
+R69
 R2
 R3
 R4
-R167
+DEx4 work 14 sdfcommutator5 0 22 WU>GdmEU_0MBQ;kR`O]ZK0
 l143
 L50
-Vi@U<dTn79LP<`ZAHC3jiM1
-!s100 Joc25_O0>0U9l2B=9ROGM3
+V@oo7T0@g9mY0JFS75LjYQ2
+!s100 Nm0Eb`VzKR_W=oYh00Z[71
 R7
-32
-R216
+31
+R50
 !i10b 1
-R219
-R224
-R225
+R45
+R88
+R89
 !i113 1
 R12
 R13
@@ -1626,39 +843,39 @@ R2
 R3
 R4
 R0
-Z226 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SDFCommutator6.vhd
-Z227 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SDFCommutator6.vhd
+Z90 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SDFCommutator6.vhd
+Z91 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SDFCommutator6.vhd
 l0
 L23
-V_M?CObg[e^e[Pe]bBVCE62
-!s100 :VKVQMBAB5FojKYXBZ1BY2
+VKbV1;DNPf0RilP5zK>d5N2
+!s100 8iV_aKIZa>E?V4NnFB>:C3
 R7
-32
-R216
+31
+R50
 !i10b 1
-R219
-Z228 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SDFCommutator6.vhd|
-Z229 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SDFCommutator6.vhd|
+R45
+Z92 !s90 -reportprogress|300|-93|-work|work|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SDFCommutator6.vhd|
+Z93 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SDFCommutator6.vhd|
 !i113 1
 R12
 R13
 Artl
-R155
+R69
 R2
 R3
 R4
-R194
+DEx4 work 14 sdfcommutator6 0 22 KbV1;DNPf0RilP5zK>d5N2
 l135
 L50
-VInDMBo>On]@cW:bCzmI^f1
-!s100 21BRC:Qe41gWhga?7HK_43
+VBK7<HS:EffJ4;ROnNhUWQ1
+!s100 Cc`QkcR^Ui9[MUS^JSiOZ3
 R7
-32
-R216
+31
+R50
 !i10b 1
-R219
-R228
-R229
+R45
+R92
+R93
 !i113 1
 R12
 R13
@@ -1668,39 +885,39 @@ R2
 R3
 R4
 R0
-Z230 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SDFCommutator7.vhd
-Z231 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SDFCommutator7.vhd
+Z94 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SDFCommutator7.vhd
+Z95 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SDFCommutator7.vhd
 l0
 L23
-V6L<AeJ?U_OJ4N>jjG06cP3
-!s100 Az8fN>RITh1<kIQEhQ;hW2
+V3jGVi]@^<[ZgKnOzZ>VK[3
+!s100 e[KilQd2AY3g1SG5hfieQ2
 R7
-32
-Z232 !s110 1777752780
+31
+R50
 !i10b 1
-Z233 !s108 1777752780.000000
-Z234 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SDFCommutator7.vhd|
-Z235 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SDFCommutator7.vhd|
+Z96 !s108 1776589532.000000
+Z97 !s90 -reportprogress|300|-93|-work|work|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SDFCommutator7.vhd|
+Z98 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SDFCommutator7.vhd|
 !i113 1
 R12
 R13
 Artl
-R155
+R69
 R2
 R3
 R4
-R172
+DEx4 work 14 sdfcommutator7 0 22 3jGVi]@^<[ZgKnOzZ>VK[3
 l135
 L50
-Vi:ljh7noPWj]efeKEK8?F0
-!s100 zg[gC9bh:gh7YIiAJ^e[L2
+V5iVU3SQK[lh2^TZbHL5Bn0
+!s100 A@WAO_cQ3Z;>RLgH?2EK93
 R7
-32
-R232
+31
+R50
 !i10b 1
-R233
-R234
-R235
+R96
+R97
+R98
 !i113 1
 R12
 R13
@@ -1710,39 +927,39 @@ R2
 R3
 R4
 R0
-Z236 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SDFCommutator8.vhd
-Z237 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SDFCommutator8.vhd
+Z99 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SDFCommutator8.vhd
+Z100 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SDFCommutator8.vhd
 l0
 L23
-VAQCU[U00f@EFWooW:J37K2
-!s100 89@1`FBiOzm0L`[ejDEBb1
+VW6[heP6I9FMBi7mM_U=4Q0
+!s100 5lNHLNTfc^W@>=:2Cgl`l2
 R7
-32
-R232
+31
+Z101 !s110 1776589532
 !i10b 1
-R233
-Z238 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SDFCommutator8.vhd|
-Z239 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SDFCommutator8.vhd|
+R96
+Z102 !s90 -reportprogress|300|-93|-work|work|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SDFCommutator8.vhd|
+Z103 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SDFCommutator8.vhd|
 !i113 1
 R12
 R13
 Artl
-R155
+R69
 R2
 R3
 R4
-R199
+DEx4 work 14 sdfcommutator8 0 22 W6[heP6I9FMBi7mM_U=4Q0
 l134
 L50
-Vo^dLTe]:5BD4RA1zN>IjE3
-!s100 iAA=@ZVee[O^Jj1]@NelF2
+VJUhb6l]UfSbAN>g3X0DB_1
+!s100 bbzkbCf9F=6jQ8DeaZk5^3
 R7
-32
-R232
+31
+R101
 !i10b 1
-R233
-R238
-R239
+R96
+R102
+R103
 !i113 1
 R12
 R13
@@ -1752,105 +969,39 @@ R2
 R3
 R4
 R0
-Z240 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SDFCommutator9.vhd
-Z241 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SDFCommutator9.vhd
+Z104 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SDFCommutator9.vhd
+Z105 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SDFCommutator9.vhd
 l0
 L23
-VWPcWTo02bJ_fW82VM_i<B0
-!s100 3ENfizSBhR<gzezEYPaD?1
+Vf5XJhJ1]R[DhlK7n;V=:U1
+!s100 1PPR4nG6O4=cXdHLLo>bJ1
 R7
-32
-R232
+31
+R101
 !i10b 1
-R233
-Z242 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SDFCommutator9.vhd|
-Z243 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SDFCommutator9.vhd|
+R96
+Z106 !s90 -reportprogress|300|-93|-work|work|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SDFCommutator9.vhd|
+Z107 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SDFCommutator9.vhd|
 !i113 1
 R12
 R13
 Artl
-R155
+R69
 R2
 R3
 R4
-R177
+DEx4 work 14 sdfcommutator9 0 22 f5XJhJ1]R[DhlK7n;V=:U1
 l140
 L50
-V8MSmLeFK=_WWVeQP6Yi8@0
-!s100 =8HG[??=T?jH?ngiM[0Ya3
+V<25QH7Pzaf;a7h0[LGLUS1
+!s100 7;Xi6f`];GYYAJgXc0=Nl3
 R7
-32
-R232
+31
+R101
 !i10b 1
-R233
-R242
-R243
-!i113 1
-R12
-R13
-Esignalgenerator
-R1
-R64
-R2
-R3
-R4
-R0
-Z244 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SignalGenerator.vhd
-Z245 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SignalGenerator.vhd
-l0
-L44
-V]b@S80_QMMjX5AXCm=Dco1
-!s100 g0YhI1zgFcFW9@:`E:zMe3
-R7
-32
-Z246 !s110 1777752781
-!i10b 1
-R233
-Z247 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SignalGenerator.vhd|
-Z248 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SignalGenerator.vhd|
-!i113 1
-R12
-R13
-Artl
-R92
-R64
-R2
-R3
-R4
-R98
-l183
-L55
-VJAZQKHeB?a1ZSh4]R>Q6G2
-!s100 JAUC<ZOIDI6CQ`=n_^ni10
-R7
-32
-R246
-!i10b 1
-R233
-R247
-R248
-!i113 1
-R12
-R13
-Psignalgenerator_pkg
-R2
-R3
-R4
-R1
-R0
-8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SignalGenerator_pkg.vhd
-FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SignalGenerator_pkg.vhd
-l0
-L15
-VWnC@agDT4UkA=lRYW5j;]3
-!s100 6L6lUSjY`8UfefSnNNI_Y0
-R7
-32
-R246
-!i10b 1
-Z249 !s108 1777752781.000000
-!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SignalGenerator_pkg.vhd|
-!s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SignalGenerator_pkg.vhd|
+R96
+R106
+R107
 !i113 1
 R12
 R13
@@ -1860,19 +1011,19 @@ R2
 R3
 R4
 R0
-Z250 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SimpleDualPortRAM_generic.vhd
-Z251 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SimpleDualPortRAM_generic.vhd
+Z108 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SimpleDualPortRAM_generic.vhd
+Z109 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SimpleDualPortRAM_generic.vhd
 l0
 L23
-VgW87:aiNCl=k_JbZ^MQHU2
+VJF@O:?`GAc1jo2=H>a@_K1
 !s100 oR7HngHZ?dmDV`RE]5SlI2
 R7
-32
-R246
+31
+R101
 !i10b 1
-R249
-Z252 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SimpleDualPortRAM_generic.vhd|
-Z253 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/SimpleDualPortRAM_generic.vhd|
+R96
+Z110 !s90 -reportprogress|300|-93|-work|work|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SimpleDualPortRAM_generic.vhd|
+Z111 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/idek11/SimpleDualPortRAM_generic.vhd|
 !i113 1
 R12
 R13
@@ -1880,272 +1031,18 @@ Artl
 R2
 R3
 R4
-R155
+R69
 l49
 L38
-V^gdR5[ZabPWHgZ<N8:h1d1
+ViZ0GaRgb=`S>kHiZD93db0
 !s100 nD;0`gDJ;[cWiKY?[=VA<1
 R7
-32
-R246
+31
+R101
 !i10b 1
-R249
-R252
-R253
-!i113 1
-R12
-R13
-Esinlut
-Z254 w1776503950
-R2
-R3
-R4
-R0
-Z255 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SynthesisCircuitry.vhd
-Z256 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SynthesisCircuitry.vhd
-l0
-L5
-VS]UTnF:i4c2DgQl@`nAgj1
-!s100 ^HPZBR8c3[khhKH9>`nl91
-R7
-32
-Z257 !s110 1777752771
-!i10b 1
-R54
-Z258 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SynthesisCircuitry.vhd|
-Z259 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SynthesisCircuitry.vhd|
-!i113 1
-R12
-R13
-Abasic
-R2
-R3
-R4
-DEx4 work 6 sinlut 0 22 S]UTnF:i4c2DgQl@`nAgj1
-l42
-L12
-VI@HK;2K:ahgXlLU;d=El@1
-!s100 5NDf`3LY_GAC;N?@Zk4T10
-R7
-32
-R257
-!i10b 1
-R54
-R258
-R259
-!i113 1
-R12
-R13
-Etestbench
-Z260 w1775763532
-R3
-R4
-R0
-Z261 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/TestBench.vhd
-Z262 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/TestBench.vhd
-l0
-L4
-VmTM2gj<z>980G2:^JcmQW3
-!s100 li1_Y<I0T[=Dji=bf<_Hm2
-R7
-32
-R8
-!i10b 1
-R9
-Z263 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/TestBench.vhd|
-Z264 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/TestBench.vhd|
-!i113 1
-R12
-R13
-Abasic
-R2
-R99
-R3
-R4
-DEx4 work 9 testbench 0 22 mTM2gj<z>980G2:^JcmQW3
-l29
-L7
-VI0<z5<>=M@Oda:KOR??nc0
-!s100 jFR6mDmk_eH4708j5_Zo>2
-R7
-32
-R8
-!i10b 1
-R9
-R263
-R264
-!i113 1
-R12
-R13
-Etwdlrom_3_1
-R1
-R64
-R2
-R3
-R4
-R0
-Z265 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/TWDLROM_3_1.vhd
-Z266 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/TWDLROM_3_1.vhd
-l0
-L24
-VMa026WGl4en]U9zcYjDQK0
-!s100 D=?72cB3Bon;3X8d7I:R;3
-R7
-32
-R246
-!i10b 1
-R249
-Z267 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/TWDLROM_3_1.vhd|
-Z268 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/TWDLROM_3_1.vhd|
-!i113 1
-R12
-R13
-Artl
-R64
-R2
-R3
-R4
-R87
-l103
-L35
-VbPa3hgTdW:FKX3UXWB1gT1
-!s100 RoBj^FdN8FIlHedn0BC]>1
-R7
-32
-R246
-!i10b 1
-R249
-R267
-R268
-!i113 1
-R12
-R13
-Etwdlrom_5_1
-R1
-R64
-R2
-R3
-R4
-R0
-Z269 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/TWDLROM_5_1.vhd
-Z270 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/TWDLROM_5_1.vhd
-l0
-L24
-Vkc_K53^D?E8Z65c6_2EHE2
-!s100 JUDO5X1XL72f=Om59V8zb2
-R7
-32
-Z271 !s110 1777752782
-!i10b 1
-Z272 !s108 1777752782.000000
-Z273 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/TWDLROM_5_1.vhd|
-Z274 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/TWDLROM_5_1.vhd|
-!i113 1
-R12
-R13
-Artl
-R64
-R2
-R3
-R4
-R82
-l103
-L35
-V]:aCdGA@lYHUXCKnflKIY3
-!s100 Sm;H1n;hR0zGO5Wd^]7kE3
-R7
-32
-R271
-!i10b 1
-R272
-R273
-R274
-!i113 1
-R12
-R13
-Etwdlrom_7_1
-R1
-R64
-R2
-R3
-R4
-R0
-Z275 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/TWDLROM_7_1.vhd
-Z276 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/TWDLROM_7_1.vhd
-l0
-L24
-V5FCNM`<:CHdYfTJ2kK9U02
-!s100 zMHFA0cPO[2]jIca?kK2h2
-R7
-32
-R271
-!i10b 1
-R272
-Z277 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/TWDLROM_7_1.vhd|
-Z278 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/TWDLROM_7_1.vhd|
-!i113 1
-R12
-R13
-Artl
-R64
-R2
-R3
-R4
-R77
-l103
-L35
-VEhWk]F6C=P8JH52@N3jVn0
-!s100 K=z56gl5]SjiZDDANh<Rk3
-R7
-32
-R271
-!i10b 1
-R272
-R277
-R278
-!i113 1
-R12
-R13
-Etwdlrom_9_1
-R1
-R64
-R2
-R3
-R4
-R0
-Z279 8Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/TWDLROM_9_1.vhd
-Z280 FZ:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/TWDLROM_9_1.vhd
-l0
-L24
-Vmh3bPH7h<gVb^Fc>`ARnX0
-!s100 B7jLW<ijO[Rf^5]gA03VN0
-R7
-32
-R271
-!i10b 1
-R272
-Z281 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/TWDLROM_9_1.vhd|
-Z282 !s107 Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SignalGenerator/TWDLROM_9_1.vhd|
-!i113 1
-R12
-R13
-Artl
-R64
-R2
-R3
-R4
-R72
-l103
-L35
-V;Zj`?`45MNEVdjW6I=DcL0
-!s100 h`Y4ELzd<6SJP:IJO=h0U0
-R7
-32
-R271
-!i10b 1
-R272
-R281
-R282
+R96
+R110
+R111
 !i113 1
 R12
 R13
