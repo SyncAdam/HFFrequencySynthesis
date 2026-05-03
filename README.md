@@ -23,3 +23,5 @@ This project aims to achieve a high frequency multi-tone signal generator using 
  2.  Open project file with Quartus Prime 18.1 Lite Edition
  3.  Start compilation
  4.  Use programmer to program the FPGA
+
+If the simulation doesnt work -> check reset signal - maybe inverted for IFFT block
