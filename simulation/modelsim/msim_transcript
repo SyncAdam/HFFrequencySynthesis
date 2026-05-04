@@ -1,16 +1,1933 @@
 # vsim -gui -l msim_transcript work.testbench 
-# Start time: 11:06:03 on Apr 19,2026
+# Start time: 19:34:19 on May 04,2026
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
 # Loading work.testbench(basic)
-# Loading work.idek11_pkg
+# Loading work.signalgenerator_pkg
 # Loading work.mainfsm(basic)
-# Loading work.sinlut(basic)
 # Loading work.configureadc(basic)
 # Loading work.configrom(basic)
-# Loading work.idek11(rtl)
+# Loading work.signalgenerator(rtl)
+# Loading work.ifft(rtl)
+# Loading work.radix22fft_ctrl1_1(rtl)
+# Loading work.radix22fft_sdf1_1(rtl)
+# Loading work.simpledualportram_generic(rtl)
+# Loading work.sdfcommutator1(rtl)
+# Loading work.radix22fft_ctrl1_2(rtl)
+# Loading work.radix22fft_sdf2_2(rtl)
+# Loading work.sdfcommutator2(rtl)
+# Loading work.twdlrom_3_1(rtl)
+# Loading work.radix22fft_ctrl1_3(rtl)
+# Loading work.radix22fft_sdf1_3(rtl)
+# Loading work.complex3multiply(rtl)
+# Loading work.sdfcommutator3(rtl)
+# Loading work.radix22fft_ctrl1_4(rtl)
+# Loading work.radix22fft_sdf2_4(rtl)
+# Loading work.sdfcommutator4(rtl)
+# Loading work.twdlrom_5_1(rtl)
+# Loading work.radix22fft_ctrl1_5(rtl)
+# Loading work.radix22fft_sdf1_5(rtl)
+# Loading work.complex3multiply_block(rtl)
+# Loading work.sdfcommutator5(rtl)
+# Loading work.radix22fft_ctrl1_6(rtl)
+# Loading work.radix22fft_sdf2_6(rtl)
+# Loading work.sdfcommutator6(rtl)
+# Loading work.twdlrom_7_1(rtl)
+# Loading work.radix22fft_ctrl1_7(rtl)
+# Loading work.radix22fft_sdf1_7(rtl)
+# Loading work.complex3multiply_block1(rtl)
+# Loading work.sdfcommutator7(rtl)
+# Loading work.radix22fft_ctrl1_8(rtl)
+# Loading work.radix22fft_sdf2_8(rtl)
+# Loading work.sdfcommutator8(rtl)
+# Loading work.twdlrom_9_1(rtl)
+# Loading work.radix22fft_ctrl1_1_block(rtl)
+# Loading work.radix22fft_sdf1_9(rtl)
+# Loading work.complex3multiply_block2(rtl)
+# Loading work.sdfcommutator9(rtl)
+# Loading work.radix2fft_bitnatural(rtl)
+# ** Warning: Design size of 23284 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+add wave -position insertpoint  \
+sim:/testbench/clock \
+sim:/testbench/output_p
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: adams  Hostname: LADAMTP  ProcessID: 12852
+#           Attempting to use alternate WLF file "./wlft9wvd40".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft9wvd40
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_dataMEM_im_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_dataMEM_re_0_1_generic
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/u_dataXMEM_re_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/u_dataXMEM_im_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_dataMEM_im_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_dataMEM_re_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/u_dataXMEM_re_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/u_dataXMEM_im_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_dataMEM_im_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_dataMEM_re_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_SDFCOMMUTATOR_3/u_dataXMEM_re_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_SDFCOMMUTATOR_3/u_dataXMEM_im_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_dataMEM_im_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_dataMEM_re_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/u_dataXMEM_re_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/u_dataXMEM_im_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_dataMEM_im_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_dataMEM_re_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_SDFCOMMUTATOR_5/u_dataXMEM_re_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_SDFCOMMUTATOR_5/u_dataXMEM_im_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_dataMEM_im_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_dataMEM_re_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/u_dataXMEM_re_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/u_dataXMEM_im_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_dataMEM_im_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_dataMEM_re_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_SDFCOMMUTATOR_7/u_dataXMEM_re_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_SDFCOMMUTATOR_7/u_dataXMEM_im_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_8_1/u_SDFCOMMUTATOR_8/u_dataXMEM_re_0_8
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_8_1/u_SDFCOMMUTATOR_8/u_dataXMEM_im_0_8
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_RADIX2/u_SDFCOMMUTATOR_9/u_dataXMEM_re_0_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_RADIX2/u_SDFCOMMUTATOR_9/u_dataXMEM_im_0_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage/u_dataMEM_im_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage/u_dataMEM_re_1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# Compile of SynthesisCircuitry.vhd was successful.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful.
+# Compile of MainFSM.vhd was successful.
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of Complex3Multiply.vhd was successful.
+# Compile of Complex3Multiply_block.vhd was successful.
+# Compile of Complex3Multiply_block1.vhd was successful.
+# Compile of Complex3Multiply_block2.vhd was successful.
+# Compile of Complex4Multiply.vhd was successful.
+# Compile of Complex4Multiply_block.vhd was successful.
+# Compile of Complex4Multiply_block1.vhd was successful.
+# Compile of Complex4Multiply_block2.vhd was successful.
+# Compile of IFFT.vhd was successful.
+restart
+# Loading work.testbench(basic)
+# Loading work.mainfsm(basic)
+# Loading work.configureadc(basic)
+# Loading work.configrom(basic)
+# Loading work.ifft(rtl)
+# Loading work.complex3multiply(rtl)
+# Loading work.complex3multiply_block(rtl)
+# Loading work.complex3multiply_block1(rtl)
+# Loading work.complex3multiply_block2(rtl)
+# Loading work.radix2fft_bitnatural(rtl)
+# ** Warning: Design size of 17748 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# Compile of RADIX2FFT_bitNatural.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_1.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_1_block.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_2.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_3.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_4.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_5.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_6.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_7.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_8.vhd was successful.
+# Compile of RADIX22FFT_SDF1_1.vhd was successful.
+# Compile of RADIX22FFT_SDF1_3.vhd was successful.
+# Compile of RADIX22FFT_SDF1_5.vhd was successful.
+# Compile of RADIX22FFT_SDF1_7.vhd was successful.
+# Compile of RADIX22FFT_SDF1_9.vhd was successful.
+# Compile of RADIX22FFT_SDF2_2.vhd was successful.
+# Compile of RADIX22FFT_SDF2_4.vhd was successful.
+# Compile of RADIX22FFT_SDF2_6.vhd was successful.
+# Compile of RADIX22FFT_SDF2_8.vhd was successful.
+# Compile of SDFCommutator1.vhd was successful.
+# Compile of SDFCommutator2.vhd was successful.
+# Compile of SDFCommutator3.vhd was successful.
+# Compile of SDFCommutator4.vhd was successful.
+# Compile of SDFCommutator5.vhd was successful.
+# Compile of SDFCommutator6.vhd was successful.
+# Compile of SDFCommutator7.vhd was successful.
+# Compile of SDFCommutator8.vhd was successful.
+# Compile of SDFCommutator9.vhd was successful.
+# Compile of SignalGenerator.vhd was successful.
+# Compile of SignalGenerator_pkg.vhd was successful.
+# Compile of SimpleDualPortRAM_generic.vhd was successful.
+# Compile of TWDLROM_3_1.vhd was successful.
+# Compile of TWDLROM_5_1.vhd was successful.
+# Compile of TWDLROM_7_1.vhd was successful.
+# Compile of TWDLROM_9_1.vhd was successful.
+# 49 compiles, 0 failed with no errors.
+# Compile of SynthesisCircuitry.vhd was successful.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful.
+# Compile of MainFSM.vhd was successful.
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of Complex3Multiply.vhd was successful.
+# Compile of Complex3Multiply_block.vhd was successful.
+# Compile of Complex3Multiply_block1.vhd was successful.
+# Compile of Complex3Multiply_block2.vhd was successful.
+# Compile of Complex4Multiply.vhd was successful.
+# Compile of Complex4Multiply_block.vhd was successful.
+# Compile of Complex4Multiply_block1.vhd was successful.
+# Compile of Complex4Multiply_block2.vhd was successful.
+# Compile of IFFT.vhd was successful.
+# Compile of RADIX2FFT_bitNatural.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_1.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_1_block.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_2.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_3.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_4.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_5.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_6.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_7.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_8.vhd was successful.
+# Compile of RADIX22FFT_SDF1_1.vhd was successful.
+# Compile of RADIX22FFT_SDF1_3.vhd was successful.
+# Compile of RADIX22FFT_SDF1_5.vhd was successful.
+# Compile of RADIX22FFT_SDF1_7.vhd was successful.
+# Compile of RADIX22FFT_SDF1_9.vhd was successful.
+# Compile of RADIX22FFT_SDF2_2.vhd was successful.
+# Compile of RADIX22FFT_SDF2_4.vhd was successful.
+# Compile of RADIX22FFT_SDF2_6.vhd was successful.
+# Compile of RADIX22FFT_SDF2_8.vhd was successful.
+# Compile of SDFCommutator1.vhd was successful.
+# Compile of SDFCommutator2.vhd was successful.
+# Compile of SDFCommutator3.vhd was successful.
+# Compile of SDFCommutator4.vhd was successful.
+# Compile of SDFCommutator5.vhd was successful.
+# Compile of SDFCommutator6.vhd was successful.
+# Compile of SDFCommutator7.vhd was successful.
+# Compile of SDFCommutator8.vhd was successful.
+# Compile of SDFCommutator9.vhd was successful.
+# Compile of SignalGenerator.vhd was successful.
+# Compile of SignalGenerator_pkg.vhd was successful.
+# Compile of SimpleDualPortRAM_generic.vhd was successful.
+# Compile of TWDLROM_3_1.vhd was successful.
+# Compile of TWDLROM_5_1.vhd was successful.
+# Compile of TWDLROM_7_1.vhd was successful.
+# Compile of TWDLROM_9_1.vhd was successful.
+# 49 compiles, 0 failed with no errors.
+# Compile of SynthesisCircuitry.vhd was successful.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful.
+# Compile of MainFSM.vhd was successful.
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of Complex3Multiply.vhd was successful.
+# Compile of Complex3Multiply_block.vhd was successful.
+# Compile of Complex3Multiply_block1.vhd was successful.
+# Compile of Complex3Multiply_block2.vhd was successful.
+# Compile of Complex4Multiply.vhd was successful.
+# Compile of Complex4Multiply_block.vhd was successful.
+# Compile of Complex4Multiply_block1.vhd was successful.
+# Compile of Complex4Multiply_block2.vhd was successful.
+# Compile of IFFT.vhd was successful.
+# Compile of RADIX2FFT_bitNatural.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_1.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_1_block.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_2.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_3.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_4.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_5.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_6.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_7.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_8.vhd was successful.
+# Compile of RADIX22FFT_SDF1_1.vhd was successful.
+# Compile of RADIX22FFT_SDF1_3.vhd was successful.
+# Compile of RADIX22FFT_SDF1_5.vhd was successful.
+# Compile of RADIX22FFT_SDF1_7.vhd was successful.
+# Compile of RADIX22FFT_SDF1_9.vhd was successful.
+# Compile of RADIX22FFT_SDF2_2.vhd was successful.
+# Compile of RADIX22FFT_SDF2_4.vhd was successful.
+# Compile of RADIX22FFT_SDF2_6.vhd was successful.
+# Compile of RADIX22FFT_SDF2_8.vhd was successful.
+# Compile of SDFCommutator1.vhd was successful.
+# Compile of SDFCommutator2.vhd was successful.
+# Compile of SDFCommutator3.vhd was successful.
+# Compile of SDFCommutator4.vhd was successful.
+# Compile of SDFCommutator5.vhd was successful.
+# Compile of SDFCommutator6.vhd was successful.
+# Compile of SDFCommutator7.vhd was successful.
+# Compile of SDFCommutator8.vhd was successful.
+# Compile of SDFCommutator9.vhd was successful.
+# Compile of SignalGenerator.vhd was successful.
+# Compile of SignalGenerator_pkg.vhd was successful.
+# Compile of SimpleDualPortRAM_generic.vhd was successful.
+# Compile of TWDLROM_3_1.vhd was successful.
+# Compile of TWDLROM_5_1.vhd was successful.
+# Compile of TWDLROM_7_1.vhd was successful.
+# Compile of TWDLROM_9_1.vhd was successful.
+# 49 compiles, 0 failed with no errors.
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_dataMEM_im_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_dataMEM_re_0_1_generic
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/u_dataXMEM_re_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/u_dataXMEM_im_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_dataMEM_im_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_dataMEM_re_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/u_dataXMEM_re_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/u_dataXMEM_im_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_dataMEM_im_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_dataMEM_re_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_SDFCOMMUTATOR_3/u_dataXMEM_re_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_SDFCOMMUTATOR_3/u_dataXMEM_im_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_dataMEM_im_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_dataMEM_re_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/u_dataXMEM_re_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/u_dataXMEM_im_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_dataMEM_im_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_dataMEM_re_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_SDFCOMMUTATOR_5/u_dataXMEM_re_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_SDFCOMMUTATOR_5/u_dataXMEM_im_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_dataMEM_im_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_dataMEM_re_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/u_dataXMEM_re_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/u_dataXMEM_im_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_dataMEM_im_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_dataMEM_re_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_SDFCOMMUTATOR_7/u_dataXMEM_re_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_SDFCOMMUTATOR_7/u_dataXMEM_im_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_8_1/u_SDFCOMMUTATOR_8/u_dataXMEM_re_0_8
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_8_1/u_SDFCOMMUTATOR_8/u_dataXMEM_im_0_8
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_RADIX2/u_SDFCOMMUTATOR_9/u_dataXMEM_re_0_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_RADIX2/u_SDFCOMMUTATOR_9/u_dataXMEM_im_0_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage/u_dataMEM_im_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage/u_dataMEM_re_1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# Compile of MainFSM.vhd was successful.
+restart
+# Loading work.testbench(basic)
+# Loading work.signalgenerator_pkg
+# Loading work.mainfsm(basic)
+# Loading work.configureadc(basic)
+# Loading work.configrom(basic)
+# Loading work.signalgenerator(rtl)
+# Loading work.ifft(rtl)
+# Loading work.radix22fft_ctrl1_1(rtl)
+# Loading work.radix22fft_sdf1_1(rtl)
+# Loading work.simpledualportram_generic(rtl)
+# Loading work.sdfcommutator1(rtl)
+# Loading work.radix22fft_ctrl1_2(rtl)
+# Loading work.radix22fft_sdf2_2(rtl)
+# Loading work.sdfcommutator2(rtl)
+# Loading work.twdlrom_3_1(rtl)
+# Loading work.radix22fft_ctrl1_3(rtl)
+# Loading work.radix22fft_sdf1_3(rtl)
+# Loading work.complex3multiply(rtl)
+# Loading work.sdfcommutator3(rtl)
+# Loading work.radix22fft_ctrl1_4(rtl)
+# Loading work.radix22fft_sdf2_4(rtl)
+# Loading work.sdfcommutator4(rtl)
+# Loading work.twdlrom_5_1(rtl)
+# Loading work.radix22fft_ctrl1_5(rtl)
+# Loading work.radix22fft_sdf1_5(rtl)
+# Loading work.complex3multiply_block(rtl)
+# Loading work.sdfcommutator5(rtl)
+# Loading work.radix22fft_ctrl1_6(rtl)
+# Loading work.radix22fft_sdf2_6(rtl)
+# Loading work.sdfcommutator6(rtl)
+# Loading work.twdlrom_7_1(rtl)
+# Loading work.radix22fft_ctrl1_7(rtl)
+# Loading work.radix22fft_sdf1_7(rtl)
+# Loading work.complex3multiply_block1(rtl)
+# Loading work.sdfcommutator7(rtl)
+# Loading work.radix22fft_ctrl1_8(rtl)
+# Loading work.radix22fft_sdf2_8(rtl)
+# Loading work.sdfcommutator8(rtl)
+# Loading work.twdlrom_9_1(rtl)
+# Loading work.radix22fft_ctrl1_1_block(rtl)
+# Loading work.radix22fft_sdf1_9(rtl)
+# Loading work.complex3multiply_block2(rtl)
+# Loading work.sdfcommutator9(rtl)
+# Loading work.radix2fft_bitnatural(rtl)
+# ** Warning: Design size of 23284 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_dataMEM_im_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_dataMEM_re_0_1_generic
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/u_dataXMEM_re_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/u_dataXMEM_im_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_dataMEM_im_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_dataMEM_re_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/u_dataXMEM_re_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/u_dataXMEM_im_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_dataMEM_im_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_dataMEM_re_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_SDFCOMMUTATOR_3/u_dataXMEM_re_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_SDFCOMMUTATOR_3/u_dataXMEM_im_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_dataMEM_im_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_dataMEM_re_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/u_dataXMEM_re_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/u_dataXMEM_im_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_dataMEM_im_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_dataMEM_re_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_SDFCOMMUTATOR_5/u_dataXMEM_re_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_SDFCOMMUTATOR_5/u_dataXMEM_im_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_dataMEM_im_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_dataMEM_re_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/u_dataXMEM_re_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/u_dataXMEM_im_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_dataMEM_im_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_dataMEM_re_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_SDFCOMMUTATOR_7/u_dataXMEM_re_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_SDFCOMMUTATOR_7/u_dataXMEM_im_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_8_1/u_SDFCOMMUTATOR_8/u_dataXMEM_re_0_8
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_8_1/u_SDFCOMMUTATOR_8/u_dataXMEM_im_0_8
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_RADIX2/u_SDFCOMMUTATOR_9/u_dataXMEM_re_0_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_RADIX2/u_SDFCOMMUTATOR_9/u_dataXMEM_im_0_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage/u_dataMEM_im_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage/u_dataMEM_re_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# Compile of SynthesisCircuitry.vhd was successful.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful.
+# Compile of MainFSM.vhd was successful.
+restart
+# Loading work.testbench(basic)
+# Loading work.mainfsm(basic)
+# Loading work.configureadc(basic)
+# Loading work.configrom(basic)
+# ** Warning: Design size of 16929 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of Complex3Multiply.vhd was successful.
+# Compile of Complex3Multiply_block.vhd was successful.
+# Compile of Complex3Multiply_block1.vhd was successful.
+# Compile of Complex3Multiply_block2.vhd was successful.
+# Compile of Complex4Multiply.vhd was successful.
+# Compile of Complex4Multiply_block.vhd was successful.
+# Compile of Complex4Multiply_block1.vhd was successful.
+# Compile of Complex4Multiply_block2.vhd was successful.
+# Compile of IFFT.vhd was successful.
+# Compile of RADIX2FFT_bitNatural.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_1.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_1_block.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_2.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_3.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_4.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_5.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_6.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_7.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_8.vhd was successful.
+# Compile of RADIX22FFT_SDF1_1.vhd was successful.
+# Compile of RADIX22FFT_SDF1_3.vhd was successful.
+# Compile of RADIX22FFT_SDF1_5.vhd was successful.
+# Compile of RADIX22FFT_SDF1_7.vhd was successful.
+# Compile of RADIX22FFT_SDF1_9.vhd was successful.
+# Compile of RADIX22FFT_SDF2_2.vhd was successful.
+# Compile of RADIX22FFT_SDF2_4.vhd was successful.
+# Compile of RADIX22FFT_SDF2_6.vhd was successful.
+# Compile of RADIX22FFT_SDF2_8.vhd was successful.
+# Compile of SDFCommutator1.vhd was successful.
+# Compile of SDFCommutator2.vhd was successful.
+# Compile of SDFCommutator3.vhd was successful.
+# Compile of SDFCommutator4.vhd was successful.
+# Compile of SDFCommutator5.vhd was successful.
+# Compile of SDFCommutator6.vhd was successful.
+# Compile of SDFCommutator7.vhd was successful.
+# Compile of SDFCommutator8.vhd was successful.
+# Compile of SDFCommutator9.vhd was successful.
+# Compile of SignalGenerator.vhd was successful.
+# Compile of SignalGenerator_pkg.vhd was successful.
+# Compile of SimpleDualPortRAM_generic.vhd was successful.
+# Compile of TWDLROM_3_1.vhd was successful.
+# Compile of TWDLROM_5_1.vhd was successful.
+# Compile of TWDLROM_7_1.vhd was successful.
+# Compile of TWDLROM_9_1.vhd was successful.
+# 49 compiles, 0 failed with no errors.
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_dataMEM_im_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_dataMEM_re_0_1_generic
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/u_dataXMEM_re_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/u_dataXMEM_im_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_dataMEM_im_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_dataMEM_re_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/u_dataXMEM_re_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/u_dataXMEM_im_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_dataMEM_im_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_dataMEM_re_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_SDFCOMMUTATOR_3/u_dataXMEM_re_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_SDFCOMMUTATOR_3/u_dataXMEM_im_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_dataMEM_im_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_dataMEM_re_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/u_dataXMEM_re_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/u_dataXMEM_im_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_dataMEM_im_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_dataMEM_re_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_SDFCOMMUTATOR_5/u_dataXMEM_re_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_SDFCOMMUTATOR_5/u_dataXMEM_im_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_dataMEM_im_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_dataMEM_re_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/u_dataXMEM_re_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/u_dataXMEM_im_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_dataMEM_im_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_dataMEM_re_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_SDFCOMMUTATOR_7/u_dataXMEM_re_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_SDFCOMMUTATOR_7/u_dataXMEM_im_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_8_1/u_SDFCOMMUTATOR_8/u_dataXMEM_re_0_8
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_8_1/u_SDFCOMMUTATOR_8/u_dataXMEM_im_0_8
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_RADIX2/u_SDFCOMMUTATOR_9/u_dataXMEM_re_0_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_RADIX2/u_SDFCOMMUTATOR_9/u_dataXMEM_im_0_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage/u_dataMEM_im_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage/u_dataMEM_re_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# Compile of SynthesisCircuitry.vhd was successful.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful.
+# Compile of MainFSM.vhd was successful.
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of Complex3Multiply.vhd was successful.
+# Compile of Complex3Multiply_block.vhd was successful.
+# Compile of Complex3Multiply_block1.vhd was successful.
+# Compile of Complex3Multiply_block2.vhd was successful.
+restart
+# Loading work.testbench(basic)
+# Loading work.signalgenerator_pkg
+# Loading work.mainfsm(basic)
+# Loading work.configureadc(basic)
+# Loading work.configrom(basic)
+# Loading work.signalgenerator(rtl)
+# Loading work.ifft(rtl)
+# Loading work.radix22fft_ctrl1_1(rtl)
+# Loading work.radix22fft_sdf1_1(rtl)
+# Loading work.simpledualportram_generic(rtl)
+# Loading work.sdfcommutator1(rtl)
+# Loading work.radix22fft_ctrl1_2(rtl)
+# Loading work.radix22fft_sdf2_2(rtl)
+# Loading work.sdfcommutator2(rtl)
+# Loading work.twdlrom_3_1(rtl)
+# Loading work.radix22fft_ctrl1_3(rtl)
+# Loading work.radix22fft_sdf1_3(rtl)
+# Loading work.complex3multiply(rtl)
+# Loading work.sdfcommutator3(rtl)
+# Loading work.radix22fft_ctrl1_4(rtl)
+# Loading work.radix22fft_sdf2_4(rtl)
+# Loading work.sdfcommutator4(rtl)
+# Loading work.twdlrom_5_1(rtl)
+# Loading work.radix22fft_ctrl1_5(rtl)
+# Loading work.radix22fft_sdf1_5(rtl)
+# Loading work.complex3multiply_block(rtl)
+# Loading work.sdfcommutator5(rtl)
+# Loading work.radix22fft_ctrl1_6(rtl)
+# Loading work.radix22fft_sdf2_6(rtl)
+# Loading work.sdfcommutator6(rtl)
+# Loading work.twdlrom_7_1(rtl)
+# Loading work.radix22fft_ctrl1_7(rtl)
+# Loading work.radix22fft_sdf1_7(rtl)
+# Loading work.complex3multiply_block1(rtl)
+# Loading work.sdfcommutator7(rtl)
+# Loading work.radix22fft_ctrl1_8(rtl)
+# Loading work.radix22fft_sdf2_8(rtl)
+# Loading work.sdfcommutator8(rtl)
+# Loading work.twdlrom_9_1(rtl)
+# Loading work.radix22fft_ctrl1_1_block(rtl)
+# Loading work.radix22fft_sdf1_9(rtl)
+# Loading work.complex3multiply_block2(rtl)
+# Loading work.sdfcommutator9(rtl)
+# Loading work.radix2fft_bitnatural(rtl)
+# ** Warning: Design size of 23284 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# Compile of Complex4Multiply.vhd was successful.
+# Compile of Complex4Multiply_block.vhd was successful.
+# Compile of Complex4Multiply_block1.vhd was successful.
+# Compile of Complex4Multiply_block2.vhd was successful.
+# Compile of IFFT.vhd was successful.
+# Compile of RADIX2FFT_bitNatural.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_1.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_1_block.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_2.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_3.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_4.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_5.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_6.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_7.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_8.vhd was successful.
+# Compile of RADIX22FFT_SDF1_1.vhd was successful.
+# Compile of RADIX22FFT_SDF1_3.vhd was successful.
+# Compile of RADIX22FFT_SDF1_5.vhd was successful.
+# Compile of RADIX22FFT_SDF1_7.vhd was successful.
+# Compile of RADIX22FFT_SDF1_9.vhd was successful.
+# Compile of RADIX22FFT_SDF2_2.vhd was successful.
+# Compile of RADIX22FFT_SDF2_4.vhd was successful.
+# Compile of RADIX22FFT_SDF2_6.vhd was successful.
+# Compile of RADIX22FFT_SDF2_8.vhd was successful.
+# Compile of SDFCommutator1.vhd was successful.
+# Compile of SDFCommutator2.vhd was successful.
+# Compile of SDFCommutator3.vhd was successful.
+# Compile of SDFCommutator4.vhd was successful.
+# Compile of SDFCommutator5.vhd was successful.
+# Compile of SDFCommutator6.vhd was successful.
+# Compile of SDFCommutator7.vhd was successful.
+# Compile of SDFCommutator8.vhd was successful.
+# Compile of SDFCommutator9.vhd was successful.
+# Compile of SignalGenerator.vhd was successful.
+# Compile of SignalGenerator_pkg.vhd was successful.
+# Compile of SimpleDualPortRAM_generic.vhd was successful.
+# Compile of TWDLROM_3_1.vhd was successful.
+# Compile of TWDLROM_5_1.vhd was successful.
+# Compile of TWDLROM_7_1.vhd was successful.
+# Compile of TWDLROM_9_1.vhd was successful.
+# 49 compiles, 0 failed with no errors.
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_dataMEM_im_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_dataMEM_re_0_1_generic
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/u_dataXMEM_re_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/u_dataXMEM_im_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_dataMEM_im_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_dataMEM_re_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/u_dataXMEM_re_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/u_dataXMEM_im_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_dataMEM_im_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_dataMEM_re_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_SDFCOMMUTATOR_3/u_dataXMEM_re_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_SDFCOMMUTATOR_3/u_dataXMEM_im_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_dataMEM_im_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_dataMEM_re_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/u_dataXMEM_re_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/u_dataXMEM_im_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_dataMEM_im_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_dataMEM_re_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_SDFCOMMUTATOR_5/u_dataXMEM_re_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_SDFCOMMUTATOR_5/u_dataXMEM_im_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_dataMEM_im_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_dataMEM_re_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/u_dataXMEM_re_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/u_dataXMEM_im_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_dataMEM_im_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_dataMEM_re_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_SDFCOMMUTATOR_7/u_dataXMEM_re_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_SDFCOMMUTATOR_7/u_dataXMEM_im_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_8_1/u_SDFCOMMUTATOR_8/u_dataXMEM_re_0_8
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_8_1/u_SDFCOMMUTATOR_8/u_dataXMEM_im_0_8
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_RADIX2/u_SDFCOMMUTATOR_9/u_dataXMEM_re_0_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_RADIX2/u_SDFCOMMUTATOR_9/u_dataXMEM_im_0_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage/u_dataMEM_im_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage/u_dataMEM_re_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# Compile of SynthesisCircuitry.vhd was successful.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful.
+# Compile of MainFSM.vhd was successful.
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of Complex3Multiply.vhd was successful.
+# Compile of Complex3Multiply_block.vhd was successful.
+# Compile of Complex3Multiply_block1.vhd was successful.
+# Compile of Complex3Multiply_block2.vhd was successful.
+# Compile of Complex4Multiply.vhd was successful.
+# Compile of Complex4Multiply_block.vhd was successful.
+# Compile of Complex4Multiply_block1.vhd was successful.
+# Compile of Complex4Multiply_block2.vhd was successful.
+# Compile of IFFT.vhd was successful.
+# Compile of RADIX2FFT_bitNatural.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_1.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_1_block.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_2.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_3.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_4.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_5.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_6.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_7.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_8.vhd was successful.
+# Compile of RADIX22FFT_SDF1_1.vhd was successful.
+# Compile of RADIX22FFT_SDF1_3.vhd was successful.
+# Compile of RADIX22FFT_SDF1_5.vhd was successful.
+# Compile of RADIX22FFT_SDF1_7.vhd was successful.
+# Compile of RADIX22FFT_SDF1_9.vhd was successful.
+# Compile of RADIX22FFT_SDF2_2.vhd was successful.
+# Compile of RADIX22FFT_SDF2_4.vhd was successful.
+# Compile of RADIX22FFT_SDF2_6.vhd was successful.
+# Compile of RADIX22FFT_SDF2_8.vhd was successful.
+# Compile of SDFCommutator1.vhd was successful.
+# Compile of SDFCommutator2.vhd was successful.
+# Compile of SDFCommutator3.vhd was successful.
+# Compile of SDFCommutator4.vhd was successful.
+# Compile of SDFCommutator5.vhd was successful.
+# Compile of SDFCommutator6.vhd was successful.
+# Compile of SDFCommutator7.vhd was successful.
+# Compile of SDFCommutator8.vhd was successful.
+# Compile of SDFCommutator9.vhd was successful.
+# Compile of SignalGenerator.vhd was successful.
+# Compile of SignalGenerator_pkg.vhd was successful.
+# Compile of SimpleDualPortRAM_generic.vhd was successful.
+# Compile of TWDLROM_3_1.vhd was successful.
+# Compile of TWDLROM_5_1.vhd was successful.
+# Compile of TWDLROM_7_1.vhd was successful.
+# Compile of TWDLROM_9_1.vhd was successful.
+# 49 compiles, 0 failed with no errors.
+# Compile of SynthesisCircuitry.vhd was successful.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful.
+# Compile of MainFSM.vhd was successful.
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of Complex3Multiply.vhd was successful.
+# Compile of Complex3Multiply_block.vhd was successful.
+# Compile of Complex3Multiply_block1.vhd was successful.
+# Compile of Complex3Multiply_block2.vhd was successful.
+# Compile of Complex4Multiply.vhd was successful.
+# Compile of Complex4Multiply_block.vhd was successful.
+# Compile of Complex4Multiply_block1.vhd was successful.
+# Compile of Complex4Multiply_block2.vhd was successful.
+# Compile of IFFT.vhd was successful.
+# Compile of RADIX2FFT_bitNatural.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_1.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_1_block.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_2.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_3.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_4.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_5.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_6.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_7.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_8.vhd was successful.
+# Compile of RADIX22FFT_SDF1_1.vhd was successful.
+# Compile of RADIX22FFT_SDF1_3.vhd was successful.
+# Compile of RADIX22FFT_SDF1_5.vhd was successful.
+# Compile of RADIX22FFT_SDF1_7.vhd was successful.
+# Compile of RADIX22FFT_SDF1_9.vhd was successful.
+# Compile of RADIX22FFT_SDF2_2.vhd was successful.
+# Compile of RADIX22FFT_SDF2_4.vhd was successful.
+# Compile of RADIX22FFT_SDF2_6.vhd was successful.
+# Compile of RADIX22FFT_SDF2_8.vhd was successful.
+# Compile of SDFCommutator1.vhd was successful.
+# Compile of SDFCommutator2.vhd was successful.
+# Compile of SDFCommutator3.vhd was successful.
+# Compile of SDFCommutator4.vhd was successful.
+# Compile of SDFCommutator5.vhd was successful.
+# Compile of SDFCommutator6.vhd was successful.
+# Compile of SDFCommutator7.vhd was successful.
+# Compile of SDFCommutator8.vhd was successful.
+# Compile of SDFCommutator9.vhd was successful.
+# Compile of SignalGenerator.vhd was successful.
+# Compile of SignalGenerator_pkg.vhd was successful.
+# Compile of SimpleDualPortRAM_generic.vhd was successful.
+# Compile of TWDLROM_3_1.vhd was successful.
+# Compile of TWDLROM_5_1.vhd was successful.
+# Compile of TWDLROM_7_1.vhd was successful.
+# Compile of TWDLROM_9_1.vhd was successful.
+# 49 compiles, 0 failed with no errors.
+restart
+# Loading work.testbench(basic)
+# Loading work.signalgenerator_pkg
+# Loading work.mainfsm(basic)
+# Loading work.configureadc(basic)
+# Loading work.configrom(basic)
+# Loading work.signalgenerator(rtl)
+# Loading work.ifft(rtl)
+# Loading work.radix22fft_ctrl1_1(rtl)
+# Loading work.radix22fft_sdf1_1(rtl)
+# Loading work.simpledualportram_generic(rtl)
+# Loading work.sdfcommutator1(rtl)
+# Loading work.radix22fft_ctrl1_2(rtl)
+# Loading work.radix22fft_sdf2_2(rtl)
+# Loading work.sdfcommutator2(rtl)
+# Loading work.twdlrom_3_1(rtl)
+# Loading work.radix22fft_ctrl1_3(rtl)
+# Loading work.radix22fft_sdf1_3(rtl)
+# Loading work.complex3multiply(rtl)
+# Loading work.sdfcommutator3(rtl)
+# Loading work.radix22fft_ctrl1_4(rtl)
+# Loading work.radix22fft_sdf2_4(rtl)
+# Loading work.sdfcommutator4(rtl)
+# Loading work.twdlrom_5_1(rtl)
+# Loading work.radix22fft_ctrl1_5(rtl)
+# Loading work.radix22fft_sdf1_5(rtl)
+# Loading work.complex3multiply_block(rtl)
+# Loading work.sdfcommutator5(rtl)
+# Loading work.radix22fft_ctrl1_6(rtl)
+# Loading work.radix22fft_sdf2_6(rtl)
+# Loading work.sdfcommutator6(rtl)
+# Loading work.twdlrom_7_1(rtl)
+# Loading work.radix22fft_ctrl1_7(rtl)
+# Loading work.radix22fft_sdf1_7(rtl)
+# Loading work.complex3multiply_block1(rtl)
+# Loading work.sdfcommutator7(rtl)
+# Loading work.radix22fft_ctrl1_8(rtl)
+# Loading work.radix22fft_sdf2_8(rtl)
+# Loading work.sdfcommutator8(rtl)
+# Loading work.twdlrom_9_1(rtl)
+# Loading work.radix22fft_ctrl1_1_block(rtl)
+# Loading work.radix22fft_sdf1_9(rtl)
+# Loading work.complex3multiply_block2(rtl)
+# Loading work.sdfcommutator9(rtl)
+# Loading work.radix2fft_bitnatural(rtl)
+# ** Warning: Design size of 23275 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_dataMEM_im_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_dataMEM_re_0_1_generic
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/u_dataXMEM_re_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/u_dataXMEM_im_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_dataMEM_im_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_dataMEM_re_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/u_dataXMEM_re_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/u_dataXMEM_im_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_dataMEM_im_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_dataMEM_re_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_SDFCOMMUTATOR_3/u_dataXMEM_re_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_SDFCOMMUTATOR_3/u_dataXMEM_im_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_dataMEM_im_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_dataMEM_re_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/u_dataXMEM_re_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/u_dataXMEM_im_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_dataMEM_im_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_dataMEM_re_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_SDFCOMMUTATOR_5/u_dataXMEM_re_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_SDFCOMMUTATOR_5/u_dataXMEM_im_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_dataMEM_im_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_dataMEM_re_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/u_dataXMEM_re_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/u_dataXMEM_im_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_dataMEM_im_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_dataMEM_re_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_SDFCOMMUTATOR_7/u_dataXMEM_re_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_SDFCOMMUTATOR_7/u_dataXMEM_im_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_8_1/u_SDFCOMMUTATOR_8/u_dataXMEM_re_0_8
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_8_1/u_SDFCOMMUTATOR_8/u_dataXMEM_im_0_8
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_RADIX2/u_SDFCOMMUTATOR_9/u_dataXMEM_re_0_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_RADIX2/u_SDFCOMMUTATOR_9/u_dataXMEM_im_0_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage/u_dataMEM_im_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage/u_dataMEM_re_1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# Compile of MainFSM.vhd was successful.
+restart
+# Loading work.mainfsm(basic)
+# ** Warning: Design size of 16725 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_dataMEM_im_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_dataMEM_re_0_1_generic
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/u_dataXMEM_re_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/u_dataXMEM_im_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_dataMEM_im_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_dataMEM_re_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/u_dataXMEM_re_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/u_dataXMEM_im_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_dataMEM_im_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_dataMEM_re_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_SDFCOMMUTATOR_3/u_dataXMEM_re_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_SDFCOMMUTATOR_3/u_dataXMEM_im_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_dataMEM_im_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_dataMEM_re_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/u_dataXMEM_re_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/u_dataXMEM_im_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_dataMEM_im_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_dataMEM_re_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_SDFCOMMUTATOR_5/u_dataXMEM_re_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_SDFCOMMUTATOR_5/u_dataXMEM_im_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_dataMEM_im_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_dataMEM_re_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/u_dataXMEM_re_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/u_dataXMEM_im_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_dataMEM_im_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_dataMEM_re_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_SDFCOMMUTATOR_7/u_dataXMEM_re_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_SDFCOMMUTATOR_7/u_dataXMEM_im_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_8_1/u_SDFCOMMUTATOR_8/u_dataXMEM_re_0_8
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_8_1/u_SDFCOMMUTATOR_8/u_dataXMEM_im_0_8
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_RADIX2/u_SDFCOMMUTATOR_9/u_dataXMEM_re_0_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_RADIX2/u_SDFCOMMUTATOR_9/u_dataXMEM_im_0_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage/u_dataMEM_im_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage/u_dataMEM_re_1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+run
+# Compile of SynthesisCircuitry.vhd was successful.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful.
+# Compile of MainFSM.vhd was successful.
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of Complex3Multiply.vhd was successful.
+# Compile of Complex3Multiply_block.vhd was successful.
+# Compile of Complex3Multiply_block1.vhd was successful.
+# Compile of Complex3Multiply_block2.vhd was successful.
+# Compile of Complex4Multiply.vhd was successful.
+# Compile of Complex4Multiply_block.vhd was successful.
+# Compile of Complex4Multiply_block1.vhd was successful.
+# Compile of Complex4Multiply_block2.vhd was successful.
+# Compile of IFFT.vhd was successful.
+# Compile of RADIX2FFT_bitNatural.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_1.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_1_block.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_2.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_3.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_4.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_5.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_6.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_7.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_8.vhd was successful.
+# Compile of RADIX22FFT_SDF1_1.vhd was successful.
+# Compile of RADIX22FFT_SDF1_3.vhd was successful.
+# Compile of RADIX22FFT_SDF1_5.vhd was successful.
+# Compile of RADIX22FFT_SDF1_7.vhd was successful.
+# Compile of RADIX22FFT_SDF1_9.vhd was successful.
+# Compile of RADIX22FFT_SDF2_2.vhd was successful.
+# Compile of RADIX22FFT_SDF2_4.vhd was successful.
+# Compile of RADIX22FFT_SDF2_6.vhd was successful.
+# Compile of RADIX22FFT_SDF2_8.vhd was successful.
+# Compile of SDFCommutator1.vhd was successful.
+# Compile of SDFCommutator2.vhd was successful.
+# Compile of SDFCommutator3.vhd was successful.
+# Compile of SDFCommutator4.vhd was successful.
+# Compile of SDFCommutator5.vhd was successful.
+# Compile of SDFCommutator6.vhd was successful.
+# Compile of SDFCommutator7.vhd was successful.
+# Compile of SDFCommutator8.vhd was successful.
+# Compile of SDFCommutator9.vhd was successful.
+# Compile of SignalGenerator.vhd was successful.
+# Compile of SignalGenerator_pkg.vhd was successful.
+# Compile of SimpleDualPortRAM_generic.vhd was successful.
+# Compile of TWDLROM_3_1.vhd was successful.
+# Compile of TWDLROM_5_1.vhd was successful.
+# Compile of TWDLROM_7_1.vhd was successful.
+# Compile of TWDLROM_9_1.vhd was successful.
+# 49 compiles, 0 failed with no errors.
+# Compile of SynthesisCircuitry.vhd was successful.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful.
+# Compile of MainFSM.vhd was successful.
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of Complex3Multiply.vhd was successful.
+# Compile of Complex3Multiply_block.vhd was successful.
+# Compile of Complex3Multiply_block1.vhd was successful.
+# Compile of Complex3Multiply_block2.vhd was successful.
+# Compile of Complex4Multiply.vhd was successful.
+# Compile of Complex4Multiply_block.vhd was successful.
+# Compile of Complex4Multiply_block1.vhd was successful.
+# Compile of Complex4Multiply_block2.vhd was successful.
+# Compile of IFFT.vhd was successful.
+# Compile of RADIX2FFT_bitNatural.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_1.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_1_block.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_2.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_3.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_4.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_5.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_6.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_7.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_8.vhd was successful.
+# Compile of RADIX22FFT_SDF1_1.vhd was successful.
+# Compile of RADIX22FFT_SDF1_3.vhd was successful.
+# Compile of RADIX22FFT_SDF1_5.vhd was successful.
+# Compile of RADIX22FFT_SDF1_7.vhd was successful.
+# Compile of RADIX22FFT_SDF1_9.vhd was successful.
+# Compile of RADIX22FFT_SDF2_2.vhd was successful.
+# Compile of RADIX22FFT_SDF2_4.vhd was successful.
+# Compile of RADIX22FFT_SDF2_6.vhd was successful.
+# Compile of RADIX22FFT_SDF2_8.vhd was successful.
+# Compile of SDFCommutator1.vhd was successful.
+# Compile of SDFCommutator2.vhd was successful.
+# Compile of SDFCommutator3.vhd was successful.
+# Compile of SDFCommutator4.vhd was successful.
+# Compile of SDFCommutator5.vhd was successful.
+# Compile of SDFCommutator6.vhd was successful.
+# Compile of SDFCommutator7.vhd was successful.
+# Compile of SDFCommutator8.vhd was successful.
+# Compile of SDFCommutator9.vhd was successful.
+# Compile of SignalGenerator.vhd was successful.
+# Compile of SignalGenerator_pkg.vhd was successful.
+# Compile of SimpleDualPortRAM_generic.vhd was successful.
+# Compile of TWDLROM_3_1.vhd was successful.
+# Compile of TWDLROM_5_1.vhd was successful.
+# Compile of TWDLROM_7_1.vhd was successful.
+# Compile of TWDLROM_9_1.vhd was successful.
+# 49 compiles, 0 failed with no errors.
+restart
+# Loading work.testbench(basic)
+# Loading work.signalgenerator_pkg
+# Loading work.mainfsm(basic)
+# Loading work.configureadc(basic)
+# Loading work.configrom(basic)
+# Loading work.signalgenerator(rtl)
+# Loading work.ifft(rtl)
+# Loading work.radix22fft_ctrl1_1(rtl)
+# Loading work.radix22fft_sdf1_1(rtl)
+# Loading work.simpledualportram_generic(rtl)
+# Loading work.sdfcommutator1(rtl)
+# Loading work.radix22fft_ctrl1_2(rtl)
+# Loading work.radix22fft_sdf2_2(rtl)
+# Loading work.sdfcommutator2(rtl)
+# Loading work.twdlrom_3_1(rtl)
+# Loading work.radix22fft_ctrl1_3(rtl)
+# Loading work.radix22fft_sdf1_3(rtl)
+# Loading work.complex3multiply(rtl)
+# Loading work.sdfcommutator3(rtl)
+# Loading work.radix22fft_ctrl1_4(rtl)
+# Loading work.radix22fft_sdf2_4(rtl)
+# Loading work.sdfcommutator4(rtl)
+# Loading work.twdlrom_5_1(rtl)
+# Loading work.radix22fft_ctrl1_5(rtl)
+# Loading work.radix22fft_sdf1_5(rtl)
+# Loading work.complex3multiply_block(rtl)
+# Loading work.sdfcommutator5(rtl)
+# Loading work.radix22fft_ctrl1_6(rtl)
+# Loading work.radix22fft_sdf2_6(rtl)
+# Loading work.sdfcommutator6(rtl)
+# Loading work.twdlrom_7_1(rtl)
+# Loading work.radix22fft_ctrl1_7(rtl)
+# Loading work.radix22fft_sdf1_7(rtl)
+# Loading work.complex3multiply_block1(rtl)
+# Loading work.sdfcommutator7(rtl)
+# Loading work.radix22fft_ctrl1_8(rtl)
+# Loading work.radix22fft_sdf2_8(rtl)
+# Loading work.sdfcommutator8(rtl)
+# Loading work.twdlrom_9_1(rtl)
+# Loading work.radix22fft_ctrl1_1_block(rtl)
+# Loading work.radix22fft_sdf1_9(rtl)
+# Loading work.complex3multiply_block2(rtl)
+# Loading work.sdfcommutator9(rtl)
+# Loading work.radix2fft_bitnatural(rtl)
+# ** Warning: Design size of 23275 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_dataMEM_im_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_dataMEM_re_0_1_generic
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/u_dataXMEM_re_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/u_dataXMEM_im_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_dataMEM_im_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_dataMEM_re_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/u_dataXMEM_re_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/u_dataXMEM_im_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_dataMEM_im_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_dataMEM_re_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_SDFCOMMUTATOR_3/u_dataXMEM_re_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_SDFCOMMUTATOR_3/u_dataXMEM_im_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_dataMEM_im_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_dataMEM_re_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/u_dataXMEM_re_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/u_dataXMEM_im_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_dataMEM_im_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_dataMEM_re_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_SDFCOMMUTATOR_5/u_dataXMEM_re_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_SDFCOMMUTATOR_5/u_dataXMEM_im_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_dataMEM_im_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_dataMEM_re_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/u_dataXMEM_re_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/u_dataXMEM_im_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_dataMEM_im_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_dataMEM_re_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_SDFCOMMUTATOR_7/u_dataXMEM_re_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_SDFCOMMUTATOR_7/u_dataXMEM_im_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_8_1/u_SDFCOMMUTATOR_8/u_dataXMEM_re_0_8
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_8_1/u_SDFCOMMUTATOR_8/u_dataXMEM_im_0_8
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_RADIX2/u_SDFCOMMUTATOR_9/u_dataXMEM_re_0_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_RADIX2/u_SDFCOMMUTATOR_9/u_dataXMEM_im_0_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage/u_dataMEM_im_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage/u_dataMEM_re_1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# Compile of SynthesisCircuitry.vhd was successful.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful.
+# Compile of MainFSM.vhd was successful.
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of Complex4Multiply.vhd was successful.
+# Compile of Complex4Multiply_block.vhd was successful.
+# Compile of Complex4Multiply_block1.vhd was successful.
+# Compile of Complex4Multiply_block2.vhd was successful.
+# Compile of IFFT.vhd failed with 4 errors.
+# Compile of NewSignalGenerator.vhd failed with 4 errors.
+# Compile of NewSignalGenerator_pkg.vhd was successful.
+# Compile of RADIX2FFT_bitNatural.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_1.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_1_block.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_2.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_3.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_4.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_5.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_6.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_7.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_8.vhd was successful.
+# Compile of RADIX22FFT_SDF1_1.vhd was successful.
+# Compile of RADIX22FFT_SDF1_3.vhd was successful.
+# Compile of RADIX22FFT_SDF1_5.vhd was successful.
+# Compile of RADIX22FFT_SDF1_7.vhd was successful.
+# Compile of RADIX22FFT_SDF1_9.vhd was successful.
+# Compile of RADIX22FFT_SDF2_2.vhd was successful.
+# Compile of RADIX22FFT_SDF2_4.vhd was successful.
+# Compile of RADIX22FFT_SDF2_6.vhd was successful.
+# Compile of RADIX22FFT_SDF2_8.vhd was successful.
+# Compile of SDFCommutator1.vhd was successful.
+# Compile of SDFCommutator2.vhd was successful.
+# Compile of SDFCommutator3.vhd was successful.
+# Compile of SDFCommutator4.vhd was successful.
+# Compile of SDFCommutator5.vhd was successful.
+# Compile of SDFCommutator6.vhd was successful.
+# Compile of SDFCommutator7.vhd was successful.
+# Compile of SDFCommutator8.vhd was successful.
+# Compile of SDFCommutator9.vhd was successful.
+# Compile of SimpleDualPortRAM_generic.vhd was successful.
+# Compile of TWDLROM_3_1.vhd was successful.
+# Compile of TWDLROM_5_1.vhd was successful.
+# Compile of TWDLROM_7_1.vhd was successful.
+# Compile of TWDLROM_9_1.vhd was successful.
+# 45 compiles, 2 failed with 8 errors.
+# Compile of IFFT.vhd was successful.
+# Compile of NewSignalGenerator.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+# Compile of SynthesisCircuitry.vhd was successful.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful.
+# Compile of MainFSM.vhd was successful.
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of Complex4Multiply.vhd was successful.
+# Compile of Complex4Multiply_block.vhd was successful.
+# Compile of Complex4Multiply_block1.vhd was successful.
+# Compile of Complex4Multiply_block2.vhd was successful.
+# Compile of IFFT.vhd was successful.
+# Compile of NewSignalGenerator.vhd was successful.
+# Compile of NewSignalGenerator_pkg.vhd was successful.
+# Compile of RADIX2FFT_bitNatural.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_1.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_1_block.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_2.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_3.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_4.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_5.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_6.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_7.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_8.vhd was successful.
+# Compile of RADIX22FFT_SDF1_1.vhd was successful.
+# Compile of RADIX22FFT_SDF1_3.vhd was successful.
+# Compile of RADIX22FFT_SDF1_5.vhd was successful.
+# Compile of RADIX22FFT_SDF1_7.vhd was successful.
+# Compile of RADIX22FFT_SDF1_9.vhd was successful.
+# Compile of RADIX22FFT_SDF2_2.vhd was successful.
+# Compile of RADIX22FFT_SDF2_4.vhd was successful.
+# Compile of RADIX22FFT_SDF2_6.vhd was successful.
+# Compile of RADIX22FFT_SDF2_8.vhd was successful.
+# Compile of SDFCommutator1.vhd was successful.
+# Compile of SDFCommutator2.vhd was successful.
+# Compile of SDFCommutator3.vhd was successful.
+# Compile of SDFCommutator4.vhd was successful.
+# Compile of SDFCommutator5.vhd was successful.
+# Compile of SDFCommutator6.vhd was successful.
+# Compile of SDFCommutator7.vhd was successful.
+# Compile of SDFCommutator8.vhd was successful.
+# Compile of SDFCommutator9.vhd was successful.
+# Compile of SimpleDualPortRAM_generic.vhd was successful.
+# Compile of TWDLROM_3_1.vhd was successful.
+# Compile of TWDLROM_5_1.vhd was successful.
+# Compile of TWDLROM_7_1.vhd was successful.
+# Compile of TWDLROM_9_1.vhd was successful.
+# 45 compiles, 0 failed with no errors.
+restart
+# Loading work.testbench(basic)
+# Loading work.mainfsm(basic)
+# Loading work.configureadc(basic)
+# Loading work.configrom(basic)
+# Loading work.newsignalgenerator_pkg
 # Loading work.ifft(rtl)
 # Loading work.radix22fft_ctrl1_1(rtl)
 # Loading work.radix22fft_sdf1_1(rtl)
@@ -49,171 +1966,593 @@
 # Loading work.complex4multiply_block2(rtl)
 # Loading work.sdfcommutator9(rtl)
 # Loading work.radix2fft_bitnatural(rtl)
-# ** Warning: Design size of 22412 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 22953 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
-add wave -position insertpoint sim:/testbench/*
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: adams  Hostname: LADAMTP  ProcessID: 12852
-#           Attempting to use alternate WLF file "./wlftzcn087".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftzcn087
-restart
 run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_9
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_9
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_9
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_9
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_9
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_7_1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_7_1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_5_1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_5_1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_3_1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_3_1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_dataMEM_im_0_1_generic
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/u_dataXMEM_re_0_1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/u_dataXMEM_im_0_1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_dataMEM_im_0_2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_dataMEM_re_0_2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/u_dataXMEM_re_0_2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/u_dataXMEM_im_0_2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_dataMEM_im_0_3
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_dataMEM_re_0_3
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_SDFCOMMUTATOR_3/u_dataXMEM_re_0_3
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_SDFCOMMUTATOR_3/u_dataXMEM_im_0_3
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_dataMEM_im_0_4
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_dataMEM_re_0_4
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/u_dataXMEM_re_0_4
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/u_dataXMEM_im_0_4
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_dataMEM_im_0_5
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_dataMEM_re_0_5
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_SDFCOMMUTATOR_5/u_dataXMEM_re_0_5
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_SDFCOMMUTATOR_5/u_dataXMEM_im_0_5
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_dataMEM_im_0_6
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_dataMEM_re_0_6
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/u_dataXMEM_re_0_6
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/u_dataXMEM_im_0_6
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_dataMEM_im_0_7
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_dataMEM_re_0_7
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_SDFCOMMUTATOR_7/u_dataXMEM_re_0_7
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_SDFCOMMUTATOR_7/u_dataXMEM_im_0_7
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_SDF2_8_1/u_SDFCOMMUTATOR_8/u_dataXMEM_re_0_8
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_SDF2_8_1/u_SDFCOMMUTATOR_8/u_dataXMEM_im_0_8
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_RADIX2/u_SDFCOMMUTATOR_9/u_dataXMEM_re_0_9
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_RADIX2/u_SDFCOMMUTATOR_9/u_dataXMEM_im_0_9
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage/u_dataMEM_im_1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage/u_dataMEM_re_1
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_3_1
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_3_1
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_3_1
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_5_1
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_5_1
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_5_1
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_7_1
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_7_1
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_7_1
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_9
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_9
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_9
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_dataMEM_im_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_dataMEM_re_0_1_generic
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/u_dataXMEM_re_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/u_dataXMEM_im_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_dataMEM_im_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_dataMEM_re_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/u_dataXMEM_re_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/u_dataXMEM_im_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_dataMEM_im_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_dataMEM_re_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_SDFCOMMUTATOR_3/u_dataXMEM_re_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_SDFCOMMUTATOR_3/u_dataXMEM_im_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_dataMEM_im_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_dataMEM_re_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/u_dataXMEM_re_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/u_dataXMEM_im_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_dataMEM_im_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_dataMEM_re_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_SDFCOMMUTATOR_5/u_dataXMEM_re_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_SDFCOMMUTATOR_5/u_dataXMEM_im_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_dataMEM_im_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_dataMEM_re_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/u_dataXMEM_re_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/u_dataXMEM_im_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_dataMEM_im_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_dataMEM_re_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_SDFCOMMUTATOR_7/u_dataXMEM_re_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_SDFCOMMUTATOR_7/u_dataXMEM_im_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_8_1/u_SDFCOMMUTATOR_8/u_dataXMEM_re_0_8
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_8_1/u_SDFCOMMUTATOR_8/u_dataXMEM_im_0_8
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_RADIX2/u_SDFCOMMUTATOR_9/u_dataXMEM_re_0_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_RADIX2/u_SDFCOMMUTATOR_9/u_dataXMEM_im_0_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage/u_dataMEM_im_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage/u_dataMEM_re_1
 # ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/syynthesizer2IFFT
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/syynthesizer2IFFT
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_9
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+restart
+# Compile of MainFSM.vhd was successful.
+run
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/syynthesizer2IFFT/u_IFFT/u_twdlROM_9
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_dataMEM_im_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_dataMEM_re_0_1_generic
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/u_dataXMEM_re_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/u_dataXMEM_im_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_dataMEM_im_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_dataMEM_re_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/u_dataXMEM_re_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/u_dataXMEM_im_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_dataMEM_im_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_dataMEM_re_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_SDFCOMMUTATOR_3/u_dataXMEM_re_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_SDFCOMMUTATOR_3/u_dataXMEM_im_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_dataMEM_im_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_dataMEM_re_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/u_dataXMEM_re_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/u_dataXMEM_im_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_dataMEM_im_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_dataMEM_re_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_SDFCOMMUTATOR_5/u_dataXMEM_re_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_SDFCOMMUTATOR_5/u_dataXMEM_im_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_dataMEM_im_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_dataMEM_re_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/u_dataXMEM_re_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/u_dataXMEM_im_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_dataMEM_im_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_dataMEM_re_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_SDFCOMMUTATOR_7/u_dataXMEM_re_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_SDFCOMMUTATOR_7/u_dataXMEM_im_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_8_1/u_SDFCOMMUTATOR_8/u_dataXMEM_re_0_8
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_8_1/u_SDFCOMMUTATOR_8/u_dataXMEM_im_0_8
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_RADIX2/u_SDFCOMMUTATOR_9/u_dataXMEM_re_0_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_RADIX2/u_SDFCOMMUTATOR_9/u_dataXMEM_im_0_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage/u_dataMEM_im_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage/u_dataMEM_re_1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+run
+run
+# Compile of SynthesisCircuitry.vhd was successful.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureADC.vhd was successful.
+# Compile of MainFSM.vhd was successful.
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of Complex4Multiply.vhd was successful.
+# Compile of Complex4Multiply_block.vhd was successful.
+# Compile of Complex4Multiply_block1.vhd was successful.
+# Compile of Complex4Multiply_block2.vhd was successful.
+# Compile of IFFT.vhd was successful.
+# Compile of NewSignalGenerator.vhd was successful.
+# Compile of NewSignalGenerator_pkg.vhd was successful.
+# Compile of RADIX2FFT_bitNatural.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_1.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_1_block.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_2.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_3.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_4.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_5.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_6.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_7.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_8.vhd was successful.
+# Compile of RADIX22FFT_SDF1_1.vhd was successful.
+# Compile of RADIX22FFT_SDF1_3.vhd was successful.
+# Compile of RADIX22FFT_SDF1_5.vhd was successful.
+# Compile of RADIX22FFT_SDF1_7.vhd was successful.
+# Compile of RADIX22FFT_SDF1_9.vhd was successful.
+# Compile of RADIX22FFT_SDF2_2.vhd was successful.
+# Compile of RADIX22FFT_SDF2_4.vhd was successful.
+# Compile of RADIX22FFT_SDF2_6.vhd was successful.
+# Compile of RADIX22FFT_SDF2_8.vhd was successful.
+# Compile of SDFCommutator1.vhd was successful.
+# Compile of SDFCommutator2.vhd was successful.
+# Compile of SDFCommutator3.vhd was successful.
+# Compile of SDFCommutator4.vhd was successful.
+# Compile of SDFCommutator5.vhd was successful.
+# Compile of SDFCommutator6.vhd was successful.
+# Compile of SDFCommutator7.vhd was successful.
+# Compile of SDFCommutator8.vhd was successful.
+# Compile of SDFCommutator9.vhd was successful.
+# Compile of SimpleDualPortRAM_generic.vhd was successful.
+# Compile of TWDLROM_3_1.vhd was successful.
+# Compile of TWDLROM_5_1.vhd was successful.
+# Compile of TWDLROM_7_1.vhd was successful.
+# Compile of TWDLROM_9_1.vhd was successful.
+# 45 compiles, 0 failed with no errors.
+restart
+# Loading work.testbench(basic)
+# Loading work.newsignalgenerator_pkg
+# Loading work.mainfsm(basic)
+# Loading work.configureadc(basic)
+# Loading work.configrom(basic)
+# Loading work.newsignalgenerator(rtl)
+# Loading work.ifft(rtl)
+# Loading work.radix22fft_ctrl1_1(rtl)
+# Loading work.radix22fft_sdf1_1(rtl)
+# Loading work.simpledualportram_generic(rtl)
+# Loading work.sdfcommutator1(rtl)
+# Loading work.radix22fft_ctrl1_2(rtl)
+# Loading work.radix22fft_sdf2_2(rtl)
+# Loading work.sdfcommutator2(rtl)
+# Loading work.twdlrom_3_1(rtl)
+# Loading work.radix22fft_ctrl1_3(rtl)
+# Loading work.radix22fft_sdf1_3(rtl)
+# Loading work.complex4multiply(rtl)
+# Loading work.sdfcommutator3(rtl)
+# Loading work.radix22fft_ctrl1_4(rtl)
+# Loading work.radix22fft_sdf2_4(rtl)
+# Loading work.sdfcommutator4(rtl)
+# Loading work.twdlrom_5_1(rtl)
+# Loading work.radix22fft_ctrl1_5(rtl)
+# Loading work.radix22fft_sdf1_5(rtl)
+# Loading work.complex4multiply_block(rtl)
+# Loading work.sdfcommutator5(rtl)
+# Loading work.radix22fft_ctrl1_6(rtl)
+# Loading work.radix22fft_sdf2_6(rtl)
+# Loading work.sdfcommutator6(rtl)
+# Loading work.twdlrom_7_1(rtl)
+# Loading work.radix22fft_ctrl1_7(rtl)
+# Loading work.radix22fft_sdf1_7(rtl)
+# Loading work.complex4multiply_block1(rtl)
+# Loading work.sdfcommutator7(rtl)
+# Loading work.radix22fft_ctrl1_8(rtl)
+# Loading work.radix22fft_sdf2_8(rtl)
+# Loading work.sdfcommutator8(rtl)
+# Loading work.twdlrom_9_1(rtl)
+# Loading work.radix22fft_ctrl1_1_block(rtl)
+# Loading work.radix22fft_sdf1_9(rtl)
+# Loading work.complex4multiply_block2(rtl)
+# Loading work.sdfcommutator9(rtl)
+# Loading work.radix2fft_bitnatural(rtl)
+# ** Warning: Design size of 22980 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_dataMEM_im_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_dataMEM_re_0_1_generic
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/u_dataXMEM_re_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/u_dataXMEM_im_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_dataMEM_im_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_dataMEM_re_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/u_dataXMEM_re_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/u_dataXMEM_im_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_dataMEM_im_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_dataMEM_re_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_SDFCOMMUTATOR_3/u_dataXMEM_re_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_3_1/u_SDFCOMMUTATOR_3/u_dataXMEM_im_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_dataMEM_im_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_dataMEM_re_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/u_dataXMEM_re_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/u_dataXMEM_im_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_dataMEM_im_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_dataMEM_re_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_SDFCOMMUTATOR_5/u_dataXMEM_re_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_5_1/u_SDFCOMMUTATOR_5/u_dataXMEM_im_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_dataMEM_im_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_dataMEM_re_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/u_dataXMEM_re_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/u_dataXMEM_im_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_dataMEM_im_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_dataMEM_re_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_SDFCOMMUTATOR_7/u_dataXMEM_re_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF1_7_1/u_SDFCOMMUTATOR_7/u_dataXMEM_im_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_8_1/u_SDFCOMMUTATOR_8/u_dataXMEM_re_0_8
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_SDF2_8_1/u_SDFCOMMUTATOR_8/u_dataXMEM_im_0_8
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_RADIX2/u_SDFCOMMUTATOR_9/u_dataXMEM_re_0_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_RADIX2/u_SDFCOMMUTATOR_9/u_dataXMEM_im_0_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage/u_dataMEM_im_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage/u_dataMEM_re_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/DUT/synthesizer2IFFT/u_IFFT/u_twdlROM_9
+# End time: 20:59:34 on May 04,2026, Elapsed time: 1:25:15
+# Errors: 0, Warnings: 803

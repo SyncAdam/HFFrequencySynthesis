@@ -70,7 +70,7 @@ begin
 	configurator: entity work.ConfigureADC(basic)
 						port map(writeconfig, configok, sdenb, sclk, sdio, inputClock, ClkOUT, stateRegOut, resetn, WrReEn);
 
-	synthesizer2IFFT: entity work.SignalGenerator(rtl)
+	synthesizer2IFFT: entity work.NewSignalGenerator(rtl)
 					port map(parallelDataClk_p, reset, enableIFFTClk, ifftCe_Out, output_p, ifftData_OutImag);
 
 end architecture;
