@@ -1,27 +1,27 @@
 {
   "CodeGenStatus": {
     "clockReportDatt": {
-      "modelBaseRate": 3.2552083333333333E-9,
-      "dutBaseRate": 3.2552083333333333E-9,
+      "modelBaseRate": 6.5104166666666666E-9,
+      "dutBaseRate": 6.5104166666666666E-9,
       "overSampleRequest": 1,
       "clockData": {
         "name": "ce_out",
-        "sampleTime": 3.2552083333333333E-9,
+        "sampleTime": 6.5104166666666666E-9,
         "ratio": 1,
         "domain": -1
       },
       "inData": [],
       "outData": [
         {
-          "signalName": "Out1_re",
+          "signalName": "Out1",
           "clockingName": "ce_out",
-          "sampleTime": 3.2552083333333333E-9,
+          "sampleTime": 6.5104166666666666E-9,
           "domain": -1
         },
         {
-          "signalName": "Out1_im",
+          "signalName": "Out2",
           "clockingName": "ce_out",
-          "sampleTime": 3.2552083333333333E-9,
+          "sampleTime": 6.5104166666666666E-9,
           "domain": -1
         }
       ],
@@ -104,19 +104,34 @@
         "TunableName": [],
         "Latency": []
       },
-      "outputPorts": {
-        "Name": "Out1",
-        "Rate": 3.2552083333333333E-9,
-        "Kind": "data",
-        "PortIndex": 0,
-        "IsComplex": true,
-        "Testpoint": false,
-        "TunableName": "",
-        "Latency": -1
-      }
+      "outputPorts": [
+        {
+          "Name": "Out1",
+          "Rate": 6.5104166666666666E-9,
+          "Kind": "data",
+          "PortIndex": 0,
+          "IsComplex": false,
+          "Testpoint": false,
+          "TunableName": "",
+          "Latency": -1
+        },
+        {
+          "Name": "Out2",
+          "Rate": 6.5104166666666666E-9,
+          "Kind": "data",
+          "PortIndex": 1,
+          "IsComplex": false,
+          "Testpoint": false,
+          "TunableName": "",
+          "Latency": -1
+        }
+      ]
     }
   },
-  "PhaseCycles": 0,
+  "PhaseCycles": [
+    0,
+    0
+  ],
   "ResourceSummary": {
     "multipliers": 16,
     "addersSubtractors": 196,

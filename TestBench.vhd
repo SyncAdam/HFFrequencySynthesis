@@ -1,13 +1,17 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
+LIBRARY altera_mf;
+USE altera_mf.altera_mf_components.all;
+
 entity TestBench is
 end entity;
 
 architecture basic of TestBench is
 
 	signal clock: std_logic := '0';
-	signal output_p: std_logic_vector(15 downto 0);
+	signal output_i: std_logic_vector(15 downto 0);
+	signal output_q: std_logic_vector(15 downto 0);
 	signal writeConfig: std_logic := '0';
 	signal configOK: std_logic;
 	signal SDENB: std_logic;
@@ -26,15 +30,39 @@ architecture basic of TestBench is
 	signal WrReEn: std_logic := '0';
 	signal WrReStatus: std_logic;
 	
+	signal aclr: std_logic := '0';
+	signal ddrData: std_logic_vector(15 downto 0);
+
+signal PLL_Locked : std_logic := '0';
+signal PLL_Clock: std_logic := '0';
+
+signal reset: std_logic := '0';
+	
+	
 begin
 
 	DUT: entity work.MainFSM(basic)
-				port map(output_p, clock, DataCLK_OUT, SCLK, SDENB, SDIO, configOK, writeConfig, WrReEn, WrReStatus, clock, ClkOUT, stateRegOut, resetn);
-	
+				port map(output_i, output_q, clock, DataCLK_OUT, SCLK, SDENB, SDIO, configOK, writeConfig, WrReEn, WrReStatus, clock, ClkOUT, stateRegOut, resetn);
+
+	DDR: entity work.DDROUT(SYN)
+			port map(aclr => aclr,
+		datain_h => output_i,
+		datain_l => output_q,
+		outclock => clock,
+		dataout => ddrData);	
+
+	PLL: entity work.PLL_OUT(RTL)
+			port map(locked	=> PLL_Locked,
+		 outclk_0 => PLL_Clock,
+		 refclk	=> clock,
+		 rst => reset);
+
 	ClockProc: process begin
 		clock <= not clock;
-		wait for 1.62ns;
+		wait for 6.53594771241830ns;
 	end process;
+
+	reset <= not resetn;
 
 	process
 	begin

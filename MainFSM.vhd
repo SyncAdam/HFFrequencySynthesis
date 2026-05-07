@@ -4,7 +4,8 @@ use ieee.numeric_std.all;
 
 entity MainFSM is
 	port(
-		output_p: out std_logic_vector(15 downto 0);
+		output_i: out std_logic_vector(15 downto 0);
+		output_q: out std_logic_vector(15 downto 0);
 		parallelDataClk_p: in std_logic;
 		
 		data_clk_out: out std_logic;
@@ -71,6 +72,6 @@ begin
 						port map(writeconfig, configok, sdenb, sclk, sdio, inputClock, ClkOUT, stateRegOut, resetn, WrReEn);
 
 	synthesizer2IFFT: entity work.NewSignalGenerator(rtl)
-					port map(parallelDataClk_p, reset, enableIFFTClk, ifftCe_Out, output_p, ifftData_OutImag);
+					port map(parallelDataClk_p, reset, enableIFFTClk, ifftCe_Out, output_i, output_q);
 
 end architecture;
