@@ -1,3 +1,3 @@
 
 
-vhdlan -xlrm "Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/PLL_OUT_sim/PLL_OUT.vho"
+vhdlan -xlrm "C:/Users/adam/Projects/HFFrequencySynthesis/PLL_OUT_sim/PLL_OUT.vho"

@@ -33,16 +33,43 @@ architecture basic of TestBench is
 	signal aclr: std_logic := '0';
 	signal ddrData: std_logic_vector(15 downto 0);
 
-signal PLL_Locked : std_logic := '0';
-signal PLL_Clock: std_logic := '0';
-
-signal reset: std_logic := '0';
+	signal PLL_Locked : std_logic := '0';
+	signal PLL_Clock: std_logic := '0';
 	
+	signal reset: std_logic := '0';
+
+	signal signalGenClockEnable: std_logic := '1';
+	signal signalGenCeOut: std_logic;
+
+	signal sinLUT_output: std_logic_vector(15 downto 0);
 	
 begin
 
 	DUT: entity work.MainFSM(basic)
-				port map(output_i, output_q, clock, DataCLK_OUT, SCLK, SDENB, SDIO, configOK, writeConfig, WrReEn, WrReStatus, clock, ClkOUT, stateRegOut, resetn);
+				port map(WrReEn, WrReStatus, clock, resetn);
+
+	Config: entity work.ConfigureDAC(basic)
+				port map(writeConfig => writeConfig,
+					 CLKIN => clock,
+					 resetn => resetn,
+					 WrReEn => WrReStatus,
+					 configOK => configOK,
+					 SDENB => SDENB,
+					 SCLK => SCLK,
+					 SDIO => SDIO,
+					 stateRegOut => stateRegOut);
+
+	SignalGen: entity work.NewSignalGenerator(rtl)
+				port map(clk => clock,
+					 reset => reset,
+					 clk_enable => signalGenClockEnable,
+					 ce_out => signalGenCeOut,
+					 Out1 => output_i,
+					 Out2 => output_q);
+
+	DDSSignalGen: entity work.SinLUT(basic)
+				port map(clk => clock,
+					 output_p => sinLUT_output);	
 
 	DDR: entity work.DDROUT(SYN)
 			port map(aclr => aclr,

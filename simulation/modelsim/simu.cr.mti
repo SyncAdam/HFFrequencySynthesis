@@ -1,195 +1,4 @@
-Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator4.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator4.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity SDFCommutator4
--- Compiling architecture rtl of SDFCommutator4
--- Loading entity SimpleDualPortRAM_generic
-
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_4.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_4.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity RADIX22FFT_CTRL1_4
--- Compiling architecture rtl of RADIX22FFT_CTRL1_4
-
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/DDROUT.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/DDROUT.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package altera_mf_components
--- Compiling entity DDROUT
--- Compiling architecture SYN of ddrout
-
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/ConfigureADC.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/ConfigureADC.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity ConfigureADC
--- Compiling architecture basic of ConfigureADC
--- Loading entity ConfigROM
-
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_5.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_5.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity RADIX22FFT_CTRL1_5
--- Compiling architecture rtl of RADIX22FFT_CTRL1_5
-
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator5.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator5.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity SDFCommutator5
--- Compiling architecture rtl of SDFCommutator5
--- Loading entity SimpleDualPortRAM_generic
-
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/MainFSM.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/MainFSM.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity MainFSM
--- Compiling architecture basic of MainFSM
--- Loading entity ConfigureADC
--- Loading package NewSignalGenerator_pkg
--- Loading entity NewSignalGenerator
-
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_6.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_6.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity RADIX22FFT_CTRL1_6
--- Compiling architecture rtl of RADIX22FFT_CTRL1_6
-
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/Complex4Multiply_block.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/Complex4Multiply_block.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity Complex4Multiply_block
--- Compiling architecture rtl of Complex4Multiply_block
-
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/ConfigROM.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/ConfigROM.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity ConfigROM
--- Compiling architecture basic of ConfigROM
-
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator6.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator6.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity SDFCommutator6
--- Compiling architecture rtl of SDFCommutator6
--- Loading entity SimpleDualPortRAM_generic
-
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator7.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator7.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity SDFCommutator7
--- Compiling architecture rtl of SDFCommutator7
--- Loading entity SimpleDualPortRAM_generic
-
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/Complex4Multiply_block1.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/Complex4Multiply_block1.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity Complex4Multiply_block1
--- Compiling architecture rtl of Complex4Multiply_block1
-
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX2FFT_bitNatural.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX2FFT_bitNatural.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity RADIX2FFT_bitNatural
--- Compiling architecture rtl of RADIX2FFT_bitNatural
--- Loading entity SimpleDualPortRAM_generic
-
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_7.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_7.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity RADIX22FFT_CTRL1_7
--- Compiling architecture rtl of RADIX22FFT_CTRL1_7
-
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator8.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator8.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity SDFCommutator8
--- Compiling architecture rtl of SDFCommutator8
--- Loading entity SimpleDualPortRAM_generic
-
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/Complex4Multiply_block2.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/Complex4Multiply_block2.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity Complex4Multiply_block2
--- Compiling architecture rtl of Complex4Multiply_block2
-
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_8.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_8.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity RADIX22FFT_CTRL1_8
--- Compiling architecture rtl of RADIX22FFT_CTRL1_8
-
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/SimpleDualPortRAM_generic.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/SimpleDualPortRAM_generic.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity SimpleDualPortRAM_generic
--- Compiling architecture rtl of SimpleDualPortRAM_generic
-
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator9.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator9.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity SDFCommutator9
--- Compiling architecture rtl of SDFCommutator9
--- Loading entity SimpleDualPortRAM_generic
-
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF1_1.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF1_1.vhd
+C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF1_1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF1_1.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -201,26 +10,33 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading entity SimpleDualPortRAM_generic
 -- Loading entity SDFCommutator1
 
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/TWDLROM_3_1.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/TWDLROM_3_1.vhd
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/TestBench.vhd {2 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/TestBench.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
+-- Loading package altera_mf_components
+-- Compiling entity TestBench
+-- Compiling architecture basic of TestBench
 -- Loading package NUMERIC_STD
+-- Loading entity MainFSM
+-- Loading entity ConfigureDAC
 -- Loading package NewSignalGenerator_pkg
--- Compiling entity TWDLROM_3_1
--- Compiling architecture rtl of TWDLROM_3_1
+-- Loading entity NewSignalGenerator
+-- Loading entity SinLUT
+-- Loading entity DDROUT
+-- Loading entity PLL_OUT
+** Warning: C:/Users/adam/Projects/HFFrequencySynthesis/TestBench.vhd(89): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: C:/Users/adam/Projects/HFFrequencySynthesis/TestBench.vhd(97): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: C:/Users/adam/Projects/HFFrequencySynthesis/TestBench.vhd(100): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: C:/Users/adam/Projects/HFFrequencySynthesis/TestBench.vhd(102): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: C:/Users/adam/Projects/HFFrequencySynthesis/TestBench.vhd(104): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: C:/Users/adam/Projects/HFFrequencySynthesis/TestBench.vhd(106): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: C:/Users/adam/Projects/HFFrequencySynthesis/TestBench.vhd(108): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: C:/Users/adam/Projects/HFFrequencySynthesis/TestBench.vhd(114): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: C:/Users/adam/Projects/HFFrequencySynthesis/TestBench.vhd(119): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_1_block.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_1_block.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity RADIX22FFT_CTRL1_1_block
--- Compiling architecture rtl of RADIX22FFT_CTRL1_1_block
-
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF1_3.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF1_3.vhd
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF1_3.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF1_3.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -233,38 +49,26 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading entity SimpleDualPortRAM_generic
 -- Loading entity SDFCommutator3
 
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF2_2.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF2_2.vhd
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/ConfigureDAC.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/ConfigureDAC.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Loading package NewSignalGenerator_pkg
--- Compiling entity RADIX22FFT_SDF2_2
--- Compiling architecture rtl of RADIX22FFT_SDF2_2
--- Loading entity SimpleDualPortRAM_generic
--- Loading entity SDFCommutator2
+-- Compiling entity ConfigureDAC
+-- Compiling architecture basic of ConfigureDAC
+-- Loading entity ConfigROM
 
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/Complex4Multiply.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/Complex4Multiply.vhd
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/MainFSM.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/MainFSM.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Compiling entity Complex4Multiply
--- Compiling architecture rtl of Complex4Multiply
+-- Compiling entity MainFSM
+-- Compiling architecture basic of MainFSM
 
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/TWDLROM_5_1.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/TWDLROM_5_1.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package NewSignalGenerator_pkg
--- Compiling entity TWDLROM_5_1
--- Compiling architecture rtl of TWDLROM_5_1
-
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF1_5.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF1_5.vhd
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF1_5.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF1_5.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -277,40 +81,35 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading entity SimpleDualPortRAM_generic
 -- Loading entity SDFCommutator5
 
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF2_4.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF2_4.vhd
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/TWDLROM_5_1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/TWDLROM_5_1.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
 -- Loading package NewSignalGenerator_pkg
--- Compiling entity RADIX22FFT_SDF2_4
--- Compiling architecture rtl of RADIX22FFT_SDF2_4
--- Loading entity SimpleDualPortRAM_generic
--- Loading entity SDFCommutator4
+-- Compiling entity TWDLROM_5_1
+-- Compiling architecture rtl of TWDLROM_5_1
 
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/TWDLROM_7_1.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/TWDLROM_7_1.vhd
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/ConfigROM.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/ConfigROM.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Loading package NewSignalGenerator_pkg
--- Compiling entity TWDLROM_7_1
--- Compiling architecture rtl of TWDLROM_7_1
+-- Compiling entity ConfigROM
+-- Compiling architecture basic of ConfigROM
 
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/NewSignalGenerator.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/NewSignalGenerator.vhd
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/Complex4Multiply_block.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/Complex4Multiply_block.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Loading package NewSignalGenerator_pkg
--- Compiling entity NewSignalGenerator
--- Compiling architecture rtl of NewSignalGenerator
--- Loading entity IFFT
+-- Compiling entity Complex4Multiply_block
+-- Compiling architecture rtl of Complex4Multiply_block
 
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF1_7.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF1_7.vhd
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF1_7.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF1_7.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -323,7 +122,119 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading entity SimpleDualPortRAM_generic
 -- Loading entity SDFCommutator7
 
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF2_6.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF2_6.vhd
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/TWDLROM_9_1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/TWDLROM_9_1.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package NewSignalGenerator_pkg
+-- Compiling entity TWDLROM_9_1
+-- Compiling architecture rtl of TWDLROM_9_1
+
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF1_9.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF1_9.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package NewSignalGenerator_pkg
+-- Compiling entity RADIX22FFT_SDF1_9
+-- Compiling architecture rtl of RADIX22FFT_SDF1_9
+-- Loading entity Complex4Multiply_block2
+-- Loading entity SDFCommutator9
+
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/Complex4Multiply.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/Complex4Multiply.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Complex4Multiply
+-- Compiling architecture rtl of Complex4Multiply
+
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator1.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity SDFCommutator1
+-- Compiling architecture rtl of SDFCommutator1
+-- Loading entity SimpleDualPortRAM_generic
+
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_2.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_2.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity RADIX22FFT_CTRL1_2
+-- Compiling architecture rtl of RADIX22FFT_CTRL1_2
+
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF2_2.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF2_2.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package NewSignalGenerator_pkg
+-- Compiling entity RADIX22FFT_SDF2_2
+-- Compiling architecture rtl of RADIX22FFT_SDF2_2
+-- Loading entity SimpleDualPortRAM_generic
+-- Loading entity SDFCommutator2
+
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator3.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator3.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity SDFCommutator3
+-- Compiling architecture rtl of SDFCommutator3
+-- Loading entity SimpleDualPortRAM_generic
+
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_4.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_4.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity RADIX22FFT_CTRL1_4
+-- Compiling architecture rtl of RADIX22FFT_CTRL1_4
+
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF2_4.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF2_4.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package NewSignalGenerator_pkg
+-- Compiling entity RADIX22FFT_SDF2_4
+-- Compiling architecture rtl of RADIX22FFT_SDF2_4
+-- Loading entity SimpleDualPortRAM_generic
+-- Loading entity SDFCommutator4
+
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator5.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator5.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity SDFCommutator5
+-- Compiling architecture rtl of SDFCommutator5
+-- Loading entity SimpleDualPortRAM_generic
+
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_6.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_6.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity RADIX22FFT_CTRL1_6
+-- Compiling architecture rtl of RADIX22FFT_CTRL1_6
+
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF2_6.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF2_6.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -335,25 +246,65 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading entity SimpleDualPortRAM_generic
 -- Loading entity SDFCommutator6
 
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/NewSignalGenerator_pkg.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/NewSignalGenerator_pkg.vhd
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator7.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator7.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Compiling package NewSignalGenerator_pkg
+-- Compiling entity SDFCommutator7
+-- Compiling architecture rtl of SDFCommutator7
+-- Loading entity SimpleDualPortRAM_generic
 
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/TWDLROM_9_1.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/TWDLROM_9_1.vhd
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_8.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_8.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity RADIX22FFT_CTRL1_8
+-- Compiling architecture rtl of RADIX22FFT_CTRL1_8
+
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF2_8.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF2_8.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
 -- Loading package NewSignalGenerator_pkg
--- Compiling entity TWDLROM_9_1
--- Compiling architecture rtl of TWDLROM_9_1
+-- Compiling entity RADIX22FFT_SDF2_8
+-- Compiling architecture rtl of RADIX22FFT_SDF2_8
+-- Loading entity SDFCommutator8
 
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/IFFT.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/IFFT.vhd
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator9.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator9.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity SDFCommutator9
+-- Compiling architecture rtl of SDFCommutator9
+-- Loading entity SimpleDualPortRAM_generic
+
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_1_block.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_1_block.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity RADIX22FFT_CTRL1_1_block
+-- Compiling architecture rtl of RADIX22FFT_CTRL1_1_block
+
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/Complex4Multiply_block2.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/Complex4Multiply_block2.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Complex4Multiply_block2
+-- Compiling architecture rtl of Complex4Multiply_block2
+
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/IFFT.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/IFFT.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -386,81 +337,55 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading entity RADIX22FFT_SDF1_9
 -- Loading entity RADIX2FFT_bitNatural
 
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_1.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_1.vhd
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/SimpleDualPortRAM_generic.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/SimpleDualPortRAM_generic.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Compiling entity RADIX22FFT_CTRL1_1
--- Compiling architecture rtl of RADIX22FFT_CTRL1_1
+-- Compiling entity SimpleDualPortRAM_generic
+-- Compiling architecture rtl of SimpleDualPortRAM_generic
 
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF1_9.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF1_9.vhd
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/PLL.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/PLL.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity PLL
+-- Compiling architecture rtl of PLL
+
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/TWDLROM_3_1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/TWDLROM_3_1.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
 -- Loading package NewSignalGenerator_pkg
--- Compiling entity RADIX22FFT_SDF1_9
--- Compiling architecture rtl of RADIX22FFT_SDF1_9
--- Loading entity Complex4Multiply_block2
--- Loading entity SDFCommutator9
+-- Compiling entity TWDLROM_3_1
+-- Compiling architecture rtl of TWDLROM_3_1
 
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF2_8.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF2_8.vhd
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX2FFT_bitNatural.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX2FFT_bitNatural.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Loading package NewSignalGenerator_pkg
--- Compiling entity RADIX22FFT_SDF2_8
--- Compiling architecture rtl of RADIX22FFT_SDF2_8
--- Loading entity SDFCommutator8
-
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator1.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator1.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity SDFCommutator1
--- Compiling architecture rtl of SDFCommutator1
+-- Compiling entity RADIX2FFT_bitNatural
+-- Compiling architecture rtl of RADIX2FFT_bitNatural
 -- Loading entity SimpleDualPortRAM_generic
 
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/PLL_OUT_sim/PLL_OUT.vho {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/PLL_OUT_sim/PLL_OUT.vho
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/TWDLROM_7_1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/TWDLROM_7_1.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Loading package altera_lnsim_components
--- Compiling entity PLL_OUT
--- Compiling architecture RTL of PLL_OUT
-
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/TestBench.vhd {2 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/TestBench.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package altera_mf_components
--- Compiling entity TestBench
--- Compiling architecture basic of TestBench
 -- Loading package NUMERIC_STD
--- Loading entity MainFSM
--- Loading entity DDROUT
--- Loading package altera_lnsim_components
--- Loading entity PLL_OUT
-** Warning: Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/TestBench.vhd(62): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/TestBench.vhd(70): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/TestBench.vhd(73): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/TestBench.vhd(75): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/TestBench.vhd(77): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/TestBench.vhd(79): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/TestBench.vhd(81): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/TestBench.vhd(87): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/TestBench.vhd(92): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+-- Loading package NewSignalGenerator_pkg
+-- Compiling entity TWDLROM_7_1
+-- Compiling architecture rtl of TWDLROM_7_1
 
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SynthesisCircuitry.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/SynthesisCircuitry.vhd
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/SynthesisCircuitry.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/SynthesisCircuitry.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -469,16 +394,44 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity SinLUT
 -- Compiling architecture basic of SinLUT
 
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_2.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_2.vhd
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/DDROUT.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/DDROUT.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package altera_mf_components
+-- Compiling entity DDROUT
+-- Compiling architecture SYN of ddrout
+
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/NewSignalGenerator.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/NewSignalGenerator.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Compiling entity RADIX22FFT_CTRL1_2
--- Compiling architecture rtl of RADIX22FFT_CTRL1_2
+-- Loading package NewSignalGenerator_pkg
+-- Compiling entity NewSignalGenerator
+-- Compiling architecture rtl of NewSignalGenerator
+-- Loading entity IFFT
 
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator2.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator2.vhd
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/NewSignalGenerator_pkg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/NewSignalGenerator_pkg.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling package NewSignalGenerator_pkg
+
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_1.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity RADIX22FFT_CTRL1_1
+-- Compiling architecture rtl of RADIX22FFT_CTRL1_1
+
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator2.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator2.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -488,7 +441,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling architecture rtl of SDFCommutator2
 -- Loading entity SimpleDualPortRAM_generic
 
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_3.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_3.vhd
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_3.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_3.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -497,14 +450,70 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity RADIX22FFT_CTRL1_3
 -- Compiling architecture rtl of RADIX22FFT_CTRL1_3
 
-} {} {}} Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator3.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/dev/hw/DDS/fpga_vhdl/ter/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator3.vhd
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator4.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator4.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Compiling entity SDFCommutator3
--- Compiling architecture rtl of SDFCommutator3
+-- Compiling entity SDFCommutator4
+-- Compiling architecture rtl of SDFCommutator4
 -- Loading entity SimpleDualPortRAM_generic
+
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_5.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_5.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity RADIX22FFT_CTRL1_5
+-- Compiling architecture rtl of RADIX22FFT_CTRL1_5
+
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator6.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator6.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity SDFCommutator6
+-- Compiling architecture rtl of SDFCommutator6
+-- Loading entity SimpleDualPortRAM_generic
+
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_7.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_7.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity RADIX22FFT_CTRL1_7
+-- Compiling architecture rtl of RADIX22FFT_CTRL1_7
+
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator8.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator8.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity SDFCommutator8
+-- Compiling architecture rtl of SDFCommutator8
+-- Loading entity SimpleDualPortRAM_generic
+
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/PLL_OUT.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/PLL_OUT.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity PLL_OUT
+-- Compiling architecture rtl of PLL_OUT
+
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/Complex4Multiply_block1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/Complex4Multiply_block1.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Complex4Multiply_block1
+-- Compiling architecture rtl of Complex4Multiply_block1
 
 } {} {}}
