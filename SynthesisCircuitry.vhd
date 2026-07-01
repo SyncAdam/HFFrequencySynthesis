@@ -20,7 +20,7 @@ begin
 
 	if rising_edge(clk) then
 		output_p <= std_logic_vector(counter);
-		counter := counter + 10;
+		counter := counter + 1000;
 	end if;
 	
 end process;

@@ -42,8 +42,11 @@ architecture basic of TestBench is
 	signal signalGenCeOut: std_logic;
 
 	signal sinLUT_output: std_logic_vector(15 downto 0);
+	signal syncr: std_logic;
 	
 begin
+
+	reset <= not resetn;
 
 	DUT: entity work.MainFSM(basic)
 				port map(WrReEn, WrReStatus, clock, resetn);
@@ -71,6 +74,12 @@ begin
 				port map(clk => clock,
 					 output_p => sinLUT_output);	
 
+	Sync: entity work.synchronisation(rtl)
+				port map(clk => clock,
+					 resetn => resetn,
+					 data => sinLUT_output,
+					 sync => syncr);
+
 	DDR: entity work.DDROUT(SYN)
 			port map(aclr => aclr,
 		datain_h => output_i,
@@ -88,8 +97,6 @@ begin
 		clock <= not clock;
 		wait for 6.53594771241830ns;
 	end process;
-
-	reset <= not resetn;
 
 	process
 	begin

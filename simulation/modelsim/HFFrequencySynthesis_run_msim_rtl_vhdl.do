@@ -47,9 +47,11 @@ vcom -93 -work work {C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenera
 vcom -93 -work work {C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/Complex4Multiply_block.vhd}
 vcom -93 -work work {C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/Complex4Multiply.vhd}
 vcom -93 -work work {C:/Users/adam/Projects/HFFrequencySynthesis/MainFSM.vhd}
+vcom -93 -work work {C:/Users/adam/Projects/HFFrequencySynthesis/SynthesisCircuitry.vhd}
 vcom -93 -work work {C:/Users/adam/Projects/HFFrequencySynthesis/ConfigROM.vhd}
 vcom -93 -work work {C:/Users/adam/Projects/HFFrequencySynthesis/DDROUT.vhd}
 vcom -93 -work work {C:/Users/adam/Projects/HFFrequencySynthesis/ConfigureDAC.vhd}
+vcom -93 -work work {C:/Users/adam/Projects/HFFrequencySynthesis/Synchronisation.vhd}
 vcom -93 -work work {C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/TWDLROM_9_1.vhd}
 vcom -93 -work work {C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/TWDLROM_7_1.vhd}
 vcom -93 -work work {C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/TWDLROM_5_1.vhd}

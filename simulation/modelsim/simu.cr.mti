@@ -24,17 +24,18 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package NewSignalGenerator_pkg
 -- Loading entity NewSignalGenerator
 -- Loading entity SinLUT
+-- Loading entity synchronisation
 -- Loading entity DDROUT
 -- Loading entity PLL_OUT
-** Warning: C:/Users/adam/Projects/HFFrequencySynthesis/TestBench.vhd(89): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: C:/Users/adam/Projects/HFFrequencySynthesis/TestBench.vhd(97): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: C:/Users/adam/Projects/HFFrequencySynthesis/TestBench.vhd(100): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: C:/Users/adam/Projects/HFFrequencySynthesis/TestBench.vhd(102): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: C:/Users/adam/Projects/HFFrequencySynthesis/TestBench.vhd(98): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 ** Warning: C:/Users/adam/Projects/HFFrequencySynthesis/TestBench.vhd(104): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: C:/Users/adam/Projects/HFFrequencySynthesis/TestBench.vhd(106): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: C:/Users/adam/Projects/HFFrequencySynthesis/TestBench.vhd(108): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: C:/Users/adam/Projects/HFFrequencySynthesis/TestBench.vhd(114): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: C:/Users/adam/Projects/HFFrequencySynthesis/TestBench.vhd(119): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: C:/Users/adam/Projects/HFFrequencySynthesis/TestBench.vhd(107): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: C:/Users/adam/Projects/HFFrequencySynthesis/TestBench.vhd(109): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: C:/Users/adam/Projects/HFFrequencySynthesis/TestBench.vhd(111): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: C:/Users/adam/Projects/HFFrequencySynthesis/TestBench.vhd(113): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: C:/Users/adam/Projects/HFFrequencySynthesis/TestBench.vhd(115): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: C:/Users/adam/Projects/HFFrequencySynthesis/TestBench.vhd(121): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: C:/Users/adam/Projects/HFFrequencySynthesis/TestBench.vhd(126): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 
 } {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF1_3.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_SDF1_3.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
@@ -460,6 +461,15 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling architecture rtl of SDFCommutator4
 -- Loading entity SimpleDualPortRAM_generic
 
+} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/Synchronisation.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/Synchronisation.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity synchronisation
+-- Compiling architecture rtl of synchronisation
+
 } {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_5.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/RADIX22FFT_CTRL1_5.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -497,15 +507,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity SDFCommutator8
 -- Compiling architecture rtl of SDFCommutator8
 -- Loading entity SimpleDualPortRAM_generic
-
-} {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/PLL_OUT.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/PLL_OUT.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity PLL_OUT
--- Compiling architecture rtl of PLL_OUT
 
 } {} {}} C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/Complex4Multiply_block1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/Complex4Multiply_block1.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
