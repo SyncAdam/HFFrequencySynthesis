@@ -259,7 +259,7 @@ refer to the applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 680 -96 896 -80)
+	(rect 696 -96 912 -80)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "Parallel_Data_Out[15..0]" (rect 90 0 210 12)(font "Arial" ))
 	(pt 0 8)
@@ -272,11 +272,11 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 896 -80 968 -56))
+	(annotation_block (location)(rect 912 -80 984 -56))
 )
 (pin
 	(output)
-	(rect 696 -48 872 -32)
+	(rect 1752 224 1928 240)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "DATACLK" (rect 90 0 139 12)(font "Arial" ))
 	(pt 0 8)
@@ -289,11 +289,11 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 872 -32 936 -8))
+	(annotation_block (location)(rect 1928 240 1992 264))
 )
 (pin
 	(output)
-	(rect 912 -232 1088 -216)
+	(rect 1720 -232 1896 -216)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "Sync" (rect 90 0 115 12)(font "Arial" ))
 	(pt 0 8)
@@ -306,6 +306,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1896 -216 1960 -192))
 )
 (symbol
 	(rect 824 0 1080 128)
@@ -612,9 +613,9 @@ refer to the applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 704 -256 864 -144)
+	(rect 1512 -256 1656 -176)
 	(text "synchronisation" (rect 5 0 82 12)(font "Arial" ))
-	(text "inst2" (rect 8 96 30 113)(font "Intel Clear" ))
+	(text "inst5" (rect 8 64 30 81)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -630,21 +631,14 @@ refer to the applicable agreement for further details.
 		(line (pt 0 48)(pt 16 48))
 	)
 	(port
-		(pt 0 64)
-		(input)
-		(text "data[15..0]" (rect 0 0 53 12)(font "Arial" ))
-		(text "data[15..0]" (rect 21 59 74 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64)(line_width 3))
-	)
-	(port
-		(pt 160 32)
-		(output)
+		(pt 144 32)
+		(bidir)
 		(text "sync" (rect 0 0 24 12)(font "Arial" ))
-		(text "sync" (rect 119 27 143 39)(font "Arial" ))
-		(line (pt 160 32)(pt 144 32))
+		(text "sync" (rect 103 27 127 39)(font "Arial" ))
+		(line (pt 144 32)(pt 128 32))
 	)
 	(drawing
-		(rectangle (rect 16 16 144 96))
+		(rectangle (rect 16 16 128 64))
 	)
 )
 (connector
@@ -874,11 +868,6 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 672 48)
-	(pt 824 48)
-	(bus)
-)
-(connector
 	(pt 680 80)
 	(pt 824 80)
 )
@@ -919,68 +908,50 @@ refer to the applicable agreement for further details.
 	(pt 416 120)
 )
 (connector
+	(pt 1752 232)
 	(pt 1720 232)
-	(pt 1728 232)
 )
 (connector
-	(pt 416 -40)
-	(pt 696 -40)
+	(pt 672 48)
+	(pt 824 48)
+	(bus)
 )
 (connector
-	(pt 416 -40)
+	(pt 440 48)
+	(pt 440 -208)
+)
+(connector
+	(pt -56 48)
+	(pt 440 48)
+)
+(connector
+	(pt 440 48)
+	(pt 488 48)
+)
+(connector
+	(pt 416 -224)
+	(pt 416 -88)
+)
+(connector
+	(pt 416 -88)
 	(pt 416 32)
 )
 (connector
-	(pt 704 -192)
-	(pt 672 -192)
-	(bus)
+	(pt 440 -208)
+	(pt 1512 -208)
 )
 (connector
-	(pt 672 -192)
-	(pt 672 -88)
-	(bus)
+	(pt 416 -224)
+	(pt 1512 -224)
+)
+(connector
+	(pt 1656 -224)
+	(pt 1720 -224)
 )
 (connector
 	(pt 664 -88)
-	(pt 672 -88)
+	(pt 696 -88)
 	(bus)
-)
-(connector
-	(pt 672 -88)
-	(pt 680 -88)
-	(bus)
-)
-(connector
-	(pt 704 -224)
-	(pt 416 -224)
-)
-(connector
-	(pt 416 -224)
-	(pt 416 -88)
-)
-(connector
-	(pt 416 -88)
-	(pt 416 -40)
-)
-(connector
-	(pt 704 -208)
-	(pt 440 -208)
-)
-(connector
-	(pt 440 -208)
-	(pt 440 48)
-)
-(connector
-	(pt 488 48)
-	(pt 440 48)
-)
-(connector
-	(pt 440 48)
-	(pt -56 48)
-)
-(connector
-	(pt 864 -224)
-	(pt 912 -224)
 )
 (junction (pt -24 200))
 (junction (pt -56 216))
@@ -990,7 +961,5 @@ refer to the applicable agreement for further details.
 (junction (pt 232 264))
 (junction (pt 416 32))
 (junction (pt 680 120))
-(junction (pt 416 -40))
-(junction (pt 672 -88))
 (junction (pt 416 -88))
 (junction (pt 440 48))

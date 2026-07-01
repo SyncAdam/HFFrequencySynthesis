@@ -64,7 +64,7 @@ begin
 
 	SignalGen: entity work.NewSignalGenerator(rtl)
 				port map(clk => clock,
-					 reset => reset,
+					 reset => resetn,
 					 clk_enable => signalGenClockEnable,
 					 ce_out => signalGenCeOut,
 					 Out1 => output_i,
@@ -77,7 +77,7 @@ begin
 	Sync: entity work.synchronisation(rtl)
 				port map(clk => clock,
 					 resetn => resetn,
-					 data => sinLUT_output,
+					 data => output_i,
 					 sync => syncr);
 
 	DDR: entity work.DDROUT(SYN)

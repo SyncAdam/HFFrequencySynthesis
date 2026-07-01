@@ -1,11 +1,53 @@
+# Compile of TWDLROM_9_1.vhd failed with 4 errors.
+# Compile of Complex4Multiply.vhd was successful.
+# Compile of Complex4Multiply_block.vhd was successful.
+# Compile of Complex4Multiply_block1.vhd was successful.
+# Compile of Complex4Multiply_block2.vhd was successful.
+# Compile of IFFT.vhd failed with 4 errors.
+# Compile of NewSignalGenerator.vhd failed with 4 errors.
+# Compile of NewSignalGenerator_pkg.vhd was successful.
+# Compile of RADIX2FFT_bitNatural.vhd failed with 5 errors.
+# Compile of RADIX22FFT_CTRL1_1.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_1_block.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_2.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_3.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_4.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_5.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_6.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_7.vhd was successful.
+# Compile of RADIX22FFT_CTRL1_8.vhd was successful.
+# Compile of RADIX22FFT_SDF1_1.vhd failed with 9 errors.
+# Compile of RADIX22FFT_SDF1_3.vhd failed with 9 errors.
+# Compile of RADIX22FFT_SDF1_5.vhd failed with 9 errors.
+# Compile of RADIX22FFT_SDF1_7.vhd failed with 9 errors.
+# Compile of RADIX22FFT_SDF1_9.vhd failed with 5 errors.
+# Compile of RADIX22FFT_SDF2_2.vhd failed with 9 errors.
+# Compile of RADIX22FFT_SDF2_4.vhd failed with 9 errors.
+# Compile of RADIX22FFT_SDF2_6.vhd failed with 9 errors.
+# Compile of RADIX22FFT_SDF2_8.vhd failed with 5 errors.
+# Compile of SDFCommutator1.vhd failed with 5 errors.
+# Compile of SDFCommutator2.vhd failed with 5 errors.
+# Compile of SDFCommutator3.vhd failed with 5 errors.
+# Compile of SDFCommutator4.vhd failed with 5 errors.
+# Compile of SDFCommutator5.vhd failed with 5 errors.
+# Compile of SDFCommutator6.vhd failed with 5 errors.
+# Compile of SDFCommutator7.vhd failed with 5 errors.
+# Compile of SDFCommutator8.vhd failed with 5 errors.
+# Compile of SDFCommutator9.vhd failed with 5 errors.
+# Compile of SimpleDualPortRAM_generic.vhd was successful.
+# Compile of TWDLROM_3_1.vhd was successful.
+# Compile of TWDLROM_5_1.vhd was successful.
+# Compile of TWDLROM_7_1.vhd was successful.
 # Compile of ConfigROM.vhd was successful.
 # Compile of ConfigureDAC.vhd was successful.
 # Compile of DDROUT.vhd was successful.
-# Compile of MainFSM.vhd was successful.
 # Compile of PLL.vhd was successful.
-# Compile of PLL_OUT.vhd was successful.
 # Compile of SynthesisCircuitry.vhd was successful.
-# Compile of TestBench.vhd was successful with warnings.
+# Compile of MainFSM.vhd was successful.
+# Compile of Synchronisation.vhd was successful.
+# Compile of TestBench.vhd failed with 4 errors.
+# Compile of PLL_OUT.vho was successful.
+# 49 compiles, 23 failed with 139 errors.
 # Compile of TWDLROM_9_1.vhd was successful.
 # Compile of Complex4Multiply.vhd was successful.
 # Compile of Complex4Multiply_block.vhd was successful.
@@ -46,6 +88,14 @@
 # Compile of TWDLROM_3_1.vhd was successful.
 # Compile of TWDLROM_5_1.vhd was successful.
 # Compile of TWDLROM_7_1.vhd was successful.
+# Compile of ConfigROM.vhd was successful.
+# Compile of ConfigureDAC.vhd was successful.
+# Compile of DDROUT.vhd was successful.
+# Compile of PLL.vhd was successful.
+# Compile of SynthesisCircuitry.vhd was successful.
+# Compile of MainFSM.vhd was successful.
 # Compile of Synchronisation.vhd was successful.
+# Compile of TestBench.vhd was successful with warnings.
+# Compile of PLL_OUT.vho was successful.
 # 49 compiles, 0 failed with no errors.
 vsim -gui -l msim_transcript work.testbench

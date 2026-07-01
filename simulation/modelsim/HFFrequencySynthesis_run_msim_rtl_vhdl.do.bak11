@@ -16,7 +16,11 @@ vmap work rtl_work
 
 vcom "C:/Users/adam/Projects/HFFrequencySynthesis/PLL_OUT_sim/PLL_OUT.vho"
 
+vcom -93 -work work {C:/Users/adam/Projects/HFFrequencySynthesis/PLL_OUT.vho}
 vlog -vlog01compat -work work +incdir+C:/Users/adam/Projects/HFFrequencySynthesis {C:/Users/adam/Projects/HFFrequencySynthesis/baseline_c5gx.v}
+vlib PLL_OUT
+vmap PLL_OUT PLL_OUT
+vlog -vlog01compat -work PLL_OUT +incdir+C:/Users/adam/Projects/HFFrequencySynthesis/PLL_OUT {C:/Users/adam/Projects/HFFrequencySynthesis/PLL_OUT/PLL_OUT_0002.v}
 vcom -93 -work work {C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/SimpleDualPortRAM_generic.vhd}
 vcom -93 -work work {C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator9.vhd}
 vcom -93 -work work {C:/Users/adam/Projects/HFFrequencySynthesis/NewSignalGenerator/SDFCommutator8.vhd}

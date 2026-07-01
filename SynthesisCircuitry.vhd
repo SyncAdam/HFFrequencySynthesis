@@ -13,16 +13,12 @@ architecture basic of SinLUT is
 begin
 
 process(clk)
-
-variable counter: unsigned(15 downto 0) := x"0000";
-	
+	variable counter: unsigned(15 downto 0) := x"0000";
 begin
-
 	if rising_edge(clk) then
 		output_p <= std_logic_vector(counter);
-		counter := counter + 1000;
+		counter := counter + 1024;
 	end if;
-	
 end process;
 
 end architecture basic;
