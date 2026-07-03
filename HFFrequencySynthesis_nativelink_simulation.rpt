@@ -1,5 +1,5 @@
 Info: Start Nativelink Simulation process
-executing command line: ip-make-simscript --nativelink-mode --output-directory=HFFrequencySynthesis_iputf_input --spd=C:/Users/adam/Projects/HFFrequencySynthesis/PLL_OUT.spd 
+executing command line: ip-make-simscript --nativelink-mode --output-directory=HFFrequencySynthesis_iputf_input --spd=C:/Users/adam/Projects/HFFrequencySynthesis/PLL_OUT.spd --spd=C:/Users/adam/Projects/HFFrequencySynthesis/NewPLL.spd 
 
 ========= EDA Simulation Settings =====================
 

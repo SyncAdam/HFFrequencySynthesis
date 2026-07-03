@@ -1,0 +1,11 @@
+
+
+C:/Users/adam/Projects/HFFrequencySynthesis/PLL_OUT.vhd
+
+Jul 03 12PM:16:17>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/adam/Projects/HFFrequencySynthesis/PLL_OUT.vhd
+
+Jul 03 12PM:16:29>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
