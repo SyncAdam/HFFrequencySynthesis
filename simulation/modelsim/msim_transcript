@@ -1,460 +1,10 @@
 # vsim -gui -l msim_transcript work.testbench 
-# Start time: 15:08:30 on Jul 03,2026
+# Start time: 12:30:02 on Jul 06,2026
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
 # Loading altera_mf.altera_mf_components
-# Loading work.newsignalgenerator_pkg
-# Loading verilog.vl_types(body)
-# Loading work.testbench(basic)
-# Loading work.mainfsm(basic)
-# Loading work.configuredac(basic)
-# Loading work.configrom(basic)
-# Loading work.newsignalgenerator(rtl)
-# Loading work.ifft(rtl)
-# Loading work.radix22fft_ctrl1_1(rtl)
-# Loading work.radix22fft_sdf1_1(rtl)
-# Loading work.simpledualportram_generic(rtl)
-# Loading work.sdfcommutator1(rtl)
-# Loading work.radix22fft_ctrl1_2(rtl)
-# Loading work.radix22fft_sdf2_2(rtl)
-# Loading work.sdfcommutator2(rtl)
-# Loading work.twdlrom_3_1(rtl)
-# Loading work.radix22fft_ctrl1_3(rtl)
-# Loading work.radix22fft_sdf1_3(rtl)
-# Loading work.complex4multiply(rtl)
-# Loading work.sdfcommutator3(rtl)
-# Loading work.radix22fft_ctrl1_4(rtl)
-# Loading work.radix22fft_sdf2_4(rtl)
-# Loading work.sdfcommutator4(rtl)
-# Loading work.twdlrom_5_1(rtl)
-# Loading work.radix22fft_ctrl1_5(rtl)
-# Loading work.radix22fft_sdf1_5(rtl)
-# Loading work.complex4multiply_block(rtl)
-# Loading work.sdfcommutator5(rtl)
-# Loading work.radix22fft_ctrl1_6(rtl)
-# Loading work.radix22fft_sdf2_6(rtl)
-# Loading work.sdfcommutator6(rtl)
-# Loading work.twdlrom_7_1(rtl)
-# Loading work.radix22fft_ctrl1_7(rtl)
-# Loading work.radix22fft_sdf1_7(rtl)
-# Loading work.complex4multiply_block1(rtl)
-# Loading work.sdfcommutator7(rtl)
-# Loading work.radix22fft_ctrl1_8(rtl)
-# Loading work.radix22fft_sdf2_8(rtl)
-# Loading work.sdfcommutator8(rtl)
-# Loading work.twdlrom_9_1(rtl)
-# Loading work.radix22fft_ctrl1_1_block(rtl)
-# Loading work.radix22fft_sdf1_9(rtl)
-# Loading work.complex4multiply_block2(rtl)
-# Loading work.sdfcommutator9(rtl)
-# Loading work.radix2fft_bitnatural(rtl)
-# Loading work.sinlut(basic)
-# Loading work.synchronisation(rtl)
-# Loading work.ddrout(syn)
-# Loading altera_mf.altera_device_families(body)
-# Loading altera_mf.altddio_out(behave)
-# Loading work.NewPLL
-# ** Error: (vsim-3033) C:/Users/adam/Projects/HFFrequencySynthesis/NewPLL_sim/NewPLL.vo(45): Instantiation of 'altera_pll' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/PLL File: C:/Users/adam/Projects/HFFrequencySynthesis/NewPLL_sim/NewPLL.vo
-#         Searched libraries:
-#             C:/Users/adam/Projects/HFFrequencySynthesis/simulation/modelsim/rtl_work
-# Loading work.pintester(rtl)
-# Error loading design
-# End time: 15:08:31 on Jul 03,2026, Elapsed time: 0:00:01
-# Errors: 1, Warnings: 0
-# Compile of NewPLL_0002.v was successful.
-# Compile of Complex4Multiply.vhd was successful.
-# Compile of Complex4Multiply_block.vhd was successful.
-# Compile of Complex4Multiply_block1.vhd was successful.
-# Compile of Complex4Multiply_block2.vhd was successful.
-# Compile of RADIX22FFT_CTRL1_1.vhd was successful.
-# Compile of RADIX22FFT_CTRL1_1_block.vhd was successful.
-# Compile of RADIX22FFT_CTRL1_2.vhd was successful.
-# Compile of RADIX22FFT_CTRL1_3.vhd was successful.
-# Compile of RADIX22FFT_CTRL1_4.vhd was successful.
-# Compile of RADIX22FFT_CTRL1_5.vhd was successful.
-# Compile of RADIX22FFT_CTRL1_6.vhd was successful.
-# Compile of RADIX22FFT_CTRL1_7.vhd was successful.
-# Compile of RADIX22FFT_CTRL1_8.vhd was successful.
-# Compile of TWDLROM_3_1.vhd was successful.
-# Compile of TWDLROM_5_1.vhd was successful.
-# Compile of TWDLROM_7_1.vhd was successful.
-# Compile of TWDLROM_9_1.vhd was successful.
-# Compile of RADIX2FFT_bitNatural.vhd was successful.
-# Compile of RADIX22FFT_SDF1_1.vhd was successful.
-# Compile of RADIX22FFT_SDF1_3.vhd was successful.
-# Compile of RADIX22FFT_SDF1_5.vhd was successful.
-# Compile of RADIX22FFT_SDF1_7.vhd was successful.
-# Compile of RADIX22FFT_SDF1_9.vhd was successful.
-# Compile of RADIX22FFT_SDF2_2.vhd was successful.
-# Compile of RADIX22FFT_SDF2_4.vhd was successful.
-# Compile of RADIX22FFT_SDF2_6.vhd was successful.
-# Compile of RADIX22FFT_SDF2_8.vhd was successful.
-# Compile of SDFCommutator1.vhd was successful.
-# Compile of SDFCommutator2.vhd was successful.
-# Compile of SDFCommutator3.vhd was successful.
-# Compile of SDFCommutator4.vhd was successful.
-# Compile of SDFCommutator5.vhd was successful.
-# Compile of SDFCommutator6.vhd was successful.
-# Compile of SDFCommutator7.vhd was successful.
-# Compile of SDFCommutator8.vhd was successful.
-# Compile of SDFCommutator9.vhd was successful.
-# Compile of SimpleDualPortRAM_generic.vhd was successful.
-# Compile of IFFT.vhd was successful.
-# Compile of NewSignalGenerator.vhd was successful.
-# Compile of NewSignalGenerator_pkg.vhd was successful.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureDAC.vhd was successful.
-# Compile of DDROUT.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# Compile of MainFSM.vhd was successful.
-# Compile of Synchronisation.vhd was successful.
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of PLL_OUT.vho was successful.
-# Compile of PinTester.vhd was successful.
-# Compile of NewPLL.vo was successful.
-# Compile of NewPLL_0002.v was successful.
-# 51 compiles, 0 failed with no errors.
-vsim -gui -l msim_transcript work.testbench
-# vsim -gui -l msim_transcript work.testbench 
-# Start time: 15:09:32 on Jul 03,2026
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading altera_mf.altera_mf_components
-# Loading work.newsignalgenerator_pkg
-# Loading verilog.vl_types(body)
-# Loading work.testbench(basic)
-# Loading work.mainfsm(basic)
-# Loading work.configuredac(basic)
-# Loading work.configrom(basic)
-# Loading work.newsignalgenerator(rtl)
-# Loading work.ifft(rtl)
-# Loading work.radix22fft_ctrl1_1(rtl)
-# Loading work.radix22fft_sdf1_1(rtl)
-# Loading work.simpledualportram_generic(rtl)
-# Loading work.sdfcommutator1(rtl)
-# Loading work.radix22fft_ctrl1_2(rtl)
-# Loading work.radix22fft_sdf2_2(rtl)
-# Loading work.sdfcommutator2(rtl)
-# Loading work.twdlrom_3_1(rtl)
-# Loading work.radix22fft_ctrl1_3(rtl)
-# Loading work.radix22fft_sdf1_3(rtl)
-# Loading work.complex4multiply(rtl)
-# Loading work.sdfcommutator3(rtl)
-# Loading work.radix22fft_ctrl1_4(rtl)
-# Loading work.radix22fft_sdf2_4(rtl)
-# Loading work.sdfcommutator4(rtl)
-# Loading work.twdlrom_5_1(rtl)
-# Loading work.radix22fft_ctrl1_5(rtl)
-# Loading work.radix22fft_sdf1_5(rtl)
-# Loading work.complex4multiply_block(rtl)
-# Loading work.sdfcommutator5(rtl)
-# Loading work.radix22fft_ctrl1_6(rtl)
-# Loading work.radix22fft_sdf2_6(rtl)
-# Loading work.sdfcommutator6(rtl)
-# Loading work.twdlrom_7_1(rtl)
-# Loading work.radix22fft_ctrl1_7(rtl)
-# Loading work.radix22fft_sdf1_7(rtl)
-# Loading work.complex4multiply_block1(rtl)
-# Loading work.sdfcommutator7(rtl)
-# Loading work.radix22fft_ctrl1_8(rtl)
-# Loading work.radix22fft_sdf2_8(rtl)
-# Loading work.sdfcommutator8(rtl)
-# Loading work.twdlrom_9_1(rtl)
-# Loading work.radix22fft_ctrl1_1_block(rtl)
-# Loading work.radix22fft_sdf1_9(rtl)
-# Loading work.complex4multiply_block2(rtl)
-# Loading work.sdfcommutator9(rtl)
-# Loading work.radix2fft_bitnatural(rtl)
-# Loading work.sinlut(basic)
-# Loading work.synchronisation(rtl)
-# Loading work.ddrout(syn)
-# Loading altera_mf.altera_device_families(body)
-# Loading altera_mf.altddio_out(behave)
-# Loading work.NewPLL
-# ** Error: (vsim-3033) C:/Users/adam/Projects/HFFrequencySynthesis/NewPLL_sim/NewPLL.vo(45): Instantiation of 'altera_pll' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/PLL File: C:/Users/adam/Projects/HFFrequencySynthesis/NewPLL_sim/NewPLL.vo
-#         Searched libraries:
-#             C:/Users/adam/Projects/HFFrequencySynthesis/simulation/modelsim/rtl_work
-# Loading work.pintester(rtl)
-# Error loading design
-# End time: 15:09:32 on Jul 03,2026, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# Compile of TestBench.vhd failed with 4 errors.
-# Compile of PLL.vhd was successful.
-# 2 compiles, 1 failed with 4 errors.
-# Compile of TestBench.vhd was successful with warnings.
-vsim -gui -l msim_transcript work.testbench
-# vsim -gui -l msim_transcript work.testbench 
-# Start time: 15:19:20 on Jul 03,2026
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading altera_mf.altera_mf_components
-# Loading work.newsignalgenerator_pkg
-# Loading work.testbench(basic)
-# Loading work.mainfsm(basic)
-# Loading work.configuredac(basic)
-# Loading work.configrom(basic)
-# Loading work.newsignalgenerator(rtl)
-# Loading work.ifft(rtl)
-# Loading work.radix22fft_ctrl1_1(rtl)
-# Loading work.radix22fft_sdf1_1(rtl)
-# Loading work.simpledualportram_generic(rtl)
-# Loading work.sdfcommutator1(rtl)
-# Loading work.radix22fft_ctrl1_2(rtl)
-# Loading work.radix22fft_sdf2_2(rtl)
-# Loading work.sdfcommutator2(rtl)
-# Loading work.twdlrom_3_1(rtl)
-# Loading work.radix22fft_ctrl1_3(rtl)
-# Loading work.radix22fft_sdf1_3(rtl)
-# Loading work.complex4multiply(rtl)
-# Loading work.sdfcommutator3(rtl)
-# Loading work.radix22fft_ctrl1_4(rtl)
-# Loading work.radix22fft_sdf2_4(rtl)
-# Loading work.sdfcommutator4(rtl)
-# Loading work.twdlrom_5_1(rtl)
-# Loading work.radix22fft_ctrl1_5(rtl)
-# Loading work.radix22fft_sdf1_5(rtl)
-# Loading work.complex4multiply_block(rtl)
-# Loading work.sdfcommutator5(rtl)
-# Loading work.radix22fft_ctrl1_6(rtl)
-# Loading work.radix22fft_sdf2_6(rtl)
-# Loading work.sdfcommutator6(rtl)
-# Loading work.twdlrom_7_1(rtl)
-# Loading work.radix22fft_ctrl1_7(rtl)
-# Loading work.radix22fft_sdf1_7(rtl)
-# Loading work.complex4multiply_block1(rtl)
-# Loading work.sdfcommutator7(rtl)
-# Loading work.radix22fft_ctrl1_8(rtl)
-# Loading work.radix22fft_sdf2_8(rtl)
-# Loading work.sdfcommutator8(rtl)
-# Loading work.twdlrom_9_1(rtl)
-# Loading work.radix22fft_ctrl1_1_block(rtl)
-# Loading work.radix22fft_sdf1_9(rtl)
-# Loading work.complex4multiply_block2(rtl)
-# Loading work.sdfcommutator9(rtl)
-# Loading work.radix2fft_bitnatural(rtl)
-# Loading work.sinlut(basic)
-# Loading work.synchronisation(rtl)
-# Loading work.ddrout(syn)
-# Loading altera_mf.altera_device_families(body)
-# Loading altera_mf.altddio_out(behave)
-# Loading work.pll(rtl)
-# ** Warning: (vsim-3473) Component instance "pll_inst : PLL_0002" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/PLL File: C:/Users/adam/Projects/HFFrequencySynthesis/PLL.vhd
-# Loading work.pintester(rtl)
-# ** Warning: Design size of 24857 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
-# Expect performance to be adversely affected.
-# ** Warning: (vsim-8684) No drivers exist on out port /testbench/PLL/outclk_0, and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /testbench/PLL_Clock.
-# ** Warning: (vsim-8684) No drivers exist on out port /testbench/PLL/locked, and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /testbench/PLL_Locked.
-add wave -position insertpoint  \
-sim:/testbench/PLL_Clock \
-sim:/testbench/SCLK \
-sim:/testbench/SDENB \
-sim:/testbench/SDIO \
-sim:/testbench/clock \
-sim:/testbench/ddrData \
-sim:/testbench/output_i \
-sim:/testbench/output_q \
-sim:/testbench/resetn \
-sim:/testbench/sinLUT_output \
-sim:/testbench/syncr \
-sim:/testbench/test_result \
-sim:/testbench/test_selector
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: adams  Hostname: LADAMTP  ProcessID: 12852
-#           Attempting to use alternate WLF file "./wlftmsnqbd".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftmsnqbd
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_NaturalOrder_Stage
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_NaturalOrder_Stage
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_NaturalOrder_Stage
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_9
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_9
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_9
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_9
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_9
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_7_1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_7_1
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_7_1
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_7_1
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_7_1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_5_1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_5_1
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_5_1
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_5_1
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_5_1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_3_1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_3_1
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_3_1
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_3_1
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_3_1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF1_1_1/u_dataMEM_im_0_1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF1_1_1/u_dataMEM_re_0_1_generic
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/u_dataXMEM_re_0_1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/u_dataXMEM_im_0_1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF2_2_1/u_dataMEM_im_0_2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF2_2_1/u_dataMEM_re_0_2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/u_dataXMEM_re_0_2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/u_dataXMEM_im_0_2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF1_3_1/u_dataMEM_im_0_3
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF1_3_1/u_dataMEM_re_0_3
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF1_3_1/u_SDFCOMMUTATOR_3/u_dataXMEM_re_0_3
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF1_3_1/u_SDFCOMMUTATOR_3/u_dataXMEM_im_0_3
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF2_4_1/u_dataMEM_im_0_4
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF2_4_1/u_dataMEM_re_0_4
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/u_dataXMEM_re_0_4
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/u_dataXMEM_im_0_4
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF1_5_1/u_dataMEM_im_0_5
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF1_5_1/u_dataMEM_re_0_5
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF1_5_1/u_SDFCOMMUTATOR_5/u_dataXMEM_re_0_5
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF1_5_1/u_SDFCOMMUTATOR_5/u_dataXMEM_im_0_5
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF2_6_1/u_dataMEM_im_0_6
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF2_6_1/u_dataMEM_re_0_6
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/u_dataXMEM_re_0_6
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/u_dataXMEM_im_0_6
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF1_7_1/u_dataMEM_im_0_7
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF1_7_1/u_dataMEM_re_0_7
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF1_7_1/u_SDFCOMMUTATOR_7/u_dataXMEM_re_0_7
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF1_7_1/u_SDFCOMMUTATOR_7/u_dataXMEM_im_0_7
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF2_8_1/u_SDFCOMMUTATOR_8/u_dataXMEM_re_0_8
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF2_8_1/u_SDFCOMMUTATOR_8/u_dataXMEM_im_0_8
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_RADIX2/u_SDFCOMMUTATOR_9/u_dataXMEM_re_0_9
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_RADIX2/u_SDFCOMMUTATOR_9/u_dataXMEM_im_0_9
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_NaturalOrder_Stage/u_dataMEM_im_1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_NaturalOrder_Stage/u_dataMEM_re_1
-# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 2  Instance: /testbench/SignalGen/u_IFFT/u_NaturalOrder_Stage
-# Compile of PLL.vho was successful.
-# Compile of Complex4Multiply.vhd was successful.
-# Compile of Complex4Multiply_block.vhd was successful.
-# Compile of Complex4Multiply_block1.vhd was successful.
-# Compile of Complex4Multiply_block2.vhd was successful.
-# Compile of RADIX22FFT_CTRL1_1.vhd was successful.
-# Compile of RADIX22FFT_CTRL1_1_block.vhd was successful.
-# Compile of RADIX22FFT_CTRL1_2.vhd was successful.
-# Compile of RADIX22FFT_CTRL1_3.vhd was successful.
-# Compile of RADIX22FFT_CTRL1_4.vhd was successful.
-# Compile of RADIX22FFT_CTRL1_5.vhd was successful.
-# Compile of RADIX22FFT_CTRL1_6.vhd was successful.
-# Compile of RADIX22FFT_CTRL1_7.vhd was successful.
-# Compile of RADIX22FFT_CTRL1_8.vhd was successful.
-# Compile of TWDLROM_3_1.vhd was successful.
-# Compile of TWDLROM_5_1.vhd was successful.
-# Compile of TWDLROM_7_1.vhd was successful.
-# Compile of TWDLROM_9_1.vhd was successful.
-# Compile of RADIX2FFT_bitNatural.vhd was successful.
-# Compile of RADIX22FFT_SDF1_1.vhd was successful.
-# Compile of RADIX22FFT_SDF1_3.vhd was successful.
-# Compile of RADIX22FFT_SDF1_5.vhd was successful.
-# Compile of RADIX22FFT_SDF1_7.vhd was successful.
-# Compile of RADIX22FFT_SDF1_9.vhd was successful.
-# Compile of RADIX22FFT_SDF2_2.vhd was successful.
-# Compile of RADIX22FFT_SDF2_4.vhd was successful.
-# Compile of RADIX22FFT_SDF2_6.vhd was successful.
-# Compile of RADIX22FFT_SDF2_8.vhd was successful.
-# Compile of SDFCommutator1.vhd was successful.
-# Compile of SDFCommutator2.vhd was successful.
-# Compile of SDFCommutator3.vhd was successful.
-# Compile of SDFCommutator4.vhd was successful.
-# Compile of SDFCommutator5.vhd was successful.
-# Compile of SDFCommutator6.vhd was successful.
-# Compile of SDFCommutator7.vhd was successful.
-# Compile of SDFCommutator8.vhd was successful.
-# Compile of SDFCommutator9.vhd was successful.
-# Compile of SimpleDualPortRAM_generic.vhd was successful.
-# Compile of IFFT.vhd was successful.
-# Compile of NewSignalGenerator.vhd was successful.
-# Compile of NewSignalGenerator_pkg.vhd was successful.
-# Compile of ConfigROM.vhd was successful.
-# Compile of ConfigureDAC.vhd was successful.
-# Compile of DDROUT.vhd was successful.
-# Compile of SynthesisCircuitry.vhd was successful.
-# Compile of MainFSM.vhd was successful.
-# Compile of Synchronisation.vhd was successful.
-# Compile of TestBench.vhd was successful with warnings.
-# Compile of PLL_OUT.vho was successful.
-# Compile of PinTester.vhd was successful.
-# Compile of NewPLL.vo was successful.
-# Compile of NewPLL_0002.v was successful.
-# Compile of PLL.vhd was successful.
-# Compile of PLL.vho was successful.
-# 53 compiles, 0 failed with no errors.
-restart
 # Loading work.newsignalgenerator_pkg
 # Loading altera_lnsim.altera_lnsim_components
 # Loading work.testbench(basic)
@@ -503,6 +53,8 @@ restart
 # Loading work.sinlut(basic)
 # Loading work.synchronisation(rtl)
 # Loading work.ddrout(syn)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altddio_out(behave)
 # Loading work.pll(rtl)
 # Loading sv_std.std
 # Loading altera_lnsim.altera_lnsim_functions
@@ -512,8 +64,25 @@ restart
 # Loading altera_lnsim.altera_generic_pll_functions
 # Loading altera_lnsim.generic_pll
 # Loading work.pintester(rtl)
-# ** Warning: Design size of 29070 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 29136 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
+add wave -position insertpoint  \
+sim:/testbench/PLL_Clock \
+sim:/testbench/SCLK \
+sim:/testbench/SDENB \
+sim:/testbench/SDIO \
+sim:/testbench/clock \
+sim:/testbench/ddrData \
+sim:/testbench/output_i \
+sim:/testbench/output_q \
+sim:/testbench/resetn \
+sim:/testbench/sinLUT_output \
+sim:/testbench/syncr
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: adams  Hostname: LADAMTP  ProcessID: 12852
+#           Attempting to use alternate WLF file "./wlft0r0903".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft0r0903
 run
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen
@@ -651,5 +220,147 @@ run
 #    Time: 0 ps  Iteration: 2  Instance: /testbench/SignalGen/u_IFFT/u_NaturalOrder_Stage
 # Info: hierarchical_name = testbench.PLL.pll_altera_pll_altera_pll_i_639.new_model.gpll.UI
 # Warning: The frequency of the reference clock signal differs from the specified frequency (307.2 MHz).
-# End time: 15:22:06 on Jul 03,2026, Elapsed time: 0:02:46
-# Errors: 0, Warnings: 129
+# Compile of PLL.vhd was successful.
+# Compile of PLL.vho was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# Loading work.pll(rtl)
+# ** Warning: Design size of 20508 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_NaturalOrder_Stage
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_7_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_5_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_3_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SignalGen/u_IFFT/u_twdlROM_3_1
+# Info: =================================================
+# Info:           Generic PLL Summary
+# Info: =================================================
+# Time scale of (testbench.PLL.pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen) is  1ps /  1ps
+# Info: hierarchical_name = testbench.PLL.pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen
+# Info: reference_clock_frequency = 153.6 MHz
+# Info: output_clock_frequency = 153.6 MHZ
+# Info: phase_shift = 0 ps
+# Info: duty_cycle = 50
+# Info: sim_additional_refclk_cycles_to_lock = 0
+# Info: output_clock_high_period = 3255.208333
+# Info: output_clock_low_period = 3255.208333
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF1_1_1/u_dataMEM_im_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF1_1_1/u_dataMEM_re_0_1_generic
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/u_dataXMEM_re_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/u_dataXMEM_im_0_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF2_2_1/u_dataMEM_im_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF2_2_1/u_dataMEM_re_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/u_dataXMEM_re_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/u_dataXMEM_im_0_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF1_3_1/u_dataMEM_im_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF1_3_1/u_dataMEM_re_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF1_3_1/u_SDFCOMMUTATOR_3/u_dataXMEM_re_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF1_3_1/u_SDFCOMMUTATOR_3/u_dataXMEM_im_0_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF2_4_1/u_dataMEM_im_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF2_4_1/u_dataMEM_re_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/u_dataXMEM_re_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/u_dataXMEM_im_0_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF1_5_1/u_dataMEM_im_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF1_5_1/u_dataMEM_re_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF1_5_1/u_SDFCOMMUTATOR_5/u_dataXMEM_re_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF1_5_1/u_SDFCOMMUTATOR_5/u_dataXMEM_im_0_5
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF2_6_1/u_dataMEM_im_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF2_6_1/u_dataMEM_re_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/u_dataXMEM_re_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/u_dataXMEM_im_0_6
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF1_7_1/u_dataMEM_im_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF1_7_1/u_dataMEM_re_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF1_7_1/u_SDFCOMMUTATOR_7/u_dataXMEM_re_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF1_7_1/u_SDFCOMMUTATOR_7/u_dataXMEM_im_0_7
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF2_8_1/u_SDFCOMMUTATOR_8/u_dataXMEM_re_0_8
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_SDF2_8_1/u_SDFCOMMUTATOR_8/u_dataXMEM_im_0_8
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_RADIX2/u_SDFCOMMUTATOR_9/u_dataXMEM_re_0_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_RADIX2/u_SDFCOMMUTATOR_9/u_dataXMEM_im_0_9
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_NaturalOrder_Stage/u_dataMEM_im_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/SignalGen/u_IFFT/u_NaturalOrder_Stage/u_dataMEM_re_1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/SignalGen/u_IFFT/u_NaturalOrder_Stage
+# End time: 15:52:07 on Jul 06,2026, Elapsed time: 3:22:05
+# Errors: 0, Warnings: 126

@@ -16,11 +16,11 @@ module  PLL_0002(
 
 	altera_pll #(
 		.fractional_vco_multiplier("false"),
-		.reference_clock_frequency("307.2 MHz"),
+		.reference_clock_frequency("153.6 MHz"),
 		.operation_mode("direct"),
 		.number_of_clocks(1),
-		.output_clock_frequency0("307.200000 MHz"),
-		.phase_shift0("0 ps"),
+		.output_clock_frequency0("153.600000 MHz"),
+		.phase_shift0("1628 ps"),
 		.duty_cycle0(50),
 		.output_clock_frequency1("0 MHz"),
 		.phase_shift1("0 ps"),

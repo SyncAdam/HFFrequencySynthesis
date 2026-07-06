@@ -71,7 +71,7 @@ end architecture rtl; -- of PLL
 -- Retrieval info: 	<generic name="device" value="5CEBA2F17A7" />
 -- Retrieval info: 	<generic name="gui_device_speed_grade" value="1" />
 -- Retrieval info: 	<generic name="gui_pll_mode" value="Integer-N PLL" />
--- Retrieval info: 	<generic name="gui_reference_clock_frequency" value="307.2" />
+-- Retrieval info: 	<generic name="gui_reference_clock_frequency" value="153.6" />
 -- Retrieval info: 	<generic name="gui_channel_spacing" value="0.0" />
 -- Retrieval info: 	<generic name="gui_operation_mode" value="direct" />
 -- Retrieval info: 	<generic name="gui_feedback_clock" value="Global Clock" />
@@ -84,12 +84,12 @@ end architecture rtl; -- of PLL
 -- Retrieval info: 	<generic name="gui_frac_multiply_factor" value="1" />
 -- Retrieval info: 	<generic name="gui_divide_factor_n" value="1" />
 -- Retrieval info: 	<generic name="gui_cascade_counter0" value="false" />
--- Retrieval info: 	<generic name="gui_output_clock_frequency0" value="307.2" />
+-- Retrieval info: 	<generic name="gui_output_clock_frequency0" value="153.6" />
 -- Retrieval info: 	<generic name="gui_divide_factor_c0" value="1" />
 -- Retrieval info: 	<generic name="gui_actual_output_clock_frequency0" value="0 MHz" />
--- Retrieval info: 	<generic name="gui_ps_units0" value="ps" />
+-- Retrieval info: 	<generic name="gui_ps_units0" value="degrees" />
 -- Retrieval info: 	<generic name="gui_phase_shift0" value="0" />
--- Retrieval info: 	<generic name="gui_phase_shift_deg0" value="0.0" />
+-- Retrieval info: 	<generic name="gui_phase_shift_deg0" value="90.0" />
 -- Retrieval info: 	<generic name="gui_actual_phase_shift0" value="0" />
 -- Retrieval info: 	<generic name="gui_duty_cycle0" value="50" />
 -- Retrieval info: 	<generic name="gui_cascade_counter1" value="false" />
@@ -245,7 +245,7 @@ end architecture rtl; -- of PLL
 -- Retrieval info: 	<generic name="gui_phase_shift_deg17" value="0.0" />
 -- Retrieval info: 	<generic name="gui_actual_phase_shift17" value="0" />
 -- Retrieval info: 	<generic name="gui_duty_cycle17" value="50" />
--- Retrieval info: 	<generic name="gui_pll_auto_reset" value="Off" />
+-- Retrieval info: 	<generic name="gui_pll_auto_reset" value="On" />
 -- Retrieval info: 	<generic name="gui_pll_bandwidth_preset" value="Auto" />
 -- Retrieval info: 	<generic name="gui_en_reconf" value="false" />
 -- Retrieval info: 	<generic name="gui_en_dps_ports" value="false" />

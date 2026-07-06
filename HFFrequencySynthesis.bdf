@@ -561,8 +561,8 @@ refer to the applicable agreement for further details.
 )
 (symbol
 	(rect 1568 72 1728 216)
-	(text "NewPLL" (rect 55 -1 111 15)(font "Arial" (font_size 10)))
-	(text "inst11" (rect 8 128 36 145)(font "Intel Clear" ))
+	(text "PLL" (rect 68 -1 95 15)(font "Arial" (font_size 10)))
+	(text "inst1" (rect 8 128 30 145)(font "Intel Clear" ))
 	(port
 		(pt 0 72)
 		(input)
@@ -617,6 +617,40 @@ refer to the applicable agreement for further details.
 		(line (pt 160 0)(pt 160 144))
 		(line (pt 0 144)(pt 160 144))
 		(line (pt 0 0)(pt 0 144))
+	)
+)
+(symbol
+	(rect 1520 184 1552 216)
+	(text "GND" (rect 8 16 29 26)(font "Arial" (font_size 6)))
+	(text "inst2" (rect 3 21 25 38)(font "Intel Clear" )(invisible))
+	(port
+		(pt 16 0)
+		(output)
+		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
+		(line (pt 16 8)(pt 16 0))
+	)
+	(drawing
+		(line (pt 8 8)(pt 16 16))
+		(line (pt 16 16)(pt 24 8))
+		(line (pt 8 8)(pt 24 8))
+	)
+)
+(symbol
+	(rect 1744 184 1776 216)
+	(text "GND" (rect 8 16 29 26)(font "Arial" (font_size 6)))
+	(text "inst4" (rect 3 21 25 38)(font "Intel Clear" )(invisible))
+	(port
+		(pt 16 0)
+		(output)
+		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
+		(line (pt 16 8)(pt 16 0))
+	)
+	(drawing
+		(line (pt 8 8)(pt 16 16))
+		(line (pt 16 16)(pt 24 8))
+		(line (pt 8 8)(pt 24 8))
 	)
 )
 (connector
@@ -914,6 +948,14 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 416 -224)
 	(pt 416 32)
+)
+(connector
+	(pt 1568 184)
+	(pt 1536 184)
+)
+(connector
+	(pt 1760 184)
+	(pt 1728 184)
 )
 (junction (pt -24 200))
 (junction (pt -56 216))
