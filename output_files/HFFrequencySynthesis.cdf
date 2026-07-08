@@ -4,10 +4,10 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(5CGXFC5C6F27) Path("C:/Users/adam/Projects/HFFrequencySynthesis/output_files/") File("HFFrequencySynthesis.sof") MfrSpec(OpMask(1));
+		Device PartName(EPCQ256) Path("C:/Users/adam/Projects/HFFrequencySynthesis/") File("output_file.pof") MfrSpec(OpMask(1) Child_OpMask(1 1));
 
 ChainEnd;
 
 AlteraBegin;
-	ChainType(JTAG);
+	ChainType(asc);
 AlteraEnd;

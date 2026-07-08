@@ -122,39 +122,6 @@ set_clock_uncertainty -fall_from [get_clocks {Parallel_Data_CLK_IN}] -fall_to [g
 # Set Output Delay
 #**************************************************************
 
-set_output_delay -add_delay -max -clock [get_clocks {inst1|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]  1.000 [get_ports {Parallel_Data_Out[0]}]
-set_output_delay -add_delay -max -clock [get_clocks {inst1|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]  1.000 [get_ports {Parallel_Data_Out[0](n)}]
-set_output_delay -add_delay -max -clock [get_clocks {inst1|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]  1.000 [get_ports {Parallel_Data_Out[1]}]
-set_output_delay -add_delay -max -clock [get_clocks {inst1|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]  1.000 [get_ports {Parallel_Data_Out[1](n)}]
-set_output_delay -add_delay -max -clock [get_clocks {inst1|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]  1.000 [get_ports {Parallel_Data_Out[2]}]
-set_output_delay -add_delay -max -clock [get_clocks {inst1|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]  1.000 [get_ports {Parallel_Data_Out[2](n)}]
-set_output_delay -add_delay -max -clock [get_clocks {inst1|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]  1.000 [get_ports {Parallel_Data_Out[3]}]
-set_output_delay -add_delay -max -clock [get_clocks {inst1|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]  1.000 [get_ports {Parallel_Data_Out[3](n)}]
-set_output_delay -add_delay -max -clock [get_clocks {inst1|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]  1.000 [get_ports {Parallel_Data_Out[4]}]
-set_output_delay -add_delay -max -clock [get_clocks {inst1|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]  1.000 [get_ports {Parallel_Data_Out[4](n)}]
-set_output_delay -add_delay -max -clock [get_clocks {inst1|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]  1.000 [get_ports {Parallel_Data_Out[5]}]
-set_output_delay -add_delay -max -clock [get_clocks {inst1|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]  1.000 [get_ports {Parallel_Data_Out[5](n)}]
-set_output_delay -add_delay -max -clock [get_clocks {inst1|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]  1.000 [get_ports {Parallel_Data_Out[6]}]
-set_output_delay -add_delay -max -clock [get_clocks {inst1|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]  1.000 [get_ports {Parallel_Data_Out[6](n)}]
-set_output_delay -add_delay -max -clock [get_clocks {inst1|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]  1.000 [get_ports {Parallel_Data_Out[7]}]
-set_output_delay -add_delay -max -clock [get_clocks {inst1|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]  1.000 [get_ports {Parallel_Data_Out[7](n)}]
-set_output_delay -add_delay -max -clock [get_clocks {inst1|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]  1.000 [get_ports {Parallel_Data_Out[8]}]
-set_output_delay -add_delay -max -clock [get_clocks {inst1|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]  1.000 [get_ports {Parallel_Data_Out[8](n)}]
-set_output_delay -add_delay -max -clock [get_clocks {inst1|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]  1.000 [get_ports {Parallel_Data_Out[9]}]
-set_output_delay -add_delay -max -clock [get_clocks {inst1|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]  1.000 [get_ports {Parallel_Data_Out[9](n)}]
-set_output_delay -add_delay -max -clock [get_clocks {inst1|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]  1.000 [get_ports {Parallel_Data_Out[10]}]
-set_output_delay -add_delay -max -clock [get_clocks {inst1|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]  1.000 [get_ports {Parallel_Data_Out[10](n)}]
-set_output_delay -add_delay -max -clock [get_clocks {inst1|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]  1.000 [get_ports {Parallel_Data_Out[11]}]
-set_output_delay -add_delay -max -clock [get_clocks {inst1|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]  1.000 [get_ports {Parallel_Data_Out[11](n)}]
-set_output_delay -add_delay -max -clock [get_clocks {inst1|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]  1.000 [get_ports {Parallel_Data_Out[12]}]
-set_output_delay -add_delay -max -clock [get_clocks {inst1|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]  1.000 [get_ports {Parallel_Data_Out[12](n)}]
-set_output_delay -add_delay -max -clock [get_clocks {inst1|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]  1.000 [get_ports {Parallel_Data_Out[13]}]
-set_output_delay -add_delay -max -clock [get_clocks {inst1|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]  1.000 [get_ports {Parallel_Data_Out[13](n)}]
-set_output_delay -add_delay -max -clock [get_clocks {inst1|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]  1.000 [get_ports {Parallel_Data_Out[14]}]
-set_output_delay -add_delay -max -clock [get_clocks {inst1|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]  1.000 [get_ports {Parallel_Data_Out[14](n)}]
-set_output_delay -add_delay -max -clock [get_clocks {inst1|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]  1.000 [get_ports {Parallel_Data_Out[15]}]
-set_output_delay -add_delay -max -clock [get_clocks {inst1|pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]  1.000 [get_ports {Parallel_Data_Out[15](n)}]
-
 
 #**************************************************************
 # Set Clock Groups
