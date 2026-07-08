@@ -1,0 +1,16 @@
+SLStudio.Utils.RemoveHighlighting(get_param('NewSignalGenerator', 'handle'));
+SLStudio.Utils.RemoveHighlighting(get_param('gm_NewSignalGenerator', 'handle'));
+annotate_port('gm_NewSignalGenerator/LUT Im', 0, 1, '');
+annotate_port('NewSignalGenerator/LUT Im', 0, 1, '');
+annotate_port('gm_NewSignalGenerator/LUT Im', 0, 1, '');
+annotate_port('NewSignalGenerator/LUT Im', 0, 1, '');
+annotate_port('gm_NewSignalGenerator/LUT Re', 0, 1, '');
+annotate_port('NewSignalGenerator/LUT Re', 0, 1, '');
+annotate_port('gm_NewSignalGenerator/LUT Re', 0, 1, '');
+annotate_port('NewSignalGenerator/LUT Re', 0, 1, '');
+annotate_port('gm_NewSignalGenerator/IFFT', 0, 1, '');
+annotate_port('NewSignalGenerator/IFFT', 0, 1, '');
+annotate_port('gm_NewSignalGenerator/IFFT', 0, 1, '');
+annotate_port('NewSignalGenerator/IFFT', 0, 1, '');
+annotate_port('gm_NewSignalGenerator/IFFT', 0, 1, '');
+annotate_port('NewSignalGenerator/IFFT', 0, 1, '');

@@ -1,0 +1,18 @@
+open_system('NewSignalGenerator');
+open_system('gm_NewSignalGenerator');
+cs.HiliteType = 'user1';
+cs.ForegroundColor = 'black';
+cs.BackgroundColor = 'cyan';
+set_param(0, 'HiliteAncestorsData', cs);
+hilite_system('gm_NewSignalGenerator/LUT Im', 'user1');
+annotate_port('gm_NewSignalGenerator/LUT Im', 0, 1, 'Lookup Table mapped to RAM');
+hilite_system('NewSignalGenerator/LUT Im', 'user1');
+annotate_port('NewSignalGenerator/LUT Im', 0, 1, 'Lookup Table mapped to RAM');
+cs.HiliteType = 'user1';
+cs.ForegroundColor = 'black';
+cs.BackgroundColor = 'cyan';
+set_param(0, 'HiliteAncestorsData', cs);
+hilite_system('gm_NewSignalGenerator/LUT Re', 'user1');
+annotate_port('gm_NewSignalGenerator/LUT Re', 0, 1, 'Lookup Table mapped to RAM');
+hilite_system('NewSignalGenerator/LUT Re', 'user1');
+annotate_port('NewSignalGenerator/LUT Re', 0, 1, 'Lookup Table mapped to RAM');

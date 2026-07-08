@@ -1,0 +1,18 @@
+open_system('NewSignalGenerator');
+open_system('gm_NewSignalGenerator');
+cs.HiliteType = 'user1';
+cs.ForegroundColor = 'black';
+cs.BackgroundColor = 'cyan';
+set_param(0, 'HiliteAncestorsData', cs);
+hilite_system('gm_NewSignalGenerator/IFFT', 'user1');
+annotate_port('gm_NewSignalGenerator/IFFT', 0, 1, 'Blocks delay absorption: 1 cycles');
+hilite_system('NewSignalGenerator/IFFT', 'user1');
+annotate_port('NewSignalGenerator/IFFT', 0, 1, 'Blocks delay absorption: 1 cycles');
+cs.HiliteType = 'user1';
+cs.ForegroundColor = 'black';
+cs.BackgroundColor = 'cyan';
+set_param(0, 'HiliteAncestorsData', cs);
+hilite_system('gm_NewSignalGenerator/IFFT', 'user1');
+annotate_port('gm_NewSignalGenerator/IFFT', 0, 1, 'Blocks delay absorption: 1 cycles');
+hilite_system('NewSignalGenerator/IFFT', 'user1');
+annotate_port('NewSignalGenerator/IFFT', 0, 1, 'Blocks delay absorption: 1 cycles');
